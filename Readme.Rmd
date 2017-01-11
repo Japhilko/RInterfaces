@@ -10,6 +10,7 @@ knitr::opts_chunk$set(echo = TRUE)
 ```
 
 ## Interaktive Darstellung mit Javascript und R
+
 -	Interaktive Karten mit dem Javascript Paket leaflet
 -	Interaktive Graphiken mit D3 und plotly
 -	Netzwerkgraphiken mit vis.js
