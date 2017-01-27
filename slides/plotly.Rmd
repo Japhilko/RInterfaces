@@ -1,0 +1,29 @@
+---
+title: "D3 und plotly"
+author: "Jan-Philipp Kolb"
+date: "27 Januar 2017"
+output: 
+  html_document: 
+    keep_md: yes
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE,message=F,warning=F)
+```
+
+## Installing plotly
+
+```{r}
+# install.packages("plotly")
+library("plotly")
+```
+
+
+## [Getting Started with Plotly for R ](https://plot.ly/r/getting-started/)
+
+```{r}
+library(plotly)
+p <- plot_ly(midwest, x = ~percollege, color = ~state, type = "box")
+p
+```
+
