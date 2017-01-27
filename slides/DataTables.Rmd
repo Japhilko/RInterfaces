@@ -1,0 +1,22 @@
+---
+title: "DataTables"
+author: "Jan-Philipp Kolb"
+date: "27 Januar 2017"
+output: 
+  html_document: 
+    keep_md: yes
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## 
+
+- [DT: An R interface to the DataTables library](https://rstudio.github.io/DT/)
+
+```{r}
+# install.packages('DT')
+library('DT')
+```
+
