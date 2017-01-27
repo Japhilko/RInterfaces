@@ -1,19 +1,13 @@
----
-title: "Interaktive Karten mit leaflet"
-author: "Jan-Philipp Kolb"
-date: "27 Januar 2017"
-output: 
-  html_document: 
-    keep_md: yes
----
+# Interaktive Karten mit leaflet
+Jan-Philipp Kolb  
+27 Januar 2017  
 
-```{r setup, include=FALSE}
-knitr::opts_chunk$set(echo = TRUE)
-```
+
 
 ## Die Daten - Weltkulturerbe
 
-```{r}
+
+```r
 url <- "https://raw.githubusercontent.com/Japhilko/
 GeoData/master/2015/data/whcSites.csv"
 
@@ -24,21 +18,24 @@ whcSites <- read.csv(url)
 
 [magrittr](https://cran.r-project.org/web/packages/magrittr/index.html) - für den Pipe Operator in R:
 
-```{r,warning=F}
+
+```r
 library("magrittr")
 ```
 
 
 [leaflet](https://rstudio.github.io/leaflet/) - um  interaktive Karten mit der JavaScript Bibliothek 'Leaflet' zu erzeugen
 
-```{r,warning=F}
+
+```r
 library("leaflet")
 ```
 
 
 ## Eine interaktive Karte erstellen
 
-```{r,eval=F}
+
+```r
 m <- leaflet() %>%
   addTiles() %>%  # Add default OpenStreetMap map tiles
   addMarkers(lng=whcSites$lon, 
@@ -53,7 +50,8 @@ m
 
 ## Farbe hinzu
 
-```{r}
+
+```r
 whcSites$color <- "red"
 whcSites$color[whcSites$category=="Cultural"] <- "blue"
 whcSites$color[whcSites$category=="Mixed"] <- "orange"
@@ -61,7 +59,8 @@ whcSites$color[whcSites$category=="Mixed"] <- "orange"
 
 ## Eine Karte mit Farbe erzeugen
 
-```{r,eval=F}
+
+```r
 m1 <- leaflet() %>%
   addTiles() %>%  
   addCircles(lng=whcSites$lon, 
