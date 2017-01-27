@@ -20,3 +20,12 @@ knitr::opts_chunk$set(echo = TRUE)
 library('DT')
 ```
 
+```{r}
+load("data/exdat.RData")
+```
+
+```{r}
+datatable(exdat)
+```
+
+- [Example for a datatable](http://rpubs.com/Japhilko82/osmplzbe)
