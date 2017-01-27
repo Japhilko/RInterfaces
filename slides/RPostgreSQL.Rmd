@@ -11,4 +11,14 @@ output:
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
-## 
+## PostgreSQL
+
+![PostgreSQL](https://www.runabove.com/images/new/2015/postgresql_1.png)
+
+- [PostgreSQL](http://wiki.openstreetmap.org/wiki/PostgreSQL)
+
+```{r}
+# install.packages("RPostgreSQL")
+library("RPostgreSQL")
+```
+
