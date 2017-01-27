@@ -1,30 +1,26 @@
----
-title: "DataTables"
-author: "Jan-Philipp Kolb"
-date: "27 Januar 2017"
-output: 
-  html_document: 
-    keep_md: yes
----
+# DataTables
+Jan-Philipp Kolb  
+27 Januar 2017  
 
-```{r setup, include=FALSE}
-knitr::opts_chunk$set(echo = TRUE,eval=F)
-```
+
 
 ## 
 
 - [DT: An R interface to the DataTables library](https://rstudio.github.io/DT/)
 
-```{r}
+
+```r
 # install.packages('DT')
 library('DT')
 ```
 
-```{r}
+
+```r
 load("data/exdat.RData")
 ```
 
-```{r}
+
+```r
 datatable(exdat)
 ```
 
