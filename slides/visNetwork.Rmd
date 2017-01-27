@@ -1,0 +1,18 @@
+---
+title: "visNetwork"
+author: "Jan-Philipp Kolb"
+date: "27 Januar 2017"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## [Introduction to visNetwork](https://cran.r-project.org/web/packages/visNetwork/vignettes/Introduction-to-visNetwork.html)
+
+```{r}
+# install.packages("visNetwork")
+library(visNetwork)
+```
+

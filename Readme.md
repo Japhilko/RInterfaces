@@ -6,10 +6,10 @@ Jan-Philipp Kolb
 
 ## Interaktive Darstellung mit Javascript und R
 
--	Interaktive Karten mit dem Javascript Paket leaflet
--	Interaktive Graphiken mit D3 und plotly
+-	[Interaktive Karten mit dem Javascript Paket leaflet](https://github.com/Japhilko/RInterfaces/blob/master/slides/leaflet.md)
+-	[Interaktive Tabellen DataTables](https://github.com/Japhilko/RInterfaces/blob/master/slides/DataTables.md)
+-	[Interaktive Graphiken mit D3 und plotly](https://github.com/Japhilko/RInterfaces/blob/master/slides/plotly.md)
 -	Netzwerkgraphiken mit vis.js
--	Interaktive Tabellen DataTables
 -	Das Erstellen von Ablaufdiagrammen mit mermaid
 -	R und die Javascript Data-Driven Documents (D3)
 
