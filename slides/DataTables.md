@@ -4,7 +4,7 @@ Jan-Philipp Kolb
 
 
 
-## 
+## The R-package DT
 
 - [DT: An R interface to the DataTables library](https://rstudio.github.io/DT/)
 

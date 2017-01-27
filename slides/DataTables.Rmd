@@ -11,7 +11,7 @@ output:
 knitr::opts_chunk$set(echo = TRUE,eval=F)
 ```
 
-## 
+## The R-package DT
 
 - [DT: An R interface to the DataTables library](https://rstudio.github.io/DT/)
 
@@ -28,4 +28,4 @@ load("data/exdat.RData")
 datatable(exdat)
 ```
 
-- [Example for a datatable](http://rpubs.com/Japhilko82/osmplzbe)
+Here is the the result - [example for a datatable](http://rpubs.com/Japhilko82/osmplzbe)
