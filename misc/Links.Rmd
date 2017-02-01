@@ -1,0 +1,15 @@
+---
+title: "Links"
+author: "Jan-Philipp Kolb"
+date: "1 Februar 2017"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## 
+
+
+- [The “Ten Simple Rules for Reproducible Computational Research” are easy to reach for R users](https://www.r-bloggers.com/the-ten-simple-rules-for-reproducible-computational-research-are-easy-to-reach-for-r-users/)

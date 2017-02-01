@@ -22,6 +22,7 @@ knitr::opts_chunk$set(echo = TRUE)
 
 ## Verarbeitung/ Manipulation organischer Daten
 
+- [Webscraping](https://github.com/Japhilko/RInterfaces/blob/master/slides/Webscraping.md)
 -	Import von XML-Dateien
 -	Die Nutzung von xpath in R
 -	Import von JSON-Objekten

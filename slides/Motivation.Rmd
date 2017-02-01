@@ -1,0 +1,20 @@
+---
+title: "Motivation"
+author: "Jan-Philipp Kolb"
+date: "1 Februar 2017"
+output: 
+  html_document: 
+    keep_md: yes
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## Intro
+
+![John Chambers’ UserR! 2014 Keynote Address](http://revolution-computing.typepad.com/.a/6a010534b1db25970b01a511de1b0a970c-800wi)
+
+
+- [Reflections on John Chambers’ UserR! 2014 Keynote Address](http://blog.revolutionanalytics.com/2014/07/reflections-on-john-chambers-userr-2014-keynote-address.html)
+
