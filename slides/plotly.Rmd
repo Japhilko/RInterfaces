@@ -28,4 +28,7 @@ p
 ```
 
 
+## Links
+
+- [Getting started with Plotly: basic Plots](https://www.r-bloggers.com/getting-started-with-plotly-basic-plots/)
 

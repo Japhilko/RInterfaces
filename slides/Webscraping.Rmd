@@ -1,0 +1,47 @@
+---
+title: "Webscraping"
+author: "Jan-Philipp Kolb"
+date: "1 Februar 2017"
+output: 
+  html_document: 
+    keep_md: yes
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+
+## Notwendige Pakete
+
+```{r,eval=F}
+install.packages("tidyverse")
+```
+
+
+
+```{r}
+library(tidyverse)
+library(stringr)
+library(forcats)
+library(ggmap)
+library(rvest)
+```
+
+## SCRAPE DATA FROM WIKIPEDIA
+
+```{r}
+html.world_ports <- read_html("https://en.wikipedia.org/wiki/List_of_busiest_container_ports")
+df.world_ports <- html_table(html_nodes(html.world_ports, "table")[[2]], fill = TRUE)
+```
+
+## Die Daten anschauen
+
+```{r}
+glimpse(df.world_ports)
+```
+
+
+## Links
+
+- [How to really do an analysis in R (part 1, data manipulation)](https://www.r-bloggers.com/how-to-really-do-an-analysis-in-r-part-1-data-manipulation/)
