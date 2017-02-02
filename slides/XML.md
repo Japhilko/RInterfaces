@@ -1,23 +1,18 @@
----
-title: "Import XML Dateien"
-author: "Jan-Philipp Kolb"
-date: "2 Februar 2017"
-output: 
-  html_document: 
-    keep_md: yes
----
+# Import XML Dateien
+Jan-Philipp Kolb  
+2 Februar 2017  
 
-```{r setup, include=FALSE}
-knitr::opts_chunk$set(echo = TRUE,eval=F)
-```
 
-```{r}
+
+
+```r
 url <- "http://api.openstreetmap.org/api/0.6/
 relation/62422"
 ```
 
 
-```{r}
+
+```r
 library(xml2)
 library(XML)
 BE <- xmlParse(url)
@@ -29,7 +24,8 @@ BE <- xmlParse(url)
 
 - [Tobi Bosede - Working with XML Data in R](http://www.informit.com/articles/article.aspx?p=2215520)
 
-```{r}
+
+```r
 xmltop = xmlRoot(BE)
 class(xmltop)
 xmlSize(xmltop)
@@ -42,7 +38,8 @@ xmlSize(xmltop[[1]])
 [Xpath](https://de.wikipedia.org/wiki/XPath), the XML Path Language, is a query language for selecting nodes from an XML document. 
 
 
-```{r}
+
+```r
 xpathApply(BE,"//tag[@k = 'source:population']")
 ```
 
@@ -78,7 +75,8 @@ xpathApply(BE,"//tag[@k = 'source:population']")
 
 ## Referenzen
 
-```{r}
+
+```r
 citation("XML")
 ```
 
