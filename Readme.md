@@ -11,7 +11,7 @@ Jan-Philipp Kolb
 -	[Interaktive Graphiken mit D3 und plotly](https://github.com/Japhilko/RInterfaces/blob/master/slides/plotly.md)
 -	[Netzwerkgraphiken mit vis.js](https://github.com/Japhilko/RInterfaces/blob/master/slides/visNetwork.md)
 -	[Das Erstellen von Ablaufdiagrammen mit mermaid](https://github.com/Japhilko/RInterfaces/blob/master/slides/mermaid.md)
--	R und die Javascript Data-Driven Documents (D3)
+-	[R und die Javascript Data-Driven Documents (D3)](https://github.com/Japhilko/RInterfaces/blob/master/slides/D3.md)
 
 ## Verarbeitung/ Manipulation organischer Daten
 
@@ -23,8 +23,8 @@ Jan-Philipp Kolb
 
 ## Hochperfomanter Code
 
--	Das Paket data.table
--	C++ Integration - Überblick über das Paket rcpp
+-	[Das Paket data.table](slides/Erweiterung_datatable.Rmd)
+-	[C++ Integration - Überblick über das Paket rcpp](https://github.com/Japhilko/RInterfaces/blob/master/slides/rcpp.md)
 -	Überblick über Möglichkeiten des Parallel Computings - Paket parallel
 
 ## Integration von Datenbanken
@@ -32,16 +32,16 @@ Jan-Philipp Kolb
 -	Integration von PostgreSQL mit dem Paket 
 RPostgreSQL
 -	Nutzung von MySQL mit dem Paket RMySQL
--	Nutzung von MongoDB in R
+-	[Nutzung von MongoDB in R](https://github.com/Japhilko/RInterfaces/blob/master/slides/Rmongodb.md)
 
 ## R und Textverarbeitung - Reproducible Research
 
 -	PDF Dokumente und Präsentationen mit LaTeX und Sweave
--	HTML Dokumente mit Rmarkdown
+-	[HTML Dokumente und Präsentationen mit Rmarkdown](https://github.com/Japhilko/RInterfaces/blob/master/slides/presentHTML.md)
 -	Word Dokumente mit knitr
 
 ## Schnittstellen zwischen Excel und R
--	Das Paket XLConnect
+-	[Das Paket XLConnect](https://github.com/Japhilko/RInterfaces/blob/master/slides/Rexcel.md)
 
 ## Internetresourcen und Schnittstellen nutzen
 
