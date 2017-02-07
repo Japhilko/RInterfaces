@@ -1,5 +1,5 @@
 ---
-title: "mermaids"
+title: "mermaid"
 author: "Jan-Philipp Kolb"
 date: "7 Februar 2017"
 output: 
