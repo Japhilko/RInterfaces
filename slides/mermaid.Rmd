@@ -1,5 +1,5 @@
 ---
-title: "mermaid"
+title: "DiagrammeR - "
 author: "Jan-Philipp Kolb"
 date: "7 Februar 2017"
 output: 
@@ -11,19 +11,19 @@ output:
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
-## Was ist Mermaid
-
-- [](https://knsv.github.io/mermaid/)
-
-## 
+## Um was geht es?
 
 - [Getting started](http://rich-iannone.github.io/DiagrammeR/docs.html)
-
 
 ```{r}
 # install.packages('DiagrammeR')
 library('DiagrammeR')
 ```
+
+- [Javascript Bibliothek mermaid](https://knsv.github.io/mermaid/)
+
+- [viz.js](https://github.com/mdaines/viz.js)
+
 
 ## Creating a simple graph
 
@@ -40,7 +40,7 @@ DiagrammeR("
 ")
 ```
 
-## Creating a GANTT diagramm
+## [Creating a GANTT diagramm](https://knsv.github.io/mermaid/#mermaid)
 
 ```{r}
 DiagrammeR("
@@ -62,3 +62,6 @@ gantt
 ")
 ```
 
+## Links
+
+- [Github repo](https://github.com/knsv/mermaid)
