@@ -1,0 +1,16 @@
+---
+title: "Presentations"
+author: "Jan-Philipp Kolb"
+date: "7 Februar 2017"
+output: 
+  html_document: 
+    keep_md: yes
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## 
+
+- [CSS](https://en.wikipedia.org/wiki/Cascading_Style_Sheets)

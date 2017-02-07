@@ -3,7 +3,7 @@ title: "R and D3"
 author: "Jan-Philipp Kolb"
 date: "7 Februar 2017"
 output: 
-  html_document: 
+  ioslides_presentation: 
     keep_md: yes
 ---
 
@@ -69,3 +69,14 @@ plot(
 )
 ```
 
+```{css}
+body {
+  color: red;
+  background: #000000;
+}
+```
+
+
+## Links
+
+- [Google Charts](https://developers.google.com/chart/interactive/docs/gallery/geochart)
