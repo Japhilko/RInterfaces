@@ -39,16 +39,16 @@ knitr::opts_chunk$set(echo = TRUE)
 -	Integration von PostgreSQL mit dem Paket 
 RPostgreSQL
 -	Nutzung von MySQL mit dem Paket RMySQL
--	Nutzung von MongoDB in R
+-	[Nutzung von MongoDB in R](https://github.com/Japhilko/RInterfaces/blob/master/slides/Rmongodb.md)
 
 ## R und Textverarbeitung - Reproducible Research
 
 -	PDF Dokumente und Präsentationen mit LaTeX und Sweave
--	HTML Dokumente mit Rmarkdown
+-	[HTML Dokumente und Präsentationen mit Rmarkdown](https://github.com/Japhilko/RInterfaces/blob/master/slides/presentHTML.md)
 -	Word Dokumente mit knitr
 
 ## Schnittstellen zwischen Excel und R
--	Das Paket XLConnect
+-	[Das Paket XLConnect](https://github.com/Japhilko/RInterfaces/blob/master/slides/Rexcel.md)
 
 ## Internetresourcen und Schnittstellen nutzen
 

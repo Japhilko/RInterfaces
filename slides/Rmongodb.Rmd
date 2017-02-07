@@ -1,0 +1,32 @@
+---
+title: "R und MongoDB"
+author: "Jan-Philipp Kolb"
+date: "7 Februar 2017"
+output: 
+  ioslides_presentation: 
+    keep_md: yes
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+```
+
+## Mongodb
+
+- [Installation](https://docs.mongodb.com/manual/tutorial/install-mongodb-on-windows/)
+
+
+## Hello World
+
+- [Getting started with MongoDB in R](https://cran.r-project.org/web/packages/mongolite/vignettes/intro.html)
+
+```{r,eval=F}
+install.packages("mongolite")
+```
+
+
+```{r,eval=F}
+library(mongolite)
+m <- mongo(collection = "diamonds")
+```
+

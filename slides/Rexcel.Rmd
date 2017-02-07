@@ -1,0 +1,36 @@
+---
+title: "R und Excel"
+author: "Jan-Philipp Kolb"
+date: "7 Februar 2017"
+output: 
+  html_document: 
+    keep_md: yes
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## 
+
+- [The excel connection](https://www.r-bloggers.com/r-the-excel-connection/)
+
+```{r,eval=F}
+install.packages("XLConnect")
+```
+
+
+
+
+## 
+
+- [readxl](https://www.r-bloggers.com/get-data-out-of-excel-and-into-r-with-readxl/)
+
+```{r,eval=F}
+install.packages("readxl")
+```
+
+```{r}
+library(readxl)
+```
+
