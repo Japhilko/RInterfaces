@@ -11,7 +11,13 @@ output:
 knitr::opts_chunk$set(echo = TRUE,message=F,warning=F)
 ```
 
-## 
+## [D3 Graph Gallery](http://christopheviau.com/d3list/gallery.html)
+
+- [Combining the power of R and D3.js](https://www.ae.be/blog-en/combining-the-power-of-r-and-d3-js/)
+
+- [Five Interactive R Visualizations With D3, ggplot2, & RStudio](http://moderndata.plot.ly/interactive-r-visualizations-with-d3-ggplot2-rstudio/)
+
+## Interaktive Graphiken
 
 - [R Interactive Graphics with SVG](http://timelyportfolio.github.io/gridSVG_intro/)
 
@@ -76,7 +82,197 @@ body {
 }
 ```
 
+## 
+
+[SVGAnnotation](https://www.jstatsoft.org/article/view/v046i01)
+
+
+```{r,eval=F}
+install.packages("SVGAnnotation")
+```
+
+
+## [Click me](http://rclickme.com/)
+
+```{r,eval=F}
+install.packages("devtools")
+library(devtools)
+
+install_github("clickme", "nachocab")
+```
+
+```{r,eval=F}
+library(clickme)
+
+# simple
+clickme("points", 1:10)
+
+# fancy
+n <- 500
+clickme("points",
+    x = rbeta(n, 1, 10), y = rbeta(n, 1, 10),
+    names = sample(letters, n, r = T),
+    color_groups = sample(LETTERS[1:3], n, r = T),
+    title = "Zoom Search Hover Click")
+```
+
+## [d3Network ](http://christophergandrud.github.io/d3Network/)
+
+```{r,eval=F}
+install.packages("d3Network")
+```
+
+```{r}
+library(d3Network)
+Source <- c("A", "A", "A", "A", "B", "B", "C", "C", "D")
+Target <- c("B", "C", "D", "J", "E", "F", "G", "H", "I")
+NetworkData <- data.frame(Source, Target)
+d3SimpleNetwork(NetworkData, width = 400, height = 250)
+```
+
+```{js}
+<!DOCTYPE html>
+        <meta charset="utf-8">
+        <body> 
+ <style>
+.link {
+stroke: #666;
+opacity: 0.6;
+stroke-width: 1.5px;
+}
+.node circle {
+stroke: #fff;
+opacity: 0.6;
+stroke-width: 1.5px;
+}
+text {
+font: 7px serif;
+opacity: 0.6;
+pointer-events: none;
+}
+</style>
+
+<script src=http://d3js.org/d3.v3.min.js></script>
+
+<script> 
+ var links = [ { "source" : "A", "target" : "B" }, { "source" : "A", "target" : "C" }, { "source" : "A", "target" : "D" }, { "source" : "A", "target" : "J" }, { "source" : "B", "target" : "E" }, { "source" : "B", "target" : "F" }, { "source" : "C", "target" : "G" }, { "source" : "C", "target" : "H" }, { "source" : "D", "target" : "I" } ] ; 
+ var nodes = {}
+
+// Compute the distinct nodes from the links.
+links.forEach(function(link) {
+link.source = nodes[link.source] ||
+(nodes[link.source] = {name: link.source});
+link.target = nodes[link.target] ||
+(nodes[link.target] = {name: link.target});
+link.value = +link.value;
+});
+
+var width = 400
+height = 250;
+
+var force = d3.layout.force()
+.nodes(d3.values(nodes))
+.links(links)
+.size([width, height])
+.linkDistance(50)
+.charge(-200)
+.on("tick", tick)
+.start();
+
+var svg = d3.select("body").append("svg")
+.attr("width", width)
+.attr("height", height);
+
+var link = svg.selectAll(".link")
+.data(force.links())
+.enter().append("line")
+.attr("class", "link");
+
+var node = svg.selectAll(".node")
+.data(force.nodes())
+.enter().append("g")
+.attr("class", "node")
+.on("mouseover", mouseover)
+.on("mouseout", mouseout)
+.on("click", click)
+.on("dblclick", dblclick)
+.call(force.drag);
+
+node.append("circle")
+.attr("r", 8)
+.style("fill", "#3182bd");
+
+node.append("text")
+.attr("x", 12)
+.attr("dy", ".35em")
+.style("fill", "#3182bd")
+.text(function(d) { return d.name; });
+
+function tick() {
+link
+.attr("x1", function(d) { return d.source.x; })
+.attr("y1", function(d) { return d.source.y; })
+.attr("x2", function(d) { return d.target.x; })
+.attr("y2", function(d) { return d.target.y; });
+
+node.attr("transform", function(d) { return "translate(" + d.x + "," + d.y + ")"; });
+}
+
+function mouseover() {
+d3.select(this).select("circle").transition()
+.duration(750)
+.attr("r", 16);
+}
+
+function mouseout() {
+d3.select(this).select("circle").transition()
+.duration(750)
+.attr("r", 8);
+}
+// action to take on mouse click
+function click() {
+d3.select(this).select("text").transition()
+.duration(750)
+.attr("x", 22)
+.style("stroke-width", ".5px")
+.style("opacity", 1)
+.style("fill", "#E34A33")
+.style("font", "17.5px serif");
+d3.select(this).select("circle").transition()
+.duration(750)
+.style("fill", "#E34A33")
+.attr("r", 16)
+}
+
+// action to take on mouse double click
+function dblclick() {
+d3.select(this).select("circle").transition()
+.duration(750)
+.attr("r", 6)
+.style("fill", "#E34A33");
+d3.select(this).select("text").transition()
+.duration(750)
+.attr("x", 12)
+.style("stroke", "none")
+.style("fill", "#E34A33")
+.style("stroke", "none")
+.style("opacity", 0.6)
+.style("font", "7px serif");
+}
+
+</script>
+ </body>
+```
+
+## [Rook](https://cran.r-project.org/web/packages/Rook/index.html)
+
+```{r,eval=F}
+install.packages("Rook")
+```
+
 
 ## Links
 
 - [Google Charts](https://developers.google.com/chart/interactive/docs/gallery/geochart)
+
+- [Three little circles](https://bost.ocks.org/mike/circles/)

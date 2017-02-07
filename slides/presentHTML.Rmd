@@ -14,3 +14,5 @@ knitr::opts_chunk$set(echo = TRUE)
 ## 
 
 - [CSS](https://en.wikipedia.org/wiki/Cascading_Style_Sheets)
+
+- [knitr Language Engines](http://rmarkdown.rstudio.com/authoring_knitr_engines.html)

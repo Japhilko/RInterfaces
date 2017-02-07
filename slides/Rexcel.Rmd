@@ -34,3 +34,6 @@ install.packages("readxl")
 library(readxl)
 ```
 
+## Links
+
+- [BERT: a newcomer in the R Excel connection](https://www.r-bloggers.com/bert-a-newcomer-in-the-r-excel-connection/)

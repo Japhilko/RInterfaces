@@ -1,0 +1,17 @@
+---
+title: "data.table"
+author: "Jan-Philipp Kolb"
+date: "7 Februar 2017"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## 
+
+```{r,eval=F}
+install.packages("data.table")
+```
+

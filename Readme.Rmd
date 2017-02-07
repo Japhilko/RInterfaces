@@ -30,8 +30,8 @@ knitr::opts_chunk$set(echo = TRUE)
 
 ## Hochperfomanter Code
 
--	Das Paket data.table
--	C++ Integration - Überblick über das Paket rcpp
+-	[Das Paket data.table](slides/Erweiterung_datatable.Rmd)
+-	[C++ Integration - Überblick über das Paket rcpp](https://github.com/Japhilko/RInterfaces/blob/master/slides/rcpp.md)
 -	Überblick über Möglichkeiten des Parallel Computings - Paket parallel
 
 ## Integration von Datenbanken
