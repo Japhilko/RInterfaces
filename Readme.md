@@ -10,12 +10,13 @@ Jan-Philipp Kolb
 -	[Interaktive Tabellen DataTables](https://github.com/Japhilko/RInterfaces/blob/master/slides/DataTables.md)
 -	[Interaktive Graphiken mit D3 und plotly](https://github.com/Japhilko/RInterfaces/blob/master/slides/plotly.md)
 -	[Netzwerkgraphiken mit vis.js](https://github.com/Japhilko/RInterfaces/blob/master/slides/visNetwork.md)
--	Das Erstellen von Ablaufdiagrammen mit mermaid
+-	[Das Erstellen von Ablaufdiagrammen mit mermaid](https://github.com/Japhilko/RInterfaces/blob/master/slides/mermaid.md)
 -	R und die Javascript Data-Driven Documents (D3)
 
 ## Verarbeitung/ Manipulation organischer Daten
 
--	Import von XML-Dateien
+- [Webscraping](https://github.com/Japhilko/RInterfaces/blob/master/slides/Webscraping.md)
+-	[Import von XML-Dateien](https://github.com/Japhilko/RInterfaces/blob/master/slides/XML.md)
 -	Die Nutzung von xpath in R
 -	Import von JSON-Objekten
 -	Datenmanipulation mit dplyr
