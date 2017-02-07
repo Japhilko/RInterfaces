@@ -25,3 +25,47 @@ data(diamonds)
 tableplot(diamonds)
 ```
 
+## [gigvis](https://github.com/rstudio/ggvis)
+
+```{r}
+# install.packages("ggvis")
+library("ggvis")
+library(dplyr)
+```
+
+- [Übersicht zu ggvis](http://ggvis.rstudio.com/)
+
+## [Kochbuch für ggvis](http://ggvis.rstudio.com/cookbook.html)
+
+```{r}
+mtcars %>% ggvis(~wt, ~mpg) %>% layer_points()
+```
+
+## Plots mit Gruppierung
+
+```{r}
+mtcars %>% 
+  ggvis(~wt, ~mpg, fill = ~factor(cyl)) %>% 
+  layer_points() %>% 
+  group_by(cyl) %>% 
+  layer_model_predictions(model = "lm")
+```
+
+## [googleVis](https://cran.r-project.org/web/packages/googleVis/index.html)
+
+```{r}
+# install.packages("googleVis")
+library(googleVis)
+```
+
+```{r}
+df <- data.frame(year=1:11, x=1:11,
+                 x.scope=c(rep(TRUE, 8), rep(FALSE, 3)),
+                 y=11:1, y.html.tooltip=LETTERS[11:1],                 
+                 y.certainty=c(rep(TRUE, 5), rep(FALSE, 6)),
+                 y.emphasis=c(rep(FALSE, 4), rep(TRUE, 7)))
+plot(
+  gvisScatterChart(df,options=list(lineWidth=2))
+)
+```
+
