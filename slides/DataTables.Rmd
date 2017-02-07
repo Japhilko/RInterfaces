@@ -3,12 +3,12 @@ title: "DataTables"
 author: "Jan-Philipp Kolb"
 date: "27 Januar 2017"
 output: 
-  html_document: 
+  slidy_presentation: 
     keep_md: yes
 ---
 
 ```{r setup, include=FALSE}
-knitr::opts_chunk$set(echo = TRUE,eval=F)
+knitr::opts_chunk$set(echo = TRUE,eval=T)
 ```
 
 ## The R-package DT
@@ -21,7 +21,7 @@ library('DT')
 ```
 
 ```{r}
-load("data/exdat.RData")
+exdat <- read.csv("data/exdat.csv")
 ```
 
 ```{r}
