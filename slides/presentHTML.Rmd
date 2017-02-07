@@ -3,7 +3,8 @@ title: "Presentations"
 author: "Jan-Philipp Kolb"
 date: "7 Februar 2017"
 output: 
-  html_document: 
+  slidy_presentation: 
+    css: mycss.css
     keep_md: yes
 ---
 
@@ -11,8 +12,28 @@ output:
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
-## 
+
+## Cascading Style Files
+
+- [Custom CSS](http://rmarkdown.rstudio.com/html_document_format.html#custom_css)
 
 - [CSS](https://en.wikipedia.org/wiki/Cascading_Style_Sheets)
 
+- [CSS pro tipps](https://github.com/AllThingsSmitty/css-protips#use-a-css-reset)
+
+## knitr Engines
+
 - [knitr Language Engines](http://rmarkdown.rstudio.com/authoring_knitr_engines.html)
+
+- [slidify](http://slidify.org/)
+
+## Tables
+
+```{r}
+library(knitr)
+a <- data.frame(a=1:10,b=10:1)
+kable(table(a))
+```
+
+- [R Studio, and Presentations, and Git! Oh my!](https://www.r-bloggers.com/r-studio-and-presentations-and-git-oh-my/)
+
