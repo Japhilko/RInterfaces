@@ -1,0 +1,27 @@
+---
+title: "R and D3"
+author: "Jan-Philipp Kolb"
+date: "7 Februar 2017"
+output: 
+  html_document: 
+    keep_md: yes
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE,message=F,warning=F)
+```
+
+## 
+
+- [R Interactive Graphics with SVG](http://timelyportfolio.github.io/gridSVG_intro/)
+
+## [tabplotd3](https://cran.r-project.org/web/packages/tabplotd3/index.html)
+
+```{r}
+# install.packages("tabplotd3")
+library(tabplotd3)
+require(ggplot2)
+data(diamonds)
+tableplot(diamonds)
+```
+
