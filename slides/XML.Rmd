@@ -46,6 +46,21 @@ xmlSize(xmltop[[1]])
 xpathApply(BE,"//tag[@k = 'source:population']")
 ```
 
+## Node parsen
+
+```{r parseNode}
+url2 <- "http://api.openstreetmap.org/api/0.6/node/2923760808"
+RennesBa <- xmlParse(url2)
+```
+
+
+## Way parsen
+
+```{r MadCalle}
+url3 <- "http://api.openstreetmap.org/api/0.6/way/72799743"
+MadCalle <- xmlParse(url3)
+```
+
 
 ## Mehr Beispiele, wie man mit XML Daten umgeht:
 
