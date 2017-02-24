@@ -11,7 +11,7 @@ output:
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
-## 
+## [Few steps to connect R with Excel](http://www.milanor.net/blog/steps-connect-r-excel-xlconnect/)
 
 - [The excel connection](https://www.r-bloggers.com/r-the-excel-connection/)
 
@@ -19,6 +19,9 @@ knitr::opts_chunk$set(echo = TRUE)
 install.packages("XLConnect")
 ```
 
+```{r}
+library("XLConnect")
+```
 
 
 
