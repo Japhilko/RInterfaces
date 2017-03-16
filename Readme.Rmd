@@ -36,8 +36,8 @@ knitr::opts_chunk$set(echo = TRUE)
 
 ## Integration von Datenbanken
 
--	Integration von PostgreSQL mit dem Paket 
-RPostgreSQL
+-	[Integration von PostgreSQL mit dem Paket 
+RPostgreSQL](https://github.com/Japhilko/RInterfaces/blob/master/slides/RPostgreSQL.Rmd)
 -	Nutzung von MySQL mit dem Paket RMySQL
 -	[Nutzung von MongoDB in R](https://github.com/Japhilko/RInterfaces/blob/master/slides/Rmongodb.md)
 

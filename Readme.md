@@ -23,14 +23,14 @@ Jan-Philipp Kolb
 
 ## Hochperfomanter Code
 
--	[Das Paket data.table](slides/Erweiterung_datatable.Rmd)
+-	[Das Paket data.table](slides/Erweiterung_datatable.md)
 -	[C++ Integration - Überblick über das Paket rcpp](https://github.com/Japhilko/RInterfaces/blob/master/slides/rcpp.md)
 -	Überblick über Möglichkeiten des Parallel Computings - Paket parallel
 
 ## Integration von Datenbanken
 
--	Integration von PostgreSQL mit dem Paket 
-RPostgreSQL
+-	[Integration von PostgreSQL mit dem Paket 
+RPostgreSQL](https://github.com/Japhilko/RInterfaces/blob/master/slides/RPostgreSQL.Rmd)
 -	Nutzung von MySQL mit dem Paket RMySQL
 -	[Nutzung von MongoDB in R](https://github.com/Japhilko/RInterfaces/blob/master/slides/Rmongodb.md)
 
