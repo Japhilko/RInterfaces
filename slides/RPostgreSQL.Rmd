@@ -8,7 +8,7 @@ output:
 ---
 
 ```{r setup, include=FALSE}
-knitr::opts_chunk$set(echo = TRUE)
+knitr::opts_chunk$set(echo = TRUE,eval=F)
 ```
 
 ## PostgreSQL
@@ -20,5 +20,18 @@ knitr::opts_chunk$set(echo = TRUE)
 ```{r}
 # install.packages("RPostgreSQL")
 library("RPostgreSQL")
+```
+
+## [PostgreSQL and Leaflet](https://www.r-bloggers.com/using-postgresql-and-shiny-with-a-dynamic-leaflet-map-monitoring-trash-cans/)
+
+```{r}
+install.packages("plot3D")
+```
+
+
+
+```{r}
+library(plot3D)
+library(RPostgreSQL)
 ```
 
