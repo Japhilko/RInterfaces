@@ -29,14 +29,9 @@ library("RPostgreSQL")
 ```
 
 
-
-## Das Arbeiten mit Geodaten in PGsql
-
-```
-CREATE EXTENSION postgis;
-```
-
 ## Geodaten in die Datenbank migrieren
+
+- [Nutzung von osm2pgsql](http://www.volkerschatz.com/net/osm/osm2pgsql-usage.html)
 
 
 ```bash
@@ -44,39 +39,34 @@ sudo -u postgres createuser Japhilko
 sudo -u postgres createdb -E UTF8 -O Japhilko offlgeoc
 ```
 
-
-```bash
-sudo -u postgres psql -d offlgeoc -f /usr/share/postgresql/9.5/contrib/postgis-2.2/postgis.sql
-```
-
-Alternativ kann der SQL Befehl auch in PostgreSQL aufgerufen werden:
+Die postgis Erweiterung muss für die Datenbank installiert werden:
 
 ```shell
 CREATE EXTENSION postgis;
 ```
 
 
+```
+osm2pgsql -s -U postgres -d offlgeoc /home/kolb/Forschung/osmData/data/saarland-latest.osm.pbf 
+```
+
+## Datenbank für Geocoding
+
+
 ```bash
-sudo -u postgres psql -d gis -c "ALTER TABLE spatial_ref_sys OWNER TO <username>;" 
+sudo -u postgres createdb -E UTF8 -O Japhilko offlgeocRLP
+```
+
+```shell
+CREATE EXTENSION postgis;
+```
+
+```
+osm2pgsql -s -U postgres -d offlgeocRLP -o gazetteer /home/kolb/Forschung/osmData/data/rheinland-pfalz-latest.osm.pbf 
 ```
 
 
 
-```
-osm2pgsql -c -d BWgis -U kolbjp -H localhost -S D:\Daten\Daten\GeoDaten\default.style D:\Daten\Daten\GeoDaten\baden-wuerttemberg-latest.osm.pbf
-```
-
-```
-osm2pgsql -c -d osmgeoc -U postgres -H localhost /home/kolb/Forschung/osmData/data/saarland-latest.osm.pbf
-```
-
-- Wenn man folgende Fehlermeldung bekommt:
-
-```
-Osm2pgsql failed due to ERROR: Error: Connection to database failed: fe_sendauth: no password supplied
-```
-
-- [Nutzung von osm2pgsql](http://www.volkerschatz.com/net/osm/osm2pgsql-usage.html)
 ## [PostgreSQL and Leaflet](https://www.r-bloggers.com/using-postgresql-and-shiny-with-a-dynamic-leaflet-map-monitoring-trash-cans/)
 
 
@@ -92,5 +82,18 @@ library(plot3D)
 library(RPostgreSQL)
 ```
 
+## Links
 
+- [osm2pgsql
+](https://github.com/petewarden/osm2pgsql/tree/master/gazetteer)
+
+- Andrew Whitby - [Roll-your-own geocoding with OpenStreetMap Nominatim on Amazon EC2](https://andrewwhitby.com/2014/12/18/nominatim-on-ec2/)
+
+- [OpenStreetMap Nominatim Server for Geocoding](http://koo.fi/blog/2015/03/19/openstreetmap-nominatim-server-for-geocoding/#Database_users)
+
+- [Getting Started With PostGIS](http://www.bostongis.com/PrinterFriendly.aspx?content_name=postgis_tut01)
+
+- [PostGIS geocode](http://postgis.net/docs/Geocode.html)
+
+- [Nominatim installation](http://wiki.openstreetmap.org/wiki/Nominatim/Installation)
 

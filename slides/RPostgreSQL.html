@@ -151,30 +151,39 @@ $(document).ready(function () {
 <pre class="r"><code># install.packages(&quot;RPostgreSQL&quot;)
 library(&quot;RPostgreSQL&quot;)</code></pre>
 </div>
-<div id="das-arbeiten-mit-geodaten-in-pgsql" class="section level2">
-<h2>Das Arbeiten mit Geodaten in PGsql</h2>
-<pre><code>CREATE EXTENSION postgis;</code></pre>
-</div>
 <div id="geodaten-in-die-datenbank-migrieren" class="section level2">
 <h2>Geodaten in die Datenbank migrieren</h2>
+<ul>
+<li><a href="http://www.volkerschatz.com/net/osm/osm2pgsql-usage.html">Nutzung von osm2pgsql</a></li>
+</ul>
 <pre class="bash"><code>sudo -u postgres createuser Japhilko
 sudo -u postgres createdb -E UTF8 -O Japhilko offlgeoc</code></pre>
-<pre class="bash"><code>sudo -u postgres psql -d offlgeoc -f /usr/share/postgresql/9.5/contrib/postgis-2.2/postgis.sql</code></pre>
-<p>Alternativ kann der SQL Befehl auch in PostgreSQL aufgerufen werden:</p>
+<p>Die postgis Erweiterung muss für die Datenbank installiert werden:</p>
 <pre class="shell"><code>CREATE EXTENSION postgis;</code></pre>
-<pre class="bash"><code>sudo -u postgres psql -d gis -c &quot;ALTER TABLE spatial_ref_sys OWNER TO &lt;username&gt;;&quot; </code></pre>
-<pre><code>osm2pgsql -c -d BWgis -U kolbjp -H localhost -S D:\Daten\Daten\GeoDaten\default.style D:\Daten\Daten\GeoDaten\baden-wuerttemberg-latest.osm.pbf</code></pre>
-<pre><code>osm2pgsql -c -d osmgeoc -U postgres -H localhost /home/kolb/Forschung/osmData/data/saarland-latest.osm.pbf</code></pre>
-<ul>
-<li>Wenn man folgende Fehlermeldung bekommt:</li>
-</ul>
-<pre><code>Osm2pgsql failed due to ERROR: Error: Connection to database failed: fe_sendauth: no password supplied</code></pre>
-<ul>
-<li><a href="http://www.volkerschatz.com/net/osm/osm2pgsql-usage.html">Nutzung von osm2pgsql</a> ## <a href="https://www.r-bloggers.com/using-postgresql-and-shiny-with-a-dynamic-leaflet-map-monitoring-trash-cans/">PostgreSQL and Leaflet</a></li>
-</ul>
+<pre><code>osm2pgsql -s -U postgres -d offlgeoc /home/kolb/Forschung/osmData/data/saarland-latest.osm.pbf </code></pre>
+</div>
+<div id="datenbank-fur-geocoding" class="section level2">
+<h2>Datenbank für Geocoding</h2>
+<pre class="bash"><code>sudo -u postgres createdb -E UTF8 -O Japhilko offlgeocRLP</code></pre>
+<pre class="shell"><code>CREATE EXTENSION postgis;</code></pre>
+<pre><code>osm2pgsql -s -U postgres -d offlgeocRLP -o gazetteer /home/kolb/Forschung/osmData/data/rheinland-pfalz-latest.osm.pbf </code></pre>
+</div>
+<div id="postgresql-and-leaflet" class="section level2">
+<h2><a href="https://www.r-bloggers.com/using-postgresql-and-shiny-with-a-dynamic-leaflet-map-monitoring-trash-cans/">PostgreSQL and Leaflet</a></h2>
 <pre class="r"><code>install.packages(&quot;plot3D&quot;)</code></pre>
 <pre class="r"><code>library(plot3D)
 library(RPostgreSQL)</code></pre>
+</div>
+<div id="links" class="section level2">
+<h2>Links</h2>
+<ul>
+<li><p><a href="https://github.com/petewarden/osm2pgsql/tree/master/gazetteer">osm2pgsql</a></p></li>
+<li><p>Andrew Whitby - <a href="https://andrewwhitby.com/2014/12/18/nominatim-on-ec2/">Roll-your-own geocoding with OpenStreetMap Nominatim on Amazon EC2</a></p></li>
+<li><p><a href="http://koo.fi/blog/2015/03/19/openstreetmap-nominatim-server-for-geocoding/#Database_users">OpenStreetMap Nominatim Server for Geocoding</a></p></li>
+<li><p><a href="http://www.bostongis.com/PrinterFriendly.aspx?content_name=postgis_tut01">Getting Started With PostGIS</a></p></li>
+<li><p><a href="http://postgis.net/docs/Geocode.html">PostGIS geocode</a></p></li>
+<li><p><a href="http://wiki.openstreetmap.org/wiki/Nominatim/Installation">Nominatim installation</a></p></li>
+</ul>
 </div>
 
 
