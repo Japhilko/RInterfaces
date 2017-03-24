@@ -1,0 +1,4 @@
+﻿SELECT * FROM planet_osm_line, planet_osm_point 
+WHERE planet_osm_line.name='Benzolstraße' AND planet_osm_line.highway IN ('motorway','trunk','primary')
+AND planet_osm_point.name='Ludwigshafen' AND planet_osm_point.place IN ('city', 'town')
+ORDER BY ST_Distance(planet_osm_line.way, osm_points.way) 
