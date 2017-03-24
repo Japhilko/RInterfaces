@@ -34,7 +34,7 @@ knitr::opts_chunk$set(echo = TRUE,eval=F)
 library("RPostgreSQL")
 ```
 
-<<<<<<< HEAD
+
 
 ## Das Arbeiten mit Geodaten in PGsql
 
@@ -49,7 +49,8 @@ osm2pgsql -c -d BWgis -U kolbjp -H localhost -S D:\Daten\Daten\GeoDaten\default.
 ```
 
 
-=======
+
+
 ## [PostgreSQL and Leaflet](https://www.r-bloggers.com/using-postgresql-and-shiny-with-a-dynamic-leaflet-map-monitoring-trash-cans/)
 
 ```{r}
@@ -62,5 +63,6 @@ install.packages("plot3D")
 library(plot3D)
 library(RPostgreSQL)
 ```
->>>>>>> origin/master
+
+
 
