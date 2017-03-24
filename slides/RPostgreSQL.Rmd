@@ -17,8 +17,35 @@ knitr::opts_chunk$set(echo = TRUE)
 
 - [PostgreSQL](http://wiki.openstreetmap.org/wiki/PostgreSQL)
 
+
+## PostgreSQL installieren
+
+- [Installation Windows](https://www.postgresql.org/download/windows/)
+- [Installation Linux](http://postgres.de/install.html)
+
+## PG admin installieren
+
+- [PGadmin](https://www.pgadmin.org/)
+
+## Wie bekomme ich Daten in die Datenbank
+
 ```{r}
 # install.packages("RPostgreSQL")
 library("RPostgreSQL")
 ```
+
+
+## Das Arbeiten mit Geodaten in PGsql
+
+```
+CREATE EXTENSION postgis;
+```
+
+## Geodaten in die Datenbank migrieren
+
+```
+osm2pgsql -c -d BWgis -U kolbjp -H localhost -S D:\Daten\Daten\GeoDaten\default.style D:\Daten\Daten\GeoDaten\baden-wuerttemberg-latest.osm.pbf
+```
+
+
 
