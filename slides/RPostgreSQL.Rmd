@@ -86,8 +86,16 @@ library(RPostgreSQL)
 
 ## Links
 
+- [osm2pgsql
+](https://github.com/petewarden/osm2pgsql/tree/master/gazetteer)
+
 - Andrew Whitby - [Roll-your-own geocoding with OpenStreetMap Nominatim on Amazon EC2](https://andrewwhitby.com/2014/12/18/nominatim-on-ec2/)
 
 - [OpenStreetMap Nominatim Server for Geocoding](http://koo.fi/blog/2015/03/19/openstreetmap-nominatim-server-for-geocoding/#Database_users)
 
+- [Getting Started With PostGIS](http://www.bostongis.com/PrinterFriendly.aspx?content_name=postgis_tut01)
+
+- [PostGIS geocode](http://postgis.net/docs/Geocode.html)
+
+- [Nominatim installation](http://wiki.openstreetmap.org/wiki/Nominatim/Installation)
 
