@@ -35,19 +35,39 @@ library("RPostgreSQL")
 ```
 
 
+## Geodaten in die Datenbank migrieren
 
-## Das Arbeiten mit Geodaten in PGsql
+- [Nutzung von osm2pgsql](http://www.volkerschatz.com/net/osm/osm2pgsql-usage.html)
 
+```{bash, eval=F}
+sudo -u postgres createuser Japhilko
+sudo -u postgres createdb -E UTF8 -O Japhilko offlgeoc
 ```
+
+Die postgis Erweiterung muss für die Datenbank installiert werden:
+
+```shell
 CREATE EXTENSION postgis;
 ```
 
-## Geodaten in die Datenbank migrieren
 
 ```
-osm2pgsql -c -d BWgis -U kolbjp -H localhost -S D:\Daten\Daten\GeoDaten\default.style D:\Daten\Daten\GeoDaten\baden-wuerttemberg-latest.osm.pbf
+osm2pgsql -s -U postgres -d offlgeoc /home/kolb/Forschung/osmData/data/saarland-latest.osm.pbf 
 ```
 
+## Datenbank für Geocoding
+
+```{bash}
+sudo -u postgres createdb -E UTF8 -O Japhilko offlgeocRLP
+```
+
+```shell
+CREATE EXTENSION postgis;
+```
+
+```
+osm2pgsql -s -U postgres -d offlgeocRLP -o gazetteer /home/kolb/Forschung/osmData/data/rheinland-pfalz-latest.osm.pbf 
+```
 
 
 
@@ -64,5 +84,10 @@ library(plot3D)
 library(RPostgreSQL)
 ```
 
+## Links
+
+- Andrew Whitby - [Roll-your-own geocoding with OpenStreetMap Nominatim on Amazon EC2](https://andrewwhitby.com/2014/12/18/nominatim-on-ec2/)
+
+- [OpenStreetMap Nominatim Server for Geocoding](http://koo.fi/blog/2015/03/19/openstreetmap-nominatim-server-for-geocoding/#Database_users)
 
 
