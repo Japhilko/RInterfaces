@@ -1,0 +1,17 @@
+---
+title: "R-Paket dplyr"
+author: "Jan-Philipp Kolb"
+date: "2 März 2017"
+output: 
+  html_document: 
+    keep_md: yes
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## [Eine Karte erstellen / Datenediting mit dplyr](http://urbanspatialanalysis.com/dataviz-tutorial-mapping-san-francisco-home-prices-using-r/)
+
+- [Example gentrification](https://www.r-bloggers.com/forecasting-gentrification-in-city-neighborhoods-with-r/)
+

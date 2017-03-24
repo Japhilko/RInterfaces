@@ -11,7 +11,9 @@ output:
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
-## 
+## Das R-Paket CPP 
+
+- [Make your R simulation models 20 times faster](https://www.r-bloggers.com/make-your-r-simulation-models-20-times-faster/)
 
 - [High performance functions with Rcpp](http://adv-r.had.co.nz/Rcpp.html)
 
