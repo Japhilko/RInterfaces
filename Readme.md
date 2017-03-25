@@ -47,3 +47,4 @@ RPostgreSQL](https://github.com/Japhilko/RInterfaces/blob/master/slides/RPostgre
 
 -	Einfache http-Nutzung mit httr
 -	Das Paket RCurl
+- [Das Paket rvest](slides/rvest.Rmd)
