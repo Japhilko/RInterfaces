@@ -11,6 +11,18 @@ output:
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
+
+## Verarbeitung/ Manipulation organischer Daten
+
+- [Webscraping](https://github.com/Japhilko/RInterfaces/blob/master/slides/Webscraping.md)
+-	[Import von XML-Dateien](https://github.com/Japhilko/RInterfaces/blob/master/slides/XML.md)
+-	Die Nutzung von xpath in R
+-	Import von JSON-Objekten
+-	Datenmanipulation mit dplyr
+
+
+
+
 ## Interaktive Darstellung mit Javascript und R
 
 -	[Interaktive Karten mit dem Javascript Paket leaflet](https://github.com/Japhilko/RInterfaces/blob/master/slides/leaflet.md)
@@ -20,13 +32,6 @@ knitr::opts_chunk$set(echo = TRUE)
 -	[Das Erstellen von Ablaufdiagrammen mit mermaid](https://github.com/Japhilko/RInterfaces/blob/master/slides/mermaid.md)
 -	[R und die Javascript Data-Driven Documents (D3)](https://github.com/Japhilko/RInterfaces/blob/master/slides/D3.md)
 
-## Verarbeitung/ Manipulation organischer Daten
-
-- [Webscraping](https://github.com/Japhilko/RInterfaces/blob/master/slides/Webscraping.md)
--	[Import von XML-Dateien](https://github.com/Japhilko/RInterfaces/blob/master/slides/XML.md)
--	Die Nutzung von xpath in R
--	Import von JSON-Objekten
--	Datenmanipulation mit dplyr
 
 ## Hochperfomanter Code
 

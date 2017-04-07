@@ -8,8 +8,11 @@ output:
 ---
 
 ```{r setup, include=FALSE}
-knitr::opts_chunk$set(echo = TRUE)
+knitr::opts_chunk$set(echo = TRUE,message = F,warning=F)
 ```
+
+
+
 
 
 ## Notwendige Pakete
@@ -45,3 +48,5 @@ glimpse(df.world_ports)
 ## Links
 
 - [How to really do an analysis in R (part 1, data manipulation)](https://www.r-bloggers.com/how-to-really-do-an-analysis-in-r-part-1-data-manipulation/)
+
+- [Read CSV From The Web](http://www.programmingr.com/examples/read-csv-web/)
