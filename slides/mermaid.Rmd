@@ -15,14 +15,12 @@ knitr::opts_chunk$set(echo = TRUE)
 
 - [Getting started](http://rich-iannone.github.io/DiagrammeR/docs.html)
 
+- [Das R-Paket DiagrammeR](http://rich-iannone.github.io/DiagrammeR/index.html)
+
 ```{r}
 # install.packages('DiagrammeR')
 library('DiagrammeR')
 ```
-
-- [Javascript Bibliothek mermaid](https://knsv.github.io/mermaid/)
-
-- [viz.js](https://github.com/mdaines/viz.js)
 
 
 ## Creating a simple graph
@@ -65,3 +63,7 @@ gantt
 ## Links
 
 - [Github repo](https://github.com/knsv/mermaid)
+
+- [Javascript Bibliothek mermaid](https://knsv.github.io/mermaid/)
+
+- [viz.js](https://github.com/mdaines/viz.js)
