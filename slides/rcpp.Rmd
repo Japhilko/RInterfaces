@@ -11,6 +11,28 @@ output:
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
+## Schnelligkeit 
+
+```{r,eval=F}
+install.packages("inline")
+```
+
+
+```{r}
+library(inline)
+src<- 'int n = as<int>(ns);
+double x = as<double>(xs);
+for (int i=0; i<n; i++) x=1/(1+x);
+return wrap(x);'
+```
+
+```{r}
+l<- cxxfunction(signature(ns="integer",
+xs="numeric"),body=src, plugin="Rcpp")
+```
+
+
+
 ## Das R-Paket CPP 
 
 - [Make your R simulation models 20 times faster](https://www.r-bloggers.com/make-your-r-simulation-models-20-times-faster/)

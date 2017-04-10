@@ -1,0 +1,30 @@
+---
+title: "Intro"
+author: "Jan-Philipp Kolb"
+date: "10 April 2017"
+output: beamer_presentation
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+```
+
+## Warum R
+
+## Nachteile von R
+
+- Daten werden oft anderswo erfasst
+- R ist manchmal zu langsam
+
+## Die Nutzung von Schnittstellen beim Import
+
+## [Schnittstellen zu Javascript](https://github.com/FrissAnalytics/shinyJsTutorials)
+
+- [shiny Javascript Tutorial](https://www.r-bloggers.com/shiny-javascript-tutorials/)
+
+```{r}
+
+```
+
+## [Warum die Schnittstelle zu C?](http://dirk.eddelbuettel.com/papers/rcpp_workshop_introduction_user2012.pdf)
+
