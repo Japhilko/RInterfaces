@@ -15,6 +15,10 @@ output:
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
+## Notebooks
+
+- [Warum R Notebook nutzen](https://news.ycombinator.com/item?id=12683625)
+
 ## Ein Notebook anlegen
 
 ![](figure/startNotebook)
@@ -51,6 +55,10 @@ print(sys.version)
 
 - [knitr Language Engines](http://rmarkdown.rstudio.com/authoring_knitr_engines.html)
 
+- [More engines](https://yihui.name/knitr/demo/engines/)
+
 - [Andere Programmiersprachen einbinden](http://rmarkdown.rstudio.com/authoring_knitr_engines.html)
 
 - [Video - Einführung in Rnotebook](https://www.rstudio.com/resources/webinars/introducing-notebooks-with-r-markdown/)
+
+- [R Notebooks](http://rmarkdown.rstudio.com/r_notebooks.html)

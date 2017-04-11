@@ -8,14 +8,14 @@ output:
 ---
 
 ```{r setup, include=FALSE}
-knitr::opts_chunk$set(echo = TRUE)
+knitr::opts_chunk$set(echo = TRUE,message=F,warnings=F)
 ```
 
 ## Eine wichtige Datenquelle
 
 - [Eurostat](http://appsso.eurostat.ec.europa.eu/nui/setupDownloads.do)
 
-```{r}
+```{r,eval=F}
 library(xlsx)
 dat <- read.xlsx("cult_emp_sex.xls",1)
 ```
@@ -32,6 +32,23 @@ install.packages("XLConnect")
 library("XLConnect")
 ```
 
+## [Eine Excel Datei aus R erzeugen](http://www.milanor.net/blog/steps-connect-r-excel-xlconnect/)
+
+```{r,eval=F}
+fileXls <- "data/newFile.xlsx"
+unlink(fileXls, recursive = FALSE, force = FALSE)
+exc <- loadWorkbook(fileXls, create = TRUE)
+createSheet(exc,'Input')
+saveWorkbook(exc)
+```
+
+## Das Arbeitsblatt mit Daten befüllen
+
+```{r,eval=F}
+input <- data.frame('inputType'=c('Day','Month'),'inputValue'=c(2,5))
+writeWorksheet(exc, input, sheet = "input", startRow = 1, startCol = 2)
+saveWorkbook(exc)
+```
 
 
 ## 

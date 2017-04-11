@@ -16,17 +16,29 @@ knitr::opts_chunk$set(echo = FALSE)
 
 ## Nachteile von R
 
-- Daten werden oft anderswo erfasst
-- R ist manchmal zu langsam
-- Nicht auf jedem Rechner ist R installiert
+1. Daten werden oft anderswo erfasst
+2. Nicht jeder ist bereit mit R zu arbeiten 
+3. R ist manchmal zu langsam
+4. Nicht auf jedem Rechner ist R installiert
+
+
+## Was folgt daraus
+
+1. Schnittstelle zu SPSS/Stata/Excel zum Import von Daten
+2. Schnittstelle zu Word
+
 
 ## Die Nutzung von Schnittstellen beim Import
 
+- Interaktion mit SPSS, Stata
 
 ![Import](figure/Import.PNG)
 
 
 ## Darstellung von Ergebnissen
+
+
+## Was ist unter reproduzierbaren Forschungsergebnissen zu verstehen?
 
 
 ## [Schnittstellen zu Javascript](https://github.com/FrissAnalytics/shinyJsTutorials)
