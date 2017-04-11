@@ -1,0 +1,50 @@
+---
+title: "Präsentationen mit R und Rstudio"
+author: "Jan-Philipp Kolb"
+date: "11 April 2017"
+output: 
+  beamer_presentation: 
+    colortheme: beaver
+    fonttheme: structurebold
+    highlight: tango
+    theme: CambridgeUS
+    fig_caption: false
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+library(knitr)
+
+```
+
+## [Presentations with Rpres](https://rstudio-pubs-static.s3.amazonaws.com/27777_55697c3a476640caa0ad2099fe914ae5.html#/)
+
+![](figure/Rpresentations.PNG)
+
+## ioslides presentations
+
+![](figure/ioslidespres.PNG)
+
+- [Presentations with ioslides](http://rmarkdown.rstudio.com/ioslides_presentation_format.html)
+
+
+## slidy presentations
+
+![](figure/sluidypresentations.PNG)
+
+
+## beamer presentations
+
+![](figure/beamerexample.PNG)
+
+## Beamer Options
+
+![](figure/beamerOptions.PNG)
+
+## Beamer Themes
+
+![](http://1.bp.blogspot.com/-ZTtDq0hOkqY/Ti0Z3WwoIJI/AAAAAAAAAPc/HM3t4j4t7h0/s1600/Screenshot%2B-%2B07252011%2B-%2B03%253A22%253A15%2BAM.png)
+
+## Links
+
+- [Keine Beschriftung der Graphiken](http://stackoverflow.com/questions/38514954/removing-figure-text-in-rmarkdown)

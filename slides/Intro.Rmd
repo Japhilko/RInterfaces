@@ -11,12 +11,23 @@ knitr::opts_chunk$set(echo = FALSE)
 
 ## Warum R
 
+![Modularer Aufbau](figure/ModularerAufbau.PNG)
+
+
 ## Nachteile von R
 
 - Daten werden oft anderswo erfasst
 - R ist manchmal zu langsam
+- Nicht auf jedem Rechner ist R installiert
 
 ## Die Nutzung von Schnittstellen beim Import
+
+
+![Import](figure/Import.PNG)
+
+
+## Darstellung von Ergebnissen
+
 
 ## [Schnittstellen zu Javascript](https://github.com/FrissAnalytics/shinyJsTutorials)
 
@@ -27,4 +38,5 @@ knitr::opts_chunk$set(echo = FALSE)
 ```
 
 ## [Warum die Schnittstelle zu C?](http://dirk.eddelbuettel.com/papers/rcpp_workshop_introduction_user2012.pdf)
+
 

@@ -1,0 +1,42 @@
+---
+title: "R Notebook"
+output: html_notebook
+---
+
+## R code inline
+
+```{r}
+plot(cars)
+```
+
+- [Other language engines](http://rmarkdown.rstudio.com/authoring_knitr_engines.html)
+
+## Adding some Python code
+
+```{python}
+print("Hello World")
+```
+
+
+```{python}
+import sys
+print(sys.version)
+```
+
+
+- [Feather](https://blog.rstudio.org/2016/03/29/feather/) - exchange between python and R
+
+
+## Adding some LaTeX Code
+
+$$
+\alpha = \dfrac{\beta}{\lambda}
+$$
+
+## [Bash code](Run bash scripts)
+
+- Works only under Linux
+
+```{bash,eval=F}
+echo hello world
+```

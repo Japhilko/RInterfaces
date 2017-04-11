@@ -11,33 +11,20 @@ output:
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
-## Schnelligkeit 
 
-```{r,eval=F}
-install.packages("inline")
-```
+## Einleitung
 
+- R ist in C geschrieben
+- Die Nutzung der Schnittstelle zu C liegt nahe
 
-```{r}
-library(inline)
-src<- 'int n = as<int>(ns);
-double x = as<double>(xs);
-for (int i=0; i<n; i++) x=1/(1+x);
-return wrap(x);'
-```
-
-```{r}
-l<- cxxfunction(signature(ns="integer",
-xs="numeric"),body=src, plugin="Rcpp")
-```
-
-
+![](https://cdn.worldvectorlogo.com/logos/c.svg)
+![](http://www.rcpp.org/book/seamless.png)
 
 ## Das R-Paket CPP 
 
-- [Make your R simulation models 20 times faster](https://www.r-bloggers.com/make-your-r-simulation-models-20-times-faster/)
+- [R Simulationsmodelle bis zu 20 mal schneller](https://www.r-bloggers.com/make-your-r-simulation-models-20-times-faster/)
 
-- [High performance functions with Rcpp](http://adv-r.had.co.nz/Rcpp.html)
+- [Hohe Performanz mit Rcpp](http://adv-r.had.co.nz/Rcpp.html)
 
 
 ```{r,eval=F}

@@ -4,14 +4,31 @@ Jan-Philipp Kolb
 
 
 
+## Einführung
+
+- [Intro](https://github.com/Japhilko/RInterfaces/blob/master/slides/Intro.md)
+
+## Schnittstellen zwischen Excel und R
+
+- [Datenimport]()
+-	[Das Paket XLConnect](https://github.com/Japhilko/RInterfaces/blob/master/slides/Rexcel.md)
+
+## R und Textverarbeitung - Reproducible Research
+
+-	PDF Dokumente und Präsentationen mit LaTeX und Sweave
+-	[HTML Dokumente und Präsentationen mit Rmarkdown](https://github.com/Japhilko/RInterfaces/blob/master/slides/presentHTML.md)
+-	Word Dokumente mit knitr
+
+
 ## Interaktive Darstellung mit Javascript und R
 
 -	[Interaktive Karten mit dem Javascript Paket leaflet](https://github.com/Japhilko/RInterfaces/blob/master/slides/leaflet.md)
--	[Interaktive Tabellen DataTables](https://github.com/Japhilko/RInterfaces/blob/master/slides/DataTables.md)
+-	[Interaktive Tabellen mit DataTables](https://github.com/Japhilko/RInterfaces/blob/master/slides/DataTables.md)
 -	[Interaktive Graphiken mit D3 und plotly](https://github.com/Japhilko/RInterfaces/blob/master/slides/plotly.md)
 -	[Netzwerkgraphiken mit vis.js](https://github.com/Japhilko/RInterfaces/blob/master/slides/visNetwork.md)
 -	[Das Erstellen von Ablaufdiagrammen mit mermaid](https://github.com/Japhilko/RInterfaces/blob/master/slides/mermaid.md)
 -	[R und die Javascript Data-Driven Documents (D3)](https://github.com/Japhilko/RInterfaces/blob/master/slides/D3.md)
+
 
 ## Verarbeitung/ Manipulation organischer Daten
 
@@ -20,6 +37,7 @@ Jan-Philipp Kolb
 -	Die Nutzung von xpath in R
 -	Import von JSON-Objekten
 -	Datenmanipulation mit dplyr
+
 
 ## Hochperfomanter Code
 
@@ -34,14 +52,7 @@ RPostgreSQL](https://github.com/Japhilko/RInterfaces/blob/master/slides/RPostgre
 -	Nutzung von MySQL mit dem Paket RMySQL
 -	[Nutzung von MongoDB in R](https://github.com/Japhilko/RInterfaces/blob/master/slides/Rmongodb.md)
 
-## R und Textverarbeitung - Reproducible Research
 
--	PDF Dokumente und Präsentationen mit LaTeX und Sweave
--	[HTML Dokumente und Präsentationen mit Rmarkdown](https://github.com/Japhilko/RInterfaces/blob/master/slides/presentHTML.md)
--	Word Dokumente mit knitr
-
-## Schnittstellen zwischen Excel und R
--	[Das Paket XLConnect](https://github.com/Japhilko/RInterfaces/blob/master/slides/Rexcel.md)
 
 ## Internetresourcen und Schnittstellen nutzen
 

@@ -17,18 +17,16 @@ knitr::opts_chunk$set(echo = TRUE)
 
 ## Schnittstellen zwischen Excel und R
 
-
+- [Datenimport]()
 -	[Das Paket XLConnect](https://github.com/Japhilko/RInterfaces/blob/master/slides/Rexcel.md)
 
+## R und Textverarbeitung - Reproducible Research
 
+-	[PDF Dokumente und Präsentationen mit LaTeX und Sweave](slides/R2pdf.Rmd)
+-	[HTML Dokumente und Präsentationen mit Rmarkdown](https://github.com/Japhilko/RInterfaces/blob/master/slides/presentHTML.md)
+-	Word Dokumente mit knitr
+- [Notebooks](slides/Notebooks.Rmd) - Beispiel Integration von Python
 
-## Verarbeitung/ Manipulation organischer Daten
-
-- [Webscraping](https://github.com/Japhilko/RInterfaces/blob/master/slides/Webscraping.md)
--	[Import von XML-Dateien](https://github.com/Japhilko/RInterfaces/blob/master/slides/XML.md)
--	Die Nutzung von xpath in R
--	Import von JSON-Objekten
--	Datenmanipulation mit dplyr
 
 ## Interaktive Darstellung mit Javascript und R
 
@@ -38,6 +36,15 @@ knitr::opts_chunk$set(echo = TRUE)
 -	[Netzwerkgraphiken mit vis.js](https://github.com/Japhilko/RInterfaces/blob/master/slides/visNetwork.md)
 -	[Das Erstellen von Ablaufdiagrammen mit mermaid](https://github.com/Japhilko/RInterfaces/blob/master/slides/mermaid.md)
 -	[R und die Javascript Data-Driven Documents (D3)](https://github.com/Japhilko/RInterfaces/blob/master/slides/D3.md)
+
+
+## Verarbeitung/ Manipulation organischer Daten
+
+- [Webscraping](https://github.com/Japhilko/RInterfaces/blob/master/slides/Webscraping.md)
+-	[Import von XML-Dateien](https://github.com/Japhilko/RInterfaces/blob/master/slides/XML.md)
+-	Die Nutzung von xpath in R
+-	Import von JSON-Objekten
+-	Datenmanipulation mit dplyr
 
 
 ## Hochperfomanter Code
@@ -53,11 +60,6 @@ RPostgreSQL](https://github.com/Japhilko/RInterfaces/blob/master/slides/RPostgre
 -	Nutzung von MySQL mit dem Paket RMySQL
 -	[Nutzung von MongoDB in R](https://github.com/Japhilko/RInterfaces/blob/master/slides/Rmongodb.md)
 
-## R und Textverarbeitung - Reproducible Research
-
--	PDF Dokumente und Präsentationen mit LaTeX und Sweave
--	[HTML Dokumente und Präsentationen mit Rmarkdown](https://github.com/Japhilko/RInterfaces/blob/master/slides/presentHTML.md)
--	Word Dokumente mit knitr
 
 
 ## Internetresourcen und Schnittstellen nutzen
@@ -65,3 +67,7 @@ RPostgreSQL](https://github.com/Japhilko/RInterfaces/blob/master/slides/RPostgre
 -	Einfache http-Nutzung mit httr
 -	Das Paket RCurl
 - [Das Paket rvest](slides/rvest.Rmd)
+
+## Vermischtes
+
+- R und Git

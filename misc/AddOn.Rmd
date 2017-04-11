@@ -20,3 +20,48 @@ install.packages("wikipediatrend")
 library(wikipediatrend)
 library(ggplot2)
 ```
+
+
+
+## Schnelligkeit 
+
+```{r,eval=F}
+install.packages("inline")
+```
+
+
+```{r}
+library(inline)
+src<- 'int n = as<int>(ns);
+double x = as<double>(xs);
+for (int i=0; i<n; i++) x=1/(1+x);
+return wrap(x);'
+```
+
+```{r}
+l<- cxxfunction(signature(ns="integer",
+xs="numeric"),body=src, plugin="Rcpp")
+```
+
+
+
+```{python, engine.path="D:/Programme/python/python.exe"}
+import feather
+import pandas as pd
+import numpy as np
+arr = np.random.randn(10000000) # 10% nulls
+arr[::10] = np.nan
+df = pd.DataFrame({'column_{0}'.format(i): arr for i in range(10)})
+feather.write_dataframe(df, 'test.feather')
+```
+
+
+```{r}
+library(feather)
+library(ggplot2)
+
+# Read from feather and plot
+flights <- read_feather("flights.feather")
+ggplot(flights, aes(carrier, arr_delay)) + geom_point() + geom_jitter()
+```
+
