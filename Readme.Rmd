@@ -24,7 +24,7 @@ knitr::opts_chunk$set(echo = TRUE)
 -	[PDF Dokumente und Präsentationen mit LaTeX und Sweave](slides/R2pdf.Rmd)
 -	[HTML Dokumente und Präsentationen mit Rmarkdown](https://github.com/Japhilko/RInterfaces/blob/master/slides/presentHTML.md)
 - [Notebooks](slides/Notebooks.Rmd) - Beispiel Integration von Python
-
+- [Dashboards](http://rmarkdown.rstudio.com/gallery.html)
 
 ## Interaktive Darstellung mit Javascript und R
 
