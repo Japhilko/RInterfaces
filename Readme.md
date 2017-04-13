@@ -11,19 +11,20 @@ Jan-Philipp Kolb
 - [Datenimport](slides/Datenimport.Rmd)
 -	[R und Excel](https://github.com/Japhilko/RInterfaces/blob/master/slides/Rexcel.md)
 
-## R und Textverarbeitung - Reproducible Research
+## R und Präsentation - Reproducible Research
 
 - [Word Dokumente mit R erstellen](slides/R2word.Rmd)
 -	[PDF Dokumente und Präsentationen mit LaTeX und Sweave](slides/R2pdf.Rmd)
 -	[HTML Dokumente und Präsentationen mit Rmarkdown](https://github.com/Japhilko/RInterfaces/blob/master/slides/presentHTML.md)
 - [Notebooks](slides/Notebooks.Rmd) - Beispiel Integration von Python
-
+- [Dashboards](slides/Dashboards.Rmd)
+- [Websites mit R erstellen](slides/)
 
 ## Interaktive Darstellung mit Javascript und R
 
--	[R und die Javascript Data-Driven Documents (D3)](https://github.com/Japhilko/RInterfaces/blob/master/slides/D3.md)
 -	[Interaktive Karten mit dem Javascript Paket leaflet](https://github.com/Japhilko/RInterfaces/blob/master/slides/leaflet.md)
 -	[Interaktive Tabellen mit DataTables](https://github.com/Japhilko/RInterfaces/blob/master/slides/DataTables.md)
+-	[R und die Javascript Data-Driven Documents (D3)](https://github.com/Japhilko/RInterfaces/blob/master/slides/D3.md)
 -	[Interaktive Graphiken mit D3 und plotly](https://github.com/Japhilko/RInterfaces/blob/master/slides/plotly.md)
 -	[Netzwerkgraphiken mit vis.js](https://github.com/Japhilko/RInterfaces/blob/master/slides/visNetwork.md)
 -	[Das Erstellen von Ablaufdiagrammen mit mermaid](https://github.com/Japhilko/RInterfaces/blob/master/slides/mermaid.md)
@@ -42,13 +43,12 @@ Jan-Philipp Kolb
 -	Datenmanipulation mit dplyr
 
 
-## Vermischtes
+## Projekte 
 
-- R und Git
+- [R und Git](slides/Rgit.Rmd)
 
 ## Hochperfomanter Code
 
--	[Das Paket data.table](slides/Erweiterung_datatable.md)
 -	[C++ Integration - Überblick über das Paket rcpp](https://github.com/Japhilko/RInterfaces/blob/master/slides/rcpp.md)
 -	Überblick über Möglichkeiten des Parallel Computings - Paket parallel
 

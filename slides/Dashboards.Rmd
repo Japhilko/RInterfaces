@@ -2,7 +2,9 @@
 title: "Dashboards"
 author: "Jan-Philipp Kolb"
 date: "13 April 2017"
-output: html_document
+output: 
+  html_document: 
+    keep_md: yes
 ---
 
 ```{r setup, include=FALSE}
@@ -28,6 +30,11 @@ install.packages("flexdashboard", type = "source")
 
 
 ## [Gallerie](http://rmarkdown.rstudio.com/gallery.html)
+
+
+```{r, eval=F}
+install.packages("highcharter", type = "source")
+```
 
 
 ```{r setup, include=FALSE}
