@@ -37,6 +37,9 @@ knitr::opts_chunk$set(echo = FALSE)
 
 ## Darstellung von Ergebnissen
 
+- Mit der Schnittstelle zu Javascript lassen sich interaktive Graphiken erzeugen
+- Diese kann man auf Websites, in Präsentationen oder in Dashboards verwenden
+
 
 ## Was ist unter reproduzierbaren Forschungsergebnissen zu verstehen?
 
