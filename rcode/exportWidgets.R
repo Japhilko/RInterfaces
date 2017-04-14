@@ -12,3 +12,5 @@ tagList(
   grViz(" digraph { a->b; b->c; c->a; }")
   ,export_widget( )
 ) %>>% html_print( viewer = utils::browseURL ) 
+
+# https://cran.r-project.org/web/packages/js/vignettes/intro.html

@@ -146,7 +146,7 @@ d3SimpleNetwork(NetworkData, width = 400, height = 250)
 ```
 
 
-```{r}
+```{r,eval=F}
 sink("FirstNetwork.js") 
 
 writeLines(d3SimpleNetwork(NetworkData), fileConn)
