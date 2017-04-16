@@ -1,0 +1,30 @@
+---
+title: "Datenmanipulation"
+author: "Jan-Philipp Kolb"
+date: "14 April 2017"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## [Addins](https://rstudio.github.io/rstudio-extensions/rstudio_addins.html)
+
+```{r,eval=F}
+devtools::install_github("rstudio/addinexamples", type = "source")
+```
+
+
+
+```{r,eval=F}
+devtools::install_github("rstudio/ptexamples")
+```
+
+## [Rstudio extensions](https://rstudio.github.io/rstudio-extensions/rstudio_viewer.html)
+
+```{r}
+install.packages("httpuv")
+install.packages("shiny")
+```
+

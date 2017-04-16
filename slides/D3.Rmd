@@ -18,6 +18,8 @@ knitr::opts_chunk$set(echo = TRUE,message=F,warning=F,eval=T)
 
 - [Five Interactive R Visualizations With D3, ggplot2, & RStudio](http://moderndata.plot.ly/interactive-r-visualizations-with-d3-ggplot2-rstudio/)
 
+- [Das D3 Netzwerk](http://christophergandrud.github.io/d3Network/)
+
 ## Interaktive Graphiken
 
 - [R Interactive Graphics with SVG](http://timelyportfolio.github.io/gridSVG_intro/)
@@ -90,12 +92,6 @@ plot(
 )
 ```
 
-```{css}
-body {
-  color: red;
-  background: #000000;
-}
-```
 
 ## 
 
@@ -161,6 +157,31 @@ unlink("FirstNetwork.js")
 install.packages("Rook")
 ```
 
+## [HTML widgets in R](http://www.htmlwidgets.org/showcase_leaflet.html)
+
+```{r}
+library(dygraphs)
+dygraph(nhtemp, main = "New Haven Temperatures") %>% 
+  dyRangeSelector(dateWindow = c("1920-01-01", "1960-01-01"))
+```
+
+## Combo Chart
+
+```{r}
+library(googleVis)
+op <- options(gvis.plot.tag = "chart")
+## Add the mean
+CityPopularity$Mean=mean(CityPopularity$Popularity)
+CC <- gvisComboChart(CityPopularity, xvar='City',
+          yvar=c('Mean', 'Popularity'),
+          options=list(seriesType='bars',
+                       width=450, height=300,
+                       title='City Popularity',
+                       series='{0: {type:\"line\"}}'))
+plot(CC)
+```
+
+
 
 ## Links
 
@@ -170,4 +191,8 @@ install.packages("Rook")
 
 - [Wie schreibt man gute html widgets](http://deanattali.com/blog/htmlwidgets-tips/)
 
+- [Die widgets exportieren](https://github.com/timelyportfolio/exportwidget)
+
 - [R wie Javascript programmieren](https://blog.semicolonsoftware.de/programming-r-like-its-javascript-python/)
+
+- [Mit Javascript in R arbeiten](https://cran.r-project.org/web/packages/js/vignettes/intro.html)

@@ -58,3 +58,10 @@ thm <-
   )
 
 ```
+
+## Links
+
+- [R Dashboards](https://plot.ly/r/dashboard/)
+- [flexdashboards](https://blog.rstudio.org/2016/05/17/flexdashboard-easy-interactive-dashboards-for-r/)
+
+- [Dashboard Beispiel](https://beta.rstudioconnect.com/jjallaire/htmlwidgets-highcharter/htmlwidgets-highcharter.html)

@@ -1,0 +1,39 @@
+---
+title: "Links"
+author: "Jan-Philipp Kolb"
+date: "16 April 2017"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## 
+
+- [Rstudio AddIns](https://rstudio.github.io/rstudio-extensions/rstudio_addins.html#shiny-gadgets)
+
+- [Rsudio Extensions](https://rstudio.github.io/rstudio-extensions/index.html)
+- [RStudio Viewer](https://rstudio.github.io/rstudio-extensions/rstudio_viewer.html)
+- [Rstudio Templates](https://github.com/rstudio/ptexamples)
+
+```{r,eval=F}
+devtools::install_github("rstudio/ptexamples")
+```
+
+- [Programming R like it's JavaScript / Python](https://blog.semicolonsoftware.de/programming-r-like-its-javascript-python/)
+
+## 
+
+```{r,eval=F}
+install.packages("sigma")
+```
+
+
+
+```{r}
+library(sigma)
+data <- system.file("examples/ediaspora.gexf.xml", package = "sigma")
+sigma(data)
+```
+
