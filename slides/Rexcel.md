@@ -14,7 +14,7 @@ library(xlsx)
 dat <- read.xlsx("cult_emp_sex.xls",1)
 ```
 
-## [Few steps to connect R with Excel](http://www.milanor.net/blog/steps-connect-r-excel-xlconnect/)
+## [Einige Schritte um R und Excel zu verbinden](http://www.milanor.net/blog/steps-connect-r-excel-xlconnect/)
 
 - [The excel connection](https://www.r-bloggers.com/r-the-excel-connection/)
 
@@ -28,24 +28,25 @@ install.packages("XLConnect")
 library("XLConnect")
 ```
 
-```
-## Loading required package: XLConnectJars
+## [Eine Excel Datei aus R erzeugen](http://www.milanor.net/blog/steps-connect-r-excel-xlconnect/)
+
+
+```r
+fileXls <- "data/newFile.xlsx"
+unlink(fileXls, recursive = FALSE, force = FALSE)
+exc <- loadWorkbook(fileXls, create = TRUE)
+createSheet(exc,'Input')
+saveWorkbook(exc)
 ```
 
-```
-## XLConnect 0.2-12 by Mirai Solutions GmbH [aut],
-##   Martin Studer [cre],
-##   The Apache Software Foundation [ctb, cph] (Apache POI, Apache Commons
-##     Codec),
-##   Stephen Colebourne [ctb, cph] (Joda-Time Java library),
-##   Graph Builder [ctb, cph] (Curvesapi Java library)
-```
+## Das Arbeitsblatt mit Daten befüllen
 
-```
-## http://www.mirai-solutions.com ,
-## http://miraisolutions.wordpress.com
-```
 
+```r
+input <- data.frame('inputType'=c('Day','Month'),'inputValue'=c(2,5))
+writeWorksheet(exc, input, sheet = "input", startRow = 1, startCol = 2)
+saveWorkbook(exc)
+```
 
 
 ## 

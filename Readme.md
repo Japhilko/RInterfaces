@@ -8,11 +8,10 @@ Jan-Philipp Kolb
 
 ## Schnittstellen für den Austausch von Daten
 
-- [Datenimport](slides/Datenimport.Rmd) ([pdf](slides/Datenimport.pdf) | [rcode](slides/Datenimport.R))
--	[R und Excel](slides/Rexcel.md)
-- [Datenexport](slides/Datenexport.Rmd) ([pdf](slides/Datenexport.pdf) | [rcode](slides/Datenexport.R))
+- [Datenimport](slides/Datenimport.md) ([pdf](slides/Datenimport.pdf) | [rcode](slides/Datenimport.R))
+-	[R und Excel](slides/Rexcel.md) ([pdf](Rexcel.pdf) | [rcode](slides/Rexcel.R))
+- [Datenexport](slides/Datenexport.md) ([pdf](slides/Datenexport.pdf) | [rcode](slides/Datenexport.R)) 
 
-- [Datenmanipulation]()
 
 ## R und Präsentation - Reproducible Research
 
