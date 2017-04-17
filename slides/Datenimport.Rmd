@@ -2,8 +2,11 @@
 title: "Datenimport"
 author: "Jan-Philipp Kolb"
 date: "11 April 2017"
-output: 
-  html_document: 
+output:
+  beamer_presentation: 
+    colortheme: beaver
+    theme: CambridgeUS
+  html_document:
     keep_md: yes
 ---
 
