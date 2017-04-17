@@ -1,15 +1,8 @@
----
-title: "Datenimport"
-author: "Jan-Philipp Kolb"
-date: "11 April 2017"
-output: 
-  html_document: 
-    keep_md: yes
----
+# Datenimport
+Jan-Philipp Kolb  
+11 April 2017  
 
-```{r setup, include=FALSE}
-knitr::opts_chunk$set(echo = TRUE)
-```
+
 
 
 ## Dateiformate in R
@@ -47,7 +40,8 @@ R unterstützt von Haus aus schon einige wichtige Formate:
 
 So findet man heraus, in welchem Verzeichnis man sich gerade befindet
 
-```{r,eval=F}
+
+```r
 getwd()
 ```
 
@@ -55,7 +49,8 @@ So kann man das Arbeitsverzeichnis ändern:
 
 Man erzeugt ein Objekt in dem man den Pfad abspeichert:
 
-```{r,eval=F}
+
+```r
 main.path <- "C:/" # Beispiel für Windows
 main.path <- "/users/Name/" # Beispiel für Mac
 main.path <- "/home/user/" # Beispiel für Linux
@@ -63,7 +58,8 @@ main.path <- "/home/user/" # Beispiel für Linux
 
 Und ändert dann den Pfad mit setwd()
 
-```{r,eval=F}
+
+```r
 setwd(main.path)
 ```
 
@@ -80,7 +76,8 @@ Bei Windows ist es wichtig Slashs anstelle von Backslashs zu verwenden.
 -  Dann kann `read.csv()` genutzt werden um die Daten einzulesen.
 - Bei Deutschen Daten kann es sein, dass man `read.csv2()` wegen der Komma-Separierung braucht.
 
-```{r,eval=F}
+
+```r
 library(foreign)
 ?read.csv
 ?read.csv2
@@ -90,20 +87,23 @@ library(foreign)
 
 Zunächst muss das Arbeitsverzeichnis gesetzt werden, in dem sich die Daten befinden:
 
-```{r,eval=F}
+
+```r
 Dat <- read.csv("schuldaten_export.csv")
 ```
 
 Wenn es sich um Deutsche Daten handelt:
 
-```{r,eval=F}
+
+```r
 Dat <- read.csv2("schuldaten_export.csv")
 ```
 
 
 ## Import csv 
 
-```{r}
+
+```r
 url <- "https://raw.githubusercontent.com/Japhilko/
 GeoData/master/2015/data/whcSites.csv"
 
@@ -115,7 +115,8 @@ whcSites <- read.csv(url)
 
 Dateien können auch direkt aus dem Internet geladen werden:
 
-```{r,eval=F}
+
+```r
 link<- "http://www.statistik.at/web_de/static/
 mz_2013_sds_-_datensatz_080469.sav"
 
@@ -125,7 +126,8 @@ Dat <- read.spss(link,to.data.frame=T)
 
 ## stata Dateien einlesen
 
-```{r,eval=F}
+
+```r
 MZ02 <- read.dta("MZ02.dta")
 ```
 

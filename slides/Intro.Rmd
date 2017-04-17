@@ -14,7 +14,7 @@ output:
 knitr::opts_chunk$set(echo = FALSE)
 ```
 
-## Warum R
+## Warum R?
 
 ![Modularer Aufbau](figure/ModularerAufbau.PNG)
 
@@ -31,7 +31,7 @@ knitr::opts_chunk$set(echo = FALSE)
 
 1. Schnittstelle zu SPSS/Stata/Excel zum Import von Daten
 2. Schnittstelle zu Word
-
+3. Nutzung von C++
 
 ## Die Nutzung von Schnittstellen beim Import
 

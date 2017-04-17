@@ -165,7 +165,7 @@ dygraph(nhtemp, main = "New Haven Temperatures") %>%
   dyRangeSelector(dateWindow = c("1920-01-01", "1960-01-01"))
 ```
 
-## Combo Chart
+## [Combo Chart](https://rawgit.com/al2na/Rmarkdown_JSviz/master/googleVis.html)
 
 ```{r}
 library(googleVis)
@@ -180,6 +180,7 @@ CC <- gvisComboChart(CityPopularity, xvar='City',
                        series='{0: {type:\"line\"}}'))
 plot(CC)
 ```
+
 
 
 

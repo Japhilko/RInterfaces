@@ -11,6 +11,8 @@ knitr::opts_chunk$set(echo = TRUE)
 
 ## 
 
+- [Rmarkdown](http://rmarkdown.rstudio.com/)
+
 - [Rstudio AddIns](https://rstudio.github.io/rstudio-extensions/rstudio_addins.html#shiny-gadgets)
 
 - [Rsudio Extensions](https://rstudio.github.io/rstudio-extensions/index.html)
@@ -23,15 +25,41 @@ devtools::install_github("rstudio/ptexamples")
 
 - [Programming R like it's JavaScript / Python](https://blog.semicolonsoftware.de/programming-r-like-its-javascript-python/)
 
-## 
+## [Widgets Binding](http://www.htmlwidgets.org/develop_intro.html)
 
 ```{r,eval=F}
 install.packages("sigma")
 ```
 
+## [sparkline](https://github.com/htmlwidgets/sparkline)
+
+```{r,eval=F}
+library(devtools)
+install_github('htmlwidgets/sparkline')
+```
+
+
+## rbokeh
+
+```{r}
+library(rbokeh)
+figure() %>%
+  ly_points(Sepal.Length, Sepal.Width, data = iris,
+    color = Species, glyph = Species,
+    hover = list(Sepal.Length, Sepal.Width))
+```
 
 
 ```{r}
+library(sparkline)
+x = rnorm(20)
+sparkline(x)
+sparkline(x, type = 'bar')
+sparkline(x, type = 'box')
+```
+
+
+```{r,eval=F}
 library(sigma)
 data <- system.file("examples/ediaspora.gexf.xml", package = "sigma")
 sigma(data)

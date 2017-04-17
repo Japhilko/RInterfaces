@@ -17,6 +17,7 @@ knitr::opts_chunk$set(echo = TRUE)
 
 - [Datenimport](slides/Datenimport.Rmd)
 -	[R und Excel](https://github.com/Japhilko/RInterfaces/blob/master/slides/Rexcel.md)
+- [Datenexport]()
 
 - [Datenmanipulation]()
 
