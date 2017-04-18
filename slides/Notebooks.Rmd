@@ -78,11 +78,11 @@ feather.write_dataframe(flights, "flights.feather")
 ![](figure/LaTexCode.PNG)
 
 
-## Notebook veröffentlichen
+## Notebook veröffentlichen I
 
 ![](figure/PublishNotebook.PNG)
 
-## Notebook veröffentlichen
+## Notebook veröffentlichen II
 
 ![](figure/PublishNotebook2.PNG)
 
@@ -93,7 +93,7 @@ feather.write_dataframe(flights, "flights.feather")
 
 - [More engines](https://yihui.name/knitr/demo/engines/)
 
-- [Andere Programmiersprachen einbinden](http://rmarkdown.rstudio.com/authoring_knitr_engines.html)
+- [Andere Programmiersprachen können eingebunden werden](http://rmarkdown.rstudio.com/authoring_knitr_engines.html)
 
 - [Video - Einführung in Rnotebook](https://www.rstudio.com/resources/webinars/introducing-notebooks-with-r-markdown/)
 

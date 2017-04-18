@@ -63,4 +63,10 @@ library(knitr)
 
 - [optionen für Beamer Präsentationen](http://rmarkdown.rstudio.com/beamer_presentation_format.html)
 
-- [Keine Beschriftung der Graphiken](http://stackoverflow.com/questions/38514954/removing-figure-text-in-rmarkdown)
+- [Keine Beschriftung der Graphiken:](http://stackoverflow.com/questions/38514954/removing-figure-text-in-rmarkdown)
+
+Oben im header muss Folgendes spezifiziert werden:
+```
+fig_caption: false
+```
+

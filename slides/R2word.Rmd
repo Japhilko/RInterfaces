@@ -1,11 +1,12 @@
 ---
-title: "R2word"
+title: "Word Dokumente mit R und Rstudio erstellen"
 author: "Jan-Philipp Kolb"
-date: "11 April 2017"
+date: "08 Mai 2017"
 output:
-  word_document: 
-    highlight: zenburn
-    toc: yes
+  beamer_presentation: 
+    colortheme: beaver
+    theme: CambridgeUS
+    fig_caption: false
   html_document:
     keep_md: yes
 ---
@@ -14,7 +15,7 @@ output:
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
-# Word mit Pander
+# Ein Markdown Dokument mit Rstudio erzeugen
 
 ## Der Start
 
@@ -25,6 +26,82 @@ knitr::opts_chunk$set(echo = TRUE)
 
 ![](figure/meinWord.PNG)
 
+## Erstes Beispiel
+
+![](figure/ErstesWord.PNG)
+
+# Das Arbeiten mit Markdown
+
+## Rmarkdown - erste Schritte
+
+Markdown ist eine sehr einfache Syntax, die es Benutzern erlaubt, aus einfachen Textdateien gut gelayoutete Dokumente zu erstellen.
+
+```
+**fettes Beispiel**
+*kursives Beispiel*
+~~durchgestrichen~~
+- Aufzählungspunkt
+```
+
+**fettes Beispiel**
+
+*kursives Beispiel*
+
+~~durchgestrichen~~
+
+- Aufzählungspunkt
+
+## Weitere Markdown Befehle
+
+```
+### Überschrift Ebene 3
+#### Überschrift Ebene 4
+[Meine Github Seite](https://github.com/Japhilko)
+```
+
+### Überschrift Ebene 3
+
+#### Überschrift Ebene 4
+
+[Meine Github Seite](https://github.com/Japhilko)
+
+## Weitere Markdown Befehle
+
+```
+![example](http://e-scientifics.de/content/example_kinderbild.jpg)
+```
+
+
+## Chunks erste Schritte
+
+- Es lassen sich so genannte Chunks einfügen
+- In diesen Chunks wird ganz normaler R-code geschrieben
+
+![](figure/NotebooksBasicEx.PNG)
+
+## Inline Code
+
+![](figure/RinlineEx.PNG)
+
+```{r}
+n=100
+```
+
+Ein inline Codeblock: `r n`
+
+## Chunk Optionen
+
+- [Man kann den Chunks Optionen mitgeben](https://yihui.name/knitr/options/)
+
+```{r,echo=F}
+library(knitr)
+chunk_names <- c("eval","warining")
+chunk_descr <- c("Soll Rcode evaluiert werden?","Sollen Warnings angezeigt werden?")
+dat_chunks <- data.frame(Argument=chunk_names,Beschreibung=chunk_descr)
+kable(dat_chunks)
+```
+
+
 ## Optionen
 
 ![](figure/RwordOptions.PNG)
@@ -33,9 +110,11 @@ knitr::opts_chunk$set(echo = TRUE)
 
 - Interview - [Ein Word Dokument mit wenig Aufwand schreiben](https://www.r-statistics.com/2013/03/write-ms-word-document-using-r-with-as-little-overhead-as-possible/)
 
-- [pander: An R Pandoc Writer](http://rapporter.github.io/pander/)
+- [pander: Ein R Pandoc Wrapper](http://rapporter.github.io/pander/)
 
 - [Ein Schummelzettel](https://www.rstudio.com/wp-content/uploads/2015/06/rmarkdown-german.pdf)
+
+- [Einführung in Markdown](https://github.com/ctreffe/r-space/wiki/R-Markdown-Intro)
 
 - [Warum TeX besser als Word ist](http://factorgrad.blogspot.de/2010/07/why-latex-is-superior-to-ms-word.html)
 
