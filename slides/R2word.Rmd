@@ -91,20 +91,56 @@ Ein inline Codeblock: `r n`
 
 ## Chunk Optionen
 
-- [Man kann den Chunks Optionen mitgeben](https://yihui.name/knitr/options/)
+- [Man kann den Chunks Optionen mitgeben:](https://yihui.name/knitr/options/)
 
 ```{r,echo=F}
 library(knitr)
-chunk_names <- c("eval","warining")
-chunk_descr <- c("Soll Rcode evaluiert werden?","Sollen Warnings angezeigt werden?")
+chunk_names <- c("eval","warning","cache")
+chunk_descr <- c("Soll Rcode evaluiert werden?","Sollen Warnings angezeigt werden?","Soll der Output gespeichert werden?")
 dat_chunks <- data.frame(Argument=chunk_names,Beschreibung=chunk_descr)
 kable(dat_chunks)
 ```
+
+- Bei eval kann ein logischer Wert angegeben werden oder eine/mehrere Nummer(n)  
+
 
 
 ## Optionen
 
 ![](figure/RwordOptions.PNG)
+
+## Das Paket `knitr`
+
+```{r,eval=F}
+install.packages("knitr")
+```
+
+```{r}
+library("knitr")
+```
+
+- Das Paket knitr enthält zahlreiche wichtige Funktionen
+- Beispiel: Befehl `kable` um Tabellen zu erzeugen
+
+## Eine Tabelle mit `kable` erzeugen
+
+```{r}
+a <- runif(10)
+b <- rnorm(10)
+ab <- cbind(a,b)
+kable(ab)
+```
+
+## [Vorlagen verwenden](http://rmarkdown.rstudio.com/articles_docx.html)
+
+- Formatvorlagen können verändert werden
+
+1. Ein Word Dokument mit Rmarkdown erstellen
+2. Das Dokument in Word öffnen und Format verändern 
+3. Vorlage als Referenz angeben
+
+![](figure/RefDoc.PNG)
+
 
 ## Resourcen
 
@@ -117,5 +153,3 @@ kable(dat_chunks)
 - [Einführung in Markdown](https://github.com/ctreffe/r-space/wiki/R-Markdown-Intro)
 
 - [Warum TeX besser als Word ist](http://factorgrad.blogspot.de/2010/07/why-latex-is-superior-to-ms-word.html)
-
-- [LaTeX](https://www.r-bloggers.com/from-openoffice-noob-to-control-freak-a-love-story-with-r-latex-and-knitr/)

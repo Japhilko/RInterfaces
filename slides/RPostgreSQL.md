@@ -65,6 +65,112 @@ CREATE EXTENSION postgis;
 osm2pgsql -s -U postgres -d offlgeocRLP -o gazetteer /home/kolb/Forschung/osmData/data/rheinland-pfalz-latest.osm.pbf 
 ```
 
+[So bekommt man alle administrativen Grenzen:](https://gist.github.com/jpetazzo/5177554)
+
+```
+SELECT name FROM planet_osm_polygon WHERE boundary='administrative'
+```
+
+## [Zurück zu R](https://datashenanigan.wordpress.com/2015/05/18/getting-started-with-postgresql-in-r/)
+
+
+```r
+pw <- {"1234"}
+drv <- dbDriver("PostgreSQL")
+con <- dbConnect(drv, dbname = "offlgeocRLP",
+                 host = "localhost", port = 5432,
+                 user = "postgres", password = pw)
+rm(pw) # removes the password
+
+dbExistsTable(con, "planet_osm_polygon")
+```
+
+- [Select more than one column](http://dba.stackexchange.com/questions/54011/postgres-function-assign-query-results-to-multiple-variables)
+
+
+```r
+df_postgres <- dbGetQuery(con, "SELECT name, admin_level FROM planet_osm_polygon WHERE boundary='administrative'")
+```
+
+
+```r
+barplot(table(df_postgres[,2]),col="royalblue")
+```
+
+## 
+
+
+```r
+df_adm8 <- dbGetQuery(con, "SELECT name, admin_level FROM planet_osm_polygon WHERE boundary='administrative' AND admin_level='8'")
+```
+
+
+```r
+library(knitr)
+# kable(head(df_adm8))
+```
+
+## 
+
+
+```r
+df_hnr <- dbGetQuery(con, "SELECT * FROM planet_osm_line, planet_osm_point 
+WHERE planet_osm_line.name='Nordring' AND planet_osm_line.highway IN ('motorway','trunk','primary')
+AND planet_osm_point.name='Ludwigshafen' AND planet_osm_point.place IN ('city', 'town')
+ORDER BY ST_Distance(planet_osm_line.way, planet_osm_point.way)")
+```
+
+
+```r
+df_hnr <- dbGetQuery(con, "SELECT * FROM planet_osm_line, planet_osm_point 
+WHERE planet_osm_line.name='Nordring' AND planet_osm_point.name='Ludwigshafen' 
+ORDER BY ST_Distance(planet_osm_line.way, planet_osm_point.way)")
+head(df_hnr)
+```
+
+
+```r
+df_ <- dbGetQuery(con, "SELECT * FROM planet_osm_line, planet_osm_point 
+WHERE planet_osm_line.name='Nordring' AND planet_osm_point.name='Ludwigshafen' 
+ORDER BY ST_Distance(planet_osm_line.way, planet_osm_point.way)")
+head(df_hnr)
+```
+
+
+```r
+colnames(df_)
+```
+
+
+```r
+table(df_$name)
+```
+
+## Adress in Sippersfeld
+
+
+```r
+df_sipp <- dbGetQuery(con, "SELECT * FROM planet_osm_line, planet_osm_point 
+WHERE planet_osm_line.name='Rechweg' AND planet_osm_point.name='Sippersfeld' 
+ORDER BY ST_Distance(planet_osm_line.way, planet_osm_point.way)")
+head(df_sipp)
+```
+
+
+## [OpenStreetMap und Open Government Data in PostGIS](http://tud.at/linuxwochen/2013-osm-postgis/)
+
+
+
+```r
+restnam <- dbGetQuery(con, "SELECT name, COUNT(osm_id) AS anzahl
+FROM planet_osm_point
+WHERE amenity = 'restaurant'
+  AND name <> ''
+GROUP BY name
+ORDER BY anzahl DESC
+LIMIT 10")
+head(restnam)
+```
 
 
 ## [PostgreSQL and Leaflet](https://www.r-bloggers.com/using-postgresql-and-shiny-with-a-dynamic-leaflet-map-monitoring-trash-cans/)
@@ -73,7 +179,6 @@ osm2pgsql -s -U postgres -d offlgeocRLP -o gazetteer /home/kolb/Forschung/osmDat
 ```r
 install.packages("plot3D")
 ```
-
 
 
 
@@ -96,4 +201,6 @@ library(RPostgreSQL)
 - [PostGIS geocode](http://postgis.net/docs/Geocode.html)
 
 - [Nominatim installation](http://wiki.openstreetmap.org/wiki/Nominatim/Installation)
+
+- [Wie bekommt man OSM Daten](https://www.azavea.com/blog/2015/12/21/tools-for-getting-data-out-of-openstreetmap-and-into-desktop-gis/)
 

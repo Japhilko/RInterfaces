@@ -1,7 +1,7 @@
 ---
 title: "Präsentationen mit R und Rstudio"
 author: "Jan-Philipp Kolb"
-date: "11 April 2017"
+date: "08 Mai 2017"
 output: 
   beamer_presentation: 
     colortheme: beaver
@@ -58,6 +58,12 @@ library(knitr)
 
 ![](figure/figOpts.PNG)
 
+## Referenzen für R-Pakete
+
+```{r}
+citation("knitr")
+```
+
 
 ## Links
 
@@ -66,7 +72,10 @@ library(knitr)
 - [Keine Beschriftung der Graphiken:](http://stackoverflow.com/questions/38514954/removing-figure-text-in-rmarkdown)
 
 Oben im header muss Folgendes spezifiziert werden:
+
 ```
 fig_caption: false
 ```
 
+
+- [LaTeX](https://www.r-bloggers.com/from-openoffice-noob-to-control-freak-a-love-story-with-r-latex-and-knitr/)

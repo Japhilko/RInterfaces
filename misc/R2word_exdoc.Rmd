@@ -4,10 +4,9 @@ author: "Jan-Philipp Kolb"
 date: "11 April 2017"
 output:
   word_document: 
+    reference_docx: RefDoc.docx
     highlight: zenburn
     toc: yes
-  html_document:
-    keep_md: yes
 ---
 
 ```{r setup, include=FALSE}
