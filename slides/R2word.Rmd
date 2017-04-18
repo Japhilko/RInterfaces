@@ -2,8 +2,11 @@
 title: "R2word"
 author: "Jan-Philipp Kolb"
 date: "11 April 2017"
-output: 
-  html_document: 
+output:
+  word_document: 
+    highlight: zenburn
+    toc: yes
+  html_document:
     keep_md: yes
 ---
 
@@ -11,12 +14,14 @@ output:
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
+# Word mit Pander
+
 ## Der Start
 
 ![](figure/r2wordstart.PNG)
 
 
-## Mein erstes mit R erzeugtes Word
+## Mein erstes mit R erzeugtes Word Dokument
 
 ![](figure/meinWord.PNG)
 
@@ -31,3 +36,7 @@ knitr::opts_chunk$set(echo = TRUE)
 - [pander: An R Pandoc Writer](http://rapporter.github.io/pander/)
 
 - [Ein Schummelzettel](https://www.rstudio.com/wp-content/uploads/2015/06/rmarkdown-german.pdf)
+
+- [Warum TeX besser als Word ist](http://factorgrad.blogspot.de/2010/07/why-latex-is-superior-to-ms-word.html)
+
+- [LaTeX](https://www.r-bloggers.com/from-openoffice-noob-to-control-freak-a-love-story-with-r-latex-and-knitr/)

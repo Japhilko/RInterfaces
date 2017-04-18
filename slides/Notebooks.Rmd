@@ -19,19 +19,55 @@ knitr::opts_chunk$set(echo = TRUE)
 
 - [Warum R Notebook nutzen](https://news.ycombinator.com/item?id=12683625)
 
-## Ein Notebook anlegen
+# Rnotebooks
+
+## Ein Rnotebook anlegen
 
 ![](figure/startNotebook)
 
+## Rnotebook - erste Schritte
+
+- Es lassen sich so genannte Chunks einfügen
+- In diesen Chunks wird ganz normaler R-code geschrieben
+
+![](figure/NotebooksBasicEx.PNG)
+
+
 ## Python Code integrieren
 
-![](figure/pythonCode.PNG)
+- Ebenso lässt sich [Python code implementieren](https://support.rstudio.com/hc/en-us/articles/233066128-Do-Notebooks-support-other-languages-)
 
-- [Python chunk integrieren](https://support.rstudio.com/hc/en-us/articles/233066128-Do-Notebooks-support-other-languages-)
+
+![](figure/pythonCode.PNG)
 
 ```{python}
 import sys
 print(sys.version)
+```
+
+## Datenaustausch mittels `feather`
+
+```{r,eval=F}
+install.packages("feather")
+```
+
+## Das Paket `feather`
+
+```{python,eval=F}
+import pandas
+import feather
+
+# Read flights data and select flights to O'Hare
+flights = pandas.read_csv("flights.csv")
+flights = flights[flights['dest'] == "ORD"]
+
+# Select carrier and delay columns and drop rows with missing values
+flights = flights[['carrier', 'dep_delay', 'arr_delay']]
+flights = flights.dropna()
+print flights.head(10)
+
+# Write to feather file for reading from R
+feather.write_dataframe(flights, "flights.feather")
 ```
 
 

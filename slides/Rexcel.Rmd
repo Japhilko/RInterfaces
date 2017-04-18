@@ -52,6 +52,12 @@ saveWorkbook(exc)
 
 ## [BERT - Eine weitere Verbindung zwischen R und Excel](https://www.r-bloggers.com/bert-a-newcomer-in-the-r-excel-connection/)
 
+- [Schnellstart mit Excel](https://bert-toolkit.com/bert-quick-start)
+
+![](figure/BERTaddins.PNG)
+
+
+
 ```{r}
 myFunction <- function(){
  aa <- rnorm(200)

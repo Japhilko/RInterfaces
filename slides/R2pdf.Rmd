@@ -9,6 +9,7 @@ output:
     highlight: tango
     theme: CambridgeUS
     fig_caption: false
+    toc: true
 ---
 
 ```{r setup, include=FALSE}
@@ -17,9 +18,13 @@ library(knitr)
 
 ```
 
+# Rpres Presentations
+
 ## [Presentations with Rpres](https://rstudio-pubs-static.s3.amazonaws.com/27777_55697c3a476640caa0ad2099fe914ae5.html#/)
 
 ![](figure/Rpresentations.PNG)
+
+# ioslides presentations
 
 ## ioslides presentations
 
@@ -45,6 +50,17 @@ library(knitr)
 
 ![](http://1.bp.blogspot.com/-ZTtDq0hOkqY/Ti0Z3WwoIJI/AAAAAAAAAPc/HM3t4j4t7h0/s1600/Screenshot%2B-%2B07252011%2B-%2B03%253A22%253A15%2BAM.png)
 
+## Inhaltsverzeichnis
+
+![](figure/BeamerInhaltsVZ.PNG)
+
+## Optionen für die Graphikeinbindung
+
+![](figure/figOpts.PNG)
+
+
 ## Links
+
+- [optionen für Beamer Präsentationen](http://rmarkdown.rstudio.com/beamer_presentation_format.html)
 
 - [Keine Beschriftung der Graphiken](http://stackoverflow.com/questions/38514954/removing-figure-text-in-rmarkdown)

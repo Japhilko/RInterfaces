@@ -20,7 +20,7 @@ knitr::opts_chunk$set(echo = TRUE)
 - [Datenexport](slides/Datenexport.md) ([pdf](slides/Datenexport.pdf) | [rcode](slides/Datenexport.R)) 
 
 
-## R und Präsentation - Reproducible Research
+## Präsentation von Daten - Reproducible Research
 
 - [Word Dokumente mit R erstellen](slides/R2word.Rmd)
 -	[PDF Dokumente und Präsentationen mit LaTeX und Sweave](slides/R2pdf.Rmd)
