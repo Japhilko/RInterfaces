@@ -1,0 +1,20 @@
+\documentclass{beamer}
+
+\begin{document}
+
+\begin{frame}
+\frametitle{Erste Folie}
+\end{frame}
+
+\begin{frame}
+\frametitle{Zweite Folie}
+
+<<>>=
+ab <- sample(1:10,8)
+@
+
+\end{frame}
+
+
+
+\end{document}

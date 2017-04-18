@@ -18,35 +18,17 @@ library(knitr)
 
 ```
 
-# Rpres Presentations
+# Präsentationen mit Rmarkdown
 
-## [Presentations with Rpres](https://rstudio-pubs-static.s3.amazonaws.com/27777_55697c3a476640caa0ad2099fe914ae5.html#/)
-
-![](figure/Rpresentations.PNG)
-
-# ioslides presentations
-
-## ioslides presentations
-
-![](figure/ioslidespres.PNG)
-
-- [Presentations with ioslides](http://rmarkdown.rstudio.com/ioslides_presentation_format.html)
-
-
-## slidy presentations
-
-![](figure/sluidypresentations.PNG)
-
-
-## beamer presentations
+## beamer Präsentationen
 
 ![](figure/beamerexample.PNG)
 
-## Beamer Options
+## Beamer Optionen
 
 ![](figure/beamerOptions.PNG)
 
-## Beamer Themes
+## Beamer Themen
 
 ![](http://1.bp.blogspot.com/-ZTtDq0hOkqY/Ti0Z3WwoIJI/AAAAAAAAAPc/HM3t4j4t7h0/s1600/Screenshot%2B-%2B07252011%2B-%2B03%253A22%253A15%2BAM.png)
 
@@ -63,6 +45,38 @@ library(knitr)
 ```{r}
 citation("knitr")
 ```
+
+
+# Präsentationen mit Sweave
+
+## Das Dokument erstellen
+
+![](figure/BSPsweave.png)
+
+## Sweave Präsentation
+
+- Ganz normaler LaTeX Code wird verwendet
+
+![](figure/Sweave1ex.PNG)
+
+## Chunks bei Sweave
+
+- Auch hier kann R-code verwendet werden
+
+![](figure/SweaveCodeChunk.PNG)
+
+## [Chunk Optionen](http://k-baeumchen.fuhlbrueck.net/R-und-LaTeX.html)
+
+- Auch bei Sweave Chunks können Optionen mitgegeben werden
+
+![](figure/SweaveOptionen.PNG)
+
+## Inline Code
+
+```
+\Sexpr{}.
+```
+
 
 
 ## Links
