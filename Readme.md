@@ -13,10 +13,10 @@ Jan-Philipp Kolb
 - [Datenexport](slides/Datenexport.md) ([pdf](slides/Datenexport.pdf) | [rcode](slides/Datenexport.R)) 
 
 
-## R und Präsentation - Reproducible Research
+## Präsentation von Daten - Reproducible Research
 
 - [Word Dokumente mit R erstellen](slides/R2word.Rmd)
--	[PDF Dokumente und Präsentationen mit LaTeX und Sweave](slides/R2pdf.Rmd)
+-	[PDF Dokumente und Präsentationen mit LaTeX, Beamer und Sweave](slides/R2pdf.Rmd)
 -	[HTML Dokumente und Präsentationen mit Rmarkdown](https://github.com/Japhilko/RInterfaces/blob/master/slides/presentHTML.md)
 - [Notebooks](slides/Notebooks.Rmd) - Beispiel Integration von Python
 - [Dashboards](slides/Dashboards.Rmd)

@@ -1,7 +1,7 @@
 ---
 title: "Notebooks"
 author: "Jan-Philipp Kolb"
-date: "11 April 2017"
+date: "08 Mai 2017"
 output: 
   beamer_presentation: 
     colortheme: beaver
@@ -45,32 +45,6 @@ import sys
 print(sys.version)
 ```
 
-## Datenaustausch mittels `feather`
-
-```{r,eval=F}
-install.packages("feather")
-```
-
-## Das Paket `feather`
-
-```{python,eval=F}
-import pandas
-import feather
-
-# Read flights data and select flights to O'Hare
-flights = pandas.read_csv("flights.csv")
-flights = flights[flights['dest'] == "ORD"]
-
-# Select carrier and delay columns and drop rows with missing values
-flights = flights[['carrier', 'dep_delay', 'arr_delay']]
-flights = flights.dropna()
-print flights.head(10)
-
-# Write to feather file for reading from R
-feather.write_dataframe(flights, "flights.feather")
-```
-
-
 ## [LaTeX Code integieren](https://blog.rstudio.org/2016/10/05/r-notebooks/)
 
 - LaTeX code wird mit zwei Dollarzeichen gekennzeichnet
@@ -86,6 +60,26 @@ feather.write_dataframe(flights, "flights.feather")
 
 ![](figure/PublishNotebook2.PNG)
 
+# Andere Notebooks
+
+## [Jupyter Notebook](http://jupyter.readthedocs.io/en/latest/install.html)
+
+![](http://jupyter.readthedocs.io/en/latest/_static/_images/jupyter.svg)
+
+- Anaconda installieren
+- folgenden Befehl in die Eingabeaufforderung eingeben
+- Diese findet man bei windows wenn man cmd in Suche eingibt.
+
+```
+jupyter notebook
+```
+## Start Jupyter Notebook
+
+![](figure/JupyterEx.PNG)
+
+## Beispiel Eingabe Code
+
+![](figure/JupyterNotebookQmap.PNG)
 
 ## Links
 
@@ -98,3 +92,5 @@ feather.write_dataframe(flights, "flights.feather")
 - [Video - Einführung in Rnotebook](https://www.rstudio.com/resources/webinars/introducing-notebooks-with-r-markdown/)
 
 - [R Notebooks](http://rmarkdown.rstudio.com/r_notebooks.html)
+
+- [IPython vs knitr, or Python vs R](https://yihui.name/en/2012/11/ipython-vs-knitr/)
