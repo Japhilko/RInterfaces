@@ -42,13 +42,13 @@ knitr::opts_chunk$set(echo = TRUE)
 
 ## Internetresourcen und Schnittstellen nutzen
 
--	Einfache http-Nutzung mit httr
+-	[Import von JSON-Objekten](slides/rapis.Rmd)
 -	Das Paket RCurl
 - [Das Paket rvest](slides/rvest.Rmd)
 - [Webscraping](https://github.com/Japhilko/RInterfaces/blob/master/slides/Webscraping.md)
 -	[Import von XML-Dateien](https://github.com/Japhilko/RInterfaces/blob/master/slides/XML.md)
 -	Die Nutzung von xpath in R
--	Import von JSON-Objekten
+- Einfache http-Nutzung mit httr
 -	Datenmanipulation mit dplyr
 
 
