@@ -5,6 +5,9 @@ date: Thu Apr 20 09:06:19 2017
 autosize: true
 transition: zoom
 transition-speed: slow
+font-family: 'Impact'
+width: 1440
+height: 900
 
 Erste Folie
 ========================================================
@@ -70,10 +73,38 @@ Ein neues Kapitel einfügen
 type: section
 
 
-Prompt Slide
+Anderer Folientyp
 ====================================
 type: prompt
 
 Noch ein anderer Folientyp
 ====================================
 type: alert
+
+Meine Folie
+====================================
+incremental: true
+
+Zum Beispiel LaTeX code:
+$$
+\begin{equation}\label{eq2}
+t_{i} =\sum\limits_{k=1}^{M_{i} } {y_{ik} } 
+\end{equation}
+$$
+
+Kleinere Schriftgröße
+====================================
+
+
+<small>This sentence will appear smaller.</small>
+
+
+My Slide
+===================================
+class: illustration
+
+- Was taucht hier auf?
+
+- Das Ergebnis ist hier zu sehen:
+
+<http://rpubs.com/Japhilko82/FirstRpubs>
