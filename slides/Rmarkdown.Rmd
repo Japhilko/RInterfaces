@@ -217,8 +217,8 @@ Um den Präsentationstyp zu ändern kann man das CSS verändern
 
 - [Cascading Style Sheets](https://de.wikipedia.org/wiki/Cascading_Style_Sheets) (CSS)
 
-- [Farbe in HTML](http://tomheller.de/html-farben.html)
-- [Eine Schriftart wählen](https://www.mediaevent.de/css/font-family.html)
-- [Schriftformatierung](https://wiki.selfhtml.org/wiki/CSS/Eigenschaften/Schriftformatierung)
-- [Weitere CSS Beispiele](https://www.w3.org/TR/WCAG20-TECHS/C22.html)
+- Bspw. lässt sich die [Farbe (HTML)](http://tomheller.de/html-farben.html) ändern.
+- [Man kann eine andere Schriftart wählen](https://www.mediaevent.de/css/font-family.html)
+- [Es gibt zahlreiche Möglichkeiten der Schriftformatierung](https://wiki.selfhtml.org/wiki/CSS/Eigenschaften/Schriftformatierung)
+- [Daneben gibt es viele weitere Dinge, die sich mit dem CSS steuern lassen](https://www.w3.org/TR/WCAG20-TECHS/C22.html)
 

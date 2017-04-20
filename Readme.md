@@ -17,10 +17,10 @@ Jan-Philipp Kolb
 
 - [Word Dokumente mit R erstellen](slides/R2word.Rmd)
 -	[PDF Dokumente und Präsentationen mit LaTeX, Beamer und Sweave](slides/R2pdf.Rmd)
--	[HTML Dokumente und Präsentationen mit Rmarkdown](https://github.com/Japhilko/RInterfaces/blob/master/slides/presentHTML.md)
-- [Notebooks](slides/Notebooks.Rmd) - Beispiel Integration von Python
-- [Dashboards](slides/Dashboards.Rmd)
-- [Websites mit R erstellen](slides/)
+-	[HTML Dokumente, Präsentationen und Dashboards mit Rmarkdown](https://github.com/Japhilko/RInterfaces/blob/master/slides/presentHTML.md)
+- [Notebooks](slides/Notebooks.Rmd) zur Integration von anderen Programmiersprachen (Python,LaTeX,Julia)
+
+
 
 ## Interaktive Darstellung mit Javascript und R
 
