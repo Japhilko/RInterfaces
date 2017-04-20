@@ -1,13 +1,13 @@
 ---
-title: "Intro"
+title: "Intro - Erste Schritte"
 author: "Jan-Philipp Kolb"
 date: "10 April 2017"
-output: 
+output:
   beamer_presentation: 
-    colortheme: dove
-    fonttheme: structuresmallcapsserif
-    highlight: zenburn
+    colortheme: beaver
     theme: CambridgeUS
+  html_document:
+    keep_md: yes
 ---
 
 ```{r setup, include=FALSE}

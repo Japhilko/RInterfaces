@@ -1,15 +1,15 @@
-# Themenübersicht
+# Themenübersicht - R Interfaces
 Jan-Philipp Kolb  
-16 September 2016  
+08 Mai 2017  
 
 
 
-[Einführung und Motivation](https://github.com/Japhilko/RInterfaces/blob/master/slides/Intro.md)
 
 ## Schnittstellen für den Austausch von Daten
 
+- [Einführung und Motivation](https://github.com/Japhilko/RInterfaces/blob/master/slides/Intro.md)
 - [Datenimport](slides/Datenimport.md) ([pdf](slides/Datenimport.pdf) | [rcode](slides/Datenimport.R))
--	[R und Excel](slides/Rexcel.md) ([pdf](Rexcel.pdf) | [rcode](slides/Rexcel.R))
+- [R und Excel](slides/Rexcel.md) ([pdf](Rexcel.pdf) | [rcode](slides/Rexcel.R))
 - [Datenexport](slides/Datenexport.md) ([pdf](slides/Datenexport.pdf) | [rcode](slides/Datenexport.R)) 
 
 
@@ -35,13 +35,13 @@ Jan-Philipp Kolb
 
 ## Internetresourcen und Schnittstellen nutzen
 
--	Einfache http-Nutzung mit httr
+-	[Import von JSON-Objekten](slides/rapis.Rmd)
 -	Das Paket RCurl
 - [Das Paket rvest](slides/rvest.Rmd)
 - [Webscraping](https://github.com/Japhilko/RInterfaces/blob/master/slides/Webscraping.md)
 -	[Import von XML-Dateien](https://github.com/Japhilko/RInterfaces/blob/master/slides/XML.md)
 -	Die Nutzung von xpath in R
--	Import von JSON-Objekten
+- Einfache http-Nutzung mit httr
 -	Datenmanipulation mit dplyr
 
 

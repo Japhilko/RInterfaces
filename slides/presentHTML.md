@@ -5,6 +5,27 @@ Jan-Philipp Kolb
 
 
 
+# Rpres Presentations
+
+## [Presentations with Rpres](https://rstudio-pubs-static.s3.amazonaws.com/27777_55697c3a476640caa0ad2099fe914ae5.html#/)
+
+![](figure/Rpresentations.PNG)
+
+# ioslides presentations
+
+## ioslides presentations
+
+![](figure/ioslidespres.PNG)
+
+- [Presentations with ioslides](http://rmarkdown.rstudio.com/ioslides_presentation_format.html)
+
+
+## slidy presentations
+
+![](figure/sluidypresentations.PNG)
+
+
+
 ## Cascading Style Files
 
 - [Custom CSS](http://rmarkdown.rstudio.com/html_document_format.html#custom_css)

@@ -1,9 +1,10 @@
 ---
-title: "Themenübersicht"
+title: "Themenübersicht - R Interfaces"
 author: "Jan-Philipp Kolb"
-date: "16 September 2016"
+date: "08 Mai 2017"
 output: 
-  html_document: 
+  slidy_presentation: 
+    css: slides/readme.css
     keep_md: yes
 ---
 
@@ -11,12 +12,12 @@ output:
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
-[Einführung und Motivation](https://github.com/Japhilko/RInterfaces/blob/master/slides/Intro.md)
 
 ## Schnittstellen für den Austausch von Daten
 
+- [Einführung und Motivation](https://github.com/Japhilko/RInterfaces/blob/master/slides/Intro.md)
 - [Datenimport](slides/Datenimport.md) ([pdf](slides/Datenimport.pdf) | [rcode](slides/Datenimport.R))
--	[R und Excel](slides/Rexcel.md) ([pdf](Rexcel.pdf) | [rcode](slides/Rexcel.R))
+- [R und Excel](slides/Rexcel.md) ([pdf](Rexcel.pdf) | [rcode](slides/Rexcel.R))
 - [Datenexport](slides/Datenexport.md) ([pdf](slides/Datenexport.pdf) | [rcode](slides/Datenexport.R)) 
 
 
@@ -25,7 +26,7 @@ knitr::opts_chunk$set(echo = TRUE)
 - [Word Dokumente mit R erstellen](slides/R2word.Rmd)
 -	[PDF Dokumente und Präsentationen mit LaTeX, Beamer und Sweave](slides/R2pdf.Rmd)
 -	[HTML Dokumente und Präsentationen mit Rmarkdown](https://github.com/Japhilko/RInterfaces/blob/master/slides/presentHTML.md)
-- [Notebooks](slides/Notebooks.Rmd) - Beispiel Integration von Python
+- [Notebooks](slides/Notebooks.Rmd) zur Integration von anderen Programmiersprachen (Python,LaTeX,Julia)
 - [Dashboards](slides/Dashboards.Rmd)
 - [Websites mit R erstellen](slides/)
 
