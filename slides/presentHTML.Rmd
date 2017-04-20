@@ -2,15 +2,11 @@
 title: "Presentations"
 author: "Jan-Philipp Kolb"
 date: "7 Februar 2017"
-output:
-  beamer_presentation: default
-  slidy_presentation:
-    css: mycss.css
-    keep_md: yes
+output:ioslides_presentation
 ---
 
 ```{r setup, include=FALSE}
-knitr::opts_chunk$set(echo = TRUE)
+knitr::opts_chunk$set(echo = TRUE,eval=F)
 ```
 
 
@@ -77,6 +73,55 @@ body {
 }
 ```
 
+
+## [Beispiel R-Pakete](https://gallery.shinyapps.io/cran-gauge/)
+
+![](figure/CRANdownloads.PNG)
+
+
+## [Paket installieren](https://blog.rstudio.org/2016/05/17/flexdashboard-easy-interactive-dashboards-for-r/)
+
+```{r, eval=F}
+install.packages("flexdashboard", type = "source")
+```
+
+## Ein Dashboard erstellen mit Rstudio
+
+![](https://i2.wp.com/rmarkdown.rstudio.com/flexdashboard/images/NewRMarkdown.png?zoom=2)
+
+
+
+
+## [Gallerie](http://rmarkdown.rstudio.com/gallery.html)
+
+
+```{r, eval=F}
+install.packages("highcharter", type = "source")
+```
+
+
+```{r setup, include=FALSE}
+library(highcharter)
+library(dplyr)
+library(viridisLite)
+library(forecast)
+library(treemap)
+library(flexdashboard)
+
+thm <- 
+  hc_theme(
+    colors = c("#1a6ecc", "#434348", "#90ed7d"),
+    chart = list(
+      backgroundColor = "transparent",
+      style = list(fontFamily = "Source Sans Pro")
+    ),
+    xAxis = list(
+      gridLineWidth = 1
+    )
+  )
+
+```
+
 ## Links
 
 - [CSS Eigenschaften](https://wiki.selfhtml.org/wiki/CSS/Eigenschaften/Schriftformatierung/font-size)
@@ -84,3 +129,11 @@ body {
 - [CSS Schrifteigenschaften](https://wiki.selfhtml.org/wiki/CSS/Eigenschaften/Schriftformatierung)
 
 - [HTML5 Folien](http://bashooka.com/coding/html-css-based-presentation-slides/)
+
+
+### Links zu Dashboards
+
+- [R Dashboards](https://plot.ly/r/dashboard/)
+- [flexdashboards](https://blog.rstudio.org/2016/05/17/flexdashboard-easy-interactive-dashboards-for-r/)
+
+- [Dashboard Beispiel](https://beta.rstudioconnect.com/jjallaire/htmlwidgets-highcharter/htmlwidgets-highcharter.html)

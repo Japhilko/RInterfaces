@@ -1,3 +1,6 @@
+# Jan-Philipp Kolb
+# Thu Apr 20 07:58:44 2017
+
 install.packages("reticulate")
 library(reticulate)
 
