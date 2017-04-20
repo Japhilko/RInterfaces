@@ -32,11 +32,29 @@ library(knitr)
 
 ![](http://1.bp.blogspot.com/-ZTtDq0hOkqY/Ti0Z3WwoIJI/AAAAAAAAAPc/HM3t4j4t7h0/s1600/Screenshot%2B-%2B07252011%2B-%2B03%253A22%253A15%2BAM.png)
 
+## Wie man das im Header des Dokuments angibt
+
+```
+---
+title: "Intro - Erste Schritte"
+author: "Jan-Philipp Kolb"
+date: "10 April 2017"
+output:
+  beamer_presentation: 
+    colortheme: beaver
+    theme: CambridgeUS
+---
+```
+
+
+
 ## Inhaltsverzeichnis
 
 ![](figure/BeamerInhaltsVZ.PNG)
 
 ## Optionen für die Graphikeinbindung
+
+- *fig_caption: false*, wenn man keine Bildunterschriften haben möchte
 
 ![](figure/figOpts.PNG)
 
