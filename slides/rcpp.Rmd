@@ -12,6 +12,10 @@ knitr::opts_chunk$set(echo = TRUE)
 ```
 
 
+## Rcpp
+
+![](figure/cppimages.jpg)
+
 ## Einleitung
 
 - R ist in C geschrieben

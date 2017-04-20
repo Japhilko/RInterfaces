@@ -3,6 +3,7 @@ title: "Dashboards"
 author: "Jan-Philipp Kolb"
 date: "13 April 2017"
 output: pdf_document
+  fig_caption: false
 ---
 
 ```{r setup, include=FALSE}

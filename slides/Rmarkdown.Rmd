@@ -222,3 +222,26 @@ Um den Präsentationstyp zu ändern kann man das CSS verändern
 - [Es gibt zahlreiche Möglichkeiten der Schriftformatierung](https://wiki.selfhtml.org/wiki/CSS/Eigenschaften/Schriftformatierung)
 - [Daneben gibt es viele weitere Dinge, die sich mit dem CSS steuern lassen](https://www.w3.org/TR/WCAG20-TECHS/C22.html)
 
+# Dashboards
+
+## [Beispiel R-Pakete](https://gallery.shinyapps.io/cran-gauge/)
+
+![](figure/CRANdownloads.PNG)
+
+
+## [Paket installieren](https://blog.rstudio.org/2016/05/17/flexdashboard-easy-interactive-dashboards-for-r/)
+
+```{r, eval=F}
+install.packages("flexdashboard", type = "source")
+```
+
+## Ein Dashboard erstellen mit Rstudio
+
+![](https://i2.wp.com/rmarkdown.rstudio.com/flexdashboard/images/NewRMarkdown.png?zoom=2)
+
+## [Gallerie](http://rmarkdown.rstudio.com/gallery.html)
+
+```{r, eval=F}
+install.packages("highcharter", type = "source")
+```
+

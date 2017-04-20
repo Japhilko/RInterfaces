@@ -39,12 +39,22 @@ knitr::opts_chunk$set(echo = FALSE)
 
 ![Import](figure/Import.PNG)
 
+## [Reproducible Research](http://www.statsmakemecry.com/smmctheblog/the-time-for-reproducible-research-is-now)
+
+![](figure/MiracleOccursImage.png)
+
+## [Was wird bei Wikipedia unter Reproduibility verstanden?](https://en.wikipedia.org/wiki/Reproducibility)
+
+![](figure/Spectrum_of_reproducible_research.png)
+
 
 ## Darstellung von Ergebnissen
 
 - Mit der Schnittstelle zu Javascript lassen sich interaktive Graphiken erzeugen
 - Diese kann man auf Websites, in Präsentationen oder in Dashboards verwenden
 
+
+![](figure/visNetwork.jpg)
 
 ## Was ist unter reproduzierbaren Forschungsergebnissen zu verstehen?
 
