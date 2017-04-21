@@ -9,5 +9,13 @@ output: html_document
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
-## 
 
+
+## [Rspotify: Access to Spotify API via R](https://www.r-bloggers.com/my-new-r-package/)
+
+```{r}
+library(devtools)
+install_github("tiagomendesdantas/Rspotify")
+```
+
+- [Token](https://developer.spotify.com/web-api/)

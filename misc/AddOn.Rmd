@@ -66,6 +66,11 @@ RPostgreSQL](https://github.com/Japhilko/RInterfaces/blob/master/slides/RPostgre
 - [Das Paket rvest](slides/rvest.Rmd)
 
 
+## [Schnittstellen zu Javascript](https://github.com/FrissAnalytics/shinyJsTutorials)
+
+- [shiny Javascript Tutorial](https://www.r-bloggers.com/shiny-javascript-tutorials/)
+
+
 
 # Agenda
 

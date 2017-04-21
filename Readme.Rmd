@@ -25,7 +25,7 @@ knitr::opts_chunk$set(echo = TRUE)
 
 - [Word Dokumente mit R erstellen](slides/R2word.Rmd)
 -	[PDF Dokumente und Präsentationen mit LaTeX, Beamer und Sweave](slides/R2pdf.Rmd)
--	[HTML Dokumente, Präsentationen und Dashboards mit Rmarkdown](https://github.com/Japhilko/RInterfaces/blob/master/slides/presentHTML.md)
+-	[HTML Dokumente, Präsentationen und Dashboards mit Rmarkdown](slides/Rmarkdown.Rmd)
 - [Notebooks](slides/Notebooks.Rmd) zur Integration von anderen Programmiersprachen (Python,LaTeX,Julia)
 
 Aufgabe: Bearbeiten Sie ein Notebook weiter

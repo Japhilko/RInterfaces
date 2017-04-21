@@ -18,4 +18,4 @@ install.packages("RMySQL")
 
 ## Links
 
-- [Full SSL Support](https://www.r-bloggers.com/rmysql-version-0-10-2-full-ssl-support/)
+- [Full SSL Support](https://www.r-bloggers.com/rmysql-version-0-10-2-full-ssl-support/) [2nd link](https://www.opencpu.org/posts/rmysql-release-0-10-2/)

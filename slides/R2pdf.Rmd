@@ -50,9 +50,18 @@ output:
 
 
 
-## Inhaltsverzeichnis
+## Inhaltsverzeichnis I
 
 ![](figure/BeamerInhaltsVZ.PNG)
+
+## Inhaltsverzeichnis II
+
+```
+output: 
+  beamer_presentation: 
+    toc: yes
+```
+
 
 ## Optionen für die Graphikeinbindung
 
@@ -103,13 +112,6 @@ output:
 
 - [optionen für Beamer Präsentationen](http://rmarkdown.rstudio.com/beamer_presentation_format.html)
 
-- [Keine Beschriftung der Graphiken:](http://stackoverflow.com/questions/38514954/removing-figure-text-in-rmarkdown)
-
-Oben im header muss Folgendes spezifiziert werden:
-
-```
-fig_caption: false
-```
 - [LaTeX](https://www.r-bloggers.com/from-openoffice-noob-to-control-freak-a-love-story-with-r-latex-and-knitr/)
 
 # PDF Paper mit R

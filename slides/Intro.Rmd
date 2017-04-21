@@ -1,11 +1,13 @@
 ---
 title: "Intro - Erste Schritte"
 author: "Jan-Philipp Kolb"
-date: "10 April 2017"
+date: "08 Mai 2017"
 output:
   beamer_presentation: 
     colortheme: beaver
     theme: CambridgeUS
+    fig_caption: false
+    toc: yes
   html_document:
     keep_md: yes
 ---
@@ -14,26 +16,60 @@ output:
 knitr::opts_chunk$set(echo = FALSE)
 ```
 
+# Warum R?
+
+## Gründe für die Nutzung von R
+
+- Als Weg kreativ zu sein ...
+- Graphiken, Graphiken, Graphiken
+- In Kombination mit anderen Programmen nutzbar
+- Zur Verbindung von Datenstrukturen
+- Zum Automatisieren
+- Um die Intelligenz anderer Leute zu nutzen ;-)
+- ...
+
+
 ## Warum R?
 
 ![Modularer Aufbau](figure/ModularerAufbau.PNG)
+
+
+## Gründe
+
+- R ist [frei verfügbar](http://www.inside-r.org/why-use-r). Es kann umsonst [runtergeladen](http://mirrors.softliste.de/cran/) werden.
+
+- R ist eine Skriptsprache 
+- Gute Möglichkeiten für die [Visualisierung](http://research.stowers-institute.org/efg/R/) ([Link](http://www.sr.bham.ac.uk/~ajrs/R/r-gallery.html) )
+
+- R wird immer [populärer](https://twitter.com/josiahjdavis/status/559778930476220418)
+
+- [Popularität von R](http://blog.revolutionanalytics.com/popularity/)
+
+## Übersicht - warum R
+
+![pic](http://d287f0h5fel5hu.cloudfront.net/blog/wp-content/uploads/2013/06/bar-learn-r-img11.png)
+
 
 
 ## Nachteile von R
 
 1. Daten werden oft anderswo erfasst
 2. Nicht jeder ist bereit mit R zu arbeiten 
-3. R ist manchmal zu langsam
-4. Nicht auf jedem Rechner ist R installiert
-
+3. Nicht auf jedem Rechner ist R installiert
+4. R ist manchmal zu langsam
+5. Schwierigkeiten bei der Arbeit mit großen Datenmengen
 
 ## Was folgt daraus
 
 1. Schnittstelle zu SPSS/Stata/Excel zum Import von Daten
 2. Schnittstelle zu Word
-3. Nutzung von C++
+3. Möglichkeit HTML Präsentationen zu erzeugen
+4. Nutzung von C++
+5. Nutzung von Datenbanken
 
-## Die Nutzung von Schnittstellen beim Import
+# Was ist unter den Themen des Workshops zu verstehen?
+
+## Die Nutzung von Schnittstellen beim Import/Export
 
 - Interaktion mit SPSS, Stata
 
@@ -56,27 +92,11 @@ knitr::opts_chunk$set(echo = FALSE)
 
 ![](figure/visNetwork.jpg)
 
-## Was ist unter reproduzierbaren Forschungsergebnissen zu verstehen?
-
-
-## [Schnittstellen zu Javascript](https://github.com/FrissAnalytics/shinyJsTutorials)
-
-- [shiny Javascript Tutorial](https://www.r-bloggers.com/shiny-javascript-tutorials/)
-
-```{r}
-
-```
 
 ## [Warum die Schnittstelle zu C?](http://dirk.eddelbuettel.com/papers/rcpp_workshop_introduction_user2012.pdf)
 
-## [Was ist CSS?](https://de.wikipedia.org/wiki/Cascading_Style_Sheets)
 
-![](https://upload.wikimedia.org/wikipedia/commons/8/83/CSS-Logo.png)
 
-- Stylesheet-Sprache für elektronische Dokumente
-- eine der Kernsprachen des World Wide Webs.
-- CSS wurde entworfen, um Darstellungsvorgaben weitgehend von den Inhalten zu trennen
-
-# Nutzung
+# Nutzung der Unterlagen auf GitHub
 
 ## Wie wird das Github Verzeichnis genutzt
