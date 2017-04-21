@@ -3,13 +3,14 @@ title: "Intro - Erste Schritte"
 author: "Jan-Philipp Kolb"
 date: "08 Mai 2017"
 output:
-  beamer_presentation: 
-    colortheme: beaver
-    theme: CambridgeUS
-    fig_caption: false
-    toc: yes
+  slidy_presentation: default
   html_document:
     keep_md: yes
+  beamer_presentation:
+    colortheme: beaver
+    fig_caption: no
+    theme: CambridgeUS
+    toc: yes
 ---
 
 ```{r setup, include=FALSE}
