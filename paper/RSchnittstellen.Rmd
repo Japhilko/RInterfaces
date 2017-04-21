@@ -13,7 +13,7 @@ bibliography: Rschnittstellen.bib
 
 
 
-Zahl der R-Packages
+[Zahl der R-Packages](http://blog.revolutionanalytics.com/2015/06/how-many-packages-are-there-really-on-cran.html)
 
 ```{r}
 types <- c("source", "win.binary", 

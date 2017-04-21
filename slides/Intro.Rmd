@@ -77,6 +77,6 @@ knitr::opts_chunk$set(echo = FALSE)
 - eine der Kernsprachen des World Wide Webs.
 - CSS wurde entworfen, um Darstellungsvorgaben weitgehend von den Inhalten zu trennen
 
-# Nutzung Github
+# Nutzung
 
 ## Wie wird das Github Verzeichnis genutzt

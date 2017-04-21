@@ -45,8 +45,22 @@ glimpse(df.world_ports)
 ```
 
 
+## 
+
+```{r}
+library(rvest)
+ht <- read_html('https://www.google.co.in/search?q=guitar+repair+workshop')
+links <- ht %>% html_nodes(xpath='//h3/a') %>% html_attr('href')
+gsub('/url\\?q=','',sapply(strsplit(links[as.vector(grep('url',links))],split='&'),'[',1))
+```
+
+
 ## Links
 
 - [How to really do an analysis in R (part 1, data manipulation)](https://www.r-bloggers.com/how-to-really-do-an-analysis-in-r-part-1-data-manipulation/)
 
 - [Read CSV From The Web](http://www.programmingr.com/examples/read-csv-web/)
+
+
+
+- [Scraping CRAN with rvest](https://www.r-bloggers.com/scraping-cran-with-rvest/)
