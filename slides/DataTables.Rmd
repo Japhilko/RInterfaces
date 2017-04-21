@@ -8,15 +8,19 @@ output:
 ---
 
 ```{r setup, include=FALSE}
-knitr::opts_chunk$set(echo = TRUE,eval=T)
+knitr::opts_chunk$set(echo = TRUE,eval=T,warning=F,message = F)
 ```
 
 ## The R-package DT
 
 - [DT: An R interface to the DataTables library](https://rstudio.github.io/DT/)
 
+```{r,eval=F}
+install.packages('DT')
+```
+
+
 ```{r}
-# install.packages('DT')
 library('DT')
 ```
 
@@ -29,3 +33,23 @@ datatable(exdat)
 ```
 
 Here is the the result - [example for a datatable](http://rpubs.com/Japhilko82/osmplzbe)
+
+## [Default Optionen verändern](http://rstudio.github.io/DT/options.html)
+
+```{r}
+datatable(head(exdat, 20), options = list(
+  columnDefs = list(list(className = 'dt-center', targets = 5)),
+  pageLength = 5,
+  lengthMenu = c(5, 10, 15, 20)
+))
+```
+
+
+## [Suchoptionen kennzeichnen](http://rstudio.github.io/DT/006-highlight.html)
+
+```{r}
+datatable(exdat, options = list(searchHighlight = TRUE), filter = 'top')
+```
+
+![](figure/tbHighlsearch.PNG)
+

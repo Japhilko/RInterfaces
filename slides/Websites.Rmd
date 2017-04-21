@@ -1,0 +1,12 @@
+---
+title: "Webseiten"
+author: "Jan-Philipp Kolb"
+date: "13 April 2017"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## [Rmarkdown Webseiten](http://rmarkdown.rstudio.com/rmarkdown_websites.html)

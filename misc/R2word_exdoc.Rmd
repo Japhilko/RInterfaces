@@ -1,0 +1,41 @@
+---
+title: "R2word"
+author: "Jan-Philipp Kolb"
+date: "11 April 2017"
+output:
+  word_document: 
+    reference_docx: RefDoc.docx
+    highlight: zenburn
+    toc: yes
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+# Word mit Pander
+
+## Der Start
+
+![](figure/r2wordstart.PNG)
+
+
+## Mein erstes mit R erzeugtes Word Dokument
+
+![](figure/meinWord.PNG)
+
+## Optionen
+
+![](figure/RwordOptions.PNG)
+
+## Resourcen
+
+- Interview - [Ein Word Dokument mit wenig Aufwand schreiben](https://www.r-statistics.com/2013/03/write-ms-word-document-using-r-with-as-little-overhead-as-possible/)
+
+- [pander: An R Pandoc Writer](http://rapporter.github.io/pander/)
+
+- [Ein Schummelzettel](https://www.rstudio.com/wp-content/uploads/2015/06/rmarkdown-german.pdf)
+
+- [Warum TeX besser als Word ist](http://factorgrad.blogspot.de/2010/07/why-latex-is-superior-to-ms-word.html)
+
+- [LaTeX](https://www.r-bloggers.com/from-openoffice-noob-to-control-freak-a-love-story-with-r-latex-and-knitr/)

@@ -15,14 +15,12 @@ knitr::opts_chunk$set(echo = TRUE)
 
 - [Getting started](http://rich-iannone.github.io/DiagrammeR/docs.html)
 
+- [Das R-Paket DiagrammeR](http://rich-iannone.github.io/DiagrammeR/index.html)
+
 ```{r}
 # install.packages('DiagrammeR')
 library('DiagrammeR')
 ```
-
-- [Javascript Bibliothek mermaid](https://knsv.github.io/mermaid/)
-
-- [viz.js](https://github.com/mdaines/viz.js)
 
 
 ## Creating a simple graph
@@ -96,4 +94,10 @@ More of the extras            :               extras_3,   after extras_1, 48h
 
 - [Github repo](https://github.com/knsv/mermaid)
 
+<<<<<<< HEAD
 - [Gantt chart](http://stackoverflow.com/questions/3550341/gantt-charts-with-r)
+=======
+- [Javascript Bibliothek mermaid](https://knsv.github.io/mermaid/)
+
+- [viz.js](https://github.com/mdaines/viz.js)
+>>>>>>> 29b8d5dd99b335faa6442b7e411224db0a313e0b

@@ -1,0 +1,34 @@
+---
+title: "APIs"
+author: "Jan-Philipp Kolb"
+date: "19 April 2017"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## JavaScript Object Notation (JSON)
+
+![](https://upload.wikimedia.org/wikipedia/commons/thumb/c/c9/JSON_vector_logo.svg/240px-JSON_vector_logo.svg.png)
+
+![](figure/jsonEx.PNG)
+
+## [JSON Daten](https://cran.r-project.org/web/packages/jsonlite/vignettes/json-apis.html)
+
+```{r}
+library(jsonlite)
+res <- fromJSON('http://ergast.com/api/f1/2004/1/results.json')
+drivers <- res$MRData$RaceTable$Races$Results[[1]]$Driver
+colnames(drivers)
+```
+
+```{r}
+article_key <- "&api-key=c2fede7bd9aea57c898f538e5ec0a1ee:6:68700045"
+url <- "http://api.nytimes.com/svc/search/v2/articlesearch.json?q=obamacare+socialism"
+req <- fromJSON(paste0(url, article_key))
+articles <- req$response$docs
+colnames(articles)
+```
+

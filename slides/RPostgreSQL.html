@@ -167,6 +167,65 @@ sudo -u postgres createdb -E UTF8 -O Japhilko offlgeoc</code></pre>
 <pre class="bash"><code>sudo -u postgres createdb -E UTF8 -O Japhilko offlgeocRLP</code></pre>
 <pre class="shell"><code>CREATE EXTENSION postgis;</code></pre>
 <pre><code>osm2pgsql -s -U postgres -d offlgeocRLP -o gazetteer /home/kolb/Forschung/osmData/data/rheinland-pfalz-latest.osm.pbf </code></pre>
+<p><a href="https://gist.github.com/jpetazzo/5177554">So bekommt man alle administrativen Grenzen:</a></p>
+<pre><code>SELECT name FROM planet_osm_polygon WHERE boundary='administrative'</code></pre>
+</div>
+<div id="zuruck-zu-r" class="section level2">
+<h2><a href="https://datashenanigan.wordpress.com/2015/05/18/getting-started-with-postgresql-in-r/">Zurück zu R</a></h2>
+<pre class="r"><code>pw &lt;- {&quot;1234&quot;}
+drv &lt;- dbDriver(&quot;PostgreSQL&quot;)
+con &lt;- dbConnect(drv, dbname = &quot;offlgeocRLP&quot;,
+                 host = &quot;localhost&quot;, port = 5432,
+                 user = &quot;postgres&quot;, password = pw)
+rm(pw) # removes the password
+
+dbExistsTable(con, &quot;planet_osm_polygon&quot;)</code></pre>
+<ul>
+<li><a href="http://dba.stackexchange.com/questions/54011/postgres-function-assign-query-results-to-multiple-variables">Select more than one column</a></li>
+</ul>
+<pre class="r"><code>df_postgres &lt;- dbGetQuery(con, &quot;SELECT name, admin_level FROM planet_osm_polygon WHERE boundary='administrative'&quot;)</code></pre>
+<pre class="r"><code>barplot(table(df_postgres[,2]),col=&quot;royalblue&quot;)</code></pre>
+</div>
+<div id="section" class="section level2">
+<h2></h2>
+<pre class="r"><code>df_adm8 &lt;- dbGetQuery(con, &quot;SELECT name, admin_level FROM planet_osm_polygon WHERE boundary='administrative' AND admin_level='8'&quot;)</code></pre>
+<pre class="r"><code>library(knitr)
+# kable(head(df_adm8))</code></pre>
+</div>
+<div id="section-1" class="section level2">
+<h2></h2>
+<pre class="r"><code>df_hnr &lt;- dbGetQuery(con, &quot;SELECT * FROM planet_osm_line, planet_osm_point 
+WHERE planet_osm_line.name='Nordring' AND planet_osm_line.highway IN ('motorway','trunk','primary')
+AND planet_osm_point.name='Ludwigshafen' AND planet_osm_point.place IN ('city', 'town')
+ORDER BY ST_Distance(planet_osm_line.way, planet_osm_point.way)&quot;)</code></pre>
+<pre class="r"><code>df_hnr &lt;- dbGetQuery(con, &quot;SELECT * FROM planet_osm_line, planet_osm_point 
+WHERE planet_osm_line.name='Nordring' AND planet_osm_point.name='Ludwigshafen' 
+ORDER BY ST_Distance(planet_osm_line.way, planet_osm_point.way)&quot;)
+head(df_hnr)</code></pre>
+<pre class="r"><code>df_ &lt;- dbGetQuery(con, &quot;SELECT * FROM planet_osm_line, planet_osm_point 
+WHERE planet_osm_line.name='Nordring' AND planet_osm_point.name='Ludwigshafen' 
+ORDER BY ST_Distance(planet_osm_line.way, planet_osm_point.way)&quot;)
+head(df_hnr)</code></pre>
+<pre class="r"><code>colnames(df_)</code></pre>
+<pre class="r"><code>table(df_$name)</code></pre>
+</div>
+<div id="adress-in-sippersfeld" class="section level2">
+<h2>Adress in Sippersfeld</h2>
+<pre class="r"><code>df_sipp &lt;- dbGetQuery(con, &quot;SELECT * FROM planet_osm_line, planet_osm_point 
+WHERE planet_osm_line.name='Rechweg' AND planet_osm_point.name='Sippersfeld' 
+ORDER BY ST_Distance(planet_osm_line.way, planet_osm_point.way)&quot;)
+head(df_sipp)</code></pre>
+</div>
+<div id="openstreetmap-und-open-government-data-in-postgis" class="section level2">
+<h2><a href="http://tud.at/linuxwochen/2013-osm-postgis/">OpenStreetMap und Open Government Data in PostGIS</a></h2>
+<pre class="r"><code>restnam &lt;- dbGetQuery(con, &quot;SELECT name, COUNT(osm_id) AS anzahl
+FROM planet_osm_point
+WHERE amenity = 'restaurant'
+  AND name &lt;&gt; ''
+GROUP BY name
+ORDER BY anzahl DESC
+LIMIT 10&quot;)
+head(restnam)</code></pre>
 </div>
 <div id="postgresql-and-leaflet" class="section level2">
 <h2><a href="https://www.r-bloggers.com/using-postgresql-and-shiny-with-a-dynamic-leaflet-map-monitoring-trash-cans/">PostgreSQL and Leaflet</a></h2>
@@ -183,6 +242,7 @@ library(RPostgreSQL)</code></pre>
 <li><p><a href="http://www.bostongis.com/PrinterFriendly.aspx?content_name=postgis_tut01">Getting Started With PostGIS</a></p></li>
 <li><p><a href="http://postgis.net/docs/Geocode.html">PostGIS geocode</a></p></li>
 <li><p><a href="http://wiki.openstreetmap.org/wiki/Nominatim/Installation">Nominatim installation</a></p></li>
+<li><p><a href="https://www.azavea.com/blog/2015/12/21/tools-for-getting-data-out-of-openstreetmap-and-into-desktop-gis/">Wie bekommt man OSM Daten</a></p></li>
 </ul>
 </div>
 

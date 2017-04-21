@@ -1,0 +1,98 @@
+---
+title: "Datenexport"
+author: "Jan-Philipp Kolb"
+date: "17 April 2017"
+output:
+  beamer_presentation: 
+    colortheme: beaver
+    theme: CambridgeUS
+  html_document:
+    keep_md: yes
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+# Export Allgemein
+
+## R's Exportformate
+
+-  In R werden offene Dateiformate bevorzugt
+-  Als Äquivalenz zu den `read.X()` Funktionen stehen viele `write.X()` Funktionen zur Verfügung
+-  Das eigene Format von R sind sog. Workspaces (`.RData`)
+
+## Beispieldatensatz erzeugen
+
+```{r}
+A <- c(1,2,3,4)
+B <- c("A","B","C","D")
+
+mydata <- data.frame(A,B)
+```
+
+
+
+## Überblick Daten Import/Export
+
+```{r,eval=F}
+save(mydata, file="mydata.RData")
+```
+
+## Daten in Excel Format abspeichern
+
+```{r,eval=F}
+write.csv(mydata,file="mydata.csv") 
+```
+
+
+```{r,eval=F}
+library(xlsx)
+write.xlsx(mydata,file="mydata.xlsx") 
+```
+
+
+
+## Daten in stata Format abspeichern
+
+```{r}
+library(foreign)
+write.dta(mydata,file="mydata.dta") 
+```
+
+## Das Paket `rio`
+
+```{r,eval=F}
+install.packages("rio")
+```
+
+
+## [Daten als .sav abspeichern (SPSS)](https://cran.r-project.org/web/packages/rio/vignettes/rio.html)
+
+```{r}
+library("rio")
+# create file to convert
+setwd("data/")
+
+export(mtcars, "mtcars.sav")
+```
+
+
+## Dateiformate konvertieren
+
+```{r}
+export(mtcars, "mtcars.dta")
+
+# convert Stata to SPSS
+convert("mtcars.dta", "mtcars.sav")
+```
+
+
+
+## Links Export
+
+- [Quick R](http://www.statmethods.net/input/exportingdata.html) für das Exportieren von Daten:
+
+- Hilfe zum Export auf dem [cran Server](http://cran.r-project.org/doc/manuals/r-release/R-data.pdf)
+
+- [Daten aus R heraus bekommen](https://www.stat.ubc.ca/~jenny/STAT545A/block05_getNumbersOut.html)

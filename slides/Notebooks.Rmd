@@ -1,0 +1,96 @@
+---
+title: "Notebooks"
+author: "Jan-Philipp Kolb"
+date: "08 Mai 2017"
+output: 
+  beamer_presentation: 
+    colortheme: beaver
+    fonttheme: structurebold
+    highlight: tango
+    theme: CambridgeUS
+    fig_caption: false
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## Notebooks
+
+- [Warum R Notebook nutzen](https://news.ycombinator.com/item?id=12683625)
+
+# Rnotebooks
+
+## Ein Rnotebook anlegen
+
+![](figure/startNotebook)
+
+## Rnotebook - erste Schritte
+
+- Es lassen sich so genannte Chunks einfügen
+- In diesen Chunks wird ganz normaler R-code geschrieben
+
+![](figure/NotebooksBasicEx.PNG)
+
+
+## Python Code integrieren
+
+- Ebenso lässt sich [Python code implementieren](https://support.rstudio.com/hc/en-us/articles/233066128-Do-Notebooks-support-other-languages-)
+
+
+![](figure/pythonCode.PNG)
+
+```{python}
+import sys
+print(sys.version)
+```
+
+## [LaTeX Code integieren](https://blog.rstudio.org/2016/10/05/r-notebooks/)
+
+- LaTeX code wird mit zwei Dollarzeichen gekennzeichnet
+
+![](figure/LaTexCode.PNG)
+
+
+## Notebook veröffentlichen I
+
+![](figure/PublishNotebook.PNG)
+
+## Notebook veröffentlichen II
+
+![](figure/PublishNotebook2.PNG)
+
+# Andere Notebooks
+
+## [Jupyter Notebook](http://jupyter.readthedocs.io/en/latest/install.html)
+
+![](http://jupyter.readthedocs.io/en/latest/_static/_images/jupyter.svg)
+
+- Anaconda installieren
+- folgenden Befehl in die Eingabeaufforderung eingeben
+- Diese findet man bei windows wenn man cmd in Suche eingibt.
+
+```
+jupyter notebook
+```
+## Start Jupyter Notebook
+
+![](figure/JupyterEx.PNG)
+
+## Beispiel Eingabe Code
+
+![](figure/JupyterNotebookQmap.PNG)
+
+## Links
+
+- [knitr Language Engines](http://rmarkdown.rstudio.com/authoring_knitr_engines.html)
+
+- [More engines](https://yihui.name/knitr/demo/engines/)
+
+- [Andere Programmiersprachen können eingebunden werden](http://rmarkdown.rstudio.com/authoring_knitr_engines.html)
+
+- [Video - Einführung in Rnotebook](https://www.rstudio.com/resources/webinars/introducing-notebooks-with-r-markdown/)
+
+- [R Notebooks](http://rmarkdown.rstudio.com/r_notebooks.html)
+
+- [IPython vs knitr, or Python vs R](https://yihui.name/en/2012/11/ipython-vs-knitr/)

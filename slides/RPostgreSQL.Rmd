@@ -29,7 +29,7 @@ knitr::opts_chunk$set(echo = TRUE,eval=F)
 
 ## Wie bekomme ich Daten in die Datenbank
 
-```{r}
+```{r,background='#FA58F4'}
 # install.packages("RPostgreSQL")
 library("RPostgreSQL")
 ```

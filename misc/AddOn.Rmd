@@ -1,0 +1,183 @@
+---
+title: "AddOn"
+author: "Jan-Philipp Kolb"
+date: "6 April 2017"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+
+[Einführung und Motivation](https://github.com/Japhilko/RInterfaces/blob/master/slides/Intro.md)
+
+## Schnittstellen für den Austausch von Daten
+
+- [Datenimport](slides/Datenimport.Rmd)
+-	[R und Excel](https://github.com/Japhilko/RInterfaces/blob/master/slides/Rexcel.md)
+
+## R und Textverarbeitung - Reproducible Research
+
+- [Word Dokumente mit R erstellen](slides/R2word.Rmd)
+-	[PDF Dokumente und Präsentationen mit LaTeX und Sweave](slides/R2pdf.Rmd)
+-	[HTML Dokumente und Präsentationen mit Rmarkdown](https://github.com/Japhilko/RInterfaces/blob/master/slides/presentHTML.md)
+- [Notebooks](slides/Notebooks.Rmd) - Beispiel Integration von Python
+
+
+## Interaktive Darstellung mit Javascript und R
+
+-	[R und die Javascript Data-Driven Documents (D3)](https://github.com/Japhilko/RInterfaces/blob/master/slides/D3.md)
+-	[Interaktive Karten mit dem Javascript Paket leaflet](https://github.com/Japhilko/RInterfaces/blob/master/slides/leaflet.md)
+-	[Interaktive Tabellen mit DataTables](https://github.com/Japhilko/RInterfaces/blob/master/slides/DataTables.md)
+-	[Interaktive Graphiken mit D3 und plotly](https://github.com/Japhilko/RInterfaces/blob/master/slides/plotly.md)
+-	[Netzwerkgraphiken mit vis.js](https://github.com/Japhilko/RInterfaces/blob/master/slides/visNetwork.md)
+-	[Das Erstellen von Ablaufdiagrammen mit mermaid](https://github.com/Japhilko/RInterfaces/blob/master/slides/mermaid.md)
+
+
+## Verarbeitung/ Manipulation organischer Daten
+
+- [Webscraping](https://github.com/Japhilko/RInterfaces/blob/master/slides/Webscraping.md)
+-	[Import von XML-Dateien](https://github.com/Japhilko/RInterfaces/blob/master/slides/XML.md)
+-	Die Nutzung von xpath in R
+-	Import von JSON-Objekten
+-	Datenmanipulation mit dplyr
+
+
+## Hochperfomanter Code
+
+-	[Das Paket data.table](slides/Erweiterung_datatable.md)
+-	[C++ Integration - Überblick über das Paket rcpp](https://github.com/Japhilko/RInterfaces/blob/master/slides/rcpp.md)
+-	Überblick über Möglichkeiten des Parallel Computings - Paket parallel
+
+## Integration von Datenbanken
+
+-	[Integration von PostgreSQL mit dem Paket 
+RPostgreSQL](https://github.com/Japhilko/RInterfaces/blob/master/slides/RPostgreSQL.Rmd)
+-	Nutzung von MySQL mit dem Paket RMySQL
+-	[Nutzung von MongoDB in R](https://github.com/Japhilko/RInterfaces/blob/master/slides/Rmongodb.md)
+
+
+
+## Internetresourcen und Schnittstellen nutzen
+
+-	Einfache http-Nutzung mit httr
+-	Das Paket RCurl
+- [Das Paket rvest](slides/rvest.Rmd)
+
+## Vermischtes
+
+- R und Git
+
+
+## Getting Data from Wikipedia
+
+```{r,eval=F}
+install.packages("wikipediatrend")
+```
+
+
+```{r}
+library(wikipediatrend)
+library(ggplot2)
+```
+
+
+
+## Schnelligkeit 
+
+```{r,eval=F}
+install.packages("inline")
+```
+
+
+```{r}
+library(inline)
+src<- 'int n = as<int>(ns);
+double x = as<double>(xs);
+for (int i=0; i<n; i++) x=1/(1+x);
+return wrap(x);'
+```
+
+```{r}
+l<- cxxfunction(signature(ns="integer",
+xs="numeric"),body=src, plugin="Rcpp")
+```
+
+
+
+```{python, engine.path="D:/Programme/python/python.exe"}
+import feather
+import pandas as pd
+import numpy as np
+arr = np.random.randn(10000000) # 10% nulls
+arr[::10] = np.nan
+df = pd.DataFrame({'column_{0}'.format(i): arr for i in range(10)})
+feather.write_dataframe(df, 'test.feather')
+```
+
+
+```{r}
+library(feather)
+library(ggplot2)
+
+# Read from feather and plot
+flights <- read_feather("flights.feather")
+ggplot(flights, aes(carrier, arr_delay)) + geom_point() + geom_jitter()
+```
+
+
+## [Das Paket R2wd](https://www.r-statistics.com/2010/05/exporting-r-output-to-ms-word-with-r2wd-an-example-session/)
+
+```{r,eval=F}
+install.packages("R2wd")
+install.packages("rcom")
+```
+
+```{r,eval=F}
+library(R2wd)
+wdGet(T)	
+wdNewDoc("c:\This.doc")
+```
+
+## Datenaustausch mittels `feather`
+
+```{r,eval=F}
+install.packages("feather")
+```
+
+
+## Das Paket `feather`
+
+```{python,eval=F}
+import pandas
+import feather
+
+# Read flights data and select flights to O'Hare
+flights = pandas.read_csv("flights.csv")
+flights = flights[flights['dest'] == "ORD"]
+
+# Select carrier and delay columns and drop rows with missing values
+flights = flights[['carrier', 'dep_delay', 'arr_delay']]
+flights = flights.dropna()
+print flights.head(10)
+
+# Write to feather file for reading from R
+feather.write_dataframe(flights, "flights.feather")
+```
+
+
+```{r}
+library(feather)
+library(ggplot2)
+
+# Read from feather and plot
+flights <- read_feather("flights.feather")
+ggplot(flights, aes(carrier, arr_delay)) + geom_boxplot()
+```
+
+
+
+## Links
+
+- [Stata und R eine Gegenüberstellung](http://www.ssoar.info/ssoar/bitstream/handle/document/25638/ssoar-2010-mumdzhiev-stata_und_r_eine_gegenuberstellung.pdf?sequence=1)

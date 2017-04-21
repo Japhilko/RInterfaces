@@ -77,7 +77,21 @@ m1 <- leaflet() %>%
 
 ![gui](http://i1.wp.com/spatialrecology.org/images/r_leaflet/snapshot2.png)
 
+## [Layers ein- und ausblenden](https://rstudio.github.io/leaflet/showhide.html)
+
+
+```r
+leaflet() %>%
+  addTiles() %>%
+  addMarkers(data = coffee_shops, group = "Food & Drink") %>%
+  addMarkers(data = restaurants, group = "Food & Drink") %>%
+  addMarkers(data = restrooms, group = "Restrooms")
+```
+
+
 ## Links und Quellen
+
+- [4 Tricks zum Arbeiten mit Leaflet](https://www.r-bloggers.com/4-tricks-for-working-with-r-leaflet-and-shiny/)
 
 - <http://www.r-bloggers.com/the-leaflet-package-for-online-mapping-in-r/>
 - <https://rstudio.github.io/leaflet/>

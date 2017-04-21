@@ -1,0 +1,66 @@
+---
+title: "Dashboards"
+author: "Jan-Philipp Kolb"
+date: "13 April 2017"
+output: pdf_document
+  fig_caption: false
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## [Beispiel R-Pakete](https://gallery.shinyapps.io/cran-gauge/)
+
+![](figure/CRANdownloads.PNG)
+
+
+## [Paket installieren](https://blog.rstudio.org/2016/05/17/flexdashboard-easy-interactive-dashboards-for-r/)
+
+```{r, eval=F}
+install.packages("flexdashboard", type = "source")
+```
+
+## Ein Dashboard erstellen mit Rstudio
+
+![](https://i2.wp.com/rmarkdown.rstudio.com/flexdashboard/images/NewRMarkdown.png?zoom=2)
+
+
+
+
+## [Gallerie](http://rmarkdown.rstudio.com/gallery.html)
+
+
+```{r, eval=F}
+install.packages("highcharter", type = "source")
+```
+
+
+```{r setup, include=FALSE}
+library(highcharter)
+library(dplyr)
+library(viridisLite)
+library(forecast)
+library(treemap)
+library(flexdashboard)
+
+thm <- 
+  hc_theme(
+    colors = c("#1a6ecc", "#434348", "#90ed7d"),
+    chart = list(
+      backgroundColor = "transparent",
+      style = list(fontFamily = "Source Sans Pro")
+    ),
+    xAxis = list(
+      gridLineWidth = 1
+    )
+  )
+
+```
+
+## Links
+
+- [R Dashboards](https://plot.ly/r/dashboard/)
+- [flexdashboards](https://blog.rstudio.org/2016/05/17/flexdashboard-easy-interactive-dashboards-for-r/)
+
+- [Dashboard Beispiel](https://beta.rstudioconnect.com/jjallaire/htmlwidgets-highcharter/htmlwidgets-highcharter.html)

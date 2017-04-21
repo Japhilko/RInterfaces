@@ -1,0 +1,74 @@
+---
+title: "Intro - Erste Schritte"
+author: "Jan-Philipp Kolb"
+date: "10 April 2017"
+output:
+  beamer_presentation: 
+    colortheme: beaver
+    theme: CambridgeUS
+  html_document:
+    keep_md: yes
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+```
+
+## Warum R?
+
+![Modularer Aufbau](figure/ModularerAufbau.PNG)
+
+
+## Nachteile von R
+
+1. Daten werden oft anderswo erfasst
+2. Nicht jeder ist bereit mit R zu arbeiten 
+3. R ist manchmal zu langsam
+4. Nicht auf jedem Rechner ist R installiert
+
+
+## Was folgt daraus
+
+1. Schnittstelle zu SPSS/Stata/Excel zum Import von Daten
+2. Schnittstelle zu Word
+3. Nutzung von C++
+
+## Die Nutzung von Schnittstellen beim Import
+
+- Interaktion mit SPSS, Stata
+
+![Import](figure/Import.PNG)
+
+## [Reproducible Research](http://www.statsmakemecry.com/smmctheblog/the-time-for-reproducible-research-is-now)
+
+![](figure/MiracleOccursImage.png)
+
+## [Was wird bei Wikipedia unter Reproduibility verstanden?](https://en.wikipedia.org/wiki/Reproducibility)
+
+![](figure/Spectrum_of_reproducible_research.png)
+
+
+## Darstellung von Ergebnissen
+
+- Mit der Schnittstelle zu Javascript lassen sich interaktive Graphiken erzeugen
+- Diese kann man auf Websites, in Präsentationen oder in Dashboards verwenden
+
+
+![](figure/visNetwork.jpg)
+
+## Was ist unter reproduzierbaren Forschungsergebnissen zu verstehen?
+
+
+## [Schnittstellen zu Javascript](https://github.com/FrissAnalytics/shinyJsTutorials)
+
+- [shiny Javascript Tutorial](https://www.r-bloggers.com/shiny-javascript-tutorials/)
+
+```{r}
+
+```
+
+## [Warum die Schnittstelle zu C?](http://dirk.eddelbuettel.com/papers/rcpp_workshop_introduction_user2012.pdf)
+
+## Was ist CSS?
+
+## Wie wird das Github Verzeichnis genutzt

@@ -11,6 +11,18 @@ output:
 knitr::opts_chunk$set(echo = TRUE,eval=F)
 ```
 
+## The XML package
+
+```{r}
+library(XML)
+citation("XML")
+```
+
+
+
+
+## First example
+
 ```{r}
 url <- "http://api.openstreetmap.org/api/0.6/
 relation/62422"
@@ -19,7 +31,6 @@ relation/62422"
 
 ```{r}
 library(xml2)
-library(XML)
 BE <- xmlParse(url)
 ```
 

@@ -1,19 +1,28 @@
 ---
 title: "R und Excel"
 author: "Jan-Philipp Kolb"
-date: "7 Februar 2017"
+date: "08 Mai 2017"
 output: 
   html_document: 
     keep_md: yes
 ---
 
 ```{r setup, include=FALSE}
-knitr::opts_chunk$set(echo = TRUE)
+knitr::opts_chunk$set(echo = TRUE,message=F,warnings=F)
 ```
 
-## [Few steps to connect R with Excel](http://www.milanor.net/blog/steps-connect-r-excel-xlconnect/)
+## Eine wichtige Datenquelle
 
-- [The excel connection](https://www.r-bloggers.com/r-the-excel-connection/)
+- [Eurostat](http://appsso.eurostat.ec.europa.eu/nui/setupDownloads.do)
+
+```{r,eval=F}
+library(xlsx)
+dat <- read.xlsx("cult_emp_sex.xls",1)
+```
+
+## [Einige Schritte um R und Excel zu verbinden](http://www.milanor.net/blog/steps-connect-r-excel-xlconnect/)
+
+- [Die Excel-Verbindung](https://www.r-bloggers.com/r-the-excel-connection/)
 
 ```{r,eval=F}
 install.packages("XLConnect")
@@ -23,9 +32,44 @@ install.packages("XLConnect")
 library("XLConnect")
 ```
 
+## [Eine Excel Datei aus R erzeugen](http://www.milanor.net/blog/steps-connect-r-excel-xlconnect/)
+
+```{r,eval=F}
+fileXls <- "data/newFile.xlsx"
+unlink(fileXls, recursive = FALSE, force = FALSE)
+exc <- loadWorkbook(fileXls, create = TRUE)
+createSheet(exc,'Input')
+saveWorkbook(exc)
+```
+
+## Das Arbeitsblatt mit Daten befüllen
+
+```{r,eval=F}
+input <- data.frame('inputType'=c('Day','Month'),'inputValue'=c(2,5))
+writeWorksheet(exc, input, sheet = "input", startRow = 1, startCol = 2)
+saveWorkbook(exc)
+```
+
+## [BERT - Eine weitere Verbindung zwischen R und Excel](https://www.r-bloggers.com/bert-a-newcomer-in-the-r-excel-connection/)
+
+- [Schnellstart mit Excel](https://bert-toolkit.com/bert-quick-start)
+
+![](figure/BERTaddins.PNG)
 
 
-## 
+
+```{r}
+myFunction <- function(){
+ aa <- rnorm(200)
+ bb <- rnorm(200)
+ res <- lm(aa~bb)$res
+ return(res)
+}
+```
+
+
+
+## Das Paket readxl
 
 - [readxl](https://www.r-bloggers.com/get-data-out-of-excel-and-into-r-with-readxl/)
 
