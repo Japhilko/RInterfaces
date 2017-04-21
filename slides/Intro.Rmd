@@ -67,7 +67,7 @@ knitr::opts_chunk$set(echo = FALSE)
 4. Nutzung von C++
 5. Nutzung von Datenbanken
 
-# Was ist unter den Themen des Workshops zu verstehen?
+# Warum die Nutzung von Schnittstellen?
 
 ## Die Nutzung von Schnittstellen beim Import/Export
 
@@ -93,9 +93,17 @@ knitr::opts_chunk$set(echo = FALSE)
 ![](figure/visNetwork.jpg)
 
 
-## [Warum die Schnittstelle zu C?](http://dirk.eddelbuettel.com/papers/rcpp_workshop_introduction_user2012.pdf)
+## [Warum die Schnittstelle zu C++?](http://dirk.eddelbuettel.com/papers/rcpp_workshop_introduction_user2012.pdf)
 
+- [Wenn Schnelligkeit wichtig ist, bietet sich C++ an](http://www.stat.berkeley.edu/scf/paciorek-cppWorkshop.pdf)
+- [Dies ist kann bspw. der Fall sein, wenn sich Schleifen nicht vermeiden lassen](https://www.r-bloggers.com/calling-c-from-r-using-rcpp/)
+- [Man wird bei der Programmierung durch RStudio unterstützt](https://support.rstudio.com/hc/en-us/articles/200486088-Using-Rcpp-with-RStudio)
+- Es gibt eine [Rcpp Galerie](http://gallery.rcpp.org/), wo man sich Anregungen holen kann
 
+## Die Nutzung von Datenbanken
+
+- Wenn große Datenmengen anfallen, kann die zusätzliche Nutzung von Datenbanken sinnvoll sein
+- In R bestehen Schnittstellen sowohl zu relationalen als auch nicht relationalen Datenbanken
 
 # Nutzung der Unterlagen auf GitHub
 
