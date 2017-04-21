@@ -1,0 +1,17 @@
+\documentclass{beamer}
+
+\begin{document}
+
+\begin{frame}
+<<>>=
+CRANmirror <- "http://cran.revolutionanalytics.com"
+
+cran <- contrib.url(repos = CRANmirror,type = "source")
+
+info <- available.packages(contriburl = cran, type = x)
+@
+
+Es gibt aktuell \Sexpr{nrow(info)} Pakete auf CRAN.
+\end{frame}
+
+\end{document}

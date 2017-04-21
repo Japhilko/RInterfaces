@@ -9,3 +9,23 @@ library(knitr)
 purl("Datenimport.Rmd")
 purl("Datenexport.Rmd")
 purl("Rexcel.Rmd")
+
+## Install Packages
+
+install.packages("dygraphs")
+
+## Citations
+
+citation("devtools")
+
+citation("foreign")
+citation("dplyr")
+citation("ggplot2")
+citation("ggvis")
+citation("googleVis")
+citation("tabplotd3")
+citation("d3Network")
+citation("Rook")
+citation("dygraphs")
+
+citation("RMySQL")

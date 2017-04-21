@@ -1,0 +1,50 @@
+---
+title: "R Schnittstellen"
+author: "Jan-Philipp Kolb"
+date: "21 April 2017"
+output: 
+  pdf_document: default
+bibliography: Rschnittstellen.bib
+---
+
+# Einleitung
+
+@ma:gandrud und [@ma:horner]
+
+
+
+Zahl der R-Packages
+
+```{r}
+types <- c("source", "win.binary", 
+           "mac.binary", "mac.binary.mavericks")
+ 
+CRANmirror <- "http://cran.revolutionanalytics.com"
+ 
+pdb <- lapply(types, function(x){
+  cran <- contrib.url(repos = CRANmirror, 
+                      type = x)
+  available.packages(contriburl = cran, type = x)
+})
+names(pdb) <- types
+str(pdb, max.level = 1)
+
+ 
+# Number of available packages
+sapply(pdb, nrow)
+```
+
+
+# Referenzen
+
+![](figure/bibtexErgebnis.PNG)
+
+
+
+
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## 

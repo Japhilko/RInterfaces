@@ -1,0 +1,102 @@
+% Encoding: UTF-8
+
+@Manual{,
+  title     = {RMySQL: Database Interface and 'MySQL' Driver for R},
+  author    = {Jeroen Ooms and David James and Saikat DebRoy and Hadley Wickham and Jeffrey Horner},
+  year      = {2017},
+  note      = {R package version 0.10.11},
+  owner     = {kolbjp},
+  timestamp = {2017-04-21},
+  url       = {https://CRAN.R-project.org/package=RMySQL},
+}
+
+  @Manual{,
+    title = {foreign: Read Data Stored by Minitab, S, SAS, SPSS, Stata, Systat, Weka,
+dBase, ...},
+    author = {{R Core Team}},
+    year = {2016},
+    note = {R package version 0.8-67},
+    url = {https://CRAN.R-project.org/package=foreign},
+  }
+
+  @Manual{,
+    title = {tabplotd3: Tabplotd3, interactive inspection of large data},
+    author = {Edwin {de Jonge} and Martijn Tennekes},
+    year = {2013},
+    note = {R package version 0.3.3},
+    url = {https://CRAN.R-project.org/package=tabplotd3},
+  }
+
+    @Book{,
+    author = {Hadley Wickham},
+    title = {ggplot2: Elegant Graphics for Data Analysis},
+    publisher = {Springer-Verlag New York},
+    year = {2009},
+    isbn = {978-0-387-98140-6},
+    url = {http://ggplot2.org},
+  }
+  
+    @Manual{,
+    title = {ggvis: Interactive Grammar of Graphics},
+    author = {Winston Chang and Hadley Wickham},
+    year = {2016},
+    note = {R package version 0.4.3},
+    url = {https://CRAN.R-project.org/package=ggvis},
+  }
+
+    @Manual{,
+    title = {dplyr: A Grammar of Data Manipulation},
+    author = {Hadley Wickham and Romain Francois},
+    year = {2016},
+    note = {R package version 0.5.0},
+    url = {https://CRAN.R-project.org/package=dplyr},
+  }
+
+    @Article{,
+    title = {googleVis: Interface between R and the Google Visualisation API},
+    author = {Markus Gesmann and Diego {de Castillo}},
+    journal = {The R Journal},
+    year = {2011},
+    volume = {3},
+    number = {2},
+    pages = {40--44},
+    month = {December},
+    url = {https://journal.r-project.org/archive/2011-2/RJournal_2011-2_Gesmann+de~Castillo.pdf},
+  }
+  
+    @Manual{,
+    title = {devtools: Tools to Make Developing R Packages Easier},
+    author = {Hadley Wickham and Winston Chang},
+    year = {2016},
+    note = {R package version 1.12.0},
+    url = {https://CRAN.R-project.org/package=devtools},
+  }
+
+    @Manual{,
+    title = {d3Network: Tools for creating D3 JavaScript network, tree, dendrogram, and
+Sankey graphs from R},
+    author = {Christopher Gandrud},
+    year = {2015},
+    note = {R package version 0.5.2.1},
+    url = {https://CRAN.R-project.org/package=d3Network},
+  }
+
+    @Manual{,
+    title = {Rook: Rook - a web server interface for R},
+    author = {Jeffrey Horner},
+    year = {2014},
+    note = {R package version 1.1-1},
+    url = {https://CRAN.R-project.org/package=Rook},
+  }
+  
+    @Manual{,
+    title = {dygraphs: Interface to 'Dygraphs' Interactive Time Series Charting Library},
+    author = {Dan Vanderkam and JJ Allaire and Jonathan Owen and Daniel Gromer and Petr Shevtsov and Benoit Thieurmel},
+    year = {2017},
+    note = {R package version 1.1.1.4},
+    url = {https://CRAN.R-project.org/package=dygraphs},
+  }
+
+
+
+@Comment{jabref-meta: databaseType:bibtex;}

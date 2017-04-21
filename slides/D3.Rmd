@@ -93,15 +93,6 @@ plot(
 ```
 
 
-## 
-
-[SVGAnnotation](https://www.jstatsoft.org/article/view/v046i01)
-
-
-```{r,eval=F}
-install.packages("SVGAnnotation")
-```
-
 
 ## [Click me](http://rclickme.com/)
 

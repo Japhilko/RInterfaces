@@ -1,24 +1,8 @@
----
-title: "PDF Paper und Präsentationen mit R und Rstudio"
-author: "Jan-Philipp Kolb"
-date: "08 Mai 2017"
-output: 
-  beamer_presentation: 
-    colortheme: beaver
-    fonttheme: structurebold
-    highlight: tango
-    theme: CambridgeUS
-    toc: yes
-  ioslides_presentation: 
-    highlight: tango
-    keep_md: yes
----
+# PDF Paper und Präsentationen mit R und Rstudio
+Jan-Philipp Kolb  
+08 Mai 2017  
 
-```{r setup, include=FALSE}
-knitr::opts_chunk$set(echo = TRUE)
-library(knitr)
 
-```
 
 # Präsentationen mit Rmarkdown
 
@@ -131,8 +115,29 @@ fig_caption: false
 
 - Mit dem Befehl `citation()` bekommt man sehr schnell die Referenz
 
-```{r}
+
+```r
 citation("RMySQL")
+```
+
+```
+## 
+## To cite package 'RMySQL' in publications use:
+## 
+##   Jeroen Ooms, David James, Saikat DebRoy, Hadley Wickham and
+##   Jeffrey Horner (2017). RMySQL: Database Interface and 'MySQL'
+##   Driver for R. R package version 0.10.11.
+##   https://CRAN.R-project.org/package=RMySQL
+## 
+## A BibTeX entry for LaTeX users is
+## 
+##   @Manual{,
+##     title = {RMySQL: Database Interface and 'MySQL' Driver for R},
+##     author = {Jeroen Ooms and David James and Saikat DebRoy and Hadley Wickham and Jeffrey Horner},
+##     year = {2017},
+##     note = {R package version 0.10.11},
+##     url = {https://CRAN.R-project.org/package=RMySQL},
+##   }
 ```
 
 ![](figure/bibtexRmysql.PNG)

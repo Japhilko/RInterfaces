@@ -177,6 +177,15 @@ ggplot(flights, aes(carrier, arr_delay)) + geom_boxplot()
 ```
 
 
+## 
+
+[SVGAnnotation](https://www.jstatsoft.org/article/view/v046i01)
+
+
+```{r,eval=F}
+install.packages("SVGAnnotation")
+```
+
 
 ## Links
 

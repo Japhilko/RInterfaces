@@ -1,0 +1,17 @@
+---
+title: "Datenbanken"
+author: "Jan-Philipp Kolb"
+date: "21 April 2017"
+output: beamer_presentation
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+```
+
+## 
+
+```{r,eval=F}
+install.packages("RMySQL")
+```
+

@@ -69,6 +69,14 @@ knitr::opts_chunk$set(echo = FALSE)
 
 ## [Warum die Schnittstelle zu C?](http://dirk.eddelbuettel.com/papers/rcpp_workshop_introduction_user2012.pdf)
 
-## Was ist CSS?
+## [Was ist CSS?](https://de.wikipedia.org/wiki/Cascading_Style_Sheets)
+
+![](https://upload.wikimedia.org/wikipedia/commons/8/83/CSS-Logo.png)
+
+- Stylesheet-Sprache für elektronische Dokumente
+- eine der Kernsprachen des World Wide Webs.
+- CSS wurde entworfen, um Darstellungsvorgaben weitgehend von den Inhalten zu trennen
+
+# Nutzung Github
 
 ## Wie wird das Github Verzeichnis genutzt
