@@ -41,20 +41,22 @@ Aufgabe: Bearbeiten Sie ein Notebook weiter
 -	[Netzwerkgraphiken mit vis.js](https://github.com/Japhilko/RInterfaces/blob/master/slides/visNetwork.md)
 -	[Das Erstellen von Ablaufdiagrammen mit mermaid](https://github.com/Japhilko/RInterfaces/blob/master/slides/mermaid.md)
 
-## Internetresourcen und APIs nutzen
 
-- [Verschiedene API's](slides/apis.Rmd)
--	[Import von JSON-Objekten und XML-Dateien](slides/rapis.Rmd)
-- [Webscraping mit rvest und RCurl](slides/Webscraping.md)
+
+## Internetresourcen und Schnittstellen nutzen
+
+-	[Import von JSON-Objekten](slides/rapis.Rmd)
+-	Das Paket RCurl
+- [Das Paket rvest](slides/rvest.Rmd)
+- [Webscraping](https://github.com/Japhilko/RInterfaces/blob/master/slides/Webscraping.md)
+-	[Import von XML-Dateien](https://github.com/Japhilko/RInterfaces/blob/master/slides/XML.md)
 -	Die Nutzung von xpath in R
 - Einfache http-Nutzung mit httr
+-	Datenmanipulation mit dplyr
 
 
+## Projekte 
 
-## Applikationen und Projektverwaltung mit Rstudio und git
-
-- Projekte in Rstudio
-- Shiny Apps
 - [R und Git](slides/Rgit.Rmd)
 
 ## Hochperfomanter Code
@@ -64,7 +66,7 @@ Aufgabe: Bearbeiten Sie ein Notebook weiter
 
 ## Integration von Datenbanken
 
-- [Datenbanken und R](slides/Datenbanken.Rmd)
+- [Datenbanken und R]()
 -	[Integration von PostgreSQL mit dem Paket 
 RPostgreSQL](https://github.com/Japhilko/RInterfaces/blob/master/slides/RPostgreSQL.Rmd)
 -	Nutzung von MySQL mit dem Paket RMySQL

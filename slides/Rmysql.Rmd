@@ -16,6 +16,3 @@ knitr::opts_chunk$set(echo = TRUE)
 install.packages("RMySQL")
 ```
 
-## Links
-
-- [Full SSL Support](https://www.r-bloggers.com/rmysql-version-0-10-2-full-ssl-support/)

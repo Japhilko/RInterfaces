@@ -9,11 +9,6 @@ output: beamer_presentation
 knitr::opts_chunk$set(echo = FALSE)
 ```
 
-## [Vergleich zwischen MySQL und PostgreSQL](http://www.torsten-horn.de/techdocs/sql.htm)
-
-![](figure/VergleichDatenbanken.PNG)
-
-
 ## 
 
 ```{r,eval=F}
