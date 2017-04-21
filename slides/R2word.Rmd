@@ -3,12 +3,14 @@ title: "Word Dokumente mit R und Rstudio erstellen"
 author: "Jan-Philipp Kolb"
 date: "08 Mai 2017"
 output:
-  beamer_presentation: 
+  beamer_presentation:
     colortheme: beaver
+    fig_caption: no
     theme: CambridgeUS
-    fig_caption: false
+    toc: yes
   html_document:
     keep_md: yes
+  slidy_presentation: default
 ---
 
 ```{r setup, include=FALSE}
@@ -67,17 +69,36 @@ Markdown ist eine sehr einfache Syntax, die es Benutzern erlaubt, aus einfachen 
 
 ## Weitere Markdown Befehle
 
+- So kann man Bilder einbinden:
+- Man kann entweder einen Link angeben:
+
 ```
-![example](http://e-scientifics.de/content/example_kinderbild.jpg)
+![BSP](http://e-scientifics.de/content/example_kinderbild.jpg)
 ```
 
+- oder einen (Unterordner) in dem das Bild liegt:
 
-## Chunks erste Schritte
+```
+![BSP 2](figure/example.png)
+```
+
+- in den eckigen Klammern steht die Bildunterschrift
+- alle gängigen Formate (.png, .jpeg,.gif) können so eingebunden werden
+- Man kann auch noch weitere Optionen spezifizieren (Größe, Breite etc.) - dazu später mehr
+
+## Chunks - Erste Schritte
 
 - Es lassen sich so genannte Chunks einfügen
 - In diesen Chunks wird ganz normaler R-code geschrieben
 
 ![](figure/NotebooksBasicEx.PNG)
+
+## Button um Chunks einzufügen
+
+- Die default Version eines Chunks ist R
+- Man hat aber auch die Möglichkeit andere Programmiersprachen einzubinden
+
+![](figure/ChunkButton.PNG)
 
 ## Inline Code
 
@@ -108,6 +129,22 @@ kable(dat_chunks)
 ## Optionen
 
 ![](figure/RwordOptions.PNG)
+
+## Optionen für Word Output
+
+![](figure/WordOutputOptions.PNG)
+
+## Code Hervorhebung
+
+- pygments Hervorhebung
+
+![](figure/pygmentsSnippet.PNG)
+
+
+- tango
+
+![](figure/tangoSnippet.PNG)
+
 
 ## Das Paket `knitr`
 

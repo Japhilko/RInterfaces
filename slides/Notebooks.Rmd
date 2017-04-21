@@ -1,14 +1,17 @@
 ---
 title: "Notebooks"
 author: "Jan-Philipp Kolb"
-date: "08 Mai 2017"
-output: 
-  beamer_presentation: 
+date: "8 Mai 2017"
+output:
+  beamer_presentation:
     colortheme: beaver
+    fig_caption: no
     fonttheme: structurebold
     highlight: tango
     theme: CambridgeUS
-    fig_caption: false
+  slidy_presentation:
+    highlight: tango
+    keep_md: yes
 ---
 
 ```{r setup, include=FALSE}
@@ -19,11 +22,13 @@ knitr::opts_chunk$set(echo = TRUE)
 
 - [Warum R Notebook nutzen](https://news.ycombinator.com/item?id=12683625)
 
+![](http://rmarkdown.rstudio.com/images/notebook-demo.png)
+
 # Rnotebooks
 
 ## Ein Rnotebook anlegen
 
-![](figure/startNotebook)
+![](figure/startNotebook.png)
 
 ## Rnotebook - erste Schritte
 
@@ -80,6 +85,23 @@ jupyter notebook
 ## Beispiel Eingabe Code
 
 ![](figure/JupyterNotebookQmap.PNG)
+
+
+# Beaker Notebook
+
+## Beaker Notebook
+
+- Auch bei Beaker kann man R-code einbauen
+
+![](figure/Beaker.PNG)
+
+## Beaker starten
+
+- [Beaker installieren](http://beakernotebook.com/getting-started) ...
+- ... und mit `beaker.command.bat` starten
+
+![](figure/BeakerEx.PNG)
+
 
 ## Links
 

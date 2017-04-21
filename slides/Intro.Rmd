@@ -3,14 +3,14 @@ title: "Intro - Erste Schritte"
 author: "Jan-Philipp Kolb"
 date: "08 Mai 2017"
 output:
-  slidy_presentation: default
-  html_document:
-    keep_md: yes
   beamer_presentation:
     colortheme: beaver
     fig_caption: no
     theme: CambridgeUS
     toc: yes
+  html_document:
+    keep_md: yes
+  slidy_presentation: default
 ---
 
 ```{r setup, include=FALSE}
@@ -109,3 +109,49 @@ knitr::opts_chunk$set(echo = FALSE)
 # Nutzung der Unterlagen auf GitHub
 
 ## Wie wird das Github Verzeichnis genutzt
+
+-   Die folgende Seite ist die Startseite für den Kurs:
+
+<https://github.com/Japhilko/RInterfaces>
+
+- Es lohnt sich immer wieder zu dieser Seite zurückzukehren, weil hier alle relevanten Dokumente verlinkt sind.
+
+- Grundsätzlich bietet es sich an, den einzelnen Teilen der Veranstaltung mit dem File zu folgen, dass mit dem Begriff _Browser_ verlinkt ist.
+
+## Informationen audrucken
+
+-   Zum Ausdrucken eignen sich die pdf-Dateien besser. 
+
+-   Diese können mit dem Raw Button heruntergeladen werden. 
+
+![Raw Button zum Download](https://raw.githubusercontent.com/Japhilko/GeoData/master/2016/slides/figure/GithubDownload.bmp)
+
+## Weitere Dateien herunterladen
+
+- Begleitend zu den Folien wird meistens auch ein R-File angeboten. 
+
+- Hier können Sie entweder das gesamte R-File herunterladen und in R ausführen oder einzelne Befehle per Copy/Paste übernehmen.
+
+- Vereinzelt sind auch Datensätze vorhanden. 
+
+- `.csv` Dateien können direkt von R eingelesen werden (wie das geht werde ich noch zeigen).
+
+- Wenn die `.csv` Dateien heruntergeladen werden sollen auch den Raw Button verwenden.
+
+- Alle anderen Dateien (bspw. `.RData`) auch mittels Raw Button herunterladen.
+
+## Organisatorisches
+
+
+- Zusätzlich gibt es für jedes Kapitel eine Aufgabe, da man nur durch eigenes Trainieren auf der Lernkurve vorankommt.
+
+
+
+## Links und Quellen
+
+
+Wen Github näher interessiert:
+
+- [Hello World](https://guides.github.com/activities/hello-world/)
+
+- [Understanding the GitHub](https://guides.github.com/introduction/flow/)

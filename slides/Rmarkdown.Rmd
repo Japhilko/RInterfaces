@@ -1,15 +1,18 @@
 ---
-title: "Rmarkdown"
+title: "HTML Dokumente PrÃ¤sentationen und Dashboards"
 author: "Jan-Philipp Kolb"
-date: "08 Mai 2017"
-output: 
-  beamer_presentation: 
+date: "8 Mai 2017"
+output:
+  slidy_presentation:
+    highlight: tango
+    keep_md: yes
+  beamer_presentation:
     colortheme: beaver
+    fig_caption: no
     fonttheme: professionalfonts
     highlight: tango
     theme: CambridgeUS
     toc: yes
-    fig_caption: false
 ---
 
 ```{r setup, include=FALSE}
@@ -233,6 +236,30 @@ Um den Präsentationstyp zu ändern kann man das CSS verändern
 - [Es gibt zahlreiche Möglichkeiten der Schriftformatierung](https://wiki.selfhtml.org/wiki/CSS/Eigenschaften/Schriftformatierung)
 - [Daneben gibt es viele weitere Dinge, die sich mit dem CSS steuern lassen](https://www.w3.org/TR/WCAG20-TECHS/C22.html)
 
+# HTML Dokumente
+
+## Ein HTML Dokument erzeugen
+
+![](figure/NewHTML.PNG)
+
+## Ein Template verwenden
+
+![](figure/UsingTemplate.PNG)
+
+## [Weitere Vorlagen nutzen](http://rmarkdown.rstudio.com/developer_document_templates.html)
+
+- Es gibt viele Formate - [manche müssen erst aktiviert werden](https://blog.rstudio.org/2016/03/21/r-markdown-custom-formats/:
+
+```{r,eval=F}
+install.packages("rticles")
+install.packages("rmdformats")
+install.packages("ProjectTemplate")
+```
+
+## [Beispiele für Templates](https://github.com/juba/rmdformats)
+
+![](https://rstudioblog.files.wordpress.com/2016/03/readthedown.png)
+
 # Dashboards
 
 ## [Beispiel R-Pakete](https://gallery.shinyapps.io/cran-gauge/)
@@ -242,9 +269,11 @@ Um den Präsentationstyp zu ändern kann man das CSS verändern
 
 ## [Paket installieren](https://blog.rstudio.org/2016/05/17/flexdashboard-easy-interactive-dashboards-for-r/)
 
-```{r, eval=F}
+```{r, eval=F,echo=T}
 install.packages("flexdashboard", type = "source")
 ```
+
+![](figure/flexdashboards.PNG)
 
 ## Ein Dashboard erstellen mit Rstudio
 
@@ -252,7 +281,8 @@ install.packages("flexdashboard", type = "source")
 
 ## [Gallerie](http://rmarkdown.rstudio.com/gallery.html)
 
-```{r, eval=F}
+```{r, eval=F,echo=T}
 install.packages("highcharter", type = "source")
 ```
 
+![](figure/RmarkdownGallery.PNG)

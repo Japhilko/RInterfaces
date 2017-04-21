@@ -1,23 +1,25 @@
 ---
-title: "PDF Paper und Präsentationen mit R und Rstudio"
+title: "PDF Paper und PrÃ¤sentationen mit R und Rstudio"
 author: "Jan-Philipp Kolb"
 date: "08 Mai 2017"
-output: 
-  beamer_presentation: 
+output:
+  slidy_presentation:
+    highlight: tango
+  ioslides_presentation:
+    highlight: tango
+    keep_md: yes
+  beamer_presentation:
     colortheme: beaver
+    fig_caption: no
     fonttheme: structurebold
     highlight: tango
     theme: CambridgeUS
     toc: yes
-  ioslides_presentation: 
-    highlight: tango
-    keep_md: yes
 ---
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
 library(knitr)
-
 ```
 
 # Präsentationen mit Rmarkdown
@@ -34,6 +36,18 @@ library(knitr)
 
 ![](http://1.bp.blogspot.com/-ZTtDq0hOkqY/Ti0Z3WwoIJI/AAAAAAAAAPc/HM3t4j4t7h0/s1600/Screenshot%2B-%2B07252011%2B-%2B03%253A22%253A15%2BAM.png)
 
+## Chunks einfügen
+
+- Auch hier lassen sich natürlich Chunks einfügen
+- Wenn `cache=T` angegeben ist, wird das Ergebnis des Chunks abgespeichert
+- Es ist sinnvoll die Chunks zu benennen, dann findet man auch das Ergebnis einfacher
+
+![](figure/CacheBenennung.PNG)
+
+## Ergebnis - Cache
+
+![](figure/ErgZufallszahlen.PNG)
+
 ## Wie man das im Header des Dokuments angibt
 
 ```
@@ -47,8 +61,6 @@ output:
     theme: CambridgeUS
 ---
 ```
-
-
 
 ## Inhaltsverzeichnis I
 
@@ -108,12 +120,6 @@ output:
 ![](figure/CRANmirror.PNG)
 
 
-## Links
-
-- [optionen für Beamer Präsentationen](http://rmarkdown.rstudio.com/beamer_presentation_format.html)
-
-- [LaTeX](https://www.r-bloggers.com/from-openoffice-noob-to-control-freak-a-love-story-with-r-latex-and-knitr/)
-
 # PDF Paper mit R
 
 ## Übersicht - PDF Paper
@@ -161,3 +167,11 @@ bibliography: Rschnittstellen.bib
 ## Das Ergebnis
 
 ![](figure/bibtexErgebnis.PNG)
+
+
+## Links
+
+- [Optionen für Beamer Präsentationen](http://rmarkdown.rstudio.com/beamer_presentation_format.html)
+
+- [Wie R und LaTeX zusammen funktionieren](https://www.r-bloggers.com/from-openoffice-noob-to-control-freak-a-love-story-with-r-latex-and-knitr/)
+

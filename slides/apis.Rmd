@@ -19,3 +19,21 @@ install_github("tiagomendesdantas/Rspotify")
 ```
 
 - [Token](https://developer.spotify.com/web-api/)
+
+## [Uber API](https://www.r-bloggers.com/uber-a-package-for-the-uber-api/)
+
+
+## Links
+
+- [RSelenium: A wonderful tool for web scraping.](https://www.r-bloggers.com/rselenium-a-wonderful-tool-for-web-scraping/)
+
+- [Statistics New Zealand experimental API initiative](https://www.r-bloggers.com/statistics-new-zealand-experimental-api-initiative/)
+
+- [Webscraping with rvest: So Easy Even An MBA Can Do It!](https://www.r-bloggers.com/webscraping-with-rvest-so-easy-even-an-mba-can-do-it/)
+
+- [Mapping and Web-scraping the 2016 Presidential Election Results in Connecticut](https://www.r-bloggers.com/mapping-web-scraping-the-2016-presidential-election-results-in-connecticut/)
+
+- [Using Microsoft’s Emotion API to Settle an Old Argument](https://www.r-bloggers.com/using-microsofts-emotion-api-to-settle-an-old-argument/)
+
+
+- [Scraping Web sources: Two illustrations](https://www.r-bloggers.com/scraping-web-sources-two-illustrations/)

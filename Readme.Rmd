@@ -23,10 +23,10 @@ knitr::opts_chunk$set(echo = TRUE)
 
 ## Präsentation von Daten - Reproducible Research
 
-- [Word Dokumente mit R erstellen](slides/R2word.Rmd)
--	[PDF Dokumente und Präsentationen mit LaTeX, Beamer und Sweave](slides/R2pdf.Rmd)
--	[HTML Dokumente, Präsentationen und Dashboards mit Rmarkdown](slides/Rmarkdown.Rmd)
-- [Notebooks](slides/Notebooks.Rmd) zur Integration von anderen Programmiersprachen (Python,LaTeX,Julia)
+- [Word Dokumente mit R erstellen](slides/R2word.md) ([pdf](slides/R2word.pdf))
+-	[PDF Dokumente und Präsentationen mit LaTeX, Beamer und Sweave](slides/R2pdf.md) ([pdf](slides/R2pdf.pdf))
+-	[HTML Dokumente, Präsentationen und Dashboards mit Rmarkdown](slides/Rmarkdown.md) ([pdf](slides/Rmarkdown.pdf))
+- [Notebooks](slides/Notebooks.md) zur Integration von anderen Programmiersprachen (Python,LaTeX,Julia) ([pdf](slides/Notebooks.pdf))
 
 Aufgabe: Bearbeiten Sie ein Notebook weiter
 
