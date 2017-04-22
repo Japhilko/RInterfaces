@@ -7,7 +7,7 @@ Jan-Philipp Kolb
 
 ## Schnittstellen für den Austausch von Daten
 
-- [Einführung und Motivation](https://github.com/Japhilko/RInterfaces/blob/master/slides/Intro.Rmd)
+- [Einführung und Motivation](https://github.com/Japhilko/RInterfaces/blob/master/slides/Intro.Rmd) ([pdf](slides/Intro.pdf))
 - [Datenimport](slides/Datenimport.md) ([pdf](slides/Datenimport.pdf) | [rcode](slides/Datenimport.R))
 - [R und Excel](slides/Rexcel.md) ([pdf](Rexcel.pdf) | [rcode](slides/Rexcel.R))
 - [Datenexport](slides/Datenexport.md) ([pdf](slides/Datenexport.pdf) | [rcode](slides/Datenexport.R)) 
@@ -15,10 +15,10 @@ Jan-Philipp Kolb
 
 ## Präsentation von Daten - Reproducible Research
 
-- [Word Dokumente mit R erstellen](slides/R2word.Rmd)
--	[PDF Dokumente und Präsentationen mit LaTeX, Beamer und Sweave](slides/R2pdf.Rmd)
--	[HTML Dokumente, Präsentationen und Dashboards mit Rmarkdown](https://github.com/Japhilko/RInterfaces/blob/master/slides/presentHTML.md)
-- [Notebooks](slides/Notebooks.Rmd) zur Integration von anderen Programmiersprachen (Python,LaTeX,Julia)
+- [Word Dokumente mit R erstellen](slides/R2word.md) ([pdf](slides/R2word.pdf))
+-	[PDF Dokumente und Präsentationen mit LaTeX, Beamer und Sweave](slides/R2pdf.md) ([pdf](slides/R2pdf.pdf))
+-	[HTML Dokumente, Präsentationen und Dashboards mit Rmarkdown](slides/Rmarkdown.md) ([pdf](slides/Rmarkdown.pdf))
+- [Notebooks](slides/Notebooks.md) zur Integration von anderen Programmiersprachen (Python,LaTeX,Julia) ([pdf](slides/Notebooks.pdf))
 
 Aufgabe: Bearbeiten Sie ein Notebook weiter
 
@@ -37,18 +37,15 @@ Aufgabe: Bearbeiten Sie ein Notebook weiter
 
 ## Internetresourcen und Schnittstellen nutzen
 
-- [Verschiedene API's](slides/apis.Rmd)
--	[Import von JSON-Objekten und XML-Dateien](slides/rapis.Rmd)
-- [Webscraping mit rvest und RCurl](slides/Webscraping.md)
--	Die Nutzung von xpath in R
+-	[Import von JSON-Objekten und XML Dateien](slides/rapis.Rmd)
+-	Das Paket RCurl
+- [Das Paket rvest und RCurl](slides/rvest.Rmd)
+- [Webscraping](https://github.com/Japhilko/RInterfaces/blob/master/slides/Webscraping.md)
 - Einfache http-Nutzung mit httr
 
 
+## Projekte 
 
-## Applikationen und Projektverwaltung mit Rstudio und git
-
-- Projekte in Rstudio
-- Shiny Apps
 - [R und Git](slides/Rgit.Rmd)
 
 ## Hochperfomanter Code

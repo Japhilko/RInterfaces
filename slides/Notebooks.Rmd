@@ -116,3 +116,5 @@ jupyter notebook
 - [R Notebooks](http://rmarkdown.rstudio.com/r_notebooks.html)
 
 - [IPython vs knitr, or Python vs R](https://yihui.name/en/2012/11/ipython-vs-knitr/)
+
+- [Datacamp Tutorial - Jupyter Notebook](https://www.datacamp.com/community/tutorials/tutorial-jupyter-notebook#gs.kZqvIvI)
