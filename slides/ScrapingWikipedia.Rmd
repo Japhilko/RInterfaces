@@ -7,14 +7,14 @@ output:
     colortheme: beaver
     fig_caption: no
     theme: CambridgeUS
-    toc: yes
+    toc: no
   html_document:
     keep_md: yes
   slidy_presentation: default
 ---
 
 ```{r setup, include=FALSE}
-knitr::opts_chunk$set(echo = TRUE,cache=T)
+knitr::opts_chunk$set(echo = TRUE,cache=T,message=F,warning = F)
 ```
 
 ## Einleitung
@@ -25,19 +25,19 @@ Im Folgenden werde ich zeigen, wie man Textinformationen aus [Wikipedia](https:/
 
 ## Die verwendeten Pakete
 
-Das R-Paket [`stringi`](http://stringi.rexamine.com/) von Marek Gagolewski and Bartek Tartanus bietet Möglichkeiten zur String Verarbeitung.
+- Das R-Paket [`stringi`](http://stringi.rexamine.com/) von Marek Gagolewski and Bartek Tartanus bietet Möglichkeiten zur String Verarbeitung.
 
 ```{r libraries}
 library("stringi")
 ```
 
-[`tm`](http://www.jstatsoft.org/v25/i05/) ist ein R-Paket um Text Mining zu realisieren. Es wurde von Ingo Feinerer, Kurt Hornik, und David Meyer geschrieben.
+- [`tm`](http://www.jstatsoft.org/v25/i05/) ist ein R-Paket um Text Mining zu realisieren. Es wurde von Ingo Feinerer, Kurt Hornik, und David Meyer geschrieben.
 
 ```{r}
 library("tm")
 ```
 
-Und schließlich brauchen wir das [`FactoMineR`] (https://cran.r-project.org/web/packages/FactoMineR/vignettes/FactoMineR.pdf)-Paket, das von Sebastien Le, Julie Josse und Francois Husson zur Durchführung der Hauptkomponentenanalyse erstellt wurde.
+- Und schließlich brauchen wir das [`FactoMineR`](https://cran.r-project.org/web/packages/FactoMineR/vignettes/FactoMineR.pdf)-Paket, das von Sebastien Le, Julie Josse und Francois Husson zur Durchführung der Hauptkomponentenanalyse erstellt wurde.
 
 ```{r}
 library("FactoMineR")
@@ -46,21 +46,30 @@ library("FactoMineR")
 
 ## Die Text Daten herunterladen
 
-Als Beispiel verwenden wir Daten zu verschiedenen Krankheiten. In diesem Fall habe ich 7 deutsche Webseiten für Infektionskrankheiten ausgewählt.
+- Als Beispiel verwenden wir Daten zu verschiedenen Krankheiten. 
+- In diesem Fall habe ich 7 deutsche Webseiten für Infektionskrankheiten ausgewählt.
 
 ```{r wikititles}
 wiki <- "http://de.wikipedia.org/wiki/"
 
-titles <- c("Zika-Virus", "Influenza-A-Virus_H1N1", "Spanische_Grippe", "Influenzavirus","Vogelgrippe_H5N1","Legionellose-Ausbruch_in_Warstein_2013", "Legionellose-Ausbruch_in_Jülich_2014")
+titles <- c("Zika-Virus", "Influenza-A-Virus_H1N1", 
+            "Spanische_Grippe","Influenzavirus",
+            "Vogelgrippe_H5N1",
+            "Legionellose-Ausbruch_in_Warstein_2013",
+            "Legionellose-Ausbruch_in_Jülich_2014")
 ```
 
 ## Das Herunterladen der Seiten
+
+- Zunächst wird ein Container erstellt um die Ergebnisse abzuspeichern
+- Dann wird der Text für jeden Artikel heruntergeladen und in dem Container gespeichert.
 
 ```{r}
 articles <- character(length(titles))
 
 for (i in 1:length(titles)){
-    articles[i] <- stri_flatten(readLines(stri_paste(wiki, titles[i])), col = " ")
+    articles[i] <- stri_flatten(
+      readLines(stri_paste(wiki, titles[i])), col = " ")
 }
 
 docs <- Corpus(VectorSource(articles))
@@ -75,9 +84,15 @@ Das Folgende basiert auf einem Blogpost von Norbert Ryciak über die [automatisc
 
 
 ```{r prepdata}
-docs2 <- tm_map(docs, function(x) stri_replace_all_regex(x, "<.+?>", " "))
-docs3 <- tm_map(docs2, function(x) stri_replace_all_fixed(x, "\t", " "))
+docs2 <- tm_map(docs, function(x) stri_replace_all_regex(
+  x, "<.+?>", " "))
+docs3 <- tm_map(docs2, function(x) stri_replace_all_fixed(
+  x, "\t", " "))
+```
 
+## Den Text weiterverarbeiten
+
+```{r}
 docs4 <- tm_map(docs3, PlainTextDocument)
 docs5 <- tm_map(docs4, stripWhitespace)
 docs6 <- tm_map(docs5, removeWords, stopwords("german"))
@@ -105,20 +120,28 @@ words <- frequency[frequency>20]
 s <- dtm2[1,which(colnames(dtm2) %in% names(words))]
 
 for(i in 2:nrow(dtm2)){
-  s <- cbind(s,dtm2[i,which(colnames(dtm2) %in% names(words))])
+  s <- cbind(s,dtm2[i,which(colnames(dtm2) %in% 
+                              names(words))])
 } 
 
 colnames(s) <- titles
 ```
 
+## Ergebnis
+
 ```{r}
 PCA(s)
 ```
 
-In der Variablen Faktor Karte sehen wir das erwartete Ergebnis. Die Seiten zur Legionnellen Krankheit sind  sehr nah beianander, während die Seiten zur Influenza in einem anderen Teil sind. 
+## Ergebnis
+
+- In der Factor Map sehen wir das erwartete Ergebnis. 
+- Die Seiten zur Legionnellen Krankheit sind  sehr nah beianander, während die Seiten zur Influenza in einem anderen Teil sind. 
+
+## Das Dendogramm
 
 
-Im Folgenden wird die Normalisierung durchgeführt und die Ergebnisse werden geplottet. 
+- Im Folgenden wird die Normalisierung durchgeführt und die Ergebnisse werden geplottet. 
 
 ```{r}
 s0 <- s/apply(s,1,sd)

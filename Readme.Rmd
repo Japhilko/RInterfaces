@@ -46,9 +46,9 @@ Aufgabe: Bearbeiten Sie ein Notebook weiter
 ## Internetresourcen und Schnittstellen nutzen
 
 -	[Import von JSON-Objekten und XML Dateien](slides/rapis.Rmd) ([pdf](slides/rapis.pdf) | [rcode](slides/rapis.pdf))
-- [Das Paket rvest und RCurl](slides/rvest.Rmd)
+- [Die Pakete rvest und RCurl](slides/rvest.Rmd)
 - [Webscraping](https://github.com/Japhilko/RInterfaces/blob/master/slides/Webscraping.md)
-- [Einfache http-Nutzung mit httr](slides/httr.rmd)
+- [Use Case - Scraping Wikipedia](slides/ScrapingWikipedia.Rmd)
 
 
 ## Projekte 
