@@ -51,8 +51,9 @@ Aufgabe: Bearbeiten Sie ein Notebook weiter
 - [Use Case - Scraping Wikipedia](slides/ScrapingWikipedia.Rmd)
 
 
-## Projekte 
+## Applikationen und Projektverwaltung mit Rstudio und git
 
+- [Shiny Apss](slides/)
 - [R und Git](slides/Rgit.Rmd)
 
 ## Hochperfomanter Code
