@@ -1,0 +1,18 @@
+---
+title: "Die Nutzung von httr"
+author: "Jan-Philipp Kolb"
+date: "23 April 2017"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## [Der Start](https://cran.r-project.org/web/packages/httr/vignettes/quickstart.html)
+
+```{r}
+library(httr)
+r <- GET("http://httpbin.org/get")
+```
+

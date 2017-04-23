@@ -99,7 +99,11 @@ names(my_repos)
 
 ## [Weiteres Beispiel für JSON Daten](https://cran.r-project.org/web/packages/jsonlite/vignettes/json-apis.html)
 
-- The Ergast Developer API is an experimental web service which provides a historical record of motor racing data
+- Die [Ergast Developer API](http://ergast.com/mrd/) ist ein experimenteller Web Service, der eine historische Aufzeichnung von Motorsportdaten liefert.
+
+![](figure/Ergast.PNG)
+
+## Ergast Daten lesen
 
 ```{r}
 library(jsonlite)
@@ -108,7 +112,13 @@ drivers <- res$MRData$RaceTable$Races$Results[[1]]$Driver
 colnames(drivers)
 ```
 
-## 
+## Daten der New York Times
+
+- Die New York Times hat mehrere APIs als Teil des NYT-Entwickler-Netzwerks.
+- Es ist eine Schnittstelle zu Daten aus verschiedenen Abteilungen, wie Nachrichtenartikel, Buchbesprechungen, Immobilien, etc. 
+- Registrierung ist erforderlich (aber kostenlos) und ein Schlüssel kann [hier](http://developer.nytimes.com/signup) erhalten werden. 
+
+## New York Times Beispiel
 
 ```{r}
 article_key <- "&api-key=c2fede7bd9aea57c898f538e5ec0a1ee:6:68700045"
@@ -126,8 +136,6 @@ colnames(articles)
 library(XML)
 citation("XML")
 ```
-
-
 
 
 ## Erstes Beispiel

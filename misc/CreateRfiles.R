@@ -9,6 +9,7 @@ library(knitr)
 purl("Datenimport.Rmd")
 purl("Datenexport.Rmd")
 purl("Rexcel.Rmd")
+purl("rapis.Rmd")
 
 ## Install Packages
 
