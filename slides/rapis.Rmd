@@ -1,21 +1,105 @@
 ---
-title: "APIs"
+title: "Import von Webdaten"
 author: "Jan-Philipp Kolb"
-date: "19 April 2017"
-output: html_document
+date: "8 Mai 2017"
+output:
+  beamer_presentation:
+    colortheme: beaver
+    fig_caption: no
+    theme: CambridgeUS
+    toc: yes
+  html_document:
+    keep_md: yes
+  slidy_presentation: default
 ---
 
 ```{r setup, include=FALSE}
-knitr::opts_chunk$set(echo = TRUE)
+knitr::opts_chunk$set(echo = TRUE,eval=T)
 ```
 
-## JavaScript Object Notation (JSON)
 
+# Import von JSON Dateien
+
+## [JavaScript Object Notation (JSON)](https://de.wikipedia.org/wiki/JavaScript_Object_Notation)
+
+- Jedes gültige JSON-Dokument soll ein gültiges JavaScript sein
+- JSON wird zur Übertragung und zum Speichern von strukturierten Daten eingesetzt
+- Insbesondere bei Webanwendungen und mobilen Apps wird es in Verbindung mit JavaScript, Ajax oder WebSockets zum Transfer von Daten zwischen dem Client und dem Server häufig genutzt.
+<!--
 ![](https://upload.wikimedia.org/wikipedia/commons/thumb/c/c9/JSON_vector_logo.svg/240px-JSON_vector_logo.svg.png)
+-->
 
 ![](figure/jsonEx.PNG)
 
-## [JSON Daten](https://cran.r-project.org/web/packages/jsonlite/vignettes/json-apis.html)
+## Das GeoJSON Format
+
+- GeoJSON ist ein offenes Format um geografische Daten nach der Simple-Feature-Access-Spezifikation zu repräsentieren. 
+- Dafür wird die JavaScript Object Notation verwendet.
+
+Die Struktur der Daten kann man sich mit einem [JSON Viewer anschauen](http://jsonviewer.stack.hu/)
+
+![](figure/jsonviewer.PNG)
+
+## [Download von Beispieldaten](https://overpass-turbo.eu/)
+
+- Overpass Turbo kann verwendet werden um Beispieldaten zu bekommen
+
+<https://overpass-turbo.eu/>
+
+![](figure/OverpassBSP.PNG)
+
+## Exkurs OpenStreetMap Daten
+
+- Auf Overpass Turbo können Daten für Map Features exportiert werden
+- Eine Liste der erhältlichen Map Features gibt es auf <http://wiki.openstreetmap.org/wiki/DE:Map_Features>
+
+![](figure/BSPamenity.PNG)
+
+
+## [Beispiele für GeoJSON](https://de.wikipedia.org/wiki/GeoJSON)
+
+![](figure/EinfacheGeometrien.PNG)
+
+## JSON importieren
+
+```{r}
+library("jsonlite")
+DRINKWATER <- fromJSON("data/RomDrinkingWater.geojson")
+```
+
+```{r}
+names(DRINKWATER)[1:3]
+names(DRINKWATER)[4:5]
+```
+
+## Die Daten anschauen
+
+```{r,eval=F}
+head(DRINKWATER$features)
+```
+
+
+```{r,echo=F}
+library(knitr)
+head(DRINKWATER$features)
+```
+
+## [Github JSON Daten](https://cran.r-project.org/web/packages/jsonlite/vignettes/json-apis.html)
+
+- Es lassen sich auch Dinge aus dem Web auslesen:
+
+```{r}
+my_repos <- fromJSON("https://api.github.com/users/japhilko/repos")
+```
+
+```{r}
+names(my_repos)
+```
+
+
+## [Weiteres Beispiel für JSON Daten](https://cran.r-project.org/web/packages/jsonlite/vignettes/json-apis.html)
+
+- The Ergast Developer API is an experimental web service which provides a historical record of motor racing data
 
 ```{r}
 library(jsonlite)
@@ -23,6 +107,8 @@ res <- fromJSON('http://ergast.com/api/f1/2004/1/results.json')
 drivers <- res$MRData$RaceTable$Races$Results[[1]]$Driver
 colnames(drivers)
 ```
+
+## 
 
 ```{r}
 article_key <- "&api-key=c2fede7bd9aea57c898f538e5ec0a1ee:6:68700045"
@@ -32,8 +118,9 @@ articles <- req$response$docs
 colnames(articles)
 ```
 
+# Import von XML Dateien
 
-## The XML package
+## Das `XML` Paket
 
 ```{r}
 library(XML)
@@ -43,11 +130,15 @@ citation("XML")
 
 
 
-## First example
+## Erstes Beispiel
 
-```{r}
+```{r,eval=F}
 url <- "http://api.openstreetmap.org/api/0.6/
 relation/62422"
+```
+
+```{r,echo=F}
+url <- "http://api.openstreetmap.org/api/0.6/relation/62422"
 ```
 
 
@@ -133,3 +224,5 @@ citation("XML")
 ## Links
 
 - [XML parsen - Stackoverflow](http://stackoverflow.com/questions/17198658/how-to-parse-xml-to-r-data-frame)
+
+- [Processing of GeoJson data in R](https://www.r-bloggers.com/processing-of-geojson-data-in-r/)

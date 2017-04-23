@@ -145,7 +145,8 @@ knitr::opts_chunk$set(echo = FALSE)
 
 - Zusätzlich gibt es für jedes Kapitel eine Aufgabe, da man nur durch eigenes Trainieren auf der Lernkurve vorankommt.
 
-
+- Die Quellen sind als Link meist in der Überschrift hinterlegt
+- Die Links sind nur im HTML Dokument zu sehen aber auch in der pdf vorhanden
 
 ## Links und Quellen
 

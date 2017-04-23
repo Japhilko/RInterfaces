@@ -1,14 +1,16 @@
 ---
 title: "Interaktive Karten mit leaflet"
 author: "Jan-Philipp Kolb"
-date: "27 Januar 2017"
+date: "08 Mai 2017"
 output: 
   slidy_presentation:
     keep_md: yes
 ---
 
 ```{r setup, include=FALSE}
-knitr::opts_chunk$set(echo = TRUE)
+knitr::opts_chunk$set(echo = TRUE,warning=F,message=F)
+pdf<-F
+web <- !pdf
 ```
 
 ## Die Daten - Weltkulturerbe
@@ -20,11 +22,15 @@ GeoData/master/2015/data/whcSites.csv"
 whcSites <- read.csv(url) 
 ```
 
-```{r,echo=F}
+```{r,echo=F,eval=pdf}
 library(knitr)
 kable(head(whcSites))
 ```
 
+```{r,echo=F,eval=web}
+library('DT')
+datatable(whcSites)
+```
 
 
 ## Notwendige Pakete
