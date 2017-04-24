@@ -49,3 +49,29 @@ add
 add(1, 2, 3)
 ```
 
+
+## [Rcpp](http://dirk.eddelbuettel.com/code/rcpp/Rcpp-introduction.pdf)
+
+[Tutorial on Rcpp by Hadley Wickham](http://adv-r.had.co.nz/Rcpp.html#rcpp-intro)
+
+```{r}
+library(Rcpp)
+```
+
+```{r}
+cppFunction('int add(int x, int y, int z) {
+  int sum = x + y + z;
+  return sum;
+}')
+```
+
+
+```{r}
+add(1, 2, 3)
+```
+
+
+
+[Youtube Video with Dirk Edelbuettel](https://www.youtube.com/watch?v=ZKx5duewv-0)
+
+

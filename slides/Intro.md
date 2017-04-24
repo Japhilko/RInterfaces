@@ -1,23 +1,8 @@
----
-title: "Intro - Erste Schritte"
-author: "Jan-Philipp Kolb"
-date: "08 Mai 2017"
-output:
-  ioslides_presentation: 
-    keep_md: yes
-  html_document:
-    keep_md: yes
-  slidy_presentation: default
-  beamer_presentation:
-    colortheme: beaver
-    fig_caption: no
-    theme: CambridgeUS
-    toc: yes
----
+# Intro - Erste Schritte
+Jan-Philipp Kolb  
+08 Mai 2017  
 
-```{r setup, include=FALSE}
-knitr::opts_chunk$set(echo = FALSE)
-```
+
 
 # Warum R?
 

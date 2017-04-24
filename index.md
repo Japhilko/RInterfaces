@@ -9,7 +9,8 @@ Here I provide information concerning my geographic research.
 
 ```
 
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
+
+## How to work with this service of Github
 
 ### Jekyll Themes
 

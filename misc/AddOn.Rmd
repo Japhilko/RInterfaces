@@ -220,3 +220,12 @@ install.packages("SVGAnnotation")
 
 
 - [C++ vs. Java](https://www.it-talents.de/blog/it-talents/c-vs-java)
+
+
+## Package [rPython](http://www.r-bloggers.com/calling-python-from-r-with-rpython/)
+
+```{r}
+# install.packages("rPython")
+```
+
+- [Python from R on Windows OS](http://stackoverflow.com/questions/23185685/how-to-call-python-from-r-in-a-windows-os)
