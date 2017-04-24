@@ -53,7 +53,7 @@ Aufgabe: Bearbeiten Sie ein Notebook weiter
 
 ## Applikationen und Projektverwaltung mit Rstudio und git
 
-- [Shiny Apss](slides/)
+- [Shiny Apps](slides/shiny.Rmd)
 - [R und Git](slides/Rgit.Rmd)
 
 ## Hochperfomanter Code

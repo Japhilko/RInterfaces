@@ -1,5 +1,5 @@
 ---
-title: "PDF Paper und PrÃ¤sentationen mit R und Rstudio"
+title: "PDF Paper und Präsentationen mit R und Rstudio"
 author: "Jan-Philipp Kolb"
 date: "08 Mai 2017"
 output:

@@ -118,3 +118,12 @@ jupyter notebook
 - [IPython vs knitr, or Python vs R](https://yihui.name/en/2012/11/ipython-vs-knitr/)
 
 - [Datacamp Tutorial - Jupyter Notebook](https://www.datacamp.com/community/tutorials/tutorial-jupyter-notebook#gs.kZqvIvI)
+
+- [Better interactive data science with Beaker and Rodeo](https://blog.dominodatalab.com/interactive-data-science/)
+
+- [Knit directly to jupyter notebooks from RStudio](https://www.r-bloggers.com/knit-directly-to-jupyter-notebooks-from-rstudio/)
+
+- [Python-Markdown](https://pythonhosted.org/Markdown/)
+
+- [Podcast](https://talkpython.fm/episodes/show/96/exploring-awesome-python)
+

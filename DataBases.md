@@ -12,3 +12,93 @@ Jan-Philipp Kolb
 
 ## Welche Datenbanken lassen sich zusammen mit R nutzen?
 
+- [PostgreSQL](http://wiki.openstreetmap.org/wiki/PostgreSQL)
+
+- [Azure in R nutzen](http://www.r-bloggers.com/using-azure-as-an-r-datasource-part-2-pulling-data-from-mysqlmariadb/)
+
+
+- [PHP & MySQL - Einführung und Installation](https://www.youtube.com/watch?v=2AVnuu4Ty_A)
+
+
+- SQLite ist schon in Python integriert
+
+
+## [R and mongodb](https://cran.r-project.org/web/packages/rmongodb/vignettes/rmongodb_introduction.html)
+
+
+- [Cheat sheet](https://cran.r-project.org/web/packages/rmongodb/vignettes/rmongodb_cheat_sheet.pdf)
+
+
+```r
+install.packages("rmongodb")
+```
+
+
+## PostGRESQL
+
+- [Intro to PGadmin](http://www.enterprisedb.com/resources-community/webcasts-podcasts-videos/videos/how-create-postgres-database-using-pgadmin)
+
+ - [Import csv-data](http://stackoverflow.com/questions/19400173/how-should-i-import-data-from-csv-into-a-postgres-table-using-pgadmin-3)
+
+## Database for geographic purposes
+
+- [Install PostGIS](http://www.bostongis.com/?content_name=postgis_tut01)
+
+- [PostGIS in combination with R](http://gis.stackexchange.com/questions/64950/which-is-the-best-way-of-working-with-postgis-data-in-r)
+
+
+
+
+## [CouchDB](https://de.wikipedia.org/wiki/CouchDB)
+
+[Installation on Windows](http://docs.couchdb.org/en/stable/install/windows.html)
+
+[CouchDB and OSM](http://wiki.openstreetmap.org/wiki/OSMCouch)
+
+
+## [Learning SQL and Database Concepts](http://www.vertabelo.com/blog/notes-from-the-lab/18-best-online-resources-for-learning-sql-and-database)
+
+
+## Relational Databases
+
+- SQL is used for querying
+- [Relation model (German)](https://ab.inf.uni-tuebingen.de/teaching/ss03/asa/db_intro.pdf)
+
+## Non relational Databases
+
+- NoSQL - non-relational approach
+- Examples: Riak, Apache Cassandra, [CouchDB](https://www.youtube.com/watch?v=TvRDOLiadtg&list=PLxcWHsmHykmWlXorl8rm-2Ux4HP1sFkub), MongoDB and Redis.
+
+
+## Die Datenbanksprache lernen 
+
+- [w3schools](http://www.w3schools.com/sql/default.asp)
+
+
+## Database for geographic purposes
+
+- [Install PostGIS](http://www.bostongis.com/?content_name=postgis_tut01)
+
+- [PostGIS in combination with R](http://gis.stackexchange.com/questions/64950/which-is-the-best-way-of-working-with-postgis-data-in-r)
+
+## PostGRESQL
+
+- [Intro to PGadmin](http://www.enterprisedb.com/resources-community/webcasts-podcasts-videos/videos/how-create-postgres-database-using-pgadmin)
+
+ - [Import csv-data](http://stackoverflow.com/questions/19400173/how-should-i-import-data-from-csv-into-a-postgres-table-using-pgadmin-3)
+
+## [CouchDB](https://de.wikipedia.org/wiki/CouchDB)
+
+[Installation on Windows](http://docs.couchdb.org/en/stable/install/windows.html)
+
+[CouchDB and OSM](http://wiki.openstreetmap.org/wiki/OSMCouch)
+
+## Making a dump
+
+- [dump](http://dba.stackexchange.com/questions/23053/copy-postgresql-data-from-one-pc-to-another)
+
+## NoSQL Databases
+
+[A deep dive to nosql db](http://bigdata-madesimple.com/a-deep-dive-into-nosql-a-complete-list-of-nosql-databases/)
+
+[Apache Spark and HBase](https://blog.cloudera.com/blog/2015/08/apache-spark-comes-to-apache-hbase-with-hbase-spark-module/)
