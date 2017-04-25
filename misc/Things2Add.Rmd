@@ -1,0 +1,16 @@
+---
+title: "Things2Add"
+author: "Jan-Philipp Kolb"
+date: "25 April 2017"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## 
+
+- [Figure Size](https://rstudio.github.io/dygraphs/r-markdown.html)
+
+- [Different ways to set figure size in RMarkdown](https://sebastiansauer.github.io/figure_sizing_knitr/)
