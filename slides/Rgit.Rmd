@@ -43,6 +43,10 @@ git push
 
 ![](https://www.researchgate.net/profile/Tom_Mens/publication/301746965/figure/fig1/AS:356583633637381@1462027571464/Figure-2-Number-of-R-packages-by-source.png)
 
+## Datensätze Suchfunktion
+
+![](figure/SearchableGithub.PNG)
+
 
 ## Links
 
