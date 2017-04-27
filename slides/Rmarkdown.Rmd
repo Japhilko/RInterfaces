@@ -286,3 +286,9 @@ install.packages("highcharter", type = "source")
 ```
 
 ![](figure/RmarkdownGallery.PNG)
+
+## Links 
+
+- [Verschiedene Markdown Dokumente zusammen fügen](http://stackoverflow.com/questions/25824795/how-to-combine-two-rmarkdown-rmd-files-into-a-single-output)
+
+![](https://github.com/Japhilko/IntroR/tree/master/2017/slides/figure/stackoverflowCombine.PNG)
