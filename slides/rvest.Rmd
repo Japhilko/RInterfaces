@@ -1,15 +1,17 @@
 ---
 title: "rvest"
 author: "Jan-Philipp Kolb"
-date: "20 März 2017"
-output: html_document
+date: "09 Mai 2017"
+output: 
+  slidy_presentation: 
+    keep_md: yes
 ---
 
-```{r setup, include=FALSE}
+```{r, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
-## 
+## Das Paket `rvest`
 
 ```{r}
 library(rvest)

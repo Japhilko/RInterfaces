@@ -45,16 +45,19 @@ knitr::opts_chunk$set(echo = TRUE)
 ```{r child = 'mermaid.Rmd'}
 ```
 
+# Internetresourcen und Schnittstellen nutzen
+
+# Import von JSON-Objekten und XML Dateien
+
+```{r child = 'rapis.Rmd'}
+```
+
+# Die Pakete rvest und RCurl
+
+```{r child = 'rvest.Rmd'}
+```
 
 
-
-
-## Internetresourcen und Schnittstellen nutzen
-
--	[Import von JSON-Objekten und XML Dateien](slides/rapis.Rmd) ([pdf](slides/rapis.pdf) | [rcode](slides/rapis.pdf))
-
-
-- [Die Pakete rvest und RCurl](slides/rvest.Rmd)
 
 
 - [Webscraping](https://github.com/Japhilko/RInterfaces/blob/master/slides/Webscraping.md)
