@@ -9,8 +9,6 @@ output:
 
 ```{r, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE,warning=F,message=F)
-pdf<-F
-web <- !pdf
 ```
 
 ## Die Daten - Weltkulturerbe
@@ -24,10 +22,10 @@ whcSites <- read.csv(url)
 
 ```{r,echo=F,eval=pdf}
 library(knitr)
-kable(head(whcSites))
+kable(head(whcSites[,6:10]))
 ```
 
-```{r,echo=F,eval=web}
+```{r,echo=F}
 library('DT')
 datatable(whcSites)
 ```
@@ -89,7 +87,9 @@ m1 <- leaflet() %>%
 
 ## [Die Karte abspeichern](http://www.r-bloggers.com/interactive-mapping-with-leaflet-in-r-2/)
 
+<!--
 ![gui](http://i1.wp.com/spatialrecology.org/images/r_leaflet/snapshot2.png)
+-->
 
 ## [Layers ein- und ausblenden](https://rstudio.github.io/leaflet/showhide.html)
 

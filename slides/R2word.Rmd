@@ -18,9 +18,7 @@ output:
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
-# Ein Markdown Dokument mit Rstudio erzeugen
-
-## Der Start
+## Ein Markdown Dokument mit Rstudio erzeugen
 
 ![](figure/r2wordstart.PNG)
 

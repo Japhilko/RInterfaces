@@ -1,5 +1,5 @@
 ---
-title: "R Schnittstellen"
+title: "Zweiter Teil"
 author: "Jan-Philipp Kolb"
 date: "28 April 2017"
 output: 
@@ -10,58 +10,6 @@ output:
 ```{r, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
 ```
-
-# Einführung und Motivation
-
-```{r child = 'Intro.Rmd'}
-```
-
-
-# Datenimport
-
-```{r child = 'Datenimport.Rmd'}
-```
-
-# R und Excel
-
-```{r child = 'Rexcel.Rmd'}
-```
-
-
-
-# Präsentation von Daten - Reproducible Research
-
-```{r child = 'ReproducibleResearch.Rmd'}
-```
-
-
-
-# Word Dokumente mit R erstellen
-
-```{r child = 'R2word.Rmd'}
-```
-
-
-#	PDF Dokumente und Präsentationen mit LaTeX, Beamer und Sweave
-
-
-```{r child = 'R2pdf.Rmd'}
-```
-
-
-# HTML Dokumente, Präsentationen und Dashboards mit Rmarkdown
-
-
-```{r child = 'Rmarkdown.Rmd'}
-```
-
-# Notebooks zur Integration von anderen Programmiersprachen (Python,LaTeX,Julia)
-
-```{r child = 'Notebooks.Rmd'}
-```
-
-## Aufgabe: Bearbeiten Sie ein Notebook weiter
-
 
 
 #	Interaktive Karten mit dem Javascript Paket leaflet
