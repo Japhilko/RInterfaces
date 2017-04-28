@@ -102,6 +102,8 @@ m1 <- leaflet() %>%
 
 ## [Die Karte abspeichern](http://www.r-bloggers.com/interactive-mapping-with-leaflet-in-r-2/)
 
+![](figure/Kartespeichern.PNG)
+
 <!--
 ![gui](http://i1.wp.com/spatialrecology.org/images/r_leaflet/snapshot2.png)
 -->

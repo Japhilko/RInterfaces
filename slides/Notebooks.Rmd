@@ -70,9 +70,9 @@ print(sys.version)
 
 ![](http://jupyter.readthedocs.io/en/latest/_static/_images/jupyter.svg)
 
-- Anaconda installieren
+- [Anaconda installieren](https://docs.continuum.io/anaconda/install)
 - folgenden Befehl in die Eingabeaufforderung eingeben
-- Diese findet man bei windows wenn man cmd in Suche eingibt.
+- Bei Windows findet man diese, wenn man `cmd` in Suche eingibt.
 
 ```
 jupyter notebook

@@ -117,7 +117,7 @@ knitr::opts_chunk$set(echo = FALSE)
 
 - Es lohnt sich immer wieder zu dieser Seite zurückzukehren, weil hier alle relevanten Dokumente verlinkt sind.
 
-- Grundsätzlich bietet es sich an, den einzelnen Teilen der Veranstaltung mit dem File zu folgen, dass mit dem Begriff _Browser_ verlinkt ist.
+- Grundsätzlich kann man der Veranstalung am Besten mit dem [kompletten File](https://github.com/Japhilko/RInterfaces/blob/master/slides/RInterfaces_all2g.md) folgen. Wenn Teile heruntergeladen werden sollen, bietet es sich an, das entsprechende pdf herunterzuladen.
 
 ## Informationen audrucken
 
@@ -145,9 +145,8 @@ knitr::opts_chunk$set(echo = FALSE)
 
 
 - Zusätzlich gibt es für jedes Kapitel eine Aufgabe, da man nur durch eigenes Trainieren auf der Lernkurve vorankommt.
-
-- Die Quellen sind als Link meist in der Überschrift hinterlegt
-- Die Links sind nur im HTML Dokument zu sehen aber auch in der pdf vorhanden
+- Die Quellen sind als Link meist in der Überschrift hinterlegt.
+- Die Links sind nur im HTML Dokument zu sehen aber auch in der pdf vorhanden.
 
 ## Links und Quellen
 
@@ -156,4 +155,4 @@ Wen Github näher interessiert:
 
 - [Hello World](https://guides.github.com/activities/hello-world/)
 
-- [Understanding the GitHub](https://guides.github.com/introduction/flow/)
+- [Understanding the GitHub flow](https://guides.github.com/introduction/flow/)

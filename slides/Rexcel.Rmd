@@ -13,12 +13,12 @@ output:
 knitr::opts_chunk$set(echo = TRUE,message=F,warnings=F)
 ```
 
-## Eine wichtige Datenquelle
+## Das Paket `xlsx`
 
-- [Eurostat](http://appsso.eurostat.ec.europa.eu/nui/setupDownloads.do)
+- Eine wichtige Datenquelle - [Eurostat](http://appsso.eurostat.ec.europa.eu/nui/setupDownloads.do)
 
 ```{r,eval=F}
-library(xlsx)
+library("xlsx")
 dat <- read.xlsx("cult_emp_sex.xls",1)
 ```
 
@@ -33,6 +33,8 @@ install.packages("XLConnect")
 ```{r}
 library("XLConnect")
 ```
+
+![[Vignette für XLconnect](https://cran.r-project.org/web/packages/XLConnect/vignettes/XLConnect.pdf)](figure/XLconnect.PNG)
 
 ## [Eine Excel Datei aus R erzeugen](http://www.milanor.net/blog/steps-connect-r-excel-xlconnect/)
 
@@ -59,7 +61,6 @@ saveWorkbook(exc)
 ![](figure/BERTaddins.PNG)
 
 
-
 ```{r}
 myFunction <- function(){
  aa <- rnorm(200)
@@ -70,6 +71,11 @@ myFunction <- function(){
 ```
 
 
+## Link `BERT`
+
+- [BERT: a newcomer in the R Excel connection](https://www.r-bloggers.com/bert-a-newcomer-in-the-r-excel-connection/)
+
+![](figure/NewcomerBERT.PNG)
 
 ## Das Paket readxl
 
@@ -83,8 +89,4 @@ install.packages("readxl")
 library(readxl)
 ```
 
-## Links
-
-- [BERT: a newcomer in the R Excel connection](https://www.r-bloggers.com/bert-a-newcomer-in-the-r-excel-connection/)
-
-![](figure/NewcomerBERT.PNG)
+![](figure/Rexcel.PNG)

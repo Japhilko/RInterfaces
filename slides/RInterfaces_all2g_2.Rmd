@@ -1,9 +1,10 @@
 ---
-title: "Zweiter Teil"
+title: "R Schnittstellen - Zweiter Teil"
 author: "Jan-Philipp Kolb"
 date: "28 April 2017"
 output: 
   slidy_presentation: 
+    css: mycss2.css
     keep_md: yes
 ---
 

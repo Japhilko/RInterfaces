@@ -40,7 +40,7 @@ Jan-Philipp Kolb
 
 ## Übersicht - warum R
 
-![pic](http://d287f0h5fel5hu.cloudfront.net/blog/wp-content/uploads/2013/06/bar-learn-r-img11.png)
+![edureka - why learn R](http://d287f0h5fel5hu.cloudfront.net/blog/wp-content/uploads/2013/06/bar-learn-r-img11.png)
 
 
 
@@ -64,7 +64,7 @@ Jan-Philipp Kolb
 
 ## Die Nutzung von Schnittstellen beim Import/Export
 
-- Interaktion mit SPSS, Stata
+- Interaktion mit Excel, SPSS, Stata, ...
 
 ![Import](figure/Import.PNG)
 
@@ -72,7 +72,7 @@ Jan-Philipp Kolb
 
 ![](figure/MiracleOccursImage.png)
 
-## [Was wird bei Wikipedia unter Reproduibility verstanden?](https://en.wikipedia.org/wiki/Reproducibility)
+## [Was wird bei Wikipedia unter Reproducability verstanden?](https://en.wikipedia.org/wiki/Reproducibility)
 
 ![](figure/Spectrum_of_reproducible_research.png)
 
@@ -108,7 +108,7 @@ Jan-Philipp Kolb
 
 - Es lohnt sich immer wieder zu dieser Seite zurückzukehren, weil hier alle relevanten Dokumente verlinkt sind.
 
-- Grundsätzlich bietet es sich an, den einzelnen Teilen der Veranstaltung mit dem File zu folgen, dass mit dem Begriff _Browser_ verlinkt ist.
+- Grundsätzlich kann man der Veranstalung am Besten mit dem [kompletten File](https://github.com/Japhilko/RInterfaces/blob/master/slides/RInterfaces_all2g.md) folgen. Wenn Teile heruntergeladen werden sollen, bietet es sich an, das entsprechende pdf herunterzuladen.
 
 ## Informationen audrucken
 
@@ -136,9 +136,8 @@ Jan-Philipp Kolb
 
 
 - Zusätzlich gibt es für jedes Kapitel eine Aufgabe, da man nur durch eigenes Trainieren auf der Lernkurve vorankommt.
-
-- Die Quellen sind als Link meist in der Überschrift hinterlegt
-- Die Links sind nur im HTML Dokument zu sehen aber auch in der pdf vorhanden
+- Die Quellen sind als Link meist in der Überschrift hinterlegt.
+- Die Links sind nur im HTML Dokument zu sehen aber auch in der pdf vorhanden.
 
 ## Links und Quellen
 
@@ -147,7 +146,7 @@ Wen Github näher interessiert:
 
 - [Hello World](https://guides.github.com/activities/hello-world/)
 
-- [Understanding the GitHub](https://guides.github.com/introduction/flow/)
+- [Understanding the GitHub flow](https://guides.github.com/introduction/flow/)
 
 
 # Datenimport
@@ -223,8 +222,9 @@ Bei Windows ist es wichtig Slashs anstelle von Backslashs zu verwenden.
 
 ## Import von Excel-Daten
 
--  `library(foreign)` ist für den Import von fremden Datenformaten nötig
+-  `library(foreign)` ist für den Import von fremden Datenformaten hilfreich
 -  Wenn Excel-Daten vorliegen - als .csv abspeichern
+- Diese lassen sich auch ohne das Paket `foreign` einlesen.
 -  Dann kann `read.csv()` genutzt werden um die Daten einzulesen.
 - Bei Deutschen Daten kann es sein, dass man `read.csv2()` wegen der Komma-Separierung braucht.
 
@@ -252,7 +252,7 @@ Dat <- read.csv2("schuldaten_export.csv")
 ```
 
 
-## Import csv 
+## `.csv`-Daten aus dem Web importieren
 
 
 ```r
@@ -261,6 +261,100 @@ GeoData/master/2015/data/whcSites.csv"
 
 whcSites <- read.csv(url) 
 ```
+
+
+
+```r
+head(whcSites)
+```
+
+```
+##   X unique_number id_no rev_bis
+## 1 1           230   208     Rev
+## 2 2           234   211     Rev
+## 3 3          1590   569     Bis
+## 4 4          1563   570     ter
+## 5 5           111   102    <NA>
+## 6 6           209   188    <NA>
+##                                                               name_en
+## 1 Cultural Landscape and Archaeological Remains of the Bamiyan Valley
+## 2                           Minaret and Archaeological Remains of Jam
+## 3                          Historic Centres of Berat and Gjirokastra 
+## 4                                                             Butrint
+## 5                                             Al Qal'a of Beni Hammad
+## 6                                                        M'Zab Valley
+##                                                                 name_fr
+## 1 Paysage culturel et vestiges archÃ©ologiques de la vallÃ©e de Bamiyan
+## 2                           Minaret et vestiges archÃ©ologiques de Djam
+## 3                       Centres historiques de Berat et de Gjirokastra 
+## 4                                                               Butrint
+## 5                                            La KalÃ¢a des BÃ©ni Hammad
+## 6                                                      VallÃ©e du M'Zab
+##                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                short_description_en
+## 1                                                                                                                                                                                                                                                                           <p>The cultural landscape and archaeological remains of the Bamiyan Valley represent the artistic and religious developments which from the 1st to the 13th centuries characterized ancient Bakhtria, integrating various cultural influences into the Gandhara school of Buddhist art. The area contains numerous Buddhist monastic ensembles and sanctuaries, as well as fortified edifices from the Islamic period. The site is also testimony to the tragic destruction by the Taliban of the two standing Buddha statues, which shook the world in March 2001.</p>
+## 2                                                                                                                                                                                                                                                                                                                                                                 <p>The 65m-tall Minaret of Jam is a graceful, soaring structure, dating back to the 12th century. Covered in elaborate brickwork with a blue tile inscription at the top, it is noteworthy for the quality of its architecture and decoration, which represent the culmination of an architectural and artistic tradition in this region. Its impact is heightened by its dramatic setting, a deep river valley between towering mountains in the heart of the Ghur province.</p>
+## 3 <p>Berat and Gjirokastra are inscribed as rare examples of an architectural character typical of the Ottoman period. Located in central Albania, Berat bears witness to the coexistence of various religious and cultural communities down the centuries. It features a castle, locally known as the Kala, most of which was built in the 13th century, although its origins date back to the 4th century BC. The citadel area numbers many Byzantine churches, mainly from the 13th century, as well as several mosques built under the Ottoman era which&nbsp;began&nbsp;in 1417. Gjirokastra, in the Drinos river valley in southern Albania, features a series of outstanding two-story&nbsp;houses which were developed in the 17th century. The town also retains a bazaar, an 18th-century mosque and two churches of the same period.</p>
+## 4                                                                                                                                                                                                                                                                                                                                                                                                               <p>Inhabited since prehistoric times, Butrint has been the site of a Greek colony, a Roman city and a bishopric. Following a period of prosperity under Byzantine administration, then a brief occupation by the Venetians, the city was abandoned in the late Middle Ages after marshes formed in the area. The present archaeological site is a repository of ruins representing each period in the city&rsquo;s development.</p>
+## 5                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       <p>In a mountainous site of extraordinary beauty, the ruins of the first capital of the Hammadid emirs, founded in 1007 and demolished in 1152, provide an authentic picture of a fortified Muslim city. The mosque, whose prayer room has 13 aisles with eight bays, is one of the largest in Algeria.</p>
+## 6                                                                                                                                                                                                                                                                                                                                                                                                           <p>A traditional human habitat, created in the 10th century by the Ibadites around their five <em>ksour</em> (fortified cities), has been preserved intact in the M&rsquo;Zab valley. Simple, functional and perfectly adapted to the environment, the architecture of M&rsquo;Zab was designed for community living, while respecting the structure of the family. It is a source of inspiration for today&rsquo;s urban planners.</p>
+##                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      short_description_fr
+## 1                                                                                                                                                                                                                                                                                                                                                                                                                                                        <p>Le paysage culturel et les vestiges arch&eacute;ologiques de la vall&eacute;e de Bamiyan illustrent les d&eacute;veloppements artistiques et religieux qui, du Ier au XIIIe si&egrave;cle, ont caract&eacute;ris&eacute; l&rsquo;ancienne Bactriane, int&eacute;grant diverses influences culturelles pour former l&rsquo;&eacute;cole d&rsquo;art bouddhique du Gandhara. Le site contient plusieurs ensembles monastiques et sanctuaires bouddhistes, ainsi que des &eacute;difices fortifi&eacute;s de la p&eacute;riode islamique. Il t&eacute;moigne &eacute;galement de la tragique destruction des deux bouddhas debout par les taliban, qui &eacute;branla le monde en mars 2001.</p>
+## 2                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           <p>Haut de 65m, le minaret de Djam est une construction gracieuse et Ã©lancÃ©e datant du XIIe siÃ¨cle. Recouvert dâune dÃ©coration complexe en briques et portant une inscription de tuiles bleues au sommet, il est remarquable par la qualitÃ© de son architecture et de ses motifs dÃ©coratifs, qui reprÃ©sentent lâapogÃ©e dâune tradition artistique propre Ã  cette rÃ©gion. Son impact est renforcÃ© par un environnement spectaculaire : une vallÃ©e profonde qui sâouvre entre dâimposantes montagnes au cÅur de la province du Ghor.</p>
+## 3 <p>Berat et Gjirokastra sont inscrites en tant que rares exemples d'un style architectural typique de la p&eacute;riode ottomane. Situ&eacute;e dans le centre de l'Albanie, Berat porte le t&eacute;moignage de la coexistence de diff&eacute;rentes communaut&eacute;s religieuses et culturelles au fil des si&egrave;cles. Elle comprend un ch&acirc;teau, localement appel&eacute; le Kala, dont la majeure partie fut construite au XIIIe si&egrave;cle, bien que ses origines remontent au IVe si&egrave;cle avant JC. Le quartier de la citadelle compte de nombreuses &eacute;glises byzantines, dont plusieurs du XIII&egrave;me si&egrave;cle, ainsi que plusieurs mosqu&eacute;es construites sous l'&egrave;re ottomane qui d&eacute;buta en 1417. Gjirokastra, dans la vall&eacute;e de la rivi&egrave;re Drinos au sud de l'Albanie, comprend une s&eacute;rie de remarquables maisons &agrave; deux &eacute;tages, qui se d&eacute;velopp&egrave;rent au XVIIe si&egrave;cle. La ville comprend &eacute;galement un bazar, une mosqu&eacute;e du XVIIIe si&egrave;cle ainsi que deux &eacute;glises de la m&ecirc;me &eacute;poque.</p>
+## 4                                                                                                                                                                                                                                                                                                                                                                                                                                                            <p>Habit&eacute; depuis les temps pr&eacute;historiques, le site de Butrint fut successivement le si&egrave;ge d&rsquo;une colonie grecque, d&rsquo;une ville romaine, puis d&rsquo;un &eacute;v&ecirc;ch&eacute;. Apr&egrave;s une &eacute;poque de prosp&eacute;rit&eacute; sous l&rsquo;administration de Byzance, puis une br&egrave;ve occupation v&eacute;nitienne, la ville fut abandonn&eacute;e par sa population &agrave; la fin du Moyen &Acirc;ge &agrave; cause de la pr&eacute;sence de mar&eacute;cages voisins. Le site arch&eacute;ologique actuel est un conservatoire des ruines repr&eacute;sentatives de chaque p&eacute;riode du d&eacute;veloppement de la ville.</p>
+## 5                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        <p>Dans un site montagneux d&rsquo;une saisissante beaut&eacute;, les ruines de la premi&egrave;re capitale des &eacute;mirs hammadides, fond&eacute;e en 1007 et d&eacute;mantel&eacute;e en 1152, nous restituent l&rsquo;image authentique d&rsquo;une ville musulmane fortifi&eacute;e. Sa mosqu&eacute;e, avec sa salle de pri&egrave;re de 13 nefs &agrave; 8 trav&eacute;es, est l&rsquo;une des plus grandes d&rsquo;Alg&eacute;rie.</p>
+## 6                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            <p>Le paysage de la vall&eacute;e du M&rsquo;Zab, cr&eacute;&eacute; au Xe si&egrave;cle par les Ibadites autour de leurs cinq <em>ksour</em>, ou villages fortifi&eacute;s, semble &ecirc;tre rest&eacute; intact. Simple, fonctionnelle et parfaitement adapt&eacute;e &agrave; l&rsquo;environnement, l&rsquo;architecture du M&rsquo;Zab a &eacute;t&eacute; con&ccedil;ue pour la vie en communaut&eacute;, tout en respectant les structures familiales. C&rsquo;est une source d&rsquo;inspiration pour les urbanistes d&rsquo;aujourd&rsquo;hui.</p>
+##                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               justification_en
+## 1 <p><em>Criterion (i):</em> The Buddha statues and the cave art in Bamiyan Valley are an outstanding representation of the Gandharan school in Buddhist art in the Central Asian region.</p>\n\n\n<p><em>Criterion (ii)</em> : The artistic and architectural remains of Bamiyan Valley, and an important Buddhist centre on the Silk Road, are an exceptional testimony to the interchange of Indian, Hellenistic, Roman, Sasanian influences as the basis for the development of a particular artistic expression in the Gandharan school. To this can be added the Islamic influence in a later period.</p>\n\n\n<p><em>Criterion (iii):</em> The Bamiyan Valley bears an exceptional testimony to a cultural tradition in the Central Asian region, which has disappeared.</p>\n\n\n<p><em>Criterion (iv):</em> The Bamiyan Valley is an outstanding example of a cultural landscape which illustrates a significant period in Buddhism.</p>\n\n\n<p><em>Criterion (vi):</em> The Bamiyan Valley is the most monumental expression of the western Buddhism. It was an important centre of pilgrimage over many centuries. Due to their symbolic values, the monuments have suffered at different times of their existence, including the deliberate destruction in 2001, which shook the whole world.</p>
+## 2                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                <p><em>Criterion (ii):</em> The innovative architecture and decoration of the Minaret of Jam played a significant role in the development of the arts and architecture of the Indian sub-continent and beyond.</p>\n\n\n<p><em>Criterion (iii): </em>The Minaret of Jam and its associated archaeological remains constitute exceptional testimony to the power and quality of the Ghurid civilization that dominated its region in the 12th and 13th centuries.</p>\n\n\n<p><em>Criterion (iv): </em>The Minaret of Jam is an outstanding example of Islamic architecture and ornamentation in this region and played a significant role in their further dissemination.</p>
+## 3                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         <NA>
+## 4                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         <NA>
+## 5                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         <NA>
+## 6                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         <NA>
+##                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       justification_fr
+## 1 <p><em>Crit&egrave;re (i):</em> Les statues de Bouddha et l&rsquo;art rupestre de la vall&eacute;e de Bamyan sont une repr&eacute;sentation exceptionnelle de l&rsquo;&eacute;cole du Gandhara dans l&rsquo;art bouddhique de la r&eacute;gion d&rsquo;Asie centrale.</p>\n\n\n<p><em>Crit&egrave;re (ii):</em> Les vestiges artistiques et architecturaux de la vall&eacute;e de Bamyan, important centre bouddhiste sur la Route de la Soie, sont un t&eacute;moignage exceptionnel de l&rsquo;&eacute;change des influences indiennes, hell&eacute;nistiques, romaines et sassanides qui ont servi de fondations &agrave; une expression artistique particuli&egrave;re de l&rsquo;&eacute;cole du Gandhara. &Agrave; cela s&rsquo;ajoute une influence islamique ult&eacute;rieure.</p>\n\n\n<p><em>Crit&egrave;re (iii):</em> La vall&eacute;e de Bamyan est un t&eacute;moignage exceptionnel d&rsquo;une tradition culturelle d&rsquo;Asie centrale aujourd&rsquo;hui disparue.</p>\n\n\n<p><em>Crit&egrave;re (iv):</em> La vall&eacute;e de Bamyan est un exemple exceptionnel de paysage culturel illustrant une p&eacute;riode significative du bouddhisme.</p>\n\n\n<p><em>Crit&egrave;re (vi):</em> La vall&eacute;e de Bamyan est l&rsquo;expression monumentale la plus importante du Bouddhisme occidental. Ce fut un centre de p&egrave;lerinage essentiel sur plusieurs si&egrave;cles. Les monuments, en raison de leurs valeurs symboliques, ont souffert &agrave; diff&eacute;rentes p&eacute;riodes de leur histoire, notamment lors de la destruction d&eacute;lib&eacute;r&eacute;e de 2001, qui secoua le monde entier.</p>
+## 2                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            <p><em>CritÃ¨re (ii)</em> : L'architecture et la dÃ©coration innovatrices du Minaret de Djam ont jouÃ© un rÃ´le significatif dans le dÃ©veloppement des arts et de l'architecture du sous-continent indien et au-delÃ .</p>\n\n\n<p><em>CritÃ¨re (iii)</em> : Le minaret de Djam et ses vestiges archÃ©ologiques associÃ©s constituent un tÃ©moignage exceptionnel de la puissance et de la qualitÃ© de la civilisation ghoride qui domina cette rÃ©gion aux XIIe et XIIIe siÃ¨cles.</p>\n\n\n<p><em>CritÃ¨re (iv)</em> : Le minaret de Djam est un exemple exceptionnel de lâarchitecture et de lâornementation islamiques dans la rÃ©gion et joua un rÃ´le dans leur diffusion.</p>
+## 3                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 <NA>
+## 4                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 <NA>
+## 5                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 <NA>
+## 6                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 <NA>
+##   date_inscribed secondary_dates danger_list longitude latitude
+## 1           2003            <NA>      Y 2003  67.82525 34.84694
+## 2           2002            <NA>      Y 2002  64.51606 34.39656
+## 3           2005            2008        <NA>  20.13333 40.06944
+## 4           1992            1999        <NA>  20.02611 39.75111
+## 5           1980            <NA>        <NA>   4.78684 35.81844
+## 6           1982            <NA>        <NA>   3.68333 32.48333
+##   area_hectares C1 C2 C3 C4 C5 C6 N7 N8 N9 N10         criteria_txt
+## 1      158.9265  1  1  1  1  0  1  0  0  0   0 (i)(ii)(iii)(iv)(vi)
+## 2       70.0000  0  1  1  1  0  0  0  0  0   0        (ii)(iii)(iv)
+## 3       58.9000  0  0  1  1  0  0  0  0  0   0            (iii)(iv)
+## 4            NA  0  0  1  0  0  0  0  0  0   0                (iii)
+## 5      150.0000  0  0  1  0  0  0  0  0  0   0                (iii)
+## 6      665.0300  0  1  1  0  1  0  0  0  0   0         (ii)(iii)(v)
+##   category category_short states_name_en states_name_fr
+## 1 Cultural              C    Afghanistan    Afghanistan
+## 2 Cultural              C    Afghanistan    Afghanistan
+## 3 Cultural              C        Albania        Albanie
+## 4 Cultural              C        Albania        Albanie
+## 5 Cultural              C        Algeria       AlgÃ©rie
+## 6 Cultural              C        Algeria       AlgÃ©rie
+##                  name_en.1                   name_fr.1 iso_code udnp_code
+## 1     Asia and the Pacific           Asie et pacifique       af       afg
+## 2     Asia and the Pacific           Asie et pacifique       af       afg
+## 3 Europe and North America Europe et AmÃ©rique du nord       al       alb
+## 4 Europe and North America Europe et AmÃ©rique du nord       al       alb
+## 5              Arab States               Ãtats arabes       dz       dza
+## 6              Arab States               Ãtats arabes       dz       dza
+##   transboundary
+## 1             0
+## 2             0
+## 3             0
+## 4             0
+## 5             0
+## 6             0
+```
+
 
 
 ## SPSS Dateien einlesen
@@ -304,13 +398,13 @@ MZ02 <- read.dta("MZ02.dta")
 
 
 
-## Eine wichtige Datenquelle
+## Das Paket `xlsx`
 
-- [Eurostat](http://appsso.eurostat.ec.europa.eu/nui/setupDownloads.do)
+- Eine wichtige Datenquelle - [Eurostat](http://appsso.eurostat.ec.europa.eu/nui/setupDownloads.do)
 
 
 ```r
-library(xlsx)
+library("xlsx")
 dat <- read.xlsx("cult_emp_sex.xls",1)
 ```
 
@@ -327,6 +421,8 @@ install.packages("XLConnect")
 ```r
 library("XLConnect")
 ```
+
+![[Vignette für XLconnect](https://cran.r-project.org/web/packages/XLConnect/vignettes/XLConnect.pdf)](figure/XLconnect.PNG)
 
 ## [Eine Excel Datei aus R erzeugen](http://www.milanor.net/blog/steps-connect-r-excel-xlconnect/)
 
@@ -570,16 +666,16 @@ kable(ab)
 
          a            b
 ----------  -----------
- 0.8939412   -0.0522295
- 0.7727248    0.9332350
- 0.8746124    2.2482572
- 0.5507054   -0.4579231
- 0.2041761   -2.4619203
- 0.1463845    0.4470147
- 0.7333708    0.0555823
- 0.8677976   -0.9933719
- 0.5543129   -1.0102304
- 0.5508996    0.2758732
+ 0.6061532    0.6976463
+ 0.4971367    1.3133231
+ 0.2344954    0.8289510
+ 0.8029970   -1.4756648
+ 0.7863071    0.1589139
+ 0.6588728   -0.8002320
+ 0.6765894    0.8921335
+ 0.7041389   -0.8169958
+ 0.6368197   -0.8411820
+ 0.6784360    0.9775720
 
 ## [Vorlagen verwenden](http://rmarkdown.rstudio.com/articles_docx.html)
 
@@ -809,7 +905,7 @@ bibliography: Rschnittstellen.bib
 
 
 ```
-## [1] "Fri Apr 28 14:56:19 2017"
+## [1] "Fri Apr 28 15:16:29 2017"
 ```
 
 ## Eine Folie mit Formel

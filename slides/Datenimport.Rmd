@@ -80,8 +80,9 @@ Bei Windows ist es wichtig Slashs anstelle von Backslashs zu verwenden.
 
 ## Import von Excel-Daten
 
--  `library(foreign)` ist für den Import von fremden Datenformaten nötig
+-  `library(foreign)` ist für den Import von fremden Datenformaten hilfreich
 -  Wenn Excel-Daten vorliegen - als .csv abspeichern
+- Diese lassen sich auch ohne das Paket `foreign` einlesen.
 -  Dann kann `read.csv()` genutzt werden um die Daten einzulesen.
 - Bei Deutschen Daten kann es sein, dass man `read.csv2()` wegen der Komma-Separierung braucht.
 
@@ -106,7 +107,7 @@ Dat <- read.csv2("schuldaten_export.csv")
 ```
 
 
-## Import csv 
+## `.csv`-Daten aus dem Web importieren
 
 ```{r}
 url <- "https://raw.githubusercontent.com/Japhilko/
@@ -114,6 +115,12 @@ GeoData/master/2015/data/whcSites.csv"
 
 whcSites <- read.csv(url) 
 ```
+
+
+```{r}
+head(whcSites)
+```
+
 
 
 ## SPSS Dateien einlesen
