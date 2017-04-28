@@ -75,7 +75,7 @@ m
 
 ## Die Karte zeigen
 
-![pic](https://github.com/Japhilko/GeoData/tree/master/data/figure/WHCPopUps.PNG) 
+![](figure/WHCPopUps.PNG) 
 
 ## Farbe hinzu
 

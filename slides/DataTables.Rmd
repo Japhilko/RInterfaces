@@ -7,7 +7,7 @@ output:
     keep_md: yes
 ---
 
-```{r setup, include=FALSE}
+```{r, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE,eval=T,warning=F,message = F)
 ```
 
@@ -32,7 +32,12 @@ exdat <- read.csv("data/exdat.csv")
 datatable(exdat)
 ```
 
-Here is the the result - [example for a datatable](http://rpubs.com/Japhilko82/osmplzbe)
+## Beispiel für interaktive Tabelle
+
+Hier ist das Ergebnis - [Beispiel für eine interaktive Tabelle](http://rpubs.com/Japhilko82/osmplzbe)
+
+![](figure/RpubsPLZBer.PNG)
+
 
 ## [Default Optionen verändern](http://rstudio.github.io/DT/options.html)
 

@@ -23,12 +23,18 @@ knitr::opts_chunk$set(echo = TRUE)
 ```{r child = 'DataTables.Rmd'}
 ```
 
+# R und die Javascript Data-Driven Documents (D3)
+
+```{r child = 'D3.Rmd'}
+```
+
+#	Interaktive Graphiken mit D3 und plotly
 
 
+```{r child = 'plotly.Rmd'}
+```
 
--	[R und die Javascript Data-Driven Documents (D3)](https://github.com/Japhilko/RInterfaces/blob/master/slides/D3.md)
 
--	[Interaktive Graphiken mit D3 und plotly](https://github.com/Japhilko/RInterfaces/blob/master/slides/plotly.md)
 
 
 -	[Netzwerkgraphiken mit vis.js](https://github.com/Japhilko/RInterfaces/blob/master/slides/visNetwork.md)
