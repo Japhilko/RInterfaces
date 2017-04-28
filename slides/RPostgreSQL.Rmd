@@ -1,7 +1,7 @@
 ---
 title: "RPostgreSQL"
 author: "Jan-Philipp Kolb"
-date: "27 Januar 2017"
+date: "9 Mai 2017"
 output: 
   html_document: 
     keep_md: yes
@@ -39,7 +39,7 @@ library("RPostgreSQL")
 
 - [Nutzung von osm2pgsql](http://www.volkerschatz.com/net/osm/osm2pgsql-usage.html)
 
-```{bash, eval=F}
+```
 sudo -u postgres createuser Japhilko
 sudo -u postgres createdb -E UTF8 -O Japhilko offlgeoc
 ```
@@ -63,11 +63,11 @@ osm2pgsql -s -U postgres -d offlgeoc /home/kolb/Forschung/osmData/data/saarland-
 
 ## Datenbank für Geocoding
 
-```{bash}
+```
 sudo -u postgres createdb -E UTF8 -O Japhilko offlgeocRLP
 ```
 
-```shell
+```
 CREATE EXTENSION postgis;
 ```
 
@@ -83,7 +83,7 @@ SELECT name FROM planet_osm_polygon WHERE boundary='administrative'
 
 ## [Zurück zu R](https://datashenanigan.wordpress.com/2015/05/18/getting-started-with-postgresql-in-r/)
 
-```{r}
+```{r,eval=F}
 pw <- {"1234"}
 drv <- dbDriver("PostgreSQL")
 con <- dbConnect(drv, dbname = "offlgeocRLP",
@@ -96,17 +96,17 @@ dbExistsTable(con, "planet_osm_polygon")
 
 - [Select more than one column](http://dba.stackexchange.com/questions/54011/postgres-function-assign-query-results-to-multiple-variables)
 
-```{r}
+```{r,eval=F}
 df_postgres <- dbGetQuery(con, "SELECT name, admin_level FROM planet_osm_polygon WHERE boundary='administrative'")
 ```
 
-```{r}
+```{r,eval=F}
 barplot(table(df_postgres[,2]),col="royalblue")
 ```
 
 ## 
 
-```{r}
+```{r,eval=F}
 df_adm8 <- dbGetQuery(con, "SELECT name, admin_level FROM planet_osm_polygon WHERE boundary='administrative' AND admin_level='8'")
 ```
 
@@ -117,38 +117,38 @@ library(knitr)
 
 ## 
 
-```{r}
+```{r,eval=F}
 df_hnr <- dbGetQuery(con, "SELECT * FROM planet_osm_line, planet_osm_point 
 WHERE planet_osm_line.name='Nordring' AND planet_osm_line.highway IN ('motorway','trunk','primary')
 AND planet_osm_point.name='Ludwigshafen' AND planet_osm_point.place IN ('city', 'town')
 ORDER BY ST_Distance(planet_osm_line.way, planet_osm_point.way)")
 ```
 
-```{r}
+```{r,eval=F}
 df_hnr <- dbGetQuery(con, "SELECT * FROM planet_osm_line, planet_osm_point 
 WHERE planet_osm_line.name='Nordring' AND planet_osm_point.name='Ludwigshafen' 
 ORDER BY ST_Distance(planet_osm_line.way, planet_osm_point.way)")
 head(df_hnr)
 ```
 
-```{r}
+```{r,eval=F}
 df_ <- dbGetQuery(con, "SELECT * FROM planet_osm_line, planet_osm_point 
 WHERE planet_osm_line.name='Nordring' AND planet_osm_point.name='Ludwigshafen' 
 ORDER BY ST_Distance(planet_osm_line.way, planet_osm_point.way)")
 head(df_hnr)
 ```
 
-```{r}
+```{r,eval=F}
 colnames(df_)
 ```
 
-```{r}
+```{r,eval=F}
 table(df_$name)
 ```
 
 ## Adress in Sippersfeld
 
-```{r}
+```{r,eval=F}
 df_sipp <- dbGetQuery(con, "SELECT * FROM planet_osm_line, planet_osm_point 
 WHERE planet_osm_line.name='Rechweg' AND planet_osm_point.name='Sippersfeld' 
 ORDER BY ST_Distance(planet_osm_line.way, planet_osm_point.way)")
@@ -159,7 +159,7 @@ head(df_sipp)
 ## [OpenStreetMap und Open Government Data in PostGIS](http://tud.at/linuxwochen/2013-osm-postgis/)
 
 
-```{r}
+```{r,eval=F}
 restnam <- dbGetQuery(con, "SELECT name, COUNT(osm_id) AS anzahl
 FROM planet_osm_point
 WHERE amenity = 'restaurant'
@@ -173,7 +173,7 @@ head(restnam)
 
 ## [PostgreSQL and Leaflet](https://www.r-bloggers.com/using-postgresql-and-shiny-with-a-dynamic-leaflet-map-monitoring-trash-cans/)
 
-```{r}
+```{r,eval=F}
 install.packages("plot3D")
 ```
 

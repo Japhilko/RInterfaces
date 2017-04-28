@@ -1,13 +1,36 @@
-# Dritter Teil
+# R Schnittstellen - Dritter Teil
 Jan-Philipp Kolb  
-28 April 2017  
+9 Mai 2017  
 
 
 
 
-# Internetresourcen und Schnittstellen nutzen
+## Internetresourcen und Schnittstellen nutzen
 
-# Import von JSON-Objekten und XML Dateien
+
+
+
+
+## JavaScript Object Notation
+
+![](figure/JSONwiki.PNG)
+
+<!--
+![https://www.percona.com/resources/webinars/json-mysql-57](figure/JSONLogo.PNG)
+
+-->
+
+## [GeoJSON](http://cannoneyed.github.io/geojson/)
+
+![](figure/GeoJSON.PNG)
+
+## [OpenStreetMap Daten](https://rstudio.github.io/leaflet/json.html)
+
+![](figure/TopoJSON.PNG)
+
+
+
+## Import von JSON-Objekten und XML Dateien
 
 
 
@@ -396,7 +419,7 @@ citation("XML")
 
 - [Processing of GeoJson data in R](https://www.r-bloggers.com/processing-of-geojson-data-in-r/)
 
-# Die Pakete rvest und RCurl
+## Die Pakete rvest und RCurl
 
 
 
@@ -407,20 +430,6 @@ citation("XML")
 
 ```r
 library(rvest)
-```
-
-```
-## 
-## Attaching package: 'rvest'
-```
-
-```
-## The following object is masked from 'package:XML':
-## 
-##     xml
-```
-
-```r
 ht <- read_html('https://www.google.co.in/search?q=guitar+repair+workshop')
 links <- ht %>% html_nodes(xpath='//h3/a') %>% html_attr('href')
 gsub('/url\\?q=','',sapply(strsplit(links[as.vector(grep('url',links))],split='&'),'[',1))
@@ -434,15 +443,15 @@ gsub('/url\\?q=','',sapply(strsplit(links[as.vector(grep('url',links))],split='&
 ## [5] "https://www.facebook.com/The-Guitar-Repair-Workshop-847517635259712/"                                        
 ## [6] "https://www.taylorguitars.com/dealer/guitar-repair-workshop-ltd"                                             
 ## [7] "http://guitarworkshopglasgow.com/pages/repairs-1"                                                            
-## [8] "http://www.laweekly.com/music/10-best-guitar-repair-shops-in-los-angeles-4647166"                            
-## [9] "https://www.justdial.com/Delhi-NCR/Guitar-Repair-Services/nct-10988623"
+## [8] "https://www.justdial.com/Delhi-NCR/Guitar-Repair-Services/nct-10988623"                                      
+## [9] "https://www.justdial.com/Mumbai/Guitar-Repair-Services/nct-10988623"
 ```
 
 ## Links
 
 - [Scraping CRAN with rvest](https://www.r-bloggers.com/scraping-cran-with-rvest/)
 
-# Webscraping
+## Webscraping
 
 
 
@@ -503,7 +512,7 @@ glimpse(df.world_ports)
 ```
 
 
-## 
+## Das Paket `rvest`
 
 
 ```r
@@ -521,8 +530,8 @@ gsub('/url\\?q=','',sapply(strsplit(links[as.vector(grep('url',links))],split='&
 ## [5] "https://www.facebook.com/The-Guitar-Repair-Workshop-847517635259712/"                                        
 ## [6] "https://www.taylorguitars.com/dealer/guitar-repair-workshop-ltd"                                             
 ## [7] "http://guitarworkshopglasgow.com/pages/repairs-1"                                                            
-## [8] "http://www.laweekly.com/music/10-best-guitar-repair-shops-in-los-angeles-4647166"                            
-## [9] "https://www.justdial.com/Delhi-NCR/Guitar-Repair-Services/nct-10988623"
+## [8] "https://www.justdial.com/Delhi-NCR/Guitar-Repair-Services/nct-10988623"                                      
+## [9] "https://www.justdial.com/Mumbai/Guitar-Repair-Services/nct-10988623"
 ```
 
 
@@ -532,11 +541,9 @@ gsub('/url\\?q=','',sapply(strsplit(links[as.vector(grep('url',links))],split='&
 
 - [Read CSV From The Web](http://www.programmingr.com/examples/read-csv-web/)
 
-
-
 - [Scraping CRAN with rvest](https://www.r-bloggers.com/scraping-cran-with-rvest/)
 
-# Use Case - Scraping Wikipedia
+## Use Case - Scraping Wikipedia
 
 
 
@@ -675,7 +682,7 @@ colnames(s) <- titles
 PCA(s)
 ```
 
-![](RInterfaces_all2g_3_files/figure-slidy/unnamed-chunk-43-1.png)<!-- -->![](RInterfaces_all2g_3_files/figure-slidy/unnamed-chunk-43-2.png)<!-- -->
+![](RInterfaces_all2g_3_files/figure-slidy/unnamed-chunk-45-1.png)<!-- -->![](RInterfaces_all2g_3_files/figure-slidy/unnamed-chunk-45-2.png)<!-- -->
 
 ```
 ## **Results for the Principal Component Analysis (PCA)**
@@ -718,7 +725,7 @@ h <- hclust(dist(t(s0)), method = "ward")
 plot(h, labels = titles, sub = "")
 ```
 
-![](RInterfaces_all2g_3_files/figure-slidy/unnamed-chunk-44-1.png)<!-- -->
+![](RInterfaces_all2g_3_files/figure-slidy/unnamed-chunk-46-1.png)<!-- -->
 
 
 - [Youtube Video zu Text Mining](https://www.youtube.com/watch?v=j1V2McKbkLo)
@@ -726,7 +733,7 @@ plot(h, labels = titles, sub = "")
 
 ## Applikationen und Projektverwaltung mit Rstudio und git
 
-# Shiny Apps 
+## Shiny Apps 
 
 
 
@@ -742,7 +749,7 @@ plot(h, labels = titles, sub = "")
 
 ![](figure/FirstShinyApp.PNG)
 
-# R und Git
+## R und Git
 
 
 
@@ -874,13 +881,13 @@ add(1, 2, 3)
 
 
 
-#	Überblick über Möglichkeiten des Parallel Computings - Paket parallel
+##	Überblick über Möglichkeiten des Parallel Computings - Paket parallel
 
 ## Integration von Datenbanken
 
-# Datenbanken und R
+## Datenbanken und R
 
-# Integration von PostgreSQL mit dem Paket 
+## Integration von PostgreSQL mit dem Paket 
 RPostgreSQL
 
 
@@ -916,8 +923,7 @@ library("RPostgreSQL")
 
 - [Nutzung von osm2pgsql](http://www.volkerschatz.com/net/osm/osm2pgsql-usage.html)
 
-
-```bash
+```
 sudo -u postgres createuser Japhilko
 sudo -u postgres createdb -E UTF8 -O Japhilko offlgeoc
 ```
@@ -941,12 +947,11 @@ osm2pgsql -s -U postgres -d offlgeoc /home/kolb/Forschung/osmData/data/saarland-
 
 ## Datenbank für Geocoding
 
-
-```bash
+```
 sudo -u postgres createdb -E UTF8 -O Japhilko offlgeocRLP
 ```
 
-```shell
+```
 CREATE EXTENSION postgis;
 ```
 
@@ -1094,8 +1099,32 @@ library(RPostgreSQL)
 - [Wie bekommt man OSM Daten](https://www.azavea.com/blog/2015/12/21/tools-for-getting-data-out-of-openstreetmap-and-into-desktop-gis/)
 
 
-#	Nutzung von MongoDB in R
+##	Nutzung von MongoDB in R
 
+
+
+
+
+## Mongodb
+
+- [Installation](https://docs.mongodb.com/manual/tutorial/install-mongodb-on-windows/)
+
+
+## Hello World
+
+- [Getting started with MongoDB in R](https://cran.r-project.org/web/packages/mongolite/vignettes/intro.html)
+
+
+```r
+install.packages("mongolite")
+```
+
+
+
+```r
+library(mongolite)
+m <- mongo(collection = "diamonds")
+```
 
 
 

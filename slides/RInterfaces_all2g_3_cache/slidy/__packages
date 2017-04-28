@@ -19,3 +19,6 @@ NLP
 tm
 FactoMineR
 Rcpp
+DBI
+RPostgreSQL
+plot3D

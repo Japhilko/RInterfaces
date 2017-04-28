@@ -1,7 +1,7 @@
 ---
-title: "Dritter Teil"
+title: "R Schnittstellen - Dritter Teil"
 author: "Jan-Philipp Kolb"
-date: "28 April 2017"
+date: "9 Mai 2017"
 output: 
   slidy_presentation: 
     keep_md: yes
@@ -12,24 +12,29 @@ knitr::opts_chunk$set(echo = TRUE)
 ```
 
 
-# Internetresourcen und Schnittstellen nutzen
+## Internetresourcen und Schnittstellen nutzen
 
-# Import von JSON-Objekten und XML Dateien
+```{r child = 'IntroAPIS.Rmd'}
+```
+
+
+
+## Import von JSON-Objekten und XML Dateien
 
 ```{r child = 'rapis.Rmd'}
 ```
 
-# Die Pakete rvest und RCurl
+## Die Pakete rvest und RCurl
 
 ```{r child = 'rvest.Rmd'}
 ```
 
-# Webscraping
+## Webscraping
 
 ```{r child = 'Webscraping.Rmd'}
 ```
 
-# Use Case - Scraping Wikipedia
+## Use Case - Scraping Wikipedia
 
 ```{r child = 'ScrapingWikipedia.Rmd'}
 ```
@@ -37,12 +42,12 @@ knitr::opts_chunk$set(echo = TRUE)
 
 ## Applikationen und Projektverwaltung mit Rstudio und git
 
-# Shiny Apps 
+## Shiny Apps 
 
 ```{r child = 'shiny.Rmd'}
 ```
 
-# R und Git
+## R und Git
 
 ```{r child = 'Rgit.Rmd'}
 ```
@@ -56,19 +61,19 @@ knitr::opts_chunk$set(echo = TRUE)
 ```
 
 
-#	Überblick über Möglichkeiten des Parallel Computings - Paket parallel
+##	Überblick über Möglichkeiten des Parallel Computings - Paket parallel
 
 ## Integration von Datenbanken
 
-# Datenbanken und R
+## Datenbanken und R
 
-# Integration von PostgreSQL mit dem Paket 
+## Integration von PostgreSQL mit dem Paket 
 RPostgreSQL
 
 ```{r child = 'RPostgreSQL.Rmd'}
 ```
 
-#	Nutzung von MongoDB in R
+##	Nutzung von MongoDB in R
 
 ```{r child = 'Rmongodb.Rmd'}
 ```
