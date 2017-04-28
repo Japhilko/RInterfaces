@@ -23,13 +23,31 @@ library("plotly")
 ```
 
 
-## [Der Anfang mit `plotly f`ür R](https://plot.ly/r/getting-started/)
+## [Der Anfang mit `plotly` für R](https://plot.ly/r/getting-started/)
 
-```{r}
-library("plotly")
+```{r,eval=F}
 p <- plot_ly(midwest, x = ~percollege, color = ~state, type = "box")
 p
 ```
+
+![](figure/plotlyEx.png)
+
+
+## plotly Beispiel mit eigenen Daten
+
+```{r,eval=F}
+url <- "https://raw.githubusercontent.com/Japhilko/GeoData/master/2015/data/whcSites.csv"
+
+whcSites <- read.csv(url) 
+```
+
+
+
+```{r,eval=F}
+p <- plot_ly(whcSites, x = ~date_inscribed, color = ~category_short, type = "box")
+p
+```
+
 
 
 ## Links
