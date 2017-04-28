@@ -20,15 +20,30 @@ GeoData/master/2015/data/whcSites.csv"
 whcSites <- read.csv(url) 
 ```
 
-```{r,echo=F,eval=pdf}
+```{r}
 library(knitr)
-kable(head(whcSites[,6:10]))
+whcSitesDat <- with(whcSites,data.frame(name_en,
+                                        category))
+kable(head(whcSitesDat))
 ```
 
-```{r,echo=F}
-library('DT')
-datatable(whcSites)
+## Weitere Variablen WHC Datensatz
+
+```{r}
+whcSitesDat2 <- with(whcSites,data.frame(name_en,category,longitude,latitude,date_inscribed,area_hectares,danger_list))
 ```
+
+
+```{r,eval=F}
+library('DT')
+datatable(whcSitesDat2)
+```
+
+## Das Ergebnis bei Rpubs
+
+<http://rpubs.com/Japhilko82/WHCdata>
+
+![](figure/WHCRpubs.PNG)
 
 
 ## Notwendige Pakete
