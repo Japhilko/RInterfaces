@@ -1,0 +1,132 @@
+---
+title: "R Schnittstellen"
+author: "Jan-Philipp Kolb"
+date: "28 April 2017"
+output: 
+  slidy_presentation: 
+    keep_md: yes
+---
+
+```{r, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+# Einführung und Motivation
+
+```{r child = 'Intro.Rmd'}
+```
+
+
+# Datenimport
+
+```{r child = 'Datenimport.Rmd'}
+```
+
+# R und Excel
+
+```{r child = 'Rexcel.Rmd'}
+```
+
+
+
+# Präsentation von Daten - Reproducible Research
+
+```{r child = 'ReproducibleResearch.Rmd'}
+```
+
+
+
+# Word Dokumente mit R erstellen
+
+```{r child = 'R2word.Rmd'}
+```
+
+
+#	PDF Dokumente und Präsentationen mit LaTeX, Beamer und Sweave
+
+
+```{r child = 'R2pdf.Rmd'}
+```
+
+
+# HTML Dokumente, Präsentationen und Dashboards mit Rmarkdown
+
+
+```{r child = 'Rmarkdown.Rmd'}
+```
+
+# Notebooks zur Integration von anderen Programmiersprachen (Python,LaTeX,Julia)
+
+```{r child = 'Notebooks.Rmd'}
+```
+
+## Aufgabe: Bearbeiten Sie ein Notebook weiter
+
+
+
+#	Interaktive Karten mit dem Javascript Paket leaflet
+
+```{r child = 'leaflet.Rmd'}
+```
+
+
+
+
+-	[Interaktive Tabellen mit DataTables](https://github.com/Japhilko/RInterfaces/blob/master/slides/DataTables.md)
+
+
+-	[R und die Javascript Data-Driven Documents (D3)](https://github.com/Japhilko/RInterfaces/blob/master/slides/D3.md)
+
+-	[Interaktive Graphiken mit D3 und plotly](https://github.com/Japhilko/RInterfaces/blob/master/slides/plotly.md)
+
+
+-	[Netzwerkgraphiken mit vis.js](https://github.com/Japhilko/RInterfaces/blob/master/slides/visNetwork.md)
+
+
+
+-	[Das Erstellen von Ablaufdiagrammen mit mermaid](https://github.com/Japhilko/RInterfaces/blob/master/slides/mermaid.md)
+
+
+
+## Internetresourcen und Schnittstellen nutzen
+
+-	[Import von JSON-Objekten und XML Dateien](slides/rapis.Rmd) ([pdf](slides/rapis.pdf) | [rcode](slides/rapis.pdf))
+
+
+- [Die Pakete rvest und RCurl](slides/rvest.Rmd)
+
+
+- [Webscraping](https://github.com/Japhilko/RInterfaces/blob/master/slides/Webscraping.md)
+
+
+- [Use Case - Scraping Wikipedia](slides/ScrapingWikipedia.Rmd)
+
+
+## Applikationen und Projektverwaltung mit Rstudio und git
+
+- [Shiny Apps](slides/shiny.Rmd)
+
+
+- [R und Git](slides/Rgit.Rmd)
+
+## Hochperfomanter Code
+
+-	[C++ Integration - Überblick über das Paket rcpp](https://github.com/Japhilko/RInterfaces/blob/master/slides/rcpp.md)
+
+
+
+-	Überblick über Möglichkeiten des Parallel Computings - Paket parallel
+
+## Integration von Datenbanken
+
+- [Datenbanken und R](slides/)
+
+
+
+-	[Integration von PostgreSQL mit dem Paket 
+RPostgreSQL](https://github.com/Japhilko/RInterfaces/blob/master/slides/RPostgreSQL.Rmd)
+
+
+
+-	[Nutzung von MongoDB in R](https://github.com/Japhilko/RInterfaces/blob/master/slides/Rmongodb.md)
+

@@ -3,6 +3,8 @@ title: "Word Dokumente mit R und Rstudio erstellen"
 author: "Jan-Philipp Kolb"
 date: "08 Mai 2017"
 output:
+  slidy_presentation: 
+    keep_md: yes
   beamer_presentation:
     colortheme: beaver
     fig_caption: no
@@ -10,10 +12,9 @@ output:
     toc: yes
   html_document:
     keep_md: yes
-  slidy_presentation: default
 ---
 
-```{r setup, include=FALSE}
+```{r, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
 ```
 

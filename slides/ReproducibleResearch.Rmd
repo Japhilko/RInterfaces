@@ -1,0 +1,24 @@
+---
+title: "Reproducible Research"
+author: "Jan-Philipp Kolb"
+date: "28 April 2017"
+output: 
+  html_document: 
+    keep_md: yes
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## [CRAN Taskview zu reproducible research](https://cran.r-project.org/web/views/ReproducibleResearch.html)
+
+![](figure/TaskViewReproducibleResearch.PNG)
+
+
+## Resourcen
+
+- [Reproducible Research
+with R and RStudio](https://englianhu.files.wordpress.com/2016/01/reproducible-research-with-r-and-studio-2nd-edition.pdf)
+
+- [A crash course in reproducible research in R](http://t-redactyl.io/blog/2016/10/a-crash-course-in-reproducible-research-in-r.html)
