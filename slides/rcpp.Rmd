@@ -7,7 +7,7 @@ output:
     keep_md: yes
 ---
 
-```{r setup, include=FALSE}
+```{r, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
@@ -58,7 +58,7 @@ add(1, 2, 3)
 library(Rcpp)
 ```
 
-```{r}
+```{r,eval=F}
 cppFunction('int add(int x, int y, int z) {
   int sum = x + y + z;
   return sum;
@@ -66,7 +66,7 @@ cppFunction('int add(int x, int y, int z) {
 ```
 
 
-```{r}
+```{r,eval=F}
 add(1, 2, 3)
 ```
 

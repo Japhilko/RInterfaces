@@ -126,26 +126,11 @@ $(document).ready(function () {
 <div id="notwendige-pakete" class="section level2">
 <h2>Notwendige Pakete</h2>
 <pre class="r"><code>install.packages(&quot;tidyverse&quot;)</code></pre>
-<pre class="r"><code>library(tidyverse)</code></pre>
-<pre><code>## Loading tidyverse: ggplot2
-## Loading tidyverse: tibble
-## Loading tidyverse: tidyr
-## Loading tidyverse: readr
-## Loading tidyverse: purrr
-## Loading tidyverse: dplyr</code></pre>
-<pre><code>## Conflicts with tidy packages ----------------------------------------------</code></pre>
-<pre><code>## filter(): dplyr, stats
-## lag():    dplyr, stats</code></pre>
-<pre class="r"><code>library(stringr)
+<pre class="r"><code>library(tidyverse)
+library(stringr)
 library(forcats)
 library(ggmap)
 library(rvest)</code></pre>
-<pre><code>## Loading required package: xml2</code></pre>
-<pre><code>## 
-## Attaching package: 'rvest'</code></pre>
-<pre><code>## The following object is masked from 'package:readr':
-## 
-##     guess_encoding</code></pre>
 </div>
 <div id="scrape-data-from-wikipedia" class="section level2">
 <h2>SCRAPE DATA FROM WIKIPEDIA</h2>
@@ -156,26 +141,45 @@ df.world_ports &lt;- html_table(html_nodes(html.world_ports, &quot;table&quot;)[
 <h2>Die Daten anschauen</h2>
 <pre class="r"><code>glimpse(df.world_ports)</code></pre>
 <pre><code>## Observations: 50
-## Variables: 14
+## Variables: 15
 ## $ Rank     &lt;int&gt; 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16...
-## $ Port     &lt;chr&gt; &quot;Shanghai&quot;, &quot;Singapore&quot;, &quot;Shenzhen&quot;, &quot;Hong Kong&quot;, &quot;Ni...
-## $ Economy  &lt;chr&gt; &quot;China&quot;, &quot;Singapore&quot;, &quot;China&quot;, &quot;China&quot;, &quot;China&quot;, &quot;Sou...
-## $ 2014[1]  &lt;chr&gt; &quot;35,268&quot;, &quot;33,869&quot;, &quot;23,798&quot;, &quot;22,374&quot;, &quot;19,450&quot;, &quot;18...
-## $ 2013[2]  &lt;chr&gt; &quot;33,617&quot;, &quot;32,240&quot;, &quot;23,280&quot;, &quot;22,352&quot;, &quot;17,351&quot;, &quot;17...
-## $ 2012[3]  &lt;chr&gt; &quot;32,529&quot;, &quot;31,649&quot;, &quot;22,940&quot;, &quot;23,117&quot;, &quot;16,670&quot;, &quot;17...
-## $ 2011[4]  &lt;chr&gt; &quot;31,700&quot;, &quot;29,937&quot;, &quot;22,570&quot;, &quot;24,384&quot;, &quot;14,686&quot;, &quot;16...
-## $ 2010[5]  &lt;chr&gt; &quot;29,069&quot;, &quot;28,431&quot;, &quot;22,510&quot;, &quot;23,532&quot;, &quot;13,144&quot;, &quot;14...
-## $ 2009[6]  &lt;chr&gt; &quot;25,002&quot;, &quot;25,866&quot;, &quot;18,250&quot;, &quot;20,983&quot;, &quot;10,502&quot;, &quot;11...
-## $ 2008[7]  &lt;chr&gt; &quot;27,980&quot;, &quot;29,918&quot;, &quot;21,414&quot;, &quot;24,248&quot;, &quot;11,226&quot;, &quot;13...
-## $ 2007[8]  &lt;chr&gt; &quot;26,150&quot;, &quot;27,932&quot;, &quot;21,099&quot;, &quot;23,881&quot;, &quot;9,349&quot;, &quot;13,...
-## $ 2006[9]  &lt;chr&gt; &quot;21,710&quot;, &quot;24,792&quot;, &quot;18,469&quot;, &quot;23,539&quot;, &quot;7,068&quot;, &quot;12,...
-## $ 2005[10] &lt;chr&gt; &quot;18,084&quot;, &quot;23,192&quot;, &quot;16,197&quot;, &quot;22,427&quot;, &quot;5,208&quot;, &quot;11,...
-## $ 2004[11] &lt;chr&gt; &quot;14,557&quot;, &quot;21,329&quot;, &quot;13,615&quot;, &quot;21,984&quot;, &quot;4,006&quot;, &quot;11,...</code></pre>
+## $ Port     &lt;chr&gt; &quot;Shanghai&quot;, &quot;Singapore&quot;, &quot;Shenzhen&quot;, &quot;Ningbo-Zhoushan...
+## $ Economy  &lt;chr&gt; &quot;China&quot;, &quot;Singapore&quot;, &quot;China&quot;, &quot;China&quot;, &quot;Hong Kong&quot;, ...
+## $ 2015[1]  &lt;chr&gt; &quot;36,516&quot;, &quot;30,922&quot;, &quot;24,142&quot;, &quot;20,636&quot;, &quot;20,073&quot;, &quot;19...
+## $ 2014[2]  &lt;chr&gt; &quot;35,268&quot;, &quot;33,869&quot;, &quot;23,798&quot;, &quot;19,450&quot;, &quot;22,374&quot;, &quot;18...
+## $ 2013[3]  &lt;chr&gt; &quot;33,617&quot;, &quot;32,240&quot;, &quot;23,280&quot;, &quot;17,351&quot;, &quot;22,352&quot;, &quot;17...
+## $ 2012[4]  &lt;chr&gt; &quot;32,529&quot;, &quot;31,649&quot;, &quot;22,940&quot;, &quot;16,670&quot;, &quot;23,117&quot;, &quot;17...
+## $ 2011[5]  &lt;chr&gt; &quot;31,700&quot;, &quot;29,937&quot;, &quot;22,570&quot;, &quot;14,686&quot;, &quot;24,384&quot;, &quot;16...
+## $ 2010[6]  &lt;chr&gt; &quot;29,069&quot;, &quot;28,431&quot;, &quot;22,510&quot;, &quot;13,144&quot;, &quot;23,532&quot;, &quot;14...
+## $ 2009[7]  &lt;chr&gt; &quot;25,002&quot;, &quot;25,866&quot;, &quot;18,250&quot;, &quot;10,502&quot;, &quot;20,983&quot;, &quot;11...
+## $ 2008[8]  &lt;chr&gt; &quot;27,980&quot;, &quot;29,918&quot;, &quot;21,414&quot;, &quot;11,226&quot;, &quot;24,248&quot;, &quot;13...
+## $ 2007[9]  &lt;chr&gt; &quot;26,150&quot;, &quot;27,932&quot;, &quot;21,099&quot;, &quot;9,349&quot;, &quot;23,881&quot;, &quot;13,...
+## $ 2006[10] &lt;chr&gt; &quot;21,710&quot;, &quot;24,792&quot;, &quot;18,469&quot;, &quot;7,068&quot;, &quot;23,539&quot;, &quot;12,...
+## $ 2005[11] &lt;chr&gt; &quot;18,084&quot;, &quot;23,192&quot;, &quot;16,197&quot;, &quot;5,208&quot;, &quot;22,427&quot;, &quot;11,...
+## $ 2004[12] &lt;chr&gt; &quot;14,557&quot;, &quot;21,329&quot;, &quot;13,615&quot;, &quot;4,006&quot;, &quot;21,984&quot;, &quot;11,...</code></pre>
+</div>
+<div id="section" class="section level2">
+<h2></h2>
+<pre class="r"><code>library(rvest)
+ht &lt;- read_html('https://www.google.co.in/search?q=guitar+repair+workshop')
+links &lt;- ht %&gt;% html_nodes(xpath='//h3/a') %&gt;% html_attr('href')
+gsub('/url\\?q=','',sapply(strsplit(links[as.vector(grep('url',links))],split='&amp;'),'[',1))</code></pre>
+<pre><code>## [1] &quot;http://theguitarrepairworkshop.com/&quot;                                                                         
+## [2] &quot;http://www.guitarservices.com/&quot;                                                                              
+## [3] &quot;http://www.guitarrepairbench.com/guitar-building-projects/guitar-workshop/guitar-workshop-project.html&quot;      
+## [4] &quot;http://www.guitarrepairbench.com/guitar-building-projects/guitar-workshop/guitar-workshop-layout-design.html&quot;
+## [5] &quot;https://www.facebook.com/The-Guitar-Repair-Workshop-847517635259712/&quot;                                        
+## [6] &quot;https://www.taylorguitars.com/dealer/guitar-repair-workshop-ltd&quot;                                             
+## [7] &quot;http://guitarworkshopglasgow.com/pages/repairs-1&quot;                                                            
+## [8] &quot;http://www.laweekly.com/music/10-best-guitar-repair-shops-in-los-angeles-4647166&quot;                            
+## [9] &quot;https://www.justdial.com/Delhi-NCR/Guitar-Repair-Services/nct-10988623&quot;</code></pre>
 </div>
 <div id="links" class="section level2">
 <h2>Links</h2>
 <ul>
-<li><a href="https://www.r-bloggers.com/how-to-really-do-an-analysis-in-r-part-1-data-manipulation/">How to really do an analysis in R (part 1, data manipulation)</a></li>
+<li><p><a href="https://www.r-bloggers.com/how-to-really-do-an-analysis-in-r-part-1-data-manipulation/">How to really do an analysis in R (part 1, data manipulation)</a></p></li>
+<li><p><a href="http://www.programmingr.com/examples/read-csv-web/">Read CSV From The Web</a></p></li>
+<li><p><a href="https://www.r-bloggers.com/scraping-cran-with-rvest/">Scraping CRAN with rvest</a></p></li>
 </ul>
 </div>
 
