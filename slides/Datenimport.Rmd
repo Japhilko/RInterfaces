@@ -1,13 +1,15 @@
 ---
 title: "Datenimport"
 author: "Jan-Philipp Kolb"
-date: "11 April 2017"
+date: "8 Mai 2017"
 output:
-  beamer_presentation: 
-    colortheme: beaver
-    theme: CambridgeUS
+  slidy_presentation: 
+    keep_md: yes
   html_document:
     keep_md: yes
+  beamer_presentation:
+    colortheme: beaver
+    theme: CambridgeUS
 ---
 
 ```{r, include=FALSE}

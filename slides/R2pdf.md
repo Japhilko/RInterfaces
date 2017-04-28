@@ -1,12 +1,12 @@
 # PDF Paper und Präsentationen mit R und Rstudio
 Jan-Philipp Kolb  
-08 Mai 2017  
+8 Mai 2017  
 
 
 
-# Präsentationen mit Rmarkdown
 
-## beamer Präsentationen
+
+## Präsentationen mit Rmarkdown - beamer Präsentationen
 
 ![](figure/beamerexample.PNG)
 
@@ -17,6 +17,18 @@ Jan-Philipp Kolb
 ## Beamer Themen
 
 ![](http://1.bp.blogspot.com/-ZTtDq0hOkqY/Ti0Z3WwoIJI/AAAAAAAAAPc/HM3t4j4t7h0/s1600/Screenshot%2B-%2B07252011%2B-%2B03%253A22%253A15%2BAM.png)
+
+## Chunks einfügen
+
+- Auch hier lassen sich natürlich Chunks einfügen
+- Wenn `cache=T` angegeben ist, wird das Ergebnis des Chunks abgespeichert
+- Es ist sinnvoll die Chunks zu benennen, dann findet man auch das Ergebnis einfacher
+
+![](figure/CacheBenennung.PNG)
+
+## Ergebnis - Cache
+
+![](figure/ErgZufallszahlen.PNG)
 
 ## Wie man das im Header des Dokuments angibt
 
@@ -32,11 +44,18 @@ output:
 ---
 ```
 
-
-
-## Inhaltsverzeichnis
+## Inhaltsverzeichnis I
 
 ![](figure/BeamerInhaltsVZ.PNG)
+
+## Inhaltsverzeichnis II
+
+```
+output: 
+  beamer_presentation: 
+    toc: yes
+```
+
 
 ## Optionen für die Graphikeinbindung
 
@@ -44,9 +63,9 @@ output:
 
 ![](figure/figOpts.PNG)
 
-# Präsentationen mit Sweave
+## Präsentationen mit Sweave
 
-## Das Dokument erstellen
+- Das Dokument erstellen
 
 ![](figure/BSPsweave.png)
 
@@ -83,22 +102,7 @@ output:
 ![](figure/CRANmirror.PNG)
 
 
-## Links
-
-- [optionen für Beamer Präsentationen](http://rmarkdown.rstudio.com/beamer_presentation_format.html)
-
-- [Keine Beschriftung der Graphiken:](http://stackoverflow.com/questions/38514954/removing-figure-text-in-rmarkdown)
-
-Oben im header muss Folgendes spezifiziert werden:
-
-```
-fig_caption: false
-```
-- [LaTeX](https://www.r-bloggers.com/from-openoffice-noob-to-control-freak-a-love-story-with-r-latex-and-knitr/)
-
-# PDF Paper mit R
-
-## Übersicht - PDF Paper
+## PDF Paper mit R
 
 - Mit R ist es möglich Berichte oder Paper zu erzeugen
 - Dies eignet sich besonders gut, wenn man viel Code hat oder einen Bericht sehr oft erzeugen muss
@@ -164,3 +168,11 @@ bibliography: Rschnittstellen.bib
 ## Das Ergebnis
 
 ![](figure/bibtexErgebnis.PNG)
+
+
+## Links
+
+- [Optionen für Beamer Präsentationen](http://rmarkdown.rstudio.com/beamer_presentation_format.html)
+
+- [Wie R und LaTeX zusammen funktionieren](https://www.r-bloggers.com/from-openoffice-noob-to-control-freak-a-love-story-with-r-latex-and-knitr/)
+

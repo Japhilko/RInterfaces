@@ -1,9 +1,9 @@
 ---
 title: "Reproducible Research"
 author: "Jan-Philipp Kolb"
-date: "28 April 2017"
+date: "8 Mai 2017"
 output: 
-  html_document: 
+  slidy_presentation: 
     keep_md: yes
 ---
 

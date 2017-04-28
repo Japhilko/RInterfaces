@@ -4,7 +4,6 @@ author: "Jan-Philipp Kolb"
 date: "8 Mai 2017"
 output:
   slidy_presentation:
-    highlight: tango
     keep_md: yes
   beamer_presentation:
     colortheme: beaver
@@ -292,3 +291,6 @@ install.packages("highcharter", type = "source")
 - [Verschiedene Markdown Dokumente zusammen fügen](http://stackoverflow.com/questions/25824795/how-to-combine-two-rmarkdown-rmd-files-into-a-single-output)
 
 ![](figure/stackoverflowCombine.PNG)
+
+
+- [Verschiedene CSS Fonts](http://www.cssfontstack.com/)

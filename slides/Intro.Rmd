@@ -49,7 +49,7 @@ knitr::opts_chunk$set(echo = FALSE)
 
 ## Übersicht - warum R
 
-![pic](http://d287f0h5fel5hu.cloudfront.net/blog/wp-content/uploads/2013/06/bar-learn-r-img11.png)
+![edureka - why learn R](http://d287f0h5fel5hu.cloudfront.net/blog/wp-content/uploads/2013/06/bar-learn-r-img11.png)
 
 
 
@@ -73,7 +73,7 @@ knitr::opts_chunk$set(echo = FALSE)
 
 ## Die Nutzung von Schnittstellen beim Import/Export
 
-- Interaktion mit SPSS, Stata
+- Interaktion mit Excel, SPSS, Stata, ...
 
 ![Import](figure/Import.PNG)
 
@@ -81,7 +81,7 @@ knitr::opts_chunk$set(echo = FALSE)
 
 ![](figure/MiracleOccursImage.png)
 
-## [Was wird bei Wikipedia unter Reproduibility verstanden?](https://en.wikipedia.org/wiki/Reproducibility)
+## [Was wird bei Wikipedia unter Reproducability verstanden?](https://en.wikipedia.org/wiki/Reproducibility)
 
 ![](figure/Spectrum_of_reproducible_research.png)
 

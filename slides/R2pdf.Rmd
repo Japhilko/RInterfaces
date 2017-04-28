@@ -1,10 +1,10 @@
 ---
 title: "PDF Paper und Präsentationen mit R und Rstudio"
 author: "Jan-Philipp Kolb"
-date: "08 Mai 2017"
+date: "8 Mai 2017"
 output:
   slidy_presentation:
-    highlight: tango
+    keep_md: yes
   ioslides_presentation:
     highlight: tango
     keep_md: yes
