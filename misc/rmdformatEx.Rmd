@@ -24,6 +24,7 @@ opts_knit$set(width=75)
 
 
 ```{r init,  echo=FALSE, results="hide"}
+install.packages("ProjectTemplate")
 library(ProjectTemplate)
 
 if (!file.exists(file.path("config", "global.dcf")))

@@ -247,13 +247,22 @@ Um den Präsentationstyp zu ändern kann man das CSS verändern
 
 ## [Weitere Vorlagen nutzen](http://rmarkdown.rstudio.com/developer_document_templates.html)
 
-- Es gibt viele Formate - [manche müssen erst aktiviert werden](https://blog.rstudio.org/2016/03/21/r-markdown-custom-formats/:
+- Es gibt viele Formate - [manche müssen erst aktiviert werden](https://blog.rstudio.org/2016/03/21/r-markdown-custom-formats/):
 
 ```{r,eval=F}
 install.packages("rticles")
+```
+
+![](figure/ShortPaper.PNG)
+
+
+## Das Paket `rmdformats`
+
+```{r,eval=F}
 install.packages("rmdformats")
 install.packages("ProjectTemplate")
 ```
+
 
 ## [Beispiele für Templates](https://github.com/juba/rmdformats)
 
