@@ -4,9 +4,24 @@ Jan-Philipp Kolb
 
 
 
-## 
 
-- [High performance functions with Rcpp](http://adv-r.had.co.nz/Rcpp.html)
+## Rcpp
+
+![](figure/cppimages.jpg)
+
+## Einleitung
+
+- R ist in C geschrieben
+- Die Nutzung der Schnittstelle zu C liegt nahe
+
+![](https://cdn.worldvectorlogo.com/logos/c.svg)
+![](http://www.rcpp.org/book/seamless.png)
+
+## Das R-Paket CPP 
+
+- [R Simulationsmodelle bis zu 20 mal schneller](https://www.r-bloggers.com/make-your-r-simulation-models-20-times-faster/)
+
+- [Hohe Performanz mit Rcpp](http://adv-r.had.co.nz/Rcpp.html)
 
 
 
@@ -29,4 +44,33 @@ add
 ```r
 add(1, 2, 3)
 ```
+
+
+## [Rcpp](http://dirk.eddelbuettel.com/code/rcpp/Rcpp-introduction.pdf)
+
+[Tutorial on Rcpp by Hadley Wickham](http://adv-r.had.co.nz/Rcpp.html#rcpp-intro)
+
+
+```r
+library(Rcpp)
+```
+
+
+```r
+cppFunction('int add(int x, int y, int z) {
+  int sum = x + y + z;
+  return sum;
+}')
+```
+
+
+
+```r
+add(1, 2, 3)
+```
+
+
+
+[Youtube Video with Dirk Edelbuettel](https://www.youtube.com/watch?v=ZKx5duewv-0)
+
 

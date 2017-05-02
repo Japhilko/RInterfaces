@@ -15,13 +15,12 @@ output:
     toc: yes
 ---
 
-```{r setup, include=FALSE}
+```{r, include=FALSE}
 knitr::opts_chunk$set(echo = FALSE)
 ```
 
-# Warum R?
 
-## Gründe für die Nutzung von R
+## Pluspunkte von R
 
 - Als Weg kreativ zu sein ...
 - Graphiken, Graphiken, Graphiken
@@ -50,7 +49,7 @@ knitr::opts_chunk$set(echo = FALSE)
 
 ## Übersicht - warum R
 
-![pic](http://d287f0h5fel5hu.cloudfront.net/blog/wp-content/uploads/2013/06/bar-learn-r-img11.png)
+![edureka - why learn R](http://d287f0h5fel5hu.cloudfront.net/blog/wp-content/uploads/2013/06/bar-learn-r-img11.png)
 
 
 
@@ -74,7 +73,7 @@ knitr::opts_chunk$set(echo = FALSE)
 
 ## Die Nutzung von Schnittstellen beim Import/Export
 
-- Interaktion mit SPSS, Stata
+- Interaktion mit Excel, SPSS, Stata, ...
 
 ![Import](figure/Import.PNG)
 
@@ -82,7 +81,7 @@ knitr::opts_chunk$set(echo = FALSE)
 
 ![](figure/MiracleOccursImage.png)
 
-## [Was wird bei Wikipedia unter Reproduibility verstanden?](https://en.wikipedia.org/wiki/Reproducibility)
+## [Was wird bei Wikipedia unter Reproducability verstanden?](https://en.wikipedia.org/wiki/Reproducibility)
 
 ![](figure/Spectrum_of_reproducible_research.png)
 
@@ -118,7 +117,7 @@ knitr::opts_chunk$set(echo = FALSE)
 
 - Es lohnt sich immer wieder zu dieser Seite zurückzukehren, weil hier alle relevanten Dokumente verlinkt sind.
 
-- Grundsätzlich bietet es sich an, den einzelnen Teilen der Veranstaltung mit dem File zu folgen, dass mit dem Begriff _Browser_ verlinkt ist.
+- Grundsätzlich kann man der Veranstalung am Besten mit dem [kompletten File](https://github.com/Japhilko/RInterfaces/blob/master/slides/RInterfaces_all2g.md) folgen. Wenn Teile heruntergeladen werden sollen, bietet es sich an, das entsprechende pdf herunterzuladen.
 
 ## Informationen audrucken
 
@@ -146,9 +145,8 @@ knitr::opts_chunk$set(echo = FALSE)
 
 
 - Zusätzlich gibt es für jedes Kapitel eine Aufgabe, da man nur durch eigenes Trainieren auf der Lernkurve vorankommt.
-
-- Die Quellen sind als Link meist in der Überschrift hinterlegt
-- Die Links sind nur im HTML Dokument zu sehen aber auch in der pdf vorhanden
+- Die Quellen sind als Link meist in der Überschrift hinterlegt.
+- Die Links sind nur im HTML Dokument zu sehen aber auch in der pdf vorhanden.
 
 ## Links und Quellen
 
@@ -157,4 +155,4 @@ Wen Github näher interessiert:
 
 - [Hello World](https://guides.github.com/activities/hello-world/)
 
-- [Understanding the GitHub](https://guides.github.com/introduction/flow/)
+- [Understanding the GitHub flow](https://guides.github.com/introduction/flow/)

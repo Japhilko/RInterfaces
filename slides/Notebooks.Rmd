@@ -3,18 +3,17 @@ title: "Notebooks"
 author: "Jan-Philipp Kolb"
 date: "8 Mai 2017"
 output:
+  slidy_presentation:
+    keep_md: yes
   beamer_presentation:
     colortheme: beaver
     fig_caption: no
     fonttheme: structurebold
     highlight: tango
     theme: CambridgeUS
-  slidy_presentation:
-    highlight: tango
-    keep_md: yes
 ---
 
-```{r setup, include=FALSE}
+```{r, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
@@ -71,9 +70,9 @@ print(sys.version)
 
 ![](http://jupyter.readthedocs.io/en/latest/_static/_images/jupyter.svg)
 
-- Anaconda installieren
+- [Anaconda installieren](https://docs.continuum.io/anaconda/install)
 - folgenden Befehl in die Eingabeaufforderung eingeben
-- Diese findet man bei windows wenn man cmd in Suche eingibt.
+- Bei Windows findet man diese, wenn man `cmd` in Suche eingibt.
 
 ```
 jupyter notebook

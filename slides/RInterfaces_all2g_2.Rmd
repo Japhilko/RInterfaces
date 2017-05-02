@@ -1,0 +1,97 @@
+---
+title: "R Schnittstellen - Zweiter Teil"
+author: "Jan-Philipp Kolb"
+date: "28 April 2017"
+output: 
+  slidy_presentation: 
+    css: mycss2.css
+    keep_md: yes
+---
+
+```{r, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+
+#	Interaktive Karten mit dem Javascript Paket leaflet
+
+```{r child = 'leaflet.Rmd'}
+```
+
+#	Interaktive Tabellen mit DataTables
+
+
+```{r child = 'DataTables.Rmd'}
+```
+
+# R und die Javascript Data-Driven Documents (D3)
+
+```{r child = 'D3.Rmd'}
+```
+
+#	Interaktive Graphiken mit D3 und plotly
+
+
+```{r child = 'plotly.Rmd'}
+```
+
+#	Netzwerkgraphiken mit vis.js
+
+```{r child = 'visNetwork.Rmd'}
+```
+
+#	Das Erstellen von Ablaufdiagrammen mit mermaid 
+
+
+```{r child = 'mermaid.Rmd'}
+```
+
+# Internetresourcen und Schnittstellen nutzen
+
+# Import von JSON-Objekten und XML Dateien
+
+```{r child = 'rapis.Rmd'}
+```
+
+# Die Pakete rvest und RCurl
+
+```{r child = 'rvest.Rmd'}
+```
+
+
+
+
+- [Webscraping](https://github.com/Japhilko/RInterfaces/blob/master/slides/Webscraping.md)
+
+
+- [Use Case - Scraping Wikipedia](slides/ScrapingWikipedia.Rmd)
+
+
+## Applikationen und Projektverwaltung mit Rstudio und git
+
+- [Shiny Apps](slides/shiny.Rmd)
+
+
+- [R und Git](slides/Rgit.Rmd)
+
+## Hochperfomanter Code
+
+-	[C++ Integration - Überblick über das Paket rcpp](https://github.com/Japhilko/RInterfaces/blob/master/slides/rcpp.md)
+
+
+
+-	Überblick über Möglichkeiten des Parallel Computings - Paket parallel
+
+## Integration von Datenbanken
+
+- [Datenbanken und R](slides/)
+
+
+
+-	[Integration von PostgreSQL mit dem Paket 
+RPostgreSQL](https://github.com/Japhilko/RInterfaces/blob/master/slides/RPostgreSQL.Rmd)
+
+
+
+-	[Nutzung von MongoDB in R](https://github.com/Japhilko/RInterfaces/blob/master/slides/Rmongodb.md)
+

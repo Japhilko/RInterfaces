@@ -1,10 +1,9 @@
 ---
-title: "HTML Dokumente PrÃ¤sentationen und Dashboards"
+title: "HTML Dokumente Präsentationen und Dashboards"
 author: "Jan-Philipp Kolb"
 date: "8 Mai 2017"
 output:
   slidy_presentation:
-    highlight: tango
     keep_md: yes
   beamer_presentation:
     colortheme: beaver
@@ -15,13 +14,13 @@ output:
     toc: yes
 ---
 
-```{r setup, include=FALSE}
-knitr::opts_chunk$set(echo = FALSE)
+```{r, include=FALSE}
+knitr::opts_chunk$set(echo = T)
 ```
 
-# Präsentationen mit Rpres
 
-## [Der einfachste Weg - Rpres](https://rstudio-pubs-static.s3.amazonaws.com/27777_55697c3a476640caa0ad2099fe914ae5.html#/)
+
+## [Präsentationen - Rpres der einfachste Weg](https://rstudio-pubs-static.s3.amazonaws.com/27777_55697c3a476640caa0ad2099fe914ae5.html#/)
 
 ![](figure/Rpresentations.PNG)
 
@@ -291,4 +290,7 @@ install.packages("highcharter", type = "source")
 
 - [Verschiedene Markdown Dokumente zusammen fügen](http://stackoverflow.com/questions/25824795/how-to-combine-two-rmarkdown-rmd-files-into-a-single-output)
 
-![](https://github.com/Japhilko/IntroR/tree/master/2017/slides/figure/stackoverflowCombine.PNG)
+![](figure/stackoverflowCombine.PNG)
+
+
+- [Verschiedene CSS Fonts](http://www.cssfontstack.com/)

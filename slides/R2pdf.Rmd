@@ -1,10 +1,10 @@
 ---
 title: "PDF Paper und Präsentationen mit R und Rstudio"
 author: "Jan-Philipp Kolb"
-date: "08 Mai 2017"
+date: "8 Mai 2017"
 output:
   slidy_presentation:
-    highlight: tango
+    keep_md: yes
   ioslides_presentation:
     highlight: tango
     keep_md: yes
@@ -17,14 +17,14 @@ output:
     toc: yes
 ---
 
-```{r setup, include=FALSE}
+```{r, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
 library(knitr)
 ```
 
-# Präsentationen mit Rmarkdown
 
-## beamer Präsentationen
+
+## Präsentationen mit Rmarkdown - beamer Präsentationen
 
 ![](figure/beamerexample.PNG)
 
@@ -81,9 +81,9 @@ output:
 
 ![](figure/figOpts.PNG)
 
-# Präsentationen mit Sweave
+## Präsentationen mit Sweave
 
-## Das Dokument erstellen
+- Das Dokument erstellen
 
 ![](figure/BSPsweave.png)
 
@@ -120,9 +120,7 @@ output:
 ![](figure/CRANmirror.PNG)
 
 
-# PDF Paper mit R
-
-## Übersicht - PDF Paper
+## PDF Paper mit R
 
 - Mit R ist es möglich Berichte oder Paper zu erzeugen
 - Dies eignet sich besonders gut, wenn man viel Code hat oder einen Bericht sehr oft erzeugen muss

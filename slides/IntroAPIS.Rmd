@@ -1,0 +1,29 @@
+---
+title: "Intro APIS"
+author: "Jan-Philipp Kolb"
+date: "28 April 2017"
+output: 
+  slidy_presentation:
+    keep_md: yes
+---
+
+```{r, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## JavaScript Object Notation
+
+![](figure/JSONwiki.PNG)
+
+<!--
+![https://www.percona.com/resources/webinars/json-mysql-57](figure/JSONLogo.PNG)
+
+-->
+
+## [GeoJSON](http://cannoneyed.github.io/geojson/)
+
+![](figure/GeoJSON.PNG)
+
+## [OpenStreetMap Daten](https://rstudio.github.io/leaflet/json.html)
+
+![](figure/TopoJSON.PNG)

@@ -1,0 +1,17 @@
+---
+title: "Test"
+author: "Jan-Philipp Kolb"
+date: "28 April 2017"
+output: 
+  slidy_presentation: 
+    css: mycss2.css
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+```
+
+## Erste Überschrift
+
+```{r child = 'Intro.Rmd'}
+```

@@ -1,18 +1,15 @@
 ---
 title: "Webscraping"
 author: "Jan-Philipp Kolb"
-date: "1 Februar 2017"
+date: "9 Mai 2017"
 output: 
-  html_document: 
+  slidy_presentation: 
     keep_md: yes
 ---
 
-```{r setup, include=FALSE}
+```{r, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE,message = F,warning=F)
 ```
-
-
-
 
 
 ## Notwendige Pakete
@@ -45,7 +42,7 @@ glimpse(df.world_ports)
 ```
 
 
-## 
+## Das Paket `rvest`
 
 ```{r}
 library(rvest)
@@ -60,7 +57,5 @@ gsub('/url\\?q=','',sapply(strsplit(links[as.vector(grep('url',links))],split='&
 - [How to really do an analysis in R (part 1, data manipulation)](https://www.r-bloggers.com/how-to-really-do-an-analysis-in-r-part-1-data-manipulation/)
 
 - [Read CSV From The Web](http://www.programmingr.com/examples/read-csv-web/)
-
-
 
 - [Scraping CRAN with rvest](https://www.r-bloggers.com/scraping-cran-with-rvest/)

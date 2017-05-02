@@ -8,7 +8,7 @@ output:
     keep_md: yes
 ---
 
-```{r setup, include=FALSE}
+```{r, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE,message=F,warning=F,eval=T)
 ```
 
@@ -175,6 +175,11 @@ plot(CC)
 
 
 - [Introducing JS](https://www.opencpu.org/posts/js-release-0-1/)
+
+```{r,eval=F}
+install.packages("threejs")
+```
+
 
 
 ```{r,results='asis'}

@@ -1,0 +1,81 @@
+---
+title: "R Schnittstellen - Dritter Teil"
+author: "Jan-Philipp Kolb"
+date: "9 Mai 2017"
+output: 
+  slidy_presentation: 
+    keep_md: yes
+---
+
+```{r, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+
+## Internetresourcen und Schnittstellen nutzen
+
+```{r child = 'IntroAPIS.Rmd'}
+```
+
+
+
+## Import von JSON-Objekten und XML Dateien
+
+```{r child = 'rapis.Rmd'}
+```
+
+## Die Pakete rvest und RCurl
+
+```{r child = 'rvest.Rmd'}
+```
+
+## Webscraping
+
+```{r child = 'Webscraping.Rmd'}
+```
+
+## Use Case - Scraping Wikipedia
+
+```{r child = 'ScrapingWikipedia.Rmd'}
+```
+
+
+## Applikationen und Projektverwaltung mit Rstudio und git
+
+## Shiny Apps 
+
+```{r child = 'shiny.Rmd'}
+```
+
+## R und Git
+
+```{r child = 'Rgit.Rmd'}
+```
+
+## Hochperfomanter Code
+
+# C++ Integration - Überblick über das Paket rcpp
+
+
+```{r child = 'rcpp.Rmd'}
+```
+
+
+##	Überblick über Möglichkeiten des Parallel Computings - Paket parallel
+
+## Integration von Datenbanken
+
+## Datenbanken und R
+
+## Integration von PostgreSQL mit dem Paket 
+RPostgreSQL
+
+```{r child = 'RPostgreSQL.Rmd'}
+```
+
+##	Nutzung von MongoDB in R
+
+```{r child = 'Rmongodb.Rmd'}
+```
+
+

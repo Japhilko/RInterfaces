@@ -1,12 +1,12 @@
-# HTML Dokumente PrÃ¤sentationen und Dashboards
+# HTML Dokumente Präsentationen und Dashboards
 Jan-Philipp Kolb  
 8 Mai 2017  
 
 
 
-# Präsentationen mit Rpres
 
-## [Der einfachste Weg - Rpres](https://rstudio-pubs-static.s3.amazonaws.com/27777_55697c3a476640caa0ad2099fe914ae5.html#/)
+
+## [Präsentationen - Rpres der einfachste Weg](https://rstudio-pubs-static.s3.amazonaws.com/27777_55697c3a476640caa0ad2099fe914ae5.html#/)
 
 ![](figure/Rpresentations.PNG)
 
@@ -20,7 +20,7 @@ Jan-Philipp Kolb
 
 
 ```
-## [1] "Fri Apr 21 16:17:32 2017"
+## [1] "Fri Apr 28 14:56:04 2017"
 ```
 
 ## Eine Folie mit Formel
@@ -278,3 +278,12 @@ install.packages("highcharter", type = "source")
 ```
 
 ![](figure/RmarkdownGallery.PNG)
+
+## Links 
+
+- [Verschiedene Markdown Dokumente zusammen fügen](http://stackoverflow.com/questions/25824795/how-to-combine-two-rmarkdown-rmd-files-into-a-single-output)
+
+![](figure/stackoverflowCombine.PNG)
+
+
+- [Verschiedene CSS Fonts](http://www.cssfontstack.com/)

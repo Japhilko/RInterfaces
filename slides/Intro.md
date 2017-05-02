@@ -4,9 +4,8 @@ Jan-Philipp Kolb
 
 
 
-# Warum R?
 
-## Gründe für die Nutzung von R
+## Pluspunkte von R
 
 - Als Weg kreativ zu sein ...
 - Graphiken, Graphiken, Graphiken

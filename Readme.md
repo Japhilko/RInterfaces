@@ -45,7 +45,7 @@ Aufgabe: Bearbeiten Sie ein Notebook weiter
 
 ## Applikationen und Projektverwaltung mit Rstudio und git
 
-- [Shiny Apss](slides/)
+- [Shiny Apps](slides/shiny.Rmd)
 - [R und Git](slides/Rgit.Rmd)
 
 ## Hochperfomanter Code
@@ -55,7 +55,7 @@ Aufgabe: Bearbeiten Sie ein Notebook weiter
 
 ## Integration von Datenbanken
 
-- [Datenbanken und R]()
+- [Datenbanken und R](slides/)
 -	[Integration von PostgreSQL mit dem Paket 
 RPostgreSQL](https://github.com/Japhilko/RInterfaces/blob/master/slides/RPostgreSQL.Rmd)
 -	Nutzung von MySQL mit dem Paket RMySQL

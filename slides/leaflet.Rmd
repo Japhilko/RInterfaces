@@ -7,10 +7,8 @@ output:
     keep_md: yes
 ---
 
-```{r setup, include=FALSE}
+```{r, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE,warning=F,message=F)
-pdf<-F
-web <- !pdf
 ```
 
 ## Die Daten - Weltkulturerbe
@@ -22,15 +20,30 @@ GeoData/master/2015/data/whcSites.csv"
 whcSites <- read.csv(url) 
 ```
 
-```{r,echo=F,eval=pdf}
+```{r}
 library(knitr)
-kable(head(whcSites))
+whcSitesDat <- with(whcSites,data.frame(name_en,
+                                        category))
+kable(head(whcSitesDat))
 ```
 
-```{r,echo=F,eval=web}
-library('DT')
-datatable(whcSites)
+## Weitere Variablen WHC Datensatz
+
+```{r}
+whcSitesDat2 <- with(whcSites,data.frame(name_en,category,longitude,latitude,date_inscribed,area_hectares,danger_list))
 ```
+
+
+```{r,eval=F}
+library('DT')
+datatable(whcSitesDat2)
+```
+
+## Das Ergebnis bei Rpubs
+
+<http://rpubs.com/Japhilko82/WHCdata>
+
+![](figure/WHCRpubs.PNG)
 
 
 ## Notwendige Pakete
@@ -62,7 +75,7 @@ m
 
 ## Die Karte zeigen
 
-![pic](https://github.com/Japhilko/GeoData/tree/master/data/figure/WHCPopUps.PNG) 
+![](figure/WHCPopUps.PNG) 
 
 ## Farbe hinzu
 
@@ -89,7 +102,11 @@ m1 <- leaflet() %>%
 
 ## [Die Karte abspeichern](http://www.r-bloggers.com/interactive-mapping-with-leaflet-in-r-2/)
 
+![](figure/Kartespeichern.PNG)
+
+<!--
 ![gui](http://i1.wp.com/spatialrecology.org/images/r_leaflet/snapshot2.png)
+-->
 
 ## [Layers ein- und ausblenden](https://rstudio.github.io/leaflet/showhide.html)
 

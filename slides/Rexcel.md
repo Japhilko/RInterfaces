@@ -1,6 +1,6 @@
 # R und Excel
 Jan-Philipp Kolb  
-7 Februar 2017  
+08 Mai 2017  
 
 
 
@@ -16,7 +16,7 @@ dat <- read.xlsx("cult_emp_sex.xls",1)
 
 ## [Einige Schritte um R und Excel zu verbinden](http://www.milanor.net/blog/steps-connect-r-excel-xlconnect/)
 
-- [The excel connection](https://www.r-bloggers.com/r-the-excel-connection/)
+- [Die Excel-Verbindung](https://www.r-bloggers.com/r-the-excel-connection/)
 
 
 ```r
@@ -48,8 +48,27 @@ writeWorksheet(exc, input, sheet = "input", startRow = 1, startCol = 2)
 saveWorkbook(exc)
 ```
 
+## [BERT - Eine weitere Verbindung zwischen R und Excel](https://www.r-bloggers.com/bert-a-newcomer-in-the-r-excel-connection/)
 
-## 
+- [Schnellstart mit Excel](https://bert-toolkit.com/bert-quick-start)
+
+![](figure/BERTaddins.PNG)
+
+
+
+
+```r
+myFunction <- function(){
+ aa <- rnorm(200)
+ bb <- rnorm(200)
+ res <- lm(aa~bb)$res
+ return(res)
+}
+```
+
+
+
+## Das Paket readxl
 
 - [readxl](https://www.r-bloggers.com/get-data-out-of-excel-and-into-r-with-readxl/)
 

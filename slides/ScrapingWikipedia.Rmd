@@ -3,6 +3,8 @@ title: "Scraping Wikipedia"
 author: "Jan-Philipp Kolb"
 date: "09 Mai 2017"
 output:
+  slidy_presentation: 
+    keep_md: yes
   beamer_presentation:
     colortheme: beaver
     fig_caption: no
@@ -10,16 +12,21 @@ output:
     toc: no
   html_document:
     keep_md: yes
-  slidy_presentation: default
 ---
 
-```{r setup, include=FALSE}
+```{r, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE,cache=T,message=F,warning = F)
 ```
 
 ## Einleitung
 
 Im Folgenden werde ich zeigen, wie man Textinformationen aus [Wikipedia](https://www.wikipedia.org/) herunterladen, verarbeiten und analysieren kann.
+
+```{r,eval=F}
+install.packages("NLP")
+install.packages("tm")
+install.packages("FactoMineR")
+```
 
 
 
@@ -98,7 +105,7 @@ docs5 <- tm_map(docs4, stripWhitespace)
 docs6 <- tm_map(docs5, removeWords, stopwords("german"))
 docs7 <- tm_map(docs6, removePunctuation)
 docs8 <- tm_map(docs7, tolower)
-docs8 <- tm_map(docs8, PlainTextDocument)
+# docs8 <- tm_map(docs8, PlainTextDocument)
 ```
 
 

@@ -1,6 +1,6 @@
 # RPostgreSQL
 Jan-Philipp Kolb  
-27 Januar 2017  
+9 Mai 2017  
 
 
 
@@ -33,16 +33,21 @@ library("RPostgreSQL")
 
 - [Nutzung von osm2pgsql](http://www.volkerschatz.com/net/osm/osm2pgsql-usage.html)
 
-
-```bash
+```
 sudo -u postgres createuser Japhilko
 sudo -u postgres createdb -E UTF8 -O Japhilko offlgeoc
 ```
 
 Die postgis Erweiterung muss für die Datenbank installiert werden:
 
-```shell
+```
 CREATE EXTENSION postgis;
+```
+
+## [Erweiterung hstore](https://www.postgresql.org/docs/9.1/static/sql-createextension.html)
+
+```
+CREATE EXTENSION hstore;
 ```
 
 
@@ -52,12 +57,11 @@ osm2pgsql -s -U postgres -d offlgeoc /home/kolb/Forschung/osmData/data/saarland-
 
 ## Datenbank für Geocoding
 
-
-```bash
+```
 sudo -u postgres createdb -E UTF8 -O Japhilko offlgeocRLP
 ```
 
-```shell
+```
 CREATE EXTENSION postgis;
 ```
 
