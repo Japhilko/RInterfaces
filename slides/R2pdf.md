@@ -121,6 +121,12 @@ output:
 
 
 ```r
+install.packages("RMySQL")
+```
+
+
+
+```r
 citation("RMySQL")
 ```
 

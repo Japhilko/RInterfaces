@@ -137,6 +137,11 @@ output:
 
 - Mit dem Befehl `citation()` bekommt man sehr schnell die Referenz
 
+```{r,eval=F}
+install.packages("RMySQL")
+```
+
+
 ```{r}
 citation("RMySQL")
 ```

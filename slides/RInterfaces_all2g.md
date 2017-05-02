@@ -452,7 +452,6 @@ saveWorkbook(exc)
 
 
 
-
 ```r
 myFunction <- function(){
  aa <- rnorm(200)
@@ -463,6 +462,11 @@ myFunction <- function(){
 ```
 
 
+## Link `BERT`
+
+- [BERT: a newcomer in the R Excel connection](https://www.r-bloggers.com/bert-a-newcomer-in-the-r-excel-connection/)
+
+![](figure/NewcomerBERT.PNG)
 
 ## Das Paket readxl
 
@@ -478,11 +482,7 @@ install.packages("readxl")
 library(readxl)
 ```
 
-## Links
-
-- [BERT: a newcomer in the R Excel connection](https://www.r-bloggers.com/bert-a-newcomer-in-the-r-excel-connection/)
-
-![](figure/NewcomerBERT.PNG)
+![](figure/Rexcel.PNG)
 
 
 
@@ -502,7 +502,12 @@ library(readxl)
 - [Reproducible Research
 with R and RStudio](https://englianhu.files.wordpress.com/2016/01/reproducible-research-with-r-and-studio-2nd-edition.pdf)
 
+![](figure/Gandrud.PNG)
+
 - [A crash course in reproducible research in R](http://t-redactyl.io/blog/2016/10/a-crash-course-in-reproducible-research-in-r.html)
+
+
+![](figure/CrashcourseReprod.PNG)
 
 
 
@@ -666,16 +671,16 @@ kable(ab)
 
          a            b
 ----------  -----------
- 0.6061532    0.6976463
- 0.4971367    1.3133231
- 0.2344954    0.8289510
- 0.8029970   -1.4756648
- 0.7863071    0.1589139
- 0.6588728   -0.8002320
- 0.6765894    0.8921335
- 0.7041389   -0.8169958
- 0.6368197   -0.8411820
- 0.6784360    0.9775720
+ 0.0868167    1.2522672
+ 0.5268304   -1.2578475
+ 0.8213497    0.5172868
+ 0.9764472   -0.7753841
+ 0.2586538   -0.5456345
+ 0.1328233    1.1389485
+ 0.4995480   -0.2662771
+ 0.6607372   -0.1834718
+ 0.1354297    0.2096799
+ 0.1812247   -0.8159881
 
 ## [Vorlagen verwenden](http://rmarkdown.rstudio.com/articles_docx.html)
 
@@ -825,6 +830,12 @@ output:
 
 
 ```r
+install.packages("RMySQL")
+```
+
+
+
+```r
 citation("RMySQL")
 ```
 
@@ -904,8 +915,12 @@ bibliography: Rschnittstellen.bib
 - Für Vergessliche:
 
 
+```r
+date()
 ```
-## [1] "Fri Apr 28 15:16:29 2017"
+
+```
+## [1] "Tue May 02 22:22:03 2017"
 ```
 
 ## Eine Folie mit Formel
@@ -1090,6 +1105,14 @@ output:
 
 
 
+```r
+library(knitr)
+a <- data.frame(a=1:10,b=10:1)
+kable(table(a))
+```
+
+
+
   1    2    3    4    5    6    7    8    9   10
 ---  ---  ---  ---  ---  ---  ---  ---  ---  ---
   0    0    0    0    0    0    0    0    0    1
@@ -1130,6 +1153,11 @@ Um den Präsentationstyp zu ändern kann man das CSS verändern
 - Es gibt viele Formate - [manche müssen erst aktiviert werden](https://blog.rstudio.org/2016/03/21/r-markdown-custom-formats/:
 
 
+```r
+install.packages("rticles")
+install.packages("rmdformats")
+install.packages("ProjectTemplate")
+```
 
 ## [Beispiele für Templates](https://github.com/juba/rmdformats)
 
@@ -1213,7 +1241,7 @@ print(sys.version)
 ```
 
 ```
-## 3.5.2 (v3.5.2:4def2a2901a5, Jun 25 2016, 22:01:18) [MSC v.1900 32 bit (Intel)]
+## 2.7.10 (default, May 23 2015, 09:44:00) [MSC v.1500 64 bit (AMD64)]
 ```
 
 ## [LaTeX Code integieren](https://blog.rstudio.org/2016/10/05/r-notebooks/)
@@ -1237,9 +1265,9 @@ print(sys.version)
 
 ![](http://jupyter.readthedocs.io/en/latest/_static/_images/jupyter.svg)
 
-- Anaconda installieren
+- [Anaconda installieren](https://docs.continuum.io/anaconda/install)
 - folgenden Befehl in die Eingabeaufforderung eingeben
-- Diese findet man bei windows wenn man cmd in Suche eingibt.
+- Bei Windows findet man diese, wenn man `cmd` in Suche eingibt.
 
 ```
 jupyter notebook
