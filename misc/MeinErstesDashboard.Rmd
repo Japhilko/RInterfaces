@@ -1,0 +1,54 @@
+---
+title: "Mein erstes Dashboard"
+output: 
+  flexdashboard::flex_dashboard:
+    orientation: columns
+    vertical_layout: fill
+---
+
+```{r setup, include=FALSE}
+library(flexdashboard)
+```
+
+Column {data-width=650}
+-----------------------------------------------------------------------
+
+### Eine interaktive Datentabelle mit `DT`
+
+
+```{r}
+url <- "https://raw.githubusercontent.com/Japhilko/
+GeoData/master/2015/data/whcSites.csv"
+
+whcSites <- read.csv(url) 
+whcSitesDat2 <- with(whcSites,data.frame(name_en,category,longitude,latitude,date_inscribed,area_hectares,danger_list))
+
+library('DT')
+datatable(whcSitesDat2)
+```
+
+
+
+Column {data-width=350}
+-----------------------------------------------------------------------
+
+### Eine einfache `ggplot2` Graphik
+
+```{r}
+library(ggplot2)
+qplot(whcSitesDat2$category)
+```
+
+
+### Eine Karte mit `leaflet`
+
+```{r}
+library(leaflet)
+m <- leaflet() %>%
+  addTiles() %>%  # Add default OpenStreetMap map tiles
+  addMarkers(lng=whcSites$lon, 
+             lat=whcSites$lat, 
+             popup=whcSites$name_en)
+m
+```
+

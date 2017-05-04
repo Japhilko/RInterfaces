@@ -11,7 +11,7 @@ output:
 ---
 
 ```{r, include=FALSE}
-knitr::opts_chunk$set(echo = TRUE)
+knitr::opts_chunk$set(echo = TRUE,eval=F)
 ```
 
 # Export Allgemein
@@ -62,7 +62,7 @@ write.xlsx(mydata,file="mydata.xlsx")
 
 ## Daten in stata Format abspeichern
 
-```{r}
+```{r,eval=F}
 library(foreign)
 write.dta(mydata,file="data/mydata.dta") 
 ```
@@ -77,7 +77,7 @@ install.packages("rio")
 
 ## [Daten als .sav abspeichern (SPSS)](https://cran.r-project.org/web/packages/rio/vignettes/rio.html)
 
-```{r}
+```{r,eval=F}
 library("rio")
 # create file to convert
 

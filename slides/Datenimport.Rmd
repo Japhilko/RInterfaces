@@ -142,7 +142,7 @@ library(haven)
 - Zunächst muss wieder der Pfad zum Arbeitsverzeichnis angeben werden.
 - SPSS-Dateien können auch direkt aus dem Internet geladen werden:
 
-```{r}
+```{r,eval=F}
 install.packages("haven")
 ```
 

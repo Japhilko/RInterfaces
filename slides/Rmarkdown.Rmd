@@ -178,39 +178,6 @@ output:
 
 ![](figure/ioslidesRlogo.PNG)
 
-# Eine slidy Präsentation
-
-
-## slidy Präsentationen
-
-
-![](figure/sluidypresentations.PNG)
-
-
-## [Was ist CSS?](https://de.wikipedia.org/wiki/Cascading_Style_Sheets)
-
-![](https://upload.wikimedia.org/wikipedia/commons/8/83/CSS-Logo.png)
-
-- Stylesheet-Sprache für elektronische Dokumente
-- eine der Kernsprachen des World Wide Webs.
-- CSS wurde entworfen, um Darstellungsvorgaben weitgehend von den Inhalten zu trennen
-
-
-
-
-## Cascading Style Files
-
-- [Custom CSS](http://rmarkdown.rstudio.com/html_document_format.html#custom_css)
-
-- [CSS](https://en.wikipedia.org/wiki/Cascading_Style_Sheets)
-
-- [CSS pro tipps](https://github.com/AllThingsSmitty/css-protips#use-a-css-reset)
-
-## knitr Engines
-
-- [knitr Language Engines](http://rmarkdown.rstudio.com/authoring_knitr_engines.html)
-
-- [slidify](http://slidify.org/)
 
 ## Tabellen
 
@@ -223,6 +190,39 @@ a <- data.frame(a=1:10,b=10:1)
 kable(table(a))
 ```
 
+
+## `knitr` Engines
+
+- [knitr Language Engines](http://rmarkdown.rstudio.com/authoring_knitr_engines.html)
+
+- [slidify](http://slidify.org/)
+
+
+# Eine slidy Präsentation
+
+
+## slidy Präsentationen
+
+
+![](figure/sluidypresentations.PNG)
+
+
+## [Was sind Cascading Style Files ([CSS](https://en.wikipedia.org/wiki/Cascading_Style_Sheets))?](https://de.wikipedia.org/wiki/Cascading_Style_Sheets)
+
+![](https://upload.wikimedia.org/wikipedia/commons/8/83/CSS-Logo.png)
+
+- Stylesheet-Sprache für elektronische Dokumente
+- eine der Kernsprachen des World Wide Webs.
+- CSS wurde entworfen, um Darstellungsvorgaben weitgehend von den Inhalten zu trennen
+
+### CSS und R
+
+- [Custom CSS](http://rmarkdown.rstudio.com/html_document_format.html#custom_css)
+- [CSS pro tipps](https://github.com/AllThingsSmitty/css-protips#use-a-css-reset)
+
+## Beispiel CSS
+
+![](figure/cssRstudio.PNG)
 
 ## Das CSS ändern
 
@@ -294,6 +294,10 @@ install.packages("highcharter", type = "source")
 ```
 
 ![](figure/RmarkdownGallery.PNG)
+
+## [Mein erstes Dashboard](http://rpubs.com/Japhilko82/whcsites)
+
+![](figure/MeinErstesDashboard.PNG)
 
 ## Links 
 
