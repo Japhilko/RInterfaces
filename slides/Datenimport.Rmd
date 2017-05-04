@@ -47,6 +47,8 @@ R unterstützt von Haus aus schon einige wichtige Formate:
 
 - [Datenimport mit Rstudio](https://support.rstudio.com/hc/en-us/articles/218611977-Importing-Data-with-RStudio)
 
+![](figure/ImportCSVPNG.PNG)
+
 
 ## Der Arbeitsspeicher
 
@@ -78,42 +80,42 @@ Bei Windows ist es wichtig Slashs anstelle von Backslashs zu verwenden.
 
 ![](figure/SetWD.PNG)
 
+## Das Paket `readr`
+
+```{r,eval=F}
+install.packages("readr")
+```
+
+```{r}
+library(readr)
+```
+
+- [`readr` auf dem Rstudio Blogg](https://blog.rstudio.org/2015/10/28/readr-0-2-0/)
+
+![](figure/readrRstudioBlogg.PNG)
+
+
+
 ## Import von Excel-Daten
 
--  `library(foreign)` ist für den Import von fremden Datenformaten hilfreich
+-  `library(readr)` ist für den Import von fremden Datenformaten hilfreich
 -  Wenn Excel-Daten vorliegen - als .csv abspeichern
 - Diese lassen sich auch ohne das Paket `foreign` einlesen.
--  Dann kann `read.csv()` genutzt werden um die Daten einzulesen.
-- Bei Deutschen Daten kann es sein, dass man `read.csv2()` wegen der Komma-Separierung braucht.
 
 ```{r,eval=F}
-library(foreign)
-?read.csv
-?read.csv2
-```
-
-## CSV Dateien einlesen
-
-Zunächst muss das Arbeitsverzeichnis gesetzt werden, in dem sich die Daten befinden:
-
-```{r,eval=F}
-Dat <- read.csv("schuldaten_export.csv")
-```
-
-Wenn es sich um Deutsche Daten handelt:
-
-```{r,eval=F}
-Dat <- read.csv2("schuldaten_export.csv")
+library(readr)
+rows <- read_csv("https://data.montgomerycountymd.gov/api/views/6rqk-pdub/rows.csv?accessType=DOWNLOAD")
 ```
 
 
-## `.csv`-Daten aus dem Web importieren
+
+## `.csv`-Daten aus dem Web importieren - zweites Beispiel
 
 ```{r}
 url <- "https://raw.githubusercontent.com/Japhilko/
 GeoData/master/2015/data/whcSites.csv"
 
-whcSites <- read.csv(url) 
+whcSites <- read_csv(url) 
 ```
 
 
@@ -121,27 +123,41 @@ whcSites <- read.csv(url)
 head(whcSites)
 ```
 
+## Das Paket `haven`
 
+```{r,eval=F}
+install.packages("haven")
+```
+
+```{r}
+library(haven)
+```
+
+- [`haven`auf dem Rstudio Blogg](https://blog.rstudio.org/2016/10/04/haven-1-0-0/)
+
+![](figure/havenRstudioBlogg.PNG)
 
 ## SPSS Dateien einlesen
 
-Dateien können auch direkt aus dem Internet geladen werden:
+- Zunächst muss wieder der Pfad zum Arbeitsverzeichnis angeben werden.
+- SPSS-Dateien können auch direkt aus dem Internet geladen werden:
+
+```{r}
+install.packages("haven")
+```
+
 
 ```{r,eval=F}
-link<- "http://www.statistik.at/web_de/static/
-mz_2013_sds_-_datensatz_080469.sav"
-
-?read.spss
-Dat <- read.spss(link,to.data.frame=T)
+library(haven)
+mtcars <- read_sav("https://github.com/Japhilko/RInterfaces/raw/master/data/mtcars.sav")
 ```
 
 ## stata Dateien einlesen
 
 ```{r,eval=F}
-MZ02 <- read.dta("MZ02.dta")
+library(haven)
+oecd <- read_dta("https://github.com/Japhilko/IntroR/raw/master/2017/data/oecd.dta")
 ```
-
-- Einführung in Import mit R ([is.R](http://is-r.tumblr.com/post/37181850668/reading-writing-stata-dta-files-with-foreign))
 
 
 ## Links

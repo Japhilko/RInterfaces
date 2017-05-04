@@ -22,6 +22,12 @@ library("xlsx")
 dat <- read.xlsx("cult_emp_sex.xls",1)
 ```
 
+```{r,eval=F}
+library(xlsx)
+write.xlsx(mydata,file="mydata.xlsx") 
+```
+
+
 ## [Einige Schritte um R und Excel zu verbinden](http://www.milanor.net/blog/steps-connect-r-excel-xlconnect/)
 
 - [Die Excel-Verbindung](https://www.r-bloggers.com/r-the-excel-connection/)

@@ -671,16 +671,16 @@ kable(ab)
 
          a            b
 ----------  -----------
- 0.0868167    1.2522672
- 0.5268304   -1.2578475
- 0.8213497    0.5172868
- 0.9764472   -0.7753841
- 0.2586538   -0.5456345
- 0.1328233    1.1389485
- 0.4995480   -0.2662771
- 0.6607372   -0.1834718
- 0.1354297    0.2096799
- 0.1812247   -0.8159881
+ 0.2887960   -1.9251730
+ 0.3363557    1.2494926
+ 0.2443964    1.9590305
+ 0.1028515    0.6370688
+ 0.5274930   -2.5582964
+ 0.7010053   -0.8216475
+ 0.1739720   -0.1884663
+ 0.6978696   -0.2594175
+ 0.7993446    1.3601609
+ 0.0693686   -0.6251665
 
 ## [Vorlagen verwenden](http://rmarkdown.rstudio.com/articles_docx.html)
 
@@ -920,7 +920,7 @@ date()
 ```
 
 ```
-## [1] "Tue May 02 22:22:03 2017"
+## [1] "Thu May 04 19:20:18 2017"
 ```
 
 ## Eine Folie mit Formel
@@ -1150,14 +1150,24 @@ Um den Präsentationstyp zu ändern kann man das CSS verändern
 
 ## [Weitere Vorlagen nutzen](http://rmarkdown.rstudio.com/developer_document_templates.html)
 
-- Es gibt viele Formate - [manche müssen erst aktiviert werden](https://blog.rstudio.org/2016/03/21/r-markdown-custom-formats/:
+- Es gibt viele Formate - [manche müssen erst aktiviert werden](https://blog.rstudio.org/2016/03/21/r-markdown-custom-formats/):
 
 
 ```r
 install.packages("rticles")
+```
+
+![](figure/ShortPaper.PNG)
+
+
+## Das Paket `rmdformats`
+
+
+```r
 install.packages("rmdformats")
 install.packages("ProjectTemplate")
 ```
+
 
 ## [Beispiele für Templates](https://github.com/juba/rmdformats)
 

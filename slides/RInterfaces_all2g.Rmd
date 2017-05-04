@@ -1,7 +1,7 @@
 ---
 title: "R Schnittstellen"
 author: "Jan-Philipp Kolb"
-date: "28 April 2017"
+date: "8 Mai 2017"
 output: 
   slidy_presentation: 
     css: mycss2.css
@@ -22,6 +22,13 @@ knitr::opts_chunk$set(echo = TRUE)
 
 ```{r child = 'Datenimport.Rmd'}
 ```
+
+# Datenimport
+
+```{r child = 'Datenexport.Rmd'}
+```
+
+
 
 # R und Excel
 

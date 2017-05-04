@@ -10,7 +10,7 @@ output:
     keep_md: yes
 ---
 
-```{r setup, include=FALSE}
+```{r, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
@@ -39,11 +39,16 @@ mydata <- data.frame(A,B)
 save(mydata, file="mydata.RData")
 ```
 
-## Daten in Excel Format abspeichern
+## Daten in `.csv` Format abspeichern
 
 ```{r,eval=F}
 write.csv(mydata,file="mydata.csv") 
 ```
+
+
+## [Das Paket `xlsx`](http://www.sthda.com/english/wiki/r-xlsx-package-a-quick-start-guide-to-manipulate-excel-files-in-r#read-an-excel-file)
+
+![](figure/sthda.PNG)
 
 
 ```{r,eval=F}
@@ -51,13 +56,15 @@ library(xlsx)
 write.xlsx(mydata,file="mydata.xlsx") 
 ```
 
+## [Das Paket `foreign`](https://www.r-bloggers.com/readingwriting-stata-dta-files-with-foreign/)
 
+![](figure/isRstata.PNG)
 
 ## Daten in stata Format abspeichern
 
 ```{r}
 library(foreign)
-write.dta(mydata,file="mydata.dta") 
+write.dta(mydata,file="data/mydata.dta") 
 ```
 
 ## Das Paket `rio`
@@ -66,25 +73,25 @@ write.dta(mydata,file="mydata.dta")
 install.packages("rio")
 ```
 
+![](figure/ImportExport.PNG)
 
 ## [Daten als .sav abspeichern (SPSS)](https://cran.r-project.org/web/packages/rio/vignettes/rio.html)
 
 ```{r}
 library("rio")
 # create file to convert
-setwd("data/")
 
-export(mtcars, "mtcars.sav")
+export(mtcars, "data/mtcars.sav")
 ```
 
 
 ## Dateiformate konvertieren
 
 ```{r}
-export(mtcars, "mtcars.dta")
+export(mtcars, "data/mtcars.dta")
 
 # convert Stata to SPSS
-convert("mtcars.dta", "mtcars.sav")
+convert("data/mtcars.dta", "data/mtcars.sav")
 ```
 
 
