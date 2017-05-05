@@ -156,3 +156,9 @@ Wen Github näher interessiert:
 - [Hello World](https://guides.github.com/activities/hello-world/)
 
 - [Understanding the GitHub flow](https://guides.github.com/introduction/flow/)
+
+## [CRAN Task Views](https://cran.r-project.org/web/views/)
+
+![](figure/CRANTaskviews.PNG)
+
+

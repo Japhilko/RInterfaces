@@ -18,6 +18,9 @@ knitr::opts_chunk$set(echo = TRUE)
 ```
 
 
+```{r child = '../tutorial/Aufgabe_Zusatzpakete.Rmd'}
+```
+
 # Datenimport
 
 ```{r child = 'Datenimport.Rmd'}

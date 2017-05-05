@@ -1,15 +1,41 @@
 ---
 title: "Rgit"
 author: "Jan-Philipp Kolb"
-date: "11 April 2017"
+date: "09 Mai 2017"
 output: 
-  html_document: 
+  slidy_presentation: 
     keep_md: yes
 ---
 
 ```{r, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
 ```
+
+
+## Rstudio und git - ein Projekt anlegen
+
+![](figure/NeuesProjekt.PNG)
+
+
+## Ein Projekt mit Versionskontrolle
+
+![](figure/VersionControl.PNG)
+
+## Auswahl Versionskontrolle
+
+![](figure/gitSVN.PNG)
+
+## Ein Projekt clonen
+
+![](figure/CloneProject.PNG)
+
+## Der git-Reiter in Rstudio
+
+![](figure/gitReiter.PNG)
+
+## Aktuelle eigene Änderungen committen
+
+![](figure/CommitMessage.PNG)
 
 
 ## Links

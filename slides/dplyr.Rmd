@@ -1,0 +1,11 @@
+---
+title: "dplyr"
+author: "Jan-Philipp Kolb"
+date: "5 Mai 2017"
+output: slidy_presentation
+---
+
+```{r, include=FALSE}
+knitr::opts_chunk$set(echo = T)
+```
+
