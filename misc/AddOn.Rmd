@@ -229,3 +229,7 @@ install.packages("SVGAnnotation")
 ```
 
 - [Python from R on Windows OS](http://stackoverflow.com/questions/23185685/how-to-call-python-from-r-in-a-windows-os)
+
+```{r, eval=F,echo=T}
+install.packages("highcharter", type = "source")
+```

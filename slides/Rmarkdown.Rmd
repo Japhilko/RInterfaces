@@ -256,12 +256,26 @@ install.packages("rticles")
 ![](figure/ShortPaper.PNG)
 
 
-## Das Paket `rmdformats`
+## Vorlagen für Markdown
+
+Das Paket `rmdformats` - HTML Output Formats and Templates for 'rmarkdown'
 
 ```{r,eval=F}
 install.packages("rmdformats")
+```
+
+- `ProjectTemplate` - Automates the Creation of New Statistical Analysis 
+
+```{r,eval=F}
 install.packages("ProjectTemplate")
 ```
+
+- `tufte` - Tufte's Styles for R Markdown Documents
+
+```{r,eval=F}
+install.packages("tufte")
+```
+
 
 
 ## [Beispiele für Templates](https://github.com/juba/rmdformats)
@@ -287,17 +301,14 @@ install.packages("flexdashboard", type = "source")
 
 ![](https://i2.wp.com/rmarkdown.rstudio.com/flexdashboard/images/NewRMarkdown.png?zoom=2)
 
-## [Gallerie](http://rmarkdown.rstudio.com/gallery.html)
-
-```{r, eval=F,echo=T}
-install.packages("highcharter", type = "source")
-```
-
-![](figure/RmarkdownGallery.PNG)
-
 ## [Mein erstes Dashboard](http://rpubs.com/Japhilko82/whcsites)
 
 ![](figure/MeinErstesDashboard.PNG)
+
+## [Gallerie](http://rmarkdown.rstudio.com/gallery.html)
+
+![](figure/RmarkdownGallery.PNG)
+
 
 ## Links 
 

@@ -79,6 +79,23 @@ library("magrittr")
 
 ![](figure/Piping.PNG)
 
+
+## [Die Pipes nutzen](https://www.r-bloggers.com/more-readable-code-with-pipes-in-r/)
+
+```{r}
+library(magrittr)
+
+str1 <- "Hallo Welt"
+str1 %>% substr(1,5)
+```
+
+
+```{r}
+str1 %>% substr(1,5) %>% toupper()
+```
+
+
+
 ## Das Paket `leaflet`
 
 - [leaflet](https://rstudio.github.io/leaflet/) - um  interaktive Karten mit der JavaScript Bibliothek 'Leaflet' zu erzeugen
@@ -107,7 +124,7 @@ m <- leaflet() %>%
 m
 ```
 
-## Die Karte zeigen
+## [Die Karte zeigen](https://rpubs.com/Japhilko82/WorldHeritageSites)
 
 ![](figure/WHCPopUps.PNG) 
 
@@ -132,7 +149,7 @@ m1 <- leaflet() %>%
              color=whcSites$color)
 ```
 
-## [Die Karte zeigen](https://rpubs.com/Japhilko82/CatWHS)
+## [Die Karte mit mehr Farbe](https://rpubs.com/Japhilko82/CatWHS)
 
 ![Weltkulturerbe](figure/WHCcircles.PNG) 
 
@@ -146,9 +163,33 @@ m1 <- leaflet() %>%
 
 ## [Layers ein- und ausblenden](https://rstudio.github.io/leaflet/showhide.html)
 
-```{r,eval=F}
-outline <- quakes[chull(quakes$long, quakes$lat),]
 
+```{r,eval=F}
+m2 <- leaflet() %>%
+  addTiles(group = "OSM (default)") %>%  
+  addProviderTiles("Stamen.Toner", group = "Toner") %>%
+  addProviderTiles("Stamen.TonerLite", group = "Toner Lite") %>%
+
+  addCircles(lng=whcSites$lon, 
+             lat=whcSites$lat, 
+             popup=whcSites$name_en) %>% 
+  
+  addLayersControl(
+    baseGroups = c("OSM (default)", "Toner", "Toner Lite"),
+    options = layersControlOptions(collapsed = FALSE)
+  )
+m2
+```
+
+![](figure/LayerSteuern.PNG)
+
+## Ein weiteres Beispiel mit Erdbebendaten
+
+```{r}
+outline <- quakes[chull(quakes$long, quakes$lat),]
+```
+
+```{r}
 map <- leaflet(quakes) %>%
   # Base groups
   addTiles(group = "OSM (default)") %>%
@@ -166,6 +207,8 @@ map <- leaflet(quakes) %>%
   )
 map
 ```
+
+
 
 ![](figure/LayersUmschalten.PNG)
 

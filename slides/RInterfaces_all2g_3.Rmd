@@ -1,7 +1,7 @@
 ---
-title: "R Schnittstellen - Zweiter Teil"
+title: "R Schnittstellen - Interaktive Darstellung mit Javascript und R"
 author: "Jan-Philipp Kolb"
-date: "28 April 2017"
+date: "8 Mai 2017"
 output: 
   slidy_presentation: 
     css: mycss2.css
@@ -17,6 +17,10 @@ knitr::opts_chunk$set(echo = TRUE)
 
 ```{r child = 'leaflet.Rmd'}
 ```
+
+```{r child = '../tutorial/Aufgabe_leaflet.Rmd'}
+```
+
 
 #	Interaktive Tabellen mit DataTables
 

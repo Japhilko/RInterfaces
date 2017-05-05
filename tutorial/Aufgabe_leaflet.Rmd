@@ -1,0 +1,16 @@
+---
+title: "Aufgabe leaflet"
+author: "Jan-Philipp Kolb"
+date: "5 Mai 2017"
+output: 
+  slidy_presentation: 
+    keep_md: yes
+---
+
+```{r, include=FALSE}
+knitr::opts_chunk$set(echo = T)
+```
+
+## Aufgabe `leaflet`
+
+- Verwenden Sie die Adresse, die Sie zuvor geokodiert haben, um eine interaktive Karte um diesen Punkt herum zu erstellen.

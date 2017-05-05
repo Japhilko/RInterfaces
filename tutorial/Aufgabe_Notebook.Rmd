@@ -19,11 +19,11 @@ knitr::opts_chunk$set(echo = T)
 
 - Lassen Sie sich die Raw Version anzeigen
 
-![](https://github.com/Japhilko/RInterfaces/blob/master/tutorial/figure/figure/RawNotebook.PNG?raw=true)
+![](https://github.com/Japhilko/RInterfaces/blob/master/tutorial/figure/RawNotebook.PNG?raw=true)
 
 - Laden Sie das Notebook herunter:
 
-![](https://github.com/Japhilko/RInterfaces/blob/master/tutorial/figure/figure/NotebookRunterladen.PNG?raw=true)
+![](https://github.com/Japhilko/RInterfaces/blob/master/tutorial/figure/NotebookRunterladen.png?raw=true)
 
 - Und bearbeiten Sie es so weiter, dass sie die Geokodierung für eine Adresse bekommen, die für Sie interessant ist (Hbf, Hotel, Restaurant etc.)
 

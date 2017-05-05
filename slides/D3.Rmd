@@ -18,32 +18,12 @@ knitr::opts_chunk$set(echo = TRUE,message=F,warning=F,eval=T)
 
 - D3 ist eine der mächtigsten unter der Vielzahl aktuell verfügbarer JavaScript-Bibliotheken zur Datenvisualisierung.
 
-
 - [Big Data im Netz visualisieren](http://t3n.de/magazin/javascript-bibliothek-d3-237224/)
 - [Möglichkeiten mit der JS D3 Bibliothek](http://christopheviau.com/d3list/gallery.html)
 - [Die Power von R und D3.js zusammen bringen](https://www.ae.be/blog-en/combining-the-power-of-r-and-d3-js/)
 - [5 Interaktive R Visualisierungen mit `D3`, `ggplot2` und RStudio](http://moderndata.plot.ly/interactive-r-visualizations-with-d3-ggplot2-rstudio/)
 - [Das D3 Netzwerk](http://christophergandrud.github.io/d3Network/)
 
-## Interaktive Graphiken
-
-- [R Interactive Graphics with SVG](http://timelyportfolio.github.io/gridSVG_intro/)
-
-## [tabplotd3](https://cran.r-project.org/web/packages/tabplotd3/index.html)
-
-- [Beispiel tabplot3d](http://www.datasciencecentral.com/profiles/blogs/r-for-big-data-in-one-picture)
-
-```{r,eval=F}
-install.packages("tabplotd3")
-```
-
-
-```{r tableplot}
-library(tabplotd3)
-require(ggplot2)
-data(diamonds)
-tableplot(diamonds)
-```
 
 ## [gigvis](https://github.com/rstudio/ggvis)
 
@@ -74,6 +54,17 @@ mtcars %>%
   group_by(cyl) %>% 
   layer_model_predictions(model = "lm")
 ```
+
+## Interaktive Graphiken mit `ggvis`
+
+```{r,eval=F}
+mtcars %>%
+  ggvis(~wt, ~mpg) %>%
+  layer_smooths(span = input_slider(0.5, 1, value = 1)) %>%
+  layer_points(size := input_slider(100, 1000, value = 100))
+```
+
+![](figure/ggvisInteractive.PNG)
 
 ## [googleVis](https://cran.r-project.org/web/packages/googleVis/index.html)
 
@@ -147,12 +138,6 @@ unlink("FirstNetwork.js")
 
 
 
-## [Rook](https://cran.r-project.org/web/packages/Rook/index.html)
-
-```{r,eval=F}
-install.packages("Rook")
-```
-
 ## [HTML widgets in R](http://www.htmlwidgets.org/showcase_leaflet.html)
 
 ```{r}
@@ -213,3 +198,13 @@ scatterplot3js(x,y,z, color=rainbow(length(z)))
 - [Mit Javascript in R arbeiten](https://cran.r-project.org/web/packages/js/vignettes/intro.html)
 
 - [Paket rbokeh](http://hafen.github.io/rbokeh/)
+
+- [ Interaktive Graphiken mit SVG](http://timelyportfolio.github.io/gridSVG_intro/)
+
+
+- [Rook](https://cran.r-project.org/web/packages/Rook/index.html) - Tools um Webapplikationen mit R zu erstellen
+
+```{r,eval=F}
+install.packages("Rook")
+```
+

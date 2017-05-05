@@ -188,16 +188,16 @@ kable(ab)
 
          a            b
 ----------  -----------
- 0.5611270    0.2488563
- 0.0398190    0.2488782
- 0.0136209    0.9069456
- 0.6067626   -0.5155376
- 0.5111370    0.0925989
- 0.5834954   -1.3498267
- 0.7095552    0.9639655
- 0.3257896    0.0012648
- 0.6230756   -1.2427838
- 0.1862518    1.7444354
+ 0.5698950   -1.0027845
+ 0.5128758    0.7160237
+ 0.9015984    0.3844438
+ 0.6933359   -0.7651290
+ 0.1793136    0.5983410
+ 0.5899971   -0.0817023
+ 0.0470482    2.6758295
+ 0.4616198    0.5917404
+ 0.7061242    1.0987356
+ 0.9341547    0.7744080
 
 ## [Vorlagen verwenden](http://rmarkdown.rstudio.com/articles_docx.html)
 
@@ -437,7 +437,7 @@ date()
 ```
 
 ```
-## [1] "Fri May 05 15:22:39 2017"
+## [1] "Fri May 05 15:43:02 2017"
 ```
 
 ## Eine Folie mit Formel
@@ -677,13 +677,29 @@ install.packages("rticles")
 ![](figure/ShortPaper.PNG)
 
 
-## Das Paket `rmdformats`
+## Vorlagen für Markdown
+
+Das Paket `rmdformats` - HTML Output Formats and Templates for 'rmarkdown'
 
 
 ```r
 install.packages("rmdformats")
+```
+
+- `ProjectTemplate` - Automates the Creation of New Statistical Analysis 
+
+
+```r
 install.packages("ProjectTemplate")
 ```
+
+- `tufte` - Tufte's Styles for R Markdown Documents
+
+
+```r
+install.packages("tufte")
+```
+
 
 
 ## [Beispiele für Templates](https://github.com/juba/rmdformats)
@@ -710,18 +726,14 @@ install.packages("flexdashboard", type = "source")
 
 ![](https://i2.wp.com/rmarkdown.rstudio.com/flexdashboard/images/NewRMarkdown.png?zoom=2)
 
-## [Gallerie](http://rmarkdown.rstudio.com/gallery.html)
-
-
-```r
-install.packages("highcharter", type = "source")
-```
-
-![](figure/RmarkdownGallery.PNG)
-
 ## [Mein erstes Dashboard](http://rpubs.com/Japhilko82/whcsites)
 
 ![](figure/MeinErstesDashboard.PNG)
+
+## [Gallerie](http://rmarkdown.rstudio.com/gallery.html)
+
+![](figure/RmarkdownGallery.PNG)
+
 
 ## Links 
 
@@ -865,11 +877,11 @@ jupyter notebook
 
 - Lassen Sie sich die Raw Version anzeigen
 
-![](https://github.com/Japhilko/RInterfaces/blob/master/tutorial/figure/figure/RawNotebook.PNG?raw=true)
+![](https://github.com/Japhilko/RInterfaces/blob/master/tutorial/figure/RawNotebook.PNG?raw=true)
 
 - Laden Sie das Notebook herunter:
 
-![](https://github.com/Japhilko/RInterfaces/blob/master/tutorial/figure/figure/NotebookRunterladen.PNG?raw=true)
+![](https://github.com/Japhilko/RInterfaces/blob/master/tutorial/figure/NotebookRunterladen.png?raw=true)
 
 - Und bearbeiten Sie es so weiter, dass sie die Geokodierung für eine Adresse bekommen, die für Sie interessant ist (Hbf, Hotel, Restaurant etc.)
 
