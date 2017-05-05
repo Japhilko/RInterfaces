@@ -13,6 +13,8 @@ knitr::opts_chunk$set(echo = TRUE,warning=F,message=F)
 
 ## Die Daten - Weltkulturerbe
 
+- die Daten einlesen:
+
 ```{r}
 url <- "https://raw.githubusercontent.com/Japhilko/
 GeoData/master/2015/data/whcSites.csv"
@@ -20,12 +22,28 @@ GeoData/master/2015/data/whcSites.csv"
 whcSites <- read.csv(url) 
 ```
 
+- die Daten werden eingeschränkt:
+
 ```{r}
-library(knitr)
 whcSitesDat <- with(whcSites,data.frame(name_en,
                                         category))
+```
+
+- Eine Tabelle erzeugen
+
+```{r}
+library(knitr)
 kable(head(whcSitesDat))
 ```
+
+## [Das Paket `DT`](https://rstudio.github.io/DT/)
+
+```{r,eval=F}
+install.packages("DT")
+```
+
+![](figure/DTintro.PNG)
+
 
 ## Weitere Variablen WHC Datensatz
 
@@ -33,6 +51,7 @@ kable(head(whcSitesDat))
 whcSitesDat2 <- with(whcSites,data.frame(name_en,category,longitude,latitude,date_inscribed,area_hectares,danger_list))
 ```
 
+- mit dem Befehl `datatable` kann man eine erste interaktive Tabelle erstellen:
 
 ```{r,eval=F}
 library('DT')
@@ -46,20 +65,35 @@ datatable(whcSitesDat2)
 ![](figure/WHCRpubs.PNG)
 
 
-## Notwendige Pakete
+## Das Paket `magrittr`
 
-[magrittr](https://cran.r-project.org/web/packages/magrittr/index.html) - für den Pipe Operator in R:
+- [magrittr](https://cran.r-project.org/web/packages/magrittr/index.html) - für den Pipe Operator in R:
+
+```{r,eval=F}
+install.packages("magrittr")
+```
 
 ```{r,warning=F}
 library("magrittr")
 ```
 
+![](figure/Piping.PNG)
 
-[leaflet](https://rstudio.github.io/leaflet/) - um  interaktive Karten mit der JavaScript Bibliothek 'Leaflet' zu erzeugen
+## Das Paket `leaflet`
+
+- [leaflet](https://rstudio.github.io/leaflet/) - um  interaktive Karten mit der JavaScript Bibliothek 'Leaflet' zu erzeugen
+
+```{r,eval=F}
+install.packages("leaflet")
+```
+
+
 
 ```{r,warning=F}
 library("leaflet")
 ```
+
+- Robin Lovelace - [The leaflet package for online mapping in R](http://robinlovelace.net/r/2015/02/01/leaflet-r-package.html)
 
 
 ## Eine interaktive Karte erstellen
@@ -79,13 +113,15 @@ m
 
 ## Farbe hinzu
 
+- die unterschiedlichen Kategorien farblich einfärben
+
 ```{r}
 whcSites$color <- "red"
 whcSites$color[whcSites$category=="Cultural"] <- "blue"
 whcSites$color[whcSites$category=="Mixed"] <- "orange"
 ```
 
-## Eine Karte mit Farbe erzeugen
+### Eine Karte mit Farbe erzeugen
 
 ```{r,eval=F}
 m1 <- leaflet() %>%
@@ -96,7 +132,7 @@ m1 <- leaflet() %>%
              color=whcSites$color)
 ```
 
-## Die Karte zeigen
+## [Die Karte zeigen](https://rpubs.com/Japhilko82/CatWHS)
 
 ![Weltkulturerbe](figure/WHCcircles.PNG) 
 
@@ -111,12 +147,27 @@ m1 <- leaflet() %>%
 ## [Layers ein- und ausblenden](https://rstudio.github.io/leaflet/showhide.html)
 
 ```{r,eval=F}
-leaflet() %>%
-  addTiles() %>%
-  addMarkers(data = coffee_shops, group = "Food & Drink") %>%
-  addMarkers(data = restaurants, group = "Food & Drink") %>%
-  addMarkers(data = restrooms, group = "Restrooms")
+outline <- quakes[chull(quakes$long, quakes$lat),]
+
+map <- leaflet(quakes) %>%
+  # Base groups
+  addTiles(group = "OSM (default)") %>%
+  addProviderTiles("Stamen.Toner", group = "Toner") %>%
+  addProviderTiles("Stamen.TonerLite", group = "Toner Lite") %>%
+  # Overlay groups
+  addCircles(~long, ~lat, ~10^mag/5, stroke = F, group = "Quakes") %>%
+  addPolygons(data = outline, lng = ~long, lat = ~lat,
+    fill = F, weight = 2, color = "#FFFFCC", group = "Outline") %>%
+  # Layers control
+  addLayersControl(
+    baseGroups = c("OSM (default)", "Toner", "Toner Lite"),
+    overlayGroups = c("Quakes", "Outline"),
+    options = layersControlOptions(collapsed = FALSE)
+  )
+map
 ```
+
+![](figure/LayersUmschalten.PNG)
 
 ## [Karte mit Polygonen erzeugen](https://rstudio.github.io/leaflet/map_widget.html)
 

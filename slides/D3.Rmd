@@ -12,12 +12,17 @@ output:
 knitr::opts_chunk$set(echo = TRUE,message=F,warning=F,eval=T)
 ```
 
-## [D3 Graph Gallery](http://christopheviau.com/d3list/gallery.html)
+## JavaScript - Data-Driven Documents 
 
-- [Combining the power of R and D3.js](https://www.ae.be/blog-en/combining-the-power-of-r-and-d3-js/)
+![](figure/D3Beispiele.PNG)
 
-- [Five Interactive R Visualizations With D3, ggplot2, & RStudio](http://moderndata.plot.ly/interactive-r-visualizations-with-d3-ggplot2-rstudio/)
+- D3 ist eine der mächtigsten unter der Vielzahl aktuell verfügbarer JavaScript-Bibliotheken zur Datenvisualisierung.
 
+
+- [Big Data im Netz visualisieren](http://t3n.de/magazin/javascript-bibliothek-d3-237224/)
+- [Möglichkeiten mit der JS D3 Bibliothek](http://christopheviau.com/d3list/gallery.html)
+- [Die Power von R und D3.js zusammen bringen](https://www.ae.be/blog-en/combining-the-power-of-r-and-d3-js/)
+- [5 Interaktive R Visualisierungen mit `D3`, `ggplot2` und RStudio](http://moderndata.plot.ly/interactive-r-visualizations-with-d3-ggplot2-rstudio/)
 - [Das D3 Netzwerk](http://christophergandrud.github.io/d3Network/)
 
 ## Interaktive Graphiken
