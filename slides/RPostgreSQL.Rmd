@@ -3,7 +3,7 @@ title: "RPostgreSQL"
 author: "Jan-Philipp Kolb"
 date: "9 Mai 2017"
 output: 
-  html_document: 
+  slidy_presentation: 
     keep_md: yes
 ---
 
@@ -146,7 +146,7 @@ colnames(df_)
 table(df_$name)
 ```
 
-## Adress in Sippersfeld
+## Adresse in einem Ort
 
 ```{r,eval=F}
 df_sipp <- dbGetQuery(con, "SELECT * FROM planet_osm_line, planet_osm_point 
@@ -158,6 +158,8 @@ head(df_sipp)
 
 ## [OpenStreetMap und Open Government Data in PostGIS](http://tud.at/linuxwochen/2013-osm-postgis/)
 
+- [Der Anfang mit PostGIS](http://www.bostongis.com/?content_name=postgis_tut01)
+- [PostGIS und R](https://gis.stackexchange.com/questions/64950/working-with-postgis-data-in-r)
 
 ```{r,eval=F}
 restnam <- dbGetQuery(con, "SELECT name, COUNT(osm_id) AS anzahl
@@ -200,3 +202,9 @@ library(RPostgreSQL)
 
 - [Wie bekommt man OSM Daten](https://www.azavea.com/blog/2015/12/21/tools-for-getting-data-out-of-openstreetmap-and-into-desktop-gis/)
 
+
+## [`RMySQL`](https://cran.r-project.org/web/packages/RMySQL/index.html)
+
+```{r,eval=F}
+install.packages("RMySQL")
+```

@@ -2,10 +2,13 @@
 title: "dplyr"
 author: "Jan-Philipp Kolb"
 date: "5 Mai 2017"
-output: slidy_presentation
+output: 
+  slidy_presentation: 
+    keep_md: yes
 ---
 
 ```{r, include=FALSE}
 knitr::opts_chunk$set(echo = T)
 ```
 
+## Das Paket `dplyr`

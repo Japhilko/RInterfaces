@@ -1,15 +1,8 @@
----
-title: "Datenbanken Allgemein"
-author: "Jan-Philipp Kolb"
-date: "9 Mai 2017"
-output: 
-  slidy_presentation: 
-    keep_md: yes
----
+# Datenbanken Allgemein
+Jan-Philipp Kolb  
+9 Mai 2017  
 
-```{r setup, include=FALSE}
-knitr::opts_chunk$set(echo = FALSE)
-```
+
 
 ## [Was sind Datenbanken?](https://de.wikipedia.org/wiki/Datenbank)
 
@@ -59,11 +52,6 @@ Man nutzt die Schnittstelle zu Datenbanken,...
 
 ![](figure/VergleichDatenbanken.PNG)
 
-## [Beispiel zu relationalen Datenbanken](https://ab.inf.uni-tuebingen.de/teaching/ss03/asa/db_intro.pdf)
-
-![](figure/FormaleRelationaleAusdrücke.PNG)
-
-![](figure/RelDatenbank.PNG)
 
 ## [Was ist der Unterschied zwischen SQL und NoSQL](https://www.r-bloggers.com/database-interfaces/)
 
@@ -85,41 +73,24 @@ Man nutzt die Schnittstelle zu Datenbanken,...
 -  Schema-freie, dokumentenorientierte NoSQL-Datenbank
 - kann Sammlungen von JSON-ähnlichen Dokumenten verwalten
 
-
-## [CouchDB](https://de.wikipedia.org/wiki/CouchDB)
-
--  dokumentenorientierte Datenbank
-- [zur Interaktion mit CouchDB kann das Paket `sofa` verwendet werden](https://github.com/ropensci/sofa)
-
-### [Podcast zu CouchDB](https://cre.fm/cre125-couchdb)
-
-![](figure/CREcouchdb.PNG)
-
 ## [Quick-R zur Integration von Datenbanken](http://www.statmethods.net/input/dbinterface.html)
 
 ![](figure/quickr_AccessDatabases.PNG)
 
+## CouchDB
 
-## SQL lernen...
-
-- [...mit W3School](https://www.w3schools.com/sql/default.asp)
-
-- [...mit SQLzoo](http://sqlzoo.net/)
-
-- [...SQL lernen mit tutorialspoint](http://www.tutorialspoint.com/sql/)
-
-- [... mit Beispielen von sql tutorial](http://www.sql-tutorial.ru/en/book_database_airport.html)
-
-![](http://www.sql-tutorial.ru/view/gimages/book/aero.gif)
-
-## [Weitergehendes Lernen](https://www.essentialsql.com/)
-
-![](figure/SQLessentials.PNG)
+- [zur Interaktion mit CouchDB kann das Paket `sofa` verwendet werden](https://github.com/ropensci/sofa)
 
 
-## Weitere Resourcen
 
-- [Video um NoSQL zu verstehen](https://www.youtube.com/watch?v=TvRDOLiadtg&list=PLxcWHsmHykmWlXorl8rm-2Ux4HP1sFkub)
+
+
+
+## [`RMySQL`](https://cran.r-project.org/web/packages/RMySQL/index.html)
+
+
+
+## Links
 
 - [Datenbanken in R](https://cran.r-project.org/web/packages/dplyr/vignettes/databases.html)
 

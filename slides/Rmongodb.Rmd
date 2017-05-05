@@ -3,12 +3,12 @@ title: "R und MongoDB"
 author: "Jan-Philipp Kolb"
 date: "7 Februar 2017"
 output: 
-  ioslides_presentation: 
+  slidy_presentation: 
     keep_md: yes
 ---
 
 ```{r, include=FALSE}
-knitr::opts_chunk$set(echo = FALSE)
+knitr::opts_chunk$set(echo = FALSE,eval=F)
 ```
 
 ## Mongodb
@@ -30,3 +30,26 @@ library(mongolite)
 m <- mongo(collection = "diamonds")
 ```
 
+## CouchDB
+
+- [Installation von CouchDB auf Windows](http://docs.couchdb.org/en/stable/install/windows.html)
+- [zur Interaktion mit CouchDB kann das Paket `sofa` verwendet werden](https://github.com/ropensci/sofa)
+- [CouchDB und OpenStreetMap](http://wiki.openstreetmap.org/wiki/OSMCouch)
+
+```{r,eval=F}
+install.packages("jsonlite")
+devtools::install_github("ropensci/sofa")
+```
+
+```{r,eval=F}
+library("sofa")
+```
+
+## Spark
+
+- [Warum Spark mit NoSQL kombinieren](https://blog.couchbase.com/why-spark-and-nosql/)
+
+- [Spark in Rstudio](http://spark.rstudio.com/)
+## Links
+
+- [Eine Liste aller NoSQL Datenbanken](http://bigdata-madesimple.com/a-deep-dive-into-nosql-a-complete-list-of-nosql-databases/)
