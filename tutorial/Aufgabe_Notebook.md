@@ -8,7 +8,7 @@ Jan-Philipp Kolb
 
 - Suchen Sie [folgendes Notebook](https://raw.githubusercontent.com/Japhilko/RInterfaces/master/misc/notebooks/Geokodierung_ggmap.Rmd) auf meinem Github Ordner:
 
-![](figure/AdresseNotebook.PNG)
+![](https://github.com/Japhilko/RInterfaces/blob/master/tutorial/figure/AdresseNotebook.PNG?raw=true)
 
 - Lassen Sie sich die Raw Version anzeigen
 
@@ -19,3 +19,4 @@ Jan-Philipp Kolb
 ![](figure/NotebookRunterladen.PNG)
 
 - Und bearbeiten Sie es so weiter, dass sie die Geokodierung für eine Adresse bekommen, die für Sie interessant ist (Hbf, Hotel, Restaurant etc.)
+

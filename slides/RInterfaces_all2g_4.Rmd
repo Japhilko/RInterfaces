@@ -12,23 +12,29 @@ knitr::opts_chunk$set(echo = TRUE)
 ```
 
 
-## Shiny Apps 
+# Internetresourcen und Schnittstellen nutzen
 
-```{r child = 'shiny.Rmd'}
+```{r child = 'IntroAPIS.Rmd'}
 ```
 
-## R und Git
+# Import von JSON-Objekten und XML Dateien
 
-```{r child = 'Rgit.Rmd'}
+```{r child = 'rapis.Rmd'}
 ```
 
-## Hochperfomanter Code
+# Die Pakete rvest und RCurl
 
-# C++ Integration - Überblick über das Paket rcpp
+```{r child = 'rvest.Rmd'}
+```
 
+# Webscraping
 
-```{r child = 'rcpp.Rmd'}
+```{r child = 'Webscraping.Rmd'}
+```
+
+# Use Case - Scraping Wikipedia
+
+```{r child = 'ScrapingWikipedia.Rmd'}
 ```
 
 
-##	Überblick über Möglichkeiten des Parallel Computings - Paket parallel

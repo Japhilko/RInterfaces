@@ -4,15 +4,16 @@ Jan-Philipp Kolb
 
 
 
-## Eine wichtige Datenquelle
+## Das Paket `xlsx`
 
-- [Eurostat](http://appsso.eurostat.ec.europa.eu/nui/setupDownloads.do)
+- Eine wichtige Datenquelle - [Eurostat](http://appsso.eurostat.ec.europa.eu/nui/setupDownloads.do)
 
 
 ```r
-library(xlsx)
+library("xlsx")
 dat <- read.xlsx("cult_emp_sex.xls",1)
 ```
+
 
 ## [Einige Schritte um R und Excel zu verbinden](http://www.milanor.net/blog/steps-connect-r-excel-xlconnect/)
 
@@ -27,6 +28,8 @@ install.packages("XLConnect")
 ```r
 library("XLConnect")
 ```
+
+![[Vignette für XLconnect](https://cran.r-project.org/web/packages/XLConnect/vignettes/XLConnect.pdf)](figure/XLconnect.PNG)
 
 ## [Eine Excel Datei aus R erzeugen](http://www.milanor.net/blog/steps-connect-r-excel-xlconnect/)
 
@@ -56,7 +59,6 @@ saveWorkbook(exc)
 
 
 
-
 ```r
 myFunction <- function(){
  aa <- rnorm(200)
@@ -67,6 +69,11 @@ myFunction <- function(){
 ```
 
 
+## Link `BERT`
+
+- [BERT: a newcomer in the R Excel connection](https://www.r-bloggers.com/bert-a-newcomer-in-the-r-excel-connection/)
+
+![](figure/NewcomerBERT.PNG)
 
 ## Das Paket readxl
 
@@ -82,6 +89,4 @@ install.packages("readxl")
 library(readxl)
 ```
 
-## Links
-
-- [BERT: a newcomer in the R Excel connection](https://www.r-bloggers.com/bert-a-newcomer-in-the-r-excel-connection/)
+![](figure/Rexcel.PNG)

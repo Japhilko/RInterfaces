@@ -32,21 +32,3 @@ RPostgreSQL
 ```{r child = 'Rmongodb.Rmd'}
 ```
 
-
-
-
-
-
-
-## Integration von PostgreSQL mit dem Paket 
-RPostgreSQL
-
-```{r child = 'RPostgreSQL.Rmd'}
-```
-
-##	Nutzung von MongoDB in R
-
-```{r child = 'Rmongodb.Rmd'}
-```
-
-

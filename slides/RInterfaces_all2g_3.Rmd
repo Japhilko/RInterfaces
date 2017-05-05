@@ -1,9 +1,10 @@
 ---
-title: "R Schnittstellen - Dritter Teil"
+title: "R Schnittstellen - Zweiter Teil"
 author: "Jan-Philipp Kolb"
-date: "9 Mai 2017"
+date: "28 April 2017"
 output: 
   slidy_presentation: 
+    css: mycss2.css
     keep_md: yes
 ---
 
@@ -12,70 +13,35 @@ knitr::opts_chunk$set(echo = TRUE)
 ```
 
 
-## Internetresourcen und Schnittstellen nutzen
+#	Interaktive Karten mit dem Javascript Paket leaflet
 
-```{r child = 'IntroAPIS.Rmd'}
+```{r child = 'leaflet.Rmd'}
 ```
 
+#	Interaktive Tabellen mit DataTables
 
 
-## Import von JSON-Objekten und XML Dateien
-
-```{r child = 'rapis.Rmd'}
+```{r child = 'DataTables.Rmd'}
 ```
 
-## Die Pakete rvest und RCurl
+# R und die Javascript Data-Driven Documents (D3)
 
-```{r child = 'rvest.Rmd'}
+```{r child = 'D3.Rmd'}
 ```
 
-## Webscraping
+#	Interaktive Graphiken mit D3 und plotly
 
-```{r child = 'Webscraping.Rmd'}
+
+```{r child = 'plotly.Rmd'}
 ```
 
-## Use Case - Scraping Wikipedia
+#	Netzwerkgraphiken mit vis.js
 
-```{r child = 'ScrapingWikipedia.Rmd'}
+```{r child = 'visNetwork.Rmd'}
 ```
 
+#	Das Erstellen von Ablaufdiagrammen mit mermaid 
 
-## Applikationen und Projektverwaltung mit Rstudio und git
-
-## Shiny Apps 
-
-```{r child = 'shiny.Rmd'}
+```{r child = 'mermaid.Rmd'}
 ```
-
-## R und Git
-
-```{r child = 'Rgit.Rmd'}
-```
-
-## Hochperfomanter Code
-
-# C++ Integration - Überblick über das Paket rcpp
-
-
-```{r child = 'rcpp.Rmd'}
-```
-
-
-##	Überblick über Möglichkeiten des Parallel Computings - Paket parallel
-
-## Integration von Datenbanken
-
-## Datenbanken und R
-
-## Integration von PostgreSQL mit dem Paket 
-RPostgreSQL
-
-```{r child = 'RPostgreSQL.Rmd'}
-```
-
-##	Nutzung von MongoDB in R
-
-```{r child = 'Rmongodb.Rmd'}
-```
-
 

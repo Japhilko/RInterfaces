@@ -7,7 +7,7 @@ output:
     keep_md: yes
 ---
 
-```{r setup, include=FALSE}
+```{r, include=FALSE}
 knitr::opts_chunk$set(echo = T)
 ```
 
@@ -15,14 +15,15 @@ knitr::opts_chunk$set(echo = T)
 
 - Suchen Sie [folgendes Notebook](https://raw.githubusercontent.com/Japhilko/RInterfaces/master/misc/notebooks/Geokodierung_ggmap.Rmd) auf meinem Github Ordner:
 
-![](figure/AdresseNotebook.PNG)
+![](https://github.com/Japhilko/RInterfaces/blob/master/tutorial/figure/AdresseNotebook.PNG?raw=true)
 
 - Lassen Sie sich die Raw Version anzeigen
 
-![](figure/RawNotebook.PNG)
+![](https://github.com/Japhilko/RInterfaces/blob/master/tutorial/figure/figure/RawNotebook.PNG?raw=true)
 
 - Laden Sie das Notebook herunter:
 
-![](figure/NotebookRunterladen.PNG)
+![](https://github.com/Japhilko/RInterfaces/blob/master/tutorial/figure/figure/NotebookRunterladen.PNG?raw=true)
 
 - Und bearbeiten Sie es so weiter, dass sie die Geokodierung für eine Adresse bekommen, die für Sie interessant ist (Hbf, Hotel, Restaurant etc.)
+

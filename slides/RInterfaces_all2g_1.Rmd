@@ -1,5 +1,5 @@
 ---
-title: "R Schnittstellen"
+title: "Schnittstellen für den Austausch von Daten"
 author: "Jan-Philipp Kolb"
 date: "8 Mai 2017"
 output: 
@@ -9,7 +9,7 @@ output:
 ---
 
 ```{r, include=FALSE}
-knitr::opts_chunk$set(echo = TRUE)
+knitr::opts_chunk$set(echo = TRUE,warning=F,message=F)
 ```
 
 # Einführung und Motivation
@@ -31,45 +31,10 @@ knitr::opts_chunk$set(echo = TRUE)
 ```{r child = 'Datenexport.Rmd'}
 ```
 
+
 # R und Excel
 
 ```{r child = 'Rexcel.Rmd'}
-```
-
-
-
-# Präsentation von Daten - Reproducible Research
-
-```{r child = 'ReproducibleResearch.Rmd'}
-```
-
-
-
-# Word Dokumente mit R erstellen
-
-```{r child = 'R2word.Rmd'}
-```
-
-
-#	PDF Dokumente und Präsentationen mit LaTeX, Beamer und Sweave
-
-
-```{r child = 'R2pdf.Rmd'}
-```
-
-
-# HTML Dokumente, Präsentationen und Dashboards mit Rmarkdown
-
-
-```{r child = 'Rmarkdown.Rmd'}
-```
-
-# Notebooks zur Integration von anderen Programmiersprachen (Python,LaTeX,Julia)
-
-```{r child = 'Notebooks.Rmd'}
-```
-
-```{r child = '../tutorial/Aufgabe_Notebook.Rmd'}
 ```
 
 

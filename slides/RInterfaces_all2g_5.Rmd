@@ -1,0 +1,22 @@
+---
+title: "R Schnittstellen - Dritter Teil"
+author: "Jan-Philipp Kolb"
+date: "9 Mai 2017"
+output: 
+  slidy_presentation: 
+    keep_md: yes
+---
+
+```{r, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+# Shiny Apps 
+
+```{r child = 'shiny.Rmd'}
+```
+
+# R und Git
+
+```{r child = 'Rgit.Rmd'}
+```

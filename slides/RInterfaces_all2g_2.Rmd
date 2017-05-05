@@ -1,7 +1,7 @@
 ---
-title: "R Schnittstellen - Zweiter Teil"
+title: "R Schnittstellen"
 author: "Jan-Philipp Kolb"
-date: "28 April 2017"
+date: "8 Mai 2017"
 output: 
   slidy_presentation: 
     css: mycss2.css
@@ -12,36 +12,37 @@ output:
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
+# Präsentation von Daten - Reproducible Research
 
-#	Interaktive Karten mit dem Javascript Paket leaflet
-
-```{r child = 'leaflet.Rmd'}
+```{r child = 'ReproducibleResearch.Rmd'}
 ```
 
-#	Interaktive Tabellen mit DataTables
 
+# Word Dokumente mit R erstellen
 
-```{r child = 'DataTables.Rmd'}
+```{r child = 'R2word.Rmd'}
 ```
 
-# R und die Javascript Data-Driven Documents (D3)
 
-```{r child = 'D3.Rmd'}
+#	PDF Dokumente und Präsentationen mit LaTeX, Beamer und Sweave
+
+
+```{r child = 'R2pdf.Rmd'}
 ```
 
-#	Interaktive Graphiken mit D3 und plotly
+
+# HTML Dokumente, Präsentationen und Dashboards mit Rmarkdown
 
 
-```{r child = 'plotly.Rmd'}
+```{r child = 'Rmarkdown.Rmd'}
 ```
 
-#	Netzwerkgraphiken mit vis.js
+# Notebooks zur Integration von anderen Programmiersprachen (Python,LaTeX,Julia)
 
-```{r child = 'visNetwork.Rmd'}
+```{r child = 'Notebooks.Rmd'}
 ```
 
-#	Das Erstellen von Ablaufdiagrammen mit mermaid 
-
-```{r child = 'mermaid.Rmd'}
+```{r child = '../tutorial/Aufgabe_Notebook.Rmd'}
 ```
+
 

@@ -1,6 +1,6 @@
 # Datenimport
 Jan-Philipp Kolb  
-11 April 2017  
+8 Mai 2017  
 
 
 
@@ -34,6 +34,8 @@ R unterstützt von Haus aus schon einige wichtige Formate:
 <https://data.montgomerycountymd.gov/api/views/6rqk-pdub/rows.csv?accessType=DOWNLOAD>
 
 - [Datenimport mit Rstudio](https://support.rstudio.com/hc/en-us/articles/218611977-Importing-Data-with-RStudio)
+
+![](figure/ImportCSVPNG.PNG)
 
 
 ## Der Arbeitsspeicher
@@ -69,69 +71,147 @@ Bei Windows ist es wichtig Slashs anstelle von Backslashs zu verwenden.
 
 ![](figure/SetWD.PNG)
 
+## Das Paket `readr`
+
+
+```r
+install.packages("readr")
+```
+
+
+```r
+library(readr)
+```
+
+- [`readr` auf dem Rstudio Blogg](https://blog.rstudio.org/2015/10/28/readr-0-2-0/)
+
+![](figure/readrRstudioBlogg.PNG)
+
+
+
 ## Import von Excel-Daten
 
--  `library(foreign)` ist für den Import von fremden Datenformaten nötig
+-  `library(readr)` ist für den Import von fremden Datenformaten hilfreich
 -  Wenn Excel-Daten vorliegen - als .csv abspeichern
--  Dann kann `read.csv()` genutzt werden um die Daten einzulesen.
-- Bei Deutschen Daten kann es sein, dass man `read.csv2()` wegen der Komma-Separierung braucht.
+- Diese lassen sich auch ohne das Paket `foreign` einlesen.
 
 
 ```r
-library(foreign)
-?read.csv
-?read.csv2
+library(readr)
+rows <- read_csv("https://data.montgomerycountymd.gov/api/views/6rqk-pdub/rows.csv?accessType=DOWNLOAD")
 ```
 
-## CSV Dateien einlesen
 
-Zunächst muss das Arbeitsverzeichnis gesetzt werden, in dem sich die Daten befinden:
+
+## `.csv`-Daten aus dem Web importieren - zweites Beispiel
 
 
 ```r
-Dat <- read.csv("schuldaten_export.csv")
+url <- "https://raw.githubusercontent.com/Japhilko/GeoData/master/2015/data/whcSites.csv"
+
+whcSites <- read_csv(url) 
 ```
 
-Wenn es sich um Deutsche Daten handelt:
+```
+## Warning: Missing column names filled in: 'X1' [1]
+```
+
+```
+## Parsed with column specification:
+## cols(
+##   .default = col_character(),
+##   X1 = col_integer(),
+##   unique_number = col_integer(),
+##   id_no = col_integer(),
+##   date_inscribed = col_integer(),
+##   longitude = col_double(),
+##   latitude = col_double(),
+##   area_hectares = col_double(),
+##   C1 = col_integer(),
+##   C2 = col_integer(),
+##   C3 = col_integer(),
+##   C4 = col_integer(),
+##   C5 = col_integer(),
+##   C6 = col_integer(),
+##   N7 = col_integer(),
+##   N8 = col_integer(),
+##   N9 = col_integer(),
+##   N10 = col_integer(),
+##   transboundary = col_integer()
+## )
+```
+
+```
+## See spec(...) for full column specifications.
+```
+
 
 
 ```r
-Dat <- read.csv2("schuldaten_export.csv")
+head(whcSites)
 ```
 
+```
+## # A tibble: 6 × 36
+##      X1 unique_number id_no rev_bis
+##   <int>         <int> <int>   <chr>
+## 1     1           230   208     Rev
+## 2     2           234   211     Rev
+## 3     3          1590   569     Bis
+## 4     4          1563   570     ter
+## 5     5           111   102    <NA>
+## 6     6           209   188    <NA>
+## # ... with 32 more variables: name_en <chr>, name_fr <chr>,
+## #   short_description_en <chr>, short_description_fr <chr>,
+## #   justification_en <chr>, justification_fr <chr>, date_inscribed <int>,
+## #   secondary_dates <chr>, danger_list <chr>, longitude <dbl>,
+## #   latitude <dbl>, area_hectares <dbl>, C1 <int>, C2 <int>, C3 <int>,
+## #   C4 <int>, C5 <int>, C6 <int>, N7 <int>, N8 <int>, N9 <int>, N10 <int>,
+## #   criteria_txt <chr>, category <chr>, category_short <chr>,
+## #   states_name_en <chr>, states_name_fr <chr>, name_en.1 <chr>,
+## #   name_fr.1 <chr>, iso_code <chr>, udnp_code <chr>, transboundary <int>
+```
 
-## Import csv 
+## Das Paket `haven`
 
 
 ```r
-url <- "https://raw.githubusercontent.com/Japhilko/
-GeoData/master/2015/data/whcSites.csv"
-
-whcSites <- read.csv(url) 
+install.packages("haven")
 ```
 
+
+```r
+library(haven)
+```
+
+- [`haven`auf dem Rstudio Blogg](https://blog.rstudio.org/2016/10/04/haven-1-0-0/)
+
+![](figure/havenRstudioBlogg.PNG)
 
 ## SPSS Dateien einlesen
 
-Dateien können auch direkt aus dem Internet geladen werden:
+- Zunächst muss wieder der Pfad zum Arbeitsverzeichnis angeben werden.
+- SPSS-Dateien können auch direkt aus dem Internet geladen werden:
 
 
 ```r
-link<- "http://www.statistik.at/web_de/static/
-mz_2013_sds_-_datensatz_080469.sav"
+install.packages("haven")
+```
 
-?read.spss
-Dat <- read.spss(link,to.data.frame=T)
+
+
+```r
+library(haven)
+mtcars <- read_sav("https://github.com/Japhilko/RInterfaces/raw/master/data/mtcars.sav")
 ```
 
 ## stata Dateien einlesen
 
 
 ```r
-MZ02 <- read.dta("MZ02.dta")
+library(haven)
+oecd <- read_dta("https://github.com/Japhilko/IntroR/raw/master/2017/data/oecd.dta")
 ```
-
-- Einführung in Import mit R ([is.R](http://is-r.tumblr.com/post/37181850668/reading-writing-stata-dta-files-with-foreign))
 
 
 ## Links

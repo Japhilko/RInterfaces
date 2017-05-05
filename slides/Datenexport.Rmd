@@ -1,25 +1,25 @@
 ---
 title: "Datenexport"
 author: "Jan-Philipp Kolb"
-date: "17 April 2017"
+date: "3 Mai 2017"
 output:
-  beamer_presentation: 
-    colortheme: beaver
-    theme: CambridgeUS
+  slidy_presentation: 
+    keep_md: yes
   html_document:
     keep_md: yes
+  beamer_presentation:
+    colortheme: beaver
+    theme: CambridgeUS
 ---
 
 ```{r, include=FALSE}
-knitr::opts_chunk$set(echo = TRUE,eval=F)
+knitr::opts_chunk$set(echo = TRUE,eval=T)
 ```
 
-# Export Allgemein
-
-## R's Exportformate
+## Die Exportformate von R
 
 -  In R werden offene Dateiformate bevorzugt
--  Als Äquivalenz zu den `read.X()` Funktionen stehen viele `write.X()` Funktionen zur Verfügung
+-  Genauso wie `read.X()` Funktionen stehen viele `write.X()` Funktionen zur Verfügung
 -  Das eigene Format von R sind sog. Workspaces (`.RData`)
 
 ## Beispieldatensatz erzeugen
@@ -32,8 +32,16 @@ mydata <- data.frame(A,B)
 ```
 
 
+```{r,eval=F,echo=F}
+library(knitr)
+kable(mydata)
+```
+
+
 
 ## Überblick Daten Import/Export
+
+- wenn mit R weitergearbeitet wird, eignet sich das `.RData` Format am Besten:
 
 ```{r,eval=F}
 save(mydata, file="mydata.RData")
@@ -45,6 +53,15 @@ save(mydata, file="mydata.RData")
 write.csv(mydata,file="mydata.csv") 
 ```
 
+- Wenn mit Deutschem Excel weitergearbeitet werden soll, eignet sich  `write.csv2` besser
+
+```{r,eval=F}
+write.csv2(mydata,file="mydata.csv") 
+```
+
+- Sonst sieht das Ergebnis so aus:
+
+![](figure/csvDeutsch.PNG)
 
 ## [Das Paket `xlsx`](http://www.sthda.com/english/wiki/r-xlsx-package-a-quick-start-guide-to-manipulate-excel-files-in-r#read-an-excel-file)
 
@@ -59,6 +76,11 @@ write.xlsx(mydata,file="mydata.xlsx")
 ## [Das Paket `foreign`](https://www.r-bloggers.com/readingwriting-stata-dta-files-with-foreign/)
 
 ![](figure/isRstata.PNG)
+
+- Funktionen im Paket `foreign`
+
+![](figure/Funktionenforeign.PNG)
+
 
 ## Daten in stata Format abspeichern
 
@@ -87,13 +109,12 @@ export(mtcars, "data/mtcars.sav")
 
 ## Dateiformate konvertieren
 
-```{r}
+```{r,eval=F}
 export(mtcars, "data/mtcars.dta")
 
 # convert Stata to SPSS
 convert("data/mtcars.dta", "data/mtcars.sav")
 ```
-
 
 
 ## Links Export

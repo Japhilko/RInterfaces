@@ -1,14 +1,13 @@
 # Datenexport
 Jan-Philipp Kolb  
-17 April 2017  
+3 Mai 2017  
 
 
 
-
-## R's Exportformate
+## Die Exportformate von R
 
 -  In R werden offene Dateiformate bevorzugt
--  Als Äquivalenz zu den `read.X()` Funktionen stehen viele `write.X()` Funktionen zur Verfügung
+-  Genauso wie `read.X()` Funktionen stehen viele `write.X()` Funktionen zur Verfügung
 -  Das eigene Format von R sind sog. Workspaces (`.RData`)
 
 ## Beispieldatensatz erzeugen
@@ -23,19 +22,39 @@ mydata <- data.frame(A,B)
 
 
 
+
+
+
 ## Überblick Daten Import/Export
+
+- wenn mit R weitergearbeitet wird, eignet sich das `.RData` Format am Besten:
 
 
 ```r
 save(mydata, file="mydata.RData")
 ```
 
-## Daten in Excel Format abspeichern
+## Daten in `.csv` Format abspeichern
 
 
 ```r
 write.csv(mydata,file="mydata.csv") 
 ```
+
+- Wenn mit Deutschem Excel weitergearbeitet werden soll, eignet sich  `write.csv2` besser
+
+
+```r
+write.csv2(mydata,file="mydata.csv") 
+```
+
+- Sonst sieht das Ergebnis so aus:
+
+![](figure/csvDeutsch.PNG)
+
+## [Das Paket `xlsx`](http://www.sthda.com/english/wiki/r-xlsx-package-a-quick-start-guide-to-manipulate-excel-files-in-r#read-an-excel-file)
+
+![](figure/sthda.PNG)
 
 
 
@@ -44,6 +63,13 @@ library(xlsx)
 write.xlsx(mydata,file="mydata.xlsx") 
 ```
 
+## [Das Paket `foreign`](https://www.r-bloggers.com/readingwriting-stata-dta-files-with-foreign/)
+
+![](figure/isRstata.PNG)
+
+- Funktionen im Paket `foreign`
+
+![](figure/Funktionenforeign.PNG)
 
 
 ## Daten in stata Format abspeichern
@@ -51,8 +77,39 @@ write.xlsx(mydata,file="mydata.xlsx")
 
 ```r
 library(foreign)
-write.dta(mydata,file="mydata.dta") 
+write.dta(mydata,file="data/mydata.dta") 
 ```
+
+## Das Paket `rio`
+
+
+```r
+install.packages("rio")
+```
+
+![](figure/ImportExport.PNG)
+
+## [Daten als .sav abspeichern (SPSS)](https://cran.r-project.org/web/packages/rio/vignettes/rio.html)
+
+
+```r
+library("rio")
+# create file to convert
+
+export(mtcars, "data/mtcars.sav")
+```
+
+
+## Dateiformate konvertieren
+
+
+```r
+export(mtcars, "data/mtcars.dta")
+
+# convert Stata to SPSS
+convert("data/mtcars.dta", "data/mtcars.sav")
+```
+
 
 ## Links Export
 
@@ -60,4 +117,4 @@ write.dta(mydata,file="mydata.dta")
 
 - Hilfe zum Export auf dem [cran Server](http://cran.r-project.org/doc/manuals/r-release/R-data.pdf)
 
-- [Zurück zur Gliederung.](https://github.com/Japhilko/IntroR/blob/master/2016/README.md)
+- [Daten aus R heraus bekommen](https://www.stat.ubc.ca/~jenny/STAT545A/block05_getNumbersOut.html)

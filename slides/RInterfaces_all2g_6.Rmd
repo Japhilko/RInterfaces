@@ -1,0 +1,21 @@
+---
+title: "R Schnittstellen - Dritter Teil"
+author: "Jan-Philipp Kolb"
+date: "9 Mai 2017"
+output: 
+  slidy_presentation: 
+    keep_md: yes
+---
+
+```{r, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+# C++ Integration - Überblick über das Paket rcpp
+
+```{r child = 'rcpp.Rmd'}
+```
+
+
+#	Überblick über Möglichkeiten des Parallel Computings - Paket parallel
+

@@ -30,27 +30,20 @@ knitr::opts_chunk$set(echo = FALSE)
 - Um die Intelligenz anderer Leute zu nutzen ;-)
 - ...
 
+## Gründe
+
+- R ist [frei verfügbar](http://www.inside-r.org/why-use-r). Es kann umsonst [runtergeladen](http://mirrors.softliste.de/cran/) werden.
+- R ist eine Skriptsprache 
+- Gute Möglichkeiten für die [Visualisierung](http://research.stowers-institute.org/efg/R/) ([Link](http://www.sr.bham.ac.uk/~ajrs/R/r-gallery.html) )
+- R wird immer [populärer](https://twitter.com/josiahjdavis/status/559778930476220418)
+- [Popularität von R](http://blog.revolutionanalytics.com/popularity/)
+
+![](http://d287f0h5fel5hu.cloudfront.net/blog/wp-content/uploads/2013/06/bar-learn-r-img11.png)
+
 
 ## Warum R?
 
 ![Modularer Aufbau](figure/ModularerAufbau.PNG)
-
-
-## Gründe
-
-- R ist [frei verfügbar](http://www.inside-r.org/why-use-r). Es kann umsonst [runtergeladen](http://mirrors.softliste.de/cran/) werden.
-
-- R ist eine Skriptsprache 
-- Gute Möglichkeiten für die [Visualisierung](http://research.stowers-institute.org/efg/R/) ([Link](http://www.sr.bham.ac.uk/~ajrs/R/r-gallery.html) )
-
-- R wird immer [populärer](https://twitter.com/josiahjdavis/status/559778930476220418)
-
-- [Popularität von R](http://blog.revolutionanalytics.com/popularity/)
-
-## Übersicht - warum R
-
-![edureka - why learn R](http://d287f0h5fel5hu.cloudfront.net/blog/wp-content/uploads/2013/06/bar-learn-r-img11.png)
-
 
 
 ## Nachteile von R
@@ -68,8 +61,6 @@ knitr::opts_chunk$set(echo = FALSE)
 3. Möglichkeit HTML Präsentationen zu erzeugen
 4. Nutzung von C++
 5. Nutzung von Datenbanken
-
-# Warum die Nutzung von Schnittstellen?
 
 ## Die Nutzung von Schnittstellen beim Import/Export
 
@@ -107,9 +98,9 @@ knitr::opts_chunk$set(echo = FALSE)
 - Wenn große Datenmengen anfallen, kann die zusätzliche Nutzung von Datenbanken sinnvoll sein
 - In R bestehen Schnittstellen sowohl zu relationalen als auch nicht relationalen Datenbanken
 
-# Nutzung der Unterlagen auf GitHub
+## Nutzung der Unterlagen auf GitHub
 
-## Wie wird das Github Verzeichnis genutzt
+Wie wird das Github Verzeichnis genutzt?
 
 -   Die folgende Seite ist die Startseite für den Kurs:
 
@@ -119,7 +110,7 @@ knitr::opts_chunk$set(echo = FALSE)
 
 - Grundsätzlich kann man der Veranstalung am Besten mit dem [kompletten File](https://github.com/Japhilko/RInterfaces/blob/master/slides/RInterfaces_all2g.md) folgen. Wenn Teile heruntergeladen werden sollen, bietet es sich an, das entsprechende pdf herunterzuladen.
 
-## Informationen audrucken
+## Informationen ausdrucken
 
 -   Zum Ausdrucken eignen sich die pdf-Dateien besser. 
 
