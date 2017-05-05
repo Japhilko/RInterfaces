@@ -1,0 +1,17 @@
+---
+title: "Aufgabe git Projekt anlegen"
+author: "Jan-Philipp Kolb"
+date: "5 Mai 2017"
+output: 
+  slidy_presentation: 
+    keep_md: yes
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## Aufgabe git Projekt anlegen
+
+- Legen Sie ein neues Projekt lokal mit Versionskontrolle an.
+- Erstellen Sie eine slidy Präsentation und speichern Sie diese im neuen Projekt ab

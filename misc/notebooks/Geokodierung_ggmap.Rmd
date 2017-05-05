@@ -1,0 +1,20 @@
+---
+title: "Geokodierung mit R und der Google API"
+output: html_notebook
+---
+
+
+## Das notwendige Paket `ggmap` laden
+
+```{r,eval=F}
+install.packages("ggmap")
+```
+
+
+
+```{r}
+library(ggmap)
+```
+
+
+

@@ -69,5 +69,7 @@ knitr::opts_chunk$set(echo = TRUE)
 ```{r child = 'Notebooks.Rmd'}
 ```
 
-## Aufgabe: Bearbeiten Sie ein Notebook weiter
+```{r child = '../tutorial/Aufgabe_Notebook.Rmd'}
+```
+
 
