@@ -26,6 +26,7 @@ knitr::opts_chunk$set(echo = TRUE,eval=F)
 ## PG admin installieren
 
 - [PGadmin](https://www.pgadmin.org/)
+- [Tutorial zur Nutzung von PGadmin](https://www.enterprisedb.com/resources/videos/how-create-postgres-database-using-pgadmin)
 
 ## Wie bekomme ich Daten in die Datenbank
 

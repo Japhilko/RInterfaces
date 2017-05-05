@@ -11,4 +11,46 @@ output:
 knitr::opts_chunk$set(echo = T)
 ```
 
-## Das Paket `dplyr`
+## [Das Paket `dplyr`](https://cran.rstudio.com/web/packages/dplyr/vignettes/introduction.html)
+
+```{r,eval=F}
+install.packages("nycflights13")
+```
+
+
+
+```{r}
+library(nycflights13)
+dim(flights)
+head(flights)
+```
+
+## Die Reihen filtern mit `filter()`
+
+```{r}
+library(dplyr)
+head(filter(flights, month == 1,day==1))
+```
+
+## [Erste Schritte mit `dplyr`](http://genomicsclass.github.io/book/pages/dplyr_tutorial.html)
+
+```{r,eval=F}
+install.packages("downloader")
+```
+
+
+
+```{r}
+library(downloader)
+url <- "https://raw.githubusercontent.com/genomicsclass/dagdata/master/inst/extdata/msleep_ggplot2.csv"
+filename <- "msleep_ggplot2.csv"
+if (!file.exists(filename)) download(url,filename)
+msleep <- read.csv("msleep_ggplot2.csv")
+head(msleep)
+```
+
+```{r}
+sleepData <- select(msleep, name, sleep_total)
+head(sleepData)
+```
+

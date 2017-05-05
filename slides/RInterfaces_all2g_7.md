@@ -58,6 +58,11 @@ Man nutzt die Schnittstelle zu Datenbanken,...
 
 ![](figure/VergleichDatenbanken.PNG)
 
+## [Beispiel zu relationalen Datenbanken](https://ab.inf.uni-tuebingen.de/teaching/ss03/asa/db_intro.pdf)
+
+![](figure/FormaleRelationaleAusdrücke.PNG)
+
+![](figure/RelDatenbank.PNG)
 
 ## [Was ist der Unterschied zwischen SQL und NoSQL](https://www.r-bloggers.com/database-interfaces/)
 
@@ -79,24 +84,41 @@ Man nutzt die Schnittstelle zu Datenbanken,...
 -  Schema-freie, dokumentenorientierte NoSQL-Datenbank
 - kann Sammlungen von JSON-ähnlichen Dokumenten verwalten
 
+
+## [CouchDB](https://de.wikipedia.org/wiki/CouchDB)
+
+-  dokumentenorientierte Datenbank
+- [zur Interaktion mit CouchDB kann das Paket `sofa` verwendet werden](https://github.com/ropensci/sofa)
+
+### [Podcast zu CouchDB](https://cre.fm/cre125-couchdb)
+
+![](figure/CREcouchdb.PNG)
+
 ## [Quick-R zur Integration von Datenbanken](http://www.statmethods.net/input/dbinterface.html)
 
 ![](figure/quickr_AccessDatabases.PNG)
 
-## CouchDB
 
-- [zur Interaktion mit CouchDB kann das Paket `sofa` verwendet werden](https://github.com/ropensci/sofa)
+## SQL lernen...
+
+- [...mit W3School](https://www.w3schools.com/sql/default.asp)
+
+- [...mit SQLzoo](http://sqlzoo.net/)
+
+- [...SQL lernen mit tutorialspoint](http://www.tutorialspoint.com/sql/)
+
+- [... mit Beispielen von sql tutorial](http://www.sql-tutorial.ru/en/book_database_airport.html)
+
+![](http://www.sql-tutorial.ru/view/gimages/book/aero.gif)
+
+## [Weitergehendes Lernen](https://www.essentialsql.com/)
+
+![](figure/SQLessentials.PNG)
 
 
+## Weitere Resourcen
 
-
-
-
-## [`RMySQL`](https://cran.r-project.org/web/packages/RMySQL/index.html)
-
-
-
-## Links
+- [Video um NoSQL zu verstehen](https://www.youtube.com/watch?v=TvRDOLiadtg&list=PLxcWHsmHykmWlXorl8rm-2Ux4HP1sFkub)
 
 - [Datenbanken in R](https://cran.r-project.org/web/packages/dplyr/vignettes/databases.html)
 
@@ -110,7 +132,141 @@ Man nutzt die Schnittstelle zu Datenbanken,...
 
 
 
-## Das Paket `dplyr`
+## [Das Paket `dplyr`](https://cran.rstudio.com/web/packages/dplyr/vignettes/introduction.html)
+
+
+```r
+install.packages("nycflights13")
+```
+
+
+
+
+```r
+library(nycflights13)
+dim(flights)
+```
+
+```
+## [1] 336776     19
+```
+
+```r
+head(flights)
+```
+
+```
+## # A tibble: 6 × 19
+##    year month   day dep_time sched_dep_time dep_delay arr_time
+##   <int> <int> <int>    <int>          <int>     <dbl>    <int>
+## 1  2013     1     1      517            515         2      830
+## 2  2013     1     1      533            529         4      850
+## 3  2013     1     1      542            540         2      923
+## 4  2013     1     1      544            545        -1     1004
+## 5  2013     1     1      554            600        -6      812
+## 6  2013     1     1      554            558        -4      740
+## # ... with 12 more variables: sched_arr_time <int>, arr_delay <dbl>,
+## #   carrier <chr>, flight <int>, tailnum <chr>, origin <chr>, dest <chr>,
+## #   air_time <dbl>, distance <dbl>, hour <dbl>, minute <dbl>,
+## #   time_hour <dttm>
+```
+
+## Die Reihen filtern mit `filter()`
+
+
+```r
+library(dplyr)
+```
+
+```
+## 
+## Attaching package: 'dplyr'
+```
+
+```
+## The following objects are masked from 'package:stats':
+## 
+##     filter, lag
+```
+
+```
+## The following objects are masked from 'package:base':
+## 
+##     intersect, setdiff, setequal, union
+```
+
+```r
+head(filter(flights, month == 1,day==1))
+```
+
+```
+## # A tibble: 6 × 19
+##    year month   day dep_time sched_dep_time dep_delay arr_time
+##   <int> <int> <int>    <int>          <int>     <dbl>    <int>
+## 1  2013     1     1      517            515         2      830
+## 2  2013     1     1      533            529         4      850
+## 3  2013     1     1      542            540         2      923
+## 4  2013     1     1      544            545        -1     1004
+## 5  2013     1     1      554            600        -6      812
+## 6  2013     1     1      554            558        -4      740
+## # ... with 12 more variables: sched_arr_time <int>, arr_delay <dbl>,
+## #   carrier <chr>, flight <int>, tailnum <chr>, origin <chr>, dest <chr>,
+## #   air_time <dbl>, distance <dbl>, hour <dbl>, minute <dbl>,
+## #   time_hour <dttm>
+```
+
+## [Erste Schritte mit `dplyr`](http://genomicsclass.github.io/book/pages/dplyr_tutorial.html)
+
+
+```r
+install.packages("downloader")
+```
+
+
+
+
+```r
+library(downloader)
+url <- "https://raw.githubusercontent.com/genomicsclass/dagdata/master/inst/extdata/msleep_ggplot2.csv"
+filename <- "msleep_ggplot2.csv"
+if (!file.exists(filename)) download(url,filename)
+msleep <- read.csv("msleep_ggplot2.csv")
+head(msleep)
+```
+
+```
+##                         name      genus  vore        order conservation
+## 1                    Cheetah   Acinonyx carni    Carnivora           lc
+## 2                 Owl monkey      Aotus  omni     Primates         <NA>
+## 3            Mountain beaver Aplodontia herbi     Rodentia           nt
+## 4 Greater short-tailed shrew    Blarina  omni Soricomorpha           lc
+## 5                        Cow        Bos herbi Artiodactyla domesticated
+## 6           Three-toed sloth   Bradypus herbi       Pilosa         <NA>
+##   sleep_total sleep_rem sleep_cycle awake brainwt  bodywt
+## 1        12.1        NA          NA  11.9      NA  50.000
+## 2        17.0       1.8          NA   7.0 0.01550   0.480
+## 3        14.4       2.4          NA   9.6      NA   1.350
+## 4        14.9       2.3   0.1333333   9.1 0.00029   0.019
+## 5         4.0       0.7   0.6666667  20.0 0.42300 600.000
+## 6        14.4       2.2   0.7666667   9.6      NA   3.850
+```
+
+
+```r
+sleepData <- select(msleep, name, sleep_total)
+head(sleepData)
+```
+
+```
+##                         name sleep_total
+## 1                    Cheetah        12.1
+## 2                 Owl monkey        17.0
+## 3            Mountain beaver        14.4
+## 4 Greater short-tailed shrew        14.9
+## 5                        Cow         4.0
+## 6           Three-toed sloth        14.4
+```
+
 
 ## Integration von PostgreSQL mit dem Paket 
 RPostgreSQL
@@ -134,6 +290,7 @@ RPostgreSQL
 ## PG admin installieren
 
 - [PGadmin](https://www.pgadmin.org/)
+- [Tutorial zur Nutzung von PGadmin](https://www.enterprisedb.com/resources/videos/how-create-postgres-database-using-pgadmin)
 
 ## Wie bekomme ich Daten in die Datenbank
 
@@ -278,6 +435,8 @@ head(df_sipp)
 
 ## [OpenStreetMap und Open Government Data in PostGIS](http://tud.at/linuxwochen/2013-osm-postgis/)
 
+- [Der Anfang mit PostGIS](http://www.bostongis.com/?content_name=postgis_tut01)
+- [PostGIS und R](https://gis.stackexchange.com/questions/64950/working-with-postgis-data-in-r)
 
 
 ```r
@@ -323,6 +482,13 @@ library(RPostgreSQL)
 
 - [Wie bekommt man OSM Daten](https://www.azavea.com/blog/2015/12/21/tools-for-getting-data-out-of-openstreetmap-and-into-desktop-gis/)
 
+
+## [`RMySQL`](https://cran.r-project.org/web/packages/RMySQL/index.html)
+
+
+```r
+install.packages("RMySQL")
+```
 
 ## Nutzung von weiteren Datenbanken (MongoDB, MySQL)
 
