@@ -1,0 +1,54 @@
+---
+title: "R Schnittstellen - Dritter Teil"
+author: "Jan-Philipp Kolb"
+date: "9 Mai 2017"
+output: 
+  slidy_presentation: 
+    keep_md: yes
+---
+
+```{r, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+# Integration von Datenbanken
+
+# Datenbanken und R
+
+```{r child = 'Datenbanken.Rmd'}
+```
+
+# Das R-Paket `dplyr`
+
+```{r child = 'dplyr.Rmd'}
+```
+
+# Integration von PostgreSQL mit dem Paket 
+RPostgreSQL
+
+```{r child = 'RPostgreSQL.Rmd'}
+```
+
+# Nutzung von weiteren Datenbanken (MongoDB, MySQL)
+
+```{r child = 'Rmongodb.Rmd'}
+```
+
+
+
+
+
+
+
+## Integration von PostgreSQL mit dem Paket 
+RPostgreSQL
+
+```{r child = 'RPostgreSQL.Rmd'}
+```
+
+##	Nutzung von MongoDB in R
+
+```{r child = 'Rmongodb.Rmd'}
+```
+
+

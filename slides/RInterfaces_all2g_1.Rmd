@@ -73,36 +73,3 @@ knitr::opts_chunk$set(echo = TRUE)
 ```
 
 
-
-#	Interaktive Karten mit dem Javascript Paket leaflet
-
-```{r child = 'leaflet.Rmd'}
-```
-
-#	Interaktive Tabellen mit DataTables
-
-
-```{r child = 'DataTables.Rmd'}
-```
-
-# R und die Javascript Data-Driven Documents (D3)
-
-```{r child = 'D3.Rmd'}
-```
-
-#	Interaktive Graphiken mit D3 und plotly
-
-
-```{r child = 'plotly.Rmd'}
-```
-
-#	Netzwerkgraphiken mit vis.js
-
-```{r child = 'visNetwork.Rmd'}
-```
-
-#	Das Erstellen von Ablaufdiagrammen mit mermaid 
-
-```{r child = 'mermaid.Rmd'}
-```
-

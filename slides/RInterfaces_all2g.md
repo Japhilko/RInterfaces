@@ -148,6 +148,23 @@ Wen Github näher interessiert:
 
 - [Understanding the GitHub flow](https://guides.github.com/introduction/flow/)
 
+## [CRAN Task Views](https://cran.r-project.org/web/views/)
+
+![](figure/CRANTaskviews.PNG)
+
+
+
+
+
+
+## Aufgabe - Zusatzpakete
+
+Gehen Sie auf <https://cran.r-project.org/> und suchen Sie in dem Bereich, wo die Pakete vorgestellt werden, nach Paketen,...
+
+-  für Reproducible Research
+-  für interaktive Darstellungen
+-  für High-Performance Computing
+-  um mit großen Datenmengen umzugehen
 
 # Datenimport
 
@@ -271,8 +288,10 @@ head(whcSites)
 ```
 
 ```
-##   https://raw.githubusercontent.com/Japhilko/
-## 1       GeoData/master/2015/data/whcSites.csv
+## # A tibble: 1 × 1
+##   `https://raw.githubusercontent.com/Japhilko/`
+##                                           <chr>
+## 1         GeoData/master/2015/data/whcSites.csv
 ```
 
 ## Das Paket `haven`
@@ -465,5 +484,33 @@ convert("data/mtcars.dta", "data/mtcars.sav")
 
 
 
-## Aufgabe: Bearbeiten Sie ein Notebook weiter
+
+
+
+
+#	Interaktive Karten mit dem Javascript Paket leaflet
+
+
+
+#	Interaktive Tabellen mit DataTables
+
+
+
+
+# R und die Javascript Data-Driven Documents (D3)
+
+
+
+#	Interaktive Graphiken mit D3 und plotly
+
+
+
+
+#	Netzwerkgraphiken mit vis.js
+
+
+
+#	Das Erstellen von Ablaufdiagrammen mit mermaid 
+
+
 
