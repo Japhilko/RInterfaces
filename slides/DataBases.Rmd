@@ -91,3 +91,9 @@ install.packages("rmongodb")
 [A deep dive to nosql db](http://bigdata-madesimple.com/a-deep-dive-into-nosql-a-complete-list-of-nosql-databases/)
 
 [Apache Spark and HBase](https://blog.cloudera.com/blog/2015/08/apache-spark-comes-to-apache-hbase-with-hbase-spark-module/)
+
+- [Database interfaces](https://www.r-bloggers.com/database-interfaces/)
+
+- [Databases](https://cran.r-project.org/web/packages/dplyr/vignettes/databases.html)
+
+- [Database basics - dplyr and DBI](https://shiny.rstudio.com/articles/overview.html)

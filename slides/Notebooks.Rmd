@@ -126,3 +126,7 @@ jupyter notebook
 
 - [Podcast](https://talkpython.fm/episodes/show/96/exploring-awesome-python)
 
+
+- [Deploying JupyterHub for Education](https://developer.rackspace.com/blog/deploying-jupyterhub-for-education/)
+- [JupyterHub](https://hub.docker.com/r/jupyterhub/jupyterhub/) - [github](https://github.com/jupyterhub/jupyterhub)
+- [Jupyter autograder](https://github.com/data-8/connector-instructors/issues/3)

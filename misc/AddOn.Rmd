@@ -233,3 +233,22 @@ install.packages("SVGAnnotation")
 ```{r, eval=F,echo=T}
 install.packages("highcharter", type = "source")
 ```
+
+
+## [tabplotd3](https://cran.r-project.org/web/packages/tabplotd3/index.html)
+
+- [Beispiel tabplot3d](http://www.datasciencecentral.com/profiles/blogs/r-for-big-data-in-one-picture)
+
+```{r,eval=F}
+install.packages("tabplotd3")
+```
+
+
+```{r tableplot}
+library(tabplotd3)
+library(ggplot2)
+data(diamonds)
+tableplot(diamonds)
+```
+
+- [Jupyter autograder](https://github.com/data-8/connector-instructors/issues/3)

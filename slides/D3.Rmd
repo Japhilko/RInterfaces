@@ -64,6 +64,8 @@ mtcars %>%
   layer_points(size := input_slider(100, 1000, value = 100))
 ```
 
+- [ggvis - Interaktivität](http://ggvis.rstudio.com/interactivity.html)
+
 ![](figure/ggvisInteractive.PNG)
 
 ## [googleVis](https://cran.r-project.org/web/packages/googleVis/index.html)
@@ -83,12 +85,13 @@ df <- data.frame(year=1:11, x=1:11,
                  y=11:1, y.html.tooltip=LETTERS[11:1],                 
                  y.certainty=c(rep(TRUE, 5), rep(FALSE, 6)),
                  y.emphasis=c(rep(FALSE, 4), rep(TRUE, 7)))
+```
+
+```{r,eval=F}
 plot(
   gvisScatterChart(df,options=list(lineWidth=2))
 )
 ```
-
-
 
 ## [Click me](http://rclickme.com/)
 
