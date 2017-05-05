@@ -16,5 +16,8 @@ install.packages("ggmap")
 library(ggmap)
 ```
 
+```{r}
+geocode("Mannheim B2,1")
+```
 
 
