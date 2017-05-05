@@ -106,3 +106,31 @@ knitr::opts_chunk$set(echo = TRUE)
 ```{r child = 'mermaid.Rmd'}
 ```
 
+
+# Internetresourcen und Schnittstellen nutzen
+
+```{r child = 'IntroAPIS.Rmd'}
+```
+
+
+
+# Import von JSON-Objekten und XML Dateien
+
+```{r child = 'rapis.Rmd'}
+```
+
+# Die Pakete rvest und RCurl
+
+```{r child = 'rvest.Rmd'}
+```
+
+# Webscraping
+
+```{r child = 'Webscraping.Rmd'}
+```
+
+# Use Case - Scraping Wikipedia
+
+```{r child = 'ScrapingWikipedia.Rmd'}
+```
+

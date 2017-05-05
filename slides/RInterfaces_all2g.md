@@ -514,3 +514,26 @@ convert("data/mtcars.dta", "data/mtcars.sav")
 
 
 
+
+# Internetresourcen und Schnittstellen nutzen
+
+
+
+
+
+# Import von JSON-Objekten und XML Dateien
+
+
+
+# Die Pakete rvest und RCurl
+
+
+
+# Webscraping
+
+
+
+# Use Case - Scraping Wikipedia
+
+
+

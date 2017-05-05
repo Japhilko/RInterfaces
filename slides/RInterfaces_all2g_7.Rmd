@@ -1,5 +1,5 @@
 ---
-title: "R Schnittstellen - Dritter Teil"
+title: "R Schnittstellen - Siebter Teil"
 author: "Jan-Philipp Kolb"
 date: "9 Mai 2017"
 output: 
@@ -10,8 +10,6 @@ output:
 ```{r, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
 ```
-
-# Integration von Datenbanken
 
 # Datenbanken und R
 
