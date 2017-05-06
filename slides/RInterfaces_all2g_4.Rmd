@@ -1,5 +1,5 @@
 ---
-title: "R Schnittstellen - Dritter Teil"
+title: "R Schnittstellen - Internetresourcen und Schnittstellen nutzen"
 author: "Jan-Philipp Kolb"
 date: "9 Mai 2017"
 output: 
@@ -32,9 +32,7 @@ knitr::opts_chunk$set(echo = TRUE)
 ```{r child = 'Webscraping.Rmd'}
 ```
 
-# Use Case - Scraping Wikipedia
+# Beispiel Scraping Wikipedia
 
 ```{r child = 'ScrapingWikipedia.Rmd'}
 ```
-
-

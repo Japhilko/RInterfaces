@@ -1,14 +1,31 @@
-# R Schnittstellen - Dritter Teil
+# R Schnittstellen - Internetresourcen und Schnittstellen nutzen
 Jan-Philipp Kolb  
 9 Mai 2017  
 
 
 
 
-## Internetresourcen und Schnittstellen nutzen
+# Internetresourcen und Schnittstellen nutzen
 
 
 
+
+
+## [Was sind API's?](https://de.wikipedia.org/wiki/Programmierschnittstelle)
+
+![](figure/APIerklaerung.PNG)
+
+## [Programmierschnittstellen](http://www.gruenderszene.de/lexikon/begriffe/application-programming-interface-api)
+
+- Relevanz hat der Begriff der API vor allem durch seine Verwendung von Webdiensten erhalten.
+- APIs dienen also zum Austausch und der Weiterverarbeitung von Daten und Inhalten zwischen verschiedenen Webseiten, Programmen und Content-Anbietern.
+
+![](figure/YoutubeAPI.PNG)
+
+## Bedeutung
+
+- es ist unter anderem möglich Daten von Programmierschnittstellen zu beziehen
+- diese Daten sind allerdings nicht als `.xlsx`, `.csv`, `.dta` oder ähnliches abgespeichert sondern in einem der folgenden Formate: `.json`, `.xml` etc.
 
 
 ## JavaScript Object Notation
@@ -28,9 +45,7 @@ Jan-Philipp Kolb
 
 ![](figure/TopoJSON.PNG)
 
-
-
-## Import von JSON-Objekten und XML Dateien
+# Import von JSON-Objekten und XML Dateien
 
 
 
@@ -79,18 +94,46 @@ Die Struktur der Daten kann man sich mit einem [JSON Viewer anschauen](http://js
 
 ![](figure/EinfacheGeometrien.PNG)
 
+
+## Das Paket `jsonlite`
+
+
+```r
+install.packages("jsonlite")
+```
+
+
+```r
+library(jsonlite)
+citation("jsonlite")
+```
+
+```
+## 
+## To cite jsonlite in publications use:
+## 
+##   Jeroen Ooms (2014). The jsonlite Package: A Practical and
+##   Consistent Mapping Between JSON Data and R Objects.
+##   arXiv:1403.2805 [stat.CO] URL http://arxiv.org/abs/1403.2805.
+## 
+## A BibTeX entry for LaTeX users is
+## 
+##   @Article{,
+##     title = {The jsonlite Package: A Practical and Consistent Mapping Between JSON Data and R Objects},
+##     author = {Jeroen Ooms},
+##     journal = {arXiv:1403.2805 [stat.CO]},
+##     year = {2014},
+##     url = {http://arxiv.org/abs/1403.2805},
+##   }
+```
+
+
+
 ## JSON importieren
 
 
 ```r
 library("jsonlite")
-```
-
-```
-## Warning: package 'jsonlite' was built under R version 3.3.3
-```
-
-```r
 DRINKWATER <- fromJSON("data/RomDrinkingWater.geojson")
 ```
 
@@ -274,6 +317,39 @@ citation("XML")
 ```
 
 
+## Das `xml2` Paket
+
+
+```r
+install.packages("xml2")
+```
+
+
+
+```r
+library(xml2)
+citation("xml2")
+```
+
+```
+## 
+## To cite package 'xml2' in publications use:
+## 
+##   Hadley Wickham and James Hester (2016). xml2: Parse XML. R
+##   package version 1.0.0. https://CRAN.R-project.org/package=xml2
+## 
+## A BibTeX entry for LaTeX users is
+## 
+##   @Manual{,
+##     title = {xml2: Parse XML},
+##     author = {Hadley Wickham and James Hester},
+##     year = {2016},
+##     note = {R package version 1.0.0},
+##     url = {https://CRAN.R-project.org/package=xml2},
+##   }
+```
+
+
 ## Erstes Beispiel
 
 
@@ -361,6 +437,160 @@ MadCalle <- xmlParse(url3)
 ```
 
 
+## The Overpass API
+
+![Logo Overpass API](figure/400px-Overpass_API_logo.svg.png)
+
+>The Overpass API is a read-only API that serves up custom selected parts of the OSM map data.
+
+(<http://wiki.openstreetmap.org/wiki/Overpass_API>)
+
+## Wichtige Information 
+
+<http://wiki.openstreetmap.org/wiki/Map_Features>
+
+![osm map features](figure/overpass-osm-disney.png)
+
+
+## Beispiel: Nutzung der Overpass API
+
+![Spielplätze Mannheim](figure/BSPoverpassMannheim.PNG)
+
+## Export der Rohdaten
+
+![Export Rohdaten](figure/OverpassExportRohdaten.PNG)
+
+## Import von der Overpass API zu R
+
+
+
+
+```r
+Link1 <- "http://www.overpass-api.de/api/interpreter?
+data=[maxsize:1073741824][timeout:900];area[name=\""
+```
+
+
+```r
+library(XML)
+place <- "Mannheim"
+type_obj <- "node"
+object <- "leisure=playground"
+
+InfoList <- xmlParse(paste(Link1,place,"\"];",
+type_obj,"(area)[",object,"];out;",sep=""))
+```
+
+
+
+
+## XML Output
+
+![Spielplätze in Mannheim](figure/xmlPlaygorung.PNG)
+
+## Das Arbeiten mit XML Daten (xpath)
+
+Die Liste der ID's mit dem Wert *playground*:
+
+
+```r
+node_id <- xpathApply(InfoList,
+"//tag[@v= 'playground']/parent::node/@ id")
+## node_id[[1]]
+```
+
+![Erste node id](figure/nodeid.PNG)
+
+## latitude und longitude bekommen
+
+
+```r
+lat_x <- xpathApply(InfoList,
+"//tag[@v= 'playground']/parent::node/@ lat")
+# lat_x[[1]];lat_x[[2]]
+```
+
+
+```r
+lat_x <- xpathApply(InfoList,
+"//tag[@v= 'playground']/parent::node/@ lon")
+```
+
+![Latitude Koordinate](figure/latpoi.PNG)
+
+## Paket auf Github
+
+
+```r
+library(devtools)
+install_github("Japhilko/gosmd")
+```
+
+
+```r
+library(gosmd)
+```
+
+```
+## Loading required package: maptools
+```
+
+```
+## Loading required package: sp
+```
+
+```
+## Checking rgeos availability: TRUE
+```
+
+```
+## Loading required package: RJSONIO
+```
+
+```
+## 
+## Attaching package: 'RJSONIO'
+```
+
+```
+## The following objects are masked from 'package:jsonlite':
+## 
+##     fromJSON, toJSON
+```
+
+```
+## Loading required package: stringr
+```
+
+```r
+pg_MA <- get_osm_nodes(object="leisure=playground",
+                       "Mannheim")
+info <- extract_osm_nodes(OSM.Data=pg_MA,
+                          value="playground")
+```
+
+## Ausschnitt der Ergebnisse
+
+
+           leisure            lat        lon  note                                                     
+---------  -----------  ---------  ---------  ---------------------------------------------------------
+30560755   playground    49.51910   8.502807  NA                                                       
+76468450   playground    49.49633   8.539396  Rutsche, Schaukel, groÃŸer Sandkasten, Tischtennis       
+76468534   playground    49.49678   8.552959  NA                                                       
+76468535   playground    49.49230   8.548750  NA                                                       
+76468536   playground    49.50243   8.548140  Schaukel, Rutsche, Sandkasten, SpielhÃ¤user, Tischtennis 
+76468558   playground    49.49759   8.542036  NA                                                       
+
+
+
+## Link
+
+- [Tutorial zur Nutzung der Overpass API](http://osmlab.github.io/learnoverpass/en/exercises/intro/1/)
+
+- [Vignette xml2](https://cran.r-project.org/web/packages/xml2/vignettes/modification.html)
+
+
+
 ## Mehr Beispiele, wie man mit XML Daten umgeht:
 
 
@@ -390,43 +620,352 @@ MadCalle <- xmlParse(url3)
 
 <http://gastonsanchez.com/Handling_and_Processing_Strings_in_R.pdf>
 
-## Referenzen
+
+
+
+## Das R-Paket `XML` - Gaston Sanchez
 
 
 ```r
-citation("XML")
+library("XML")
+```
+
+![Gaston Sanchez - Dataflow](figure/GastonSanchez2.png)
+
+Seine Arbeit sieht man [hier](http://gastonsanchez.com/).
+
+
+## [Das Arbeiten mit XML Daten](https://github.com/gastonstat/tutorial-R-web-data/blob/master/04-parsing-xml/04-parsing-xml.pdf)
+
+![Gaston Sanchez - Webdaten bekommen](figure/GastonSanchez3.PNG)
+
+
+## Funktionen im XML Paket
+
+
+Function         Description                              
+---------------  -----------------------------------------
+xmlName()        name of the node                         
+xmlSize()        number of subnodes                       
+xmlAttrs()       named character vector of all attributes 
+xmlGetAttr()     value of a single attribute              
+xmlValue()       contents of a leaf node                  
+xmlParent()      name of parent node                      
+xmlAncestors()   name of ancestor nodes                   
+getSibling()     siblings to the right or to the left     
+xmlNamespace()   the namespace (if there’s one)           
+
+
+## [Einzelne Objekte finden](http://www.openstreetmap.org/export)
+
+<www.openstreetmap.org/export>
+
+![osm export](figure/admgrBer.PNG)
+
+
+## Beispiel: administrative Grenzen Berlin
+
+[Administrative Grenzen für Deutschland](http://wiki.openstreetmap.org/wiki/DE:Grenze#Bundesl.C3.A4ndergrenze_-_admin_level.3D4)
+
+
+```r
+url <- "http://api.openstreetmap.org/api/0.6/relation/62422"
+```
+
+
+
+
+
+```r
+BE <- xmlParse(url)
+```
+
+![Administrative Grenzen  Berlin](https://raw.githubusercontent.com/Japhilko/GeoData/master/data/figure/ExampleAdmBE.PNG)
+
+## Das XML analysieren
+
+- [Tobi Bosede - Working with XML Data in R](http://www.informit.com/articles/article.aspx?p=2215520)
+
+
+```r
+xmltop = xmlRoot(BE)
+class(xmltop)
+```
+
+```
+## [1] "XMLInternalElementNode" "XMLInternalNode"       
+## [3] "XMLAbstractNode"
+```
+
+```r
+xmlSize(xmltop)
+```
+
+```
+## [1] 1
+```
+
+```r
+xmlSize(xmltop[[1]])
+```
+
+```
+## [1] 328
+```
+
+
+## Nutzung von Xpath
+
+> [Xpath](https://de.wikipedia.org/wiki/XPath), the XML Path Language, is a query language for selecting nodes from an XML document. 
+
+
+```r
+xpathApply(BE,"//tag[@k = 'population']")
+```
+
+```
+## [[1]]
+## <tag k="population" v="3440441"/> 
+## 
+## attr(,"class")
+## [1] "XMLNodeSet"
+```
+
+
+## Quelle für die Bevölkerungsgröße
+
+
+```r
+xpathApply(BE,"//tag[@k = 'source:population']")
+```
+
+```
+## [[1]]
+## <tag k="source:population" v="http://www.statistik-berlin-brandenburg.de/Publikationen/Stat_Berichte/2010/SB_A1-1_A2-4_q01-10_BE.pdf 2010-10-01"/> 
+## 
+## attr(,"class")
+## [1] "XMLNodeSet"
+```
+
+-[Statistik Berlin Brandenburg](https://www.statistik-berlin-brandenburg.de/datenbank/inhalt-datenbank.asp)
+
+## Etwas überraschend: 
+
+
+```r
+xpathApply(BE,"//tag[@k = 'name:ta']")
+```
+
+```
+## [[1]]
+## <tag k="name:ta" v="<U+0BAA><U+0BC6><U+0BB0><U+0BCD><U+0BB2><U+0BBF><U+0BA9><U+0BCD>"/> 
+## 
+## attr(,"class")
+## [1] "XMLNodeSet"
+```
+
+![](figure/OSMBerta.png)
+
+## Geographische Region
+
+
+```r
+region <- xpathApply(BE,
+  "//tag[@k = 'geographical_region']")
+# regular expressions
+region[[1]]
+```
+
+```
+## <tag k="geographical_region" v="Barnim;Berliner Urstromtal;Teltow;Nauener Platte"/>
+```
+
+```
+<tag k="geographical_region" 
+  v="Barnim;Berliner Urstromtal;
+  Teltow;Nauener Platte"/>
+```
+
+## Landkreis
+
+![Barnim](figure/Barnim.png)
+
+
+## Weiteres Beispiel
+
+
+```r
+url2<-"http://api.openstreetmap.org/api/0.6/node/25113879"
+obj2<-xmlParse(url2)
+obj_amenity<-xpathApply(obj2,"//tag[@k = 'amenity']")[[1]]
+obj_amenity
+```
+
+```
+## <tag k="amenity" v="university"/>
+```
+
+## Wikipedia Artikel
+
+
+```r
+xpathApply(obj2,"//tag[@k = 'wikipedia']")[[1]]
+```
+
+```
+## <tag k="wikipedia" v="de:Universität Mannheim"/>
+```
+
+
+```r
+xpathApply(obj2,"//tag[@k = 'wheelchair']")[[1]]
+```
+
+
+```r
+xpathApply(obj2,"//tag[@k = 'name']")[[1]]
+```
+
+
+## Das C und das A
+
+
+```r
+url3<-"http://api.openstreetmap.org/api/0.6/node/303550876"
+obj3 <- xmlParse(url3)
+xpathApply(obj3,"//tag[@k = 'opening_hours']")[[1]]
+```
+
+```
+## <tag k="opening_hours" v="Mo-Sa 09:00-20:00; Su,PH off"/>
+```
+
+## Hin und weg
+
+
+```r
+url4<-"http://api.openstreetmap.org/api/0.6/node/25439439"
+obj4 <- xmlParse(url4)
+xpathApply(obj4,"//tag[@k = 'railway:station_category']")[[1]]
+```
+
+```
+## <tag k="railway:station_category" v="2"/>
+```
+
+- [Wikipedia Artikel Bahnhofskategorien](https://de.wikipedia.org/wiki/Bahnhofskategorie)
+
+![](figure/Bahnhofskategorien.PNG)
+
+## Exkurs: Bahnhofskategorien
+
+- [rvest: Easily Harvest (Scrape) Web Pages](https://cran.r-project.org/web/packages/rvest/index.html)
+
+
+```r
+library(rvest)
 ```
 
 ```
 ## 
-## To cite package 'XML' in publications use:
-## 
-##   Duncan Temple Lang and the CRAN Team (2016). XML: Tools for
-##   Parsing and Generating XML Within R and S-Plus. R package
-##   version 3.98-1.5. https://CRAN.R-project.org/package=XML
-## 
-## A BibTeX entry for LaTeX users is
-## 
-##   @Manual{,
-##     title = {XML: Tools for Parsing and Generating XML Within R and S-Plus},
-##     author = {Duncan Temple Lang and the CRAN Team},
-##     year = {2016},
-##     note = {R package version 3.98-1.5},
-##     url = {https://CRAN.R-project.org/package=XML},
-##   }
-## 
-## ATTENTION: This citation information has been auto-generated from
-## the package DESCRIPTION file and may need manual editing, see
-## 'help("citation")'.
+## Attaching package: 'rvest'
 ```
 
-## Links
+```
+## The following object is masked from 'package:XML':
+## 
+##     xml
+```
+
+```r
+bhfkat<-read_html(
+  "https://de.wikipedia.org/wiki/Bahnhofskategorie")
+df_html_bhfkat<-html_table(
+  html_nodes(bhfkat, "table")[[1]],fill = TRUE)
+```
+
+## Bahnhofskategorien Übersicht
+
+
+ Stufe  Bahnsteigkanten   Bahnsteiglänge    Reisende/Tag        Zughalte/Tag 
+------  ----------------  ----------------  ------------------  -------------
+     6  01                > 000 bis 090 m   00000 bis 00049     000 bis 0010 
+     5  02                > 090 bis 140 m   00050 bis 00299     011 bis 0050 
+     4  03 bis 04         > 140 bis 170 m   00300 bis 00999     051 bis 0100 
+     3  05 bis 09         > 170 bis 210 m   01000 bis 09999     101 bis 0500 
+     2  10 bis 14         > 210 bis 280 m   10.000 bis 49.999   501 bis 1000 
+     1  00i ab 15         > 280 m           00000i ab 50.000    000i ab 1001 
+
+## Nur fliegen ist schöner
+
+
+```r
+url5<-"http://api.openstreetmap.org/api/0.6/way/162149882"
+obj5<-xmlParse(url5)
+xpathApply(obj5,"//tag[@k = 'name']")[[1]]
+```
+
+```
+## <tag k="name" v="City-Airport Mannheim"/>
+```
+
+
+
+```r
+xpathApply(obj5,"//tag[@k = 'website']")[[1]]
+```
+
+```
+## <tag k="website" v="http://www.flugplatz-mannheim.de/"/>
+```
+
+
+
+```r
+xpathApply(obj5,"//tag[@k = 'iata']")[[1]]
+```
+
+```
+## <tag k="iata" v="MHG"/>
+```
+
+
+
+## [OSM Ausschnitte herunterladen](http://www.openstreetmap.org/export)
+
+<www.openstreetmap.org/export>
+
+![osm export](http://www.azavea.com/blogs/atlas/wp-content/uploads/2015/11/openstreetmap_export-1024x505.png)
+
+## Mehr Beispiele, wie man mit XML Daten umgeht:
+
+
+- Deborah Nolan - [Extracting data from XML](http://www.stat.berkeley.edu/~statcur/Workshop2/Presentations/XML.pdf)
+
+
+- Duncan Temple Lang - [A Short Introduction to the XML package for R](http://www.omegahat.net/RSXML/shortIntro.pdf)
+
+
+Noch mehr Informationen
+
+- [Web Daten manipulieren](http://www.di.fc.ul.pt/~jpn/r/web/index.html#parsing-xml)
+
+- [Tutorial zu xquery](http://www.w3schools.com/xml/xquery_intro.asp)
+
+- [R und das Web (für Anfänger), Teil II: XML und R](http://giventhedata.blogspot.de/2012/06/r-and-web-for-beginners-part-ii-xml-in.html)
+
+- [String Manipulation](http://gastonsanchez.com/Handling_and_Processing_Strings_in_R.pdf)
+
+- [Nutzung, Vor- und Nachteile OSM](https://www.e-education.psu.edu/geog585/node/738)
+
+- [Forschungsprojekte im Zusammenhang mit OpenStreetMap](http://wiki.openstreetmap.org/wiki/Research)
 
 - [XML parsen - Stackoverflow](http://stackoverflow.com/questions/17198658/how-to-parse-xml-to-r-data-frame)
 
 - [Processing of GeoJson data in R](https://www.r-bloggers.com/processing-of-geojson-data-in-r/)
 
-## Die Pakete rvest und RCurl
+
+# Die Pakete rvest und RCurl
 
 
 
@@ -459,7 +998,7 @@ gsub('/url\\?q=','',sapply(strsplit(links[as.vector(grep('url',links))],split='&
 
 - [Scraping CRAN with rvest](https://www.r-bloggers.com/scraping-cran-with-rvest/)
 
-## Webscraping
+# Webscraping
 
 
 
@@ -552,7 +1091,7 @@ gsub('/url\\?q=','',sapply(strsplit(links[as.vector(grep('url',links))],split='&
 
 - [Scraping CRAN with rvest](https://www.r-bloggers.com/scraping-cran-with-rvest/)
 
-## Use Case - Scraping Wikipedia
+# Beispiel Scraping Wikipedia
 
 
 
@@ -684,6 +1223,11 @@ for(i in 2:nrow(dtm2)){
 colnames(s) <- titles
 ```
 
+
+
+
+
+
 ## Ergebnis
 
 
@@ -691,7 +1235,7 @@ colnames(s) <- titles
 PCA(s)
 ```
 
-![](RInterfaces_all2g_4_files/figure-slidy/unnamed-chunk-45-1.png)<!-- -->![](RInterfaces_all2g_4_files/figure-slidy/unnamed-chunk-45-2.png)<!-- -->
+![](RInterfaces_all2g_4_files/figure-slidy/unnamed-chunk-76-1.png)<!-- -->![](RInterfaces_all2g_4_files/figure-slidy/unnamed-chunk-76-2.png)<!-- -->
 
 ```
 ## **Results for the Principal Component Analysis (PCA)**
@@ -734,468 +1278,7 @@ h <- hclust(dist(t(s0)), method = "ward")
 plot(h, labels = titles, sub = "")
 ```
 
-![](RInterfaces_all2g_4_files/figure-slidy/unnamed-chunk-46-1.png)<!-- -->
+![](RInterfaces_all2g_4_files/figure-slidy/unnamed-chunk-77-1.png)<!-- -->
 
 
 - [Youtube Video zu Text Mining](https://www.youtube.com/watch?v=j1V2McKbkLo)
-
-
-## Applikationen und Projektverwaltung mit Rstudio und git
-
-## Shiny Apps 
-
-
-
-
-
-## Der Start
-
-![](figure/ShinyAppEx.PNG)
-
-## Die erste App
-
-![](figure/RunApp.PNG)
-
-![](figure/FirstShinyApp.PNG)
-
-## R und Git
-
-
-
-
-
-
-## Rstudio und git - ein Projekt anlegen
-
-![](figure/NeuesProjekt.PNG)
-
-
-## Ein Projekt mit Versionskontrolle
-
-![](figure/VersionControl.PNG)
-
-## Auswahl Versionskontrolle
-
-![](figure/gitSVN.PNG)
-
-## Ein Projekt clonen
-
-![](figure/CloneProject.PNG)
-
-## Der git-Reiter in Rstudio
-
-![](figure/gitReiter.PNG)
-
-## Aktuelle eigene Änderungen committen
-
-![](figure/CommitMessage.PNG)
-
-
-## Links
-
-- [Commit failed - git shell](http://stackoverflow.com/questions/11229843/github-windows-commit-failed-failed-to-create-a-new-commit)
-
-- [Git cheatsheet](https://services.github.com/on-demand/downloads/github-git-cheat-sheet.pdf)
-
-
-## Commands
-
-``` 
-git commit
-```
-
-``` 
-git push
-```
-
-
-<http://stackoverflow.com/questions/1125968/force-git-to-overwrite-local-files-on-pull>
-
-## Problems with disk space
-
-[WinDirStat](http://www.tecchannel.de/storage/tools/2037869/mit_windirstat_kostenlos_speicherplatz_auf_der_festplatte_visualisieren/)
-<https://support.microsoft.com/de-de/kb/912997>
-<http://www.pcwelt.de/tipps/Update-Dateien-loeschen-8357046.html>
-
-
-## [Quelle für Pakete](https://www.researchgate.net/figure/301746965_fig1_Figure-2-Number-of-R-packages-by-source)
-
-![](https://www.researchgate.net/profile/Tom_Mens/publication/301746965/figure/fig1/AS:356583633637381@1462027571464/Figure-2-Number-of-R-packages-by-source.png)
-
-## Datensätze Suchfunktion
-
-![](figure/SearchableGithub.PNG)
-
-
-## Links
-
-- [Using github and rstudio](https://www.r-bloggers.com/version-control-file-sharing-and-collaboration-using-github-and-rstudio/)
-
-- [How do I tell Git for Windows where to find my private RSA key](http://serverfault.com/questions/194567/how-do-i-tell-git-for-windows-where-to-find-my-private-rsa-key)
-
-- [Reset local repository branch to be just like remote repository HEAD](http://stackoverflow.com/questions/1628088/reset-local-repository-branch-to-be-just-like-remote-repository-head)
-
-## Hochperfomanter Code
-
-# C++ Integration - Überblick über das Paket rcpp
-
-
-
-
-
-
-<!-- 
-folgendes stammt aus dem EMBL Kurs
---> 
-
-## Warum die Integration von c++
-
-Robert Gentleman, in R Programming for Bioinformatics, 2008,
-about R's built-in C interfaces:
-
-> Since R is not compiled, in some situations its performance can be substantially improved by writing code in a compiled language. There are also reasons not to write code in other languages, and in particular we caution against premature optimization, prototyping in R
-is often cost effective. And in our experience very few routines need to be implemented in other languages for effiiency reasons. Another substantial reason not to use an implementation in some other language is increased complexity. The use of another language almost always
-results in higher maintenance costs and less stability. In addition, any extensions or enhancements of the code will require someone that is proficient in both R and the other language.
-
-
-- Rcpp does make some of the above caution statements slightly less
-critical.
-
-
-## Warum und wann?
-
-- Warum? - R wird langsam oder hat Probleme bei der  Speicherverwaltung: zum Beispiel bei Schleifen, die nicht vektorisiert werden können.
-
-- Wann? - wenn man es mit Rcode nicht besser hinbekommt und man den langsamen Code identifiziert hat.
-
-## Voraussetzung Compiler
-
-Für Windows, Rtools
-
-1. http://cran.r-project.org/bin/windows/Rtools/
-2. http://cran.r-project.org/doc/manuals/R-admin.html#The-Windows-toolset
-
-Für Mac, Xcode
-
-3. http://cran.r-project.org/doc/manuals/R-admin.html#Installing-R-under-_0028Mac_0029-OS-X
-4. http://cran.r-project.org/doc/manuals/R-admin.html#Mac-OS-X
-
-## Was wir nutzen werden
-
-Wir werden die folgenden beiden Pakete nutzen:
-
-- `inline` und die `cfunction` um Inline C code zu schreiben, der on-the-fly kompiliert wird (Es gibt auch eine `cxxfunction` für
-C++ Code).
-
-- `Rcpp`, und die Nutzung der Funktion `cppFunction` 
-
-## Rcpp
-
-![](figure/cppimages.jpg)
-
-## Einleitung
-
-- R ist in C geschrieben
-- Die Nutzung der Schnittstelle zu C liegt nahe
-
-![](https://cdn.worldvectorlogo.com/logos/c.svg)
-![](http://www.rcpp.org/book/seamless.png)
-
-## Das R-Paket CPP 
-
-- [R Simulationsmodelle bis zu 20 mal schneller](https://www.r-bloggers.com/make-your-r-simulation-models-20-times-faster/)
-
-- [Hohe Performanz mit Rcpp](http://adv-r.had.co.nz/Rcpp.html)
-
-
-
-```r
-install.packages("Rcpp")
-```
-
-
-```r
-library(Rcpp)
-cppFunction('int add(int x, int y, int z) {
-  int sum = x + y + z;
-  return sum;
-}')
-# add works like a regular R function
-add
-```
-
-
-```r
-add(1, 2, 3)
-```
-
-
-## [Rcpp](http://dirk.eddelbuettel.com/code/rcpp/Rcpp-introduction.pdf)
-
-[Tutorial on Rcpp by Hadley Wickham](http://adv-r.had.co.nz/Rcpp.html#rcpp-intro)
-
-
-```r
-library(Rcpp)
-```
-
-
-```r
-cppFunction('int add(int x, int y, int z) {
-  int sum = x + y + z;
-  return sum;
-}')
-```
-
-
-
-```r
-add(1, 2, 3)
-```
-
-## Benchmarking
-
-
-```r
-install.packages("microbenchmark")
-```
-
-
-
-```r
-library(microbenchmark)
-```
-
-- [R-bloggers Artikel zu dem Paket `microbenchmark` ](https://www.r-bloggers.com/microbenchmarking-with-r/)
-
-## Resourcen
-
-- [Youtube Video with Dirk Edelbuettel](https://www.youtube.com/watch?v=ZKx5duewv-0)
-
-- Oliver Heidmann - [Programmieren in R - 
-Rcpp](https://wr.informatik.uni-hamburg.de/_media/teaching/sommersemester_2016/pir-16-oliver_heidmann-report.pdf)
-
-
-##	Überblick über Möglichkeiten des Parallel Computings - Paket parallel
-
-## Integration von Datenbanken
-
-## Datenbanken und R
-
-## Integration von PostgreSQL mit dem Paket 
-RPostgreSQL
-
-
-
-
-
-## PostgreSQL
-
-![PostgreSQL](https://www.runabove.com/images/new/2015/postgresql_1.png)
-
-- [PostgreSQL](http://wiki.openstreetmap.org/wiki/PostgreSQL)
-
-
-## PostgreSQL installieren
-
-- [Installation Windows](https://www.postgresql.org/download/windows/)
-- [Installation Linux](http://postgres.de/install.html)
-
-## PG admin installieren
-
-- [PGadmin](https://www.pgadmin.org/)
-
-## Wie bekomme ich Daten in die Datenbank
-
-
-```r
-# install.packages("RPostgreSQL")
-library("RPostgreSQL")
-```
-
-
-## Geodaten in die Datenbank migrieren
-
-- [Nutzung von osm2pgsql](http://www.volkerschatz.com/net/osm/osm2pgsql-usage.html)
-
-```
-sudo -u postgres createuser Japhilko
-sudo -u postgres createdb -E UTF8 -O Japhilko offlgeoc
-```
-
-Die postgis Erweiterung muss für die Datenbank installiert werden:
-
-```
-CREATE EXTENSION postgis;
-```
-
-## [Erweiterung hstore](https://www.postgresql.org/docs/9.1/static/sql-createextension.html)
-
-```
-CREATE EXTENSION hstore;
-```
-
-
-```
-osm2pgsql -s -U postgres -d offlgeoc /home/kolb/Forschung/osmData/data/saarland-latest.osm.pbf 
-```
-
-## Datenbank für Geocoding
-
-```
-sudo -u postgres createdb -E UTF8 -O Japhilko offlgeocRLP
-```
-
-```
-CREATE EXTENSION postgis;
-```
-
-```
-osm2pgsql -s -U postgres -d offlgeocRLP -o gazetteer /home/kolb/Forschung/osmData/data/rheinland-pfalz-latest.osm.pbf 
-```
-
-[So bekommt man alle administrativen Grenzen:](https://gist.github.com/jpetazzo/5177554)
-
-```
-SELECT name FROM planet_osm_polygon WHERE boundary='administrative'
-```
-
-## [Zurück zu R](https://datashenanigan.wordpress.com/2015/05/18/getting-started-with-postgresql-in-r/)
-
-
-```r
-pw <- {"1234"}
-drv <- dbDriver("PostgreSQL")
-con <- dbConnect(drv, dbname = "offlgeocRLP",
-                 host = "localhost", port = 5432,
-                 user = "postgres", password = pw)
-rm(pw) # removes the password
-
-dbExistsTable(con, "planet_osm_polygon")
-```
-
-- [Select more than one column](http://dba.stackexchange.com/questions/54011/postgres-function-assign-query-results-to-multiple-variables)
-
-
-```r
-df_postgres <- dbGetQuery(con, "SELECT name, admin_level FROM planet_osm_polygon WHERE boundary='administrative'")
-```
-
-
-```r
-barplot(table(df_postgres[,2]),col="royalblue")
-```
-
-## 
-
-
-```r
-df_adm8 <- dbGetQuery(con, "SELECT name, admin_level FROM planet_osm_polygon WHERE boundary='administrative' AND admin_level='8'")
-```
-
-
-```r
-library(knitr)
-# kable(head(df_adm8))
-```
-
-## 
-
-
-```r
-df_hnr <- dbGetQuery(con, "SELECT * FROM planet_osm_line, planet_osm_point 
-WHERE planet_osm_line.name='Nordring' AND planet_osm_line.highway IN ('motorway','trunk','primary')
-AND planet_osm_point.name='Ludwigshafen' AND planet_osm_point.place IN ('city', 'town')
-ORDER BY ST_Distance(planet_osm_line.way, planet_osm_point.way)")
-```
-
-
-```r
-df_hnr <- dbGetQuery(con, "SELECT * FROM planet_osm_line, planet_osm_point 
-WHERE planet_osm_line.name='Nordring' AND planet_osm_point.name='Ludwigshafen' 
-ORDER BY ST_Distance(planet_osm_line.way, planet_osm_point.way)")
-head(df_hnr)
-```
-
-
-```r
-df_ <- dbGetQuery(con, "SELECT * FROM planet_osm_line, planet_osm_point 
-WHERE planet_osm_line.name='Nordring' AND planet_osm_point.name='Ludwigshafen' 
-ORDER BY ST_Distance(planet_osm_line.way, planet_osm_point.way)")
-head(df_hnr)
-```
-
-
-```r
-colnames(df_)
-```
-
-
-```r
-table(df_$name)
-```
-
-## Adress in Sippersfeld
-
-
-```r
-df_sipp <- dbGetQuery(con, "SELECT * FROM planet_osm_line, planet_osm_point 
-WHERE planet_osm_line.name='Rechweg' AND planet_osm_point.name='Sippersfeld' 
-ORDER BY ST_Distance(planet_osm_line.way, planet_osm_point.way)")
-head(df_sipp)
-```
-
-
-## [OpenStreetMap und Open Government Data in PostGIS](http://tud.at/linuxwochen/2013-osm-postgis/)
-
-
-
-```r
-restnam <- dbGetQuery(con, "SELECT name, COUNT(osm_id) AS anzahl
-FROM planet_osm_point
-WHERE amenity = 'restaurant'
-  AND name <> ''
-GROUP BY name
-ORDER BY anzahl DESC
-LIMIT 10")
-head(restnam)
-```
-
-
-## [PostgreSQL and Leaflet](https://www.r-bloggers.com/using-postgresql-and-shiny-with-a-dynamic-leaflet-map-monitoring-trash-cans/)
-
-
-```r
-install.packages("plot3D")
-```
-
-
-
-```r
-library(plot3D)
-library(RPostgreSQL)
-```
-
-## Links
-
-- [osm2pgsql
-](https://github.com/petewarden/osm2pgsql/tree/master/gazetteer)
-
-- Andrew Whitby - [Roll-your-own geocoding with OpenStreetMap Nominatim on Amazon EC2](https://andrewwhitby.com/2014/12/18/nominatim-on-ec2/)
-
-- [OpenStreetMap Nominatim Server for Geocoding](http://koo.fi/blog/2015/03/19/openstreetmap-nominatim-server-for-geocoding/#Database_users)
-
-- [Getting Started With PostGIS](http://www.bostongis.com/PrinterFriendly.aspx?content_name=postgis_tut01)
-
-- [PostGIS geocode](http://postgis.net/docs/Geocode.html)
-
-- [Nominatim installation](http://wiki.openstreetmap.org/wiki/Nominatim/Installation)
-
-- [Wie bekommt man OSM Daten](https://www.azavea.com/blog/2015/12/21/tools-for-getting-data-out-of-openstreetmap-and-into-desktop-gis/)
-
-
-##	Nutzung von MongoDB in R
-
-
-
-

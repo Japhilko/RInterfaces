@@ -177,6 +177,15 @@ kable(ab)
 
 ![](figure/RefDoc.PNG)
 
+## [Immer das aktuelle Datum im Kopf](http://stackoverflow.com/questions/23449319/yaml-current-date-in-rmarkdown)
+
+```
+date: "`r format(Sys.time(), '%d %B, %Y')`"
+```
+![](figure/rmdAktuellesDatum.PNG)
+
+![](figure/ErgebenisAktuellesDatum.PNG)
+
 
 ## Resourcen
 

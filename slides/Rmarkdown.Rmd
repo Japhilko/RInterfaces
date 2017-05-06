@@ -318,3 +318,5 @@ install.packages("flexdashboard", type = "source")
 
 
 - [Verschiedene CSS Fonts](http://www.cssfontstack.com/)
+
+- [Überblick über die verschiedenen Rmarkdown Formate](http://rmarkdown.rstudio.com/formats.html)

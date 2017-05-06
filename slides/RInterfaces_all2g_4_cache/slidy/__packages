@@ -20,3 +20,7 @@ tm
 FactoMineR
 Rcpp
 microbenchmark
+sp
+maptools
+RJSONIO
+gosmd

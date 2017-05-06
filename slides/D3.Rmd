@@ -39,6 +39,8 @@ library(dplyr)
 
 - [Übersicht zu ggvis](http://ggvis.rstudio.com/)
 
+![](figure/ggvisGraphics.PNG)
+
 ## [Kochbuch für ggvis](http://ggvis.rstudio.com/cookbook.html)
 
 ```{r}

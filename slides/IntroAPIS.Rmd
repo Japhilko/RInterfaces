@@ -11,6 +11,23 @@ output:
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
+## [Was sind API's?](https://de.wikipedia.org/wiki/Programmierschnittstelle)
+
+![](figure/APIerklaerung.PNG)
+
+## [Programmierschnittstellen](http://www.gruenderszene.de/lexikon/begriffe/application-programming-interface-api)
+
+- Relevanz hat der Begriff der API vor allem durch seine Verwendung von Webdiensten erhalten.
+- APIs dienen also zum Austausch und der Weiterverarbeitung von Daten und Inhalten zwischen verschiedenen Webseiten, Programmen und Content-Anbietern.
+
+![](figure/YoutubeAPI.PNG)
+
+## Bedeutung
+
+- es ist unter anderem möglich Daten von Programmierschnittstellen zu beziehen
+- diese Daten sind allerdings nicht als `.xlsx`, `.csv`, `.dta` oder ähnliches abgespeichert sondern in einem der folgenden Formate: `.json`, `.xml` etc.
+
+
 ## JavaScript Object Notation
 
 ![](figure/JSONwiki.PNG)

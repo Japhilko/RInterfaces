@@ -98,7 +98,7 @@ str1 %>% substr(1,5) %>% toupper()
 
 ## Das Paket `leaflet`
 
-- [leaflet](https://rstudio.github.io/leaflet/) - um  interaktive Karten mit der JavaScript Bibliothek 'Leaflet' zu erzeugen
+- [leaflet](https://rstudio.github.io/leaflet/) - um  interaktive Karten mit der JavaScript Bibliothek `leaflet` zu erzeugen
 
 ```{r,eval=F}
 install.packages("leaflet")
@@ -112,6 +112,12 @@ library("leaflet")
 
 - Robin Lovelace - [The leaflet package for online mapping in R](http://robinlovelace.net/r/2015/02/01/leaflet-r-package.html)
 
+
+## Was sind Tiles
+
+- das Bild der Fliese erklärt es eigentlich ganz gut 
+- es geht um eine [Kachelgrafik](https://de.wikipedia.org/wiki/Kachelgrafik)
+- es ist eine Grafik bezeichnet, die mosaikartig zusammengesetzt ein vielfach größeres Gesamtbild ergibt.
 
 ## Eine interaktive Karte erstellen
 
@@ -183,7 +189,10 @@ m2
 
 ![](figure/LayerSteuern.PNG)
 
-## Ein weiteres Beispiel mit Erdbebendaten
+## [Ein weiteres Beispiel mit Erdbebendaten](https://rstudio.github.io/leaflet/showhide.html)
+
+
+![](figure/LayersUmschalten.PNG)
 
 ```{r}
 outline <- quakes[chull(quakes$long, quakes$lat),]
@@ -210,8 +219,6 @@ map
 
 
 
-![](figure/LayersUmschalten.PNG)
-
 ## [Karte mit Polygonen erzeugen](https://rstudio.github.io/leaflet/map_widget.html)
 
 ```{r}
@@ -224,8 +231,14 @@ Srs1 = Polygons(list(Sr1), "s1")
 Srs2 = Polygons(list(Sr2), "s2")
 Srs3 = Polygons(list(Sr4, Sr3), "s3/4")
 SpP = SpatialPolygons(list(Srs1, Srs2, Srs3), 1:3)
+```
+
+- so wird die Karte erzeugt:
+
+```{r}
 leaflet(height = "300px") %>% addPolygons(data = SpP)
 ```
+
 
 ## Beispiel US Staaten
 
@@ -235,6 +248,19 @@ mapStates = map("state", fill = TRUE, plot = FALSE)
 leaflet(data = mapStates) %>% addTiles() %>%
   addPolygons(fillColor = topo.colors(10, alpha = NULL), stroke = FALSE)
 ```
+
+## Der Befehl `setView`
+
+- mit `setView` kann man bestimmen welchen Ausschnitt man für die Hintergrundkarte haben möchte
+- dazu muss man die latitude und Longitude Koordinaten und ein zoom Level angegeben
+- dabei kann man nur ganze Zahlen angeben
+- je kleiner die Zahl, desto größer ist der Kartenausschnitt:
+
+
+- level 3 - Kontinent
+- level 10 - Stadt
+- level 21 - Gebäude
+
 
 ## Die Basiskarte ändern
 

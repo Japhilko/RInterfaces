@@ -49,3 +49,8 @@ knitr::opts_chunk$set(echo = TRUE)
 ```{r child = 'mermaid.Rmd'}
 ```
 
+# Addins für RStudio
+
+```{r child = 'Rstudio_AddIns.Rmd'}
+```
+

@@ -35,3 +35,13 @@ stringi
 NLP
 tm
 FactoMineR
+maptools
+RJSONIO
+gosmd
+Rcpp
+microbenchmark
+nycflights13
+downloader
+DBI
+RPostgreSQL
+plot3D

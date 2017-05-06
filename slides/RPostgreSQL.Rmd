@@ -1,7 +1,7 @@
 ---
 title: "RPostgreSQL"
 author: "Jan-Philipp Kolb"
-date: "9 Mai 2017"
+date: "`r format(Sys.time(), '%d %B, %Y')`"
 output: 
   slidy_presentation: 
     keep_md: yes
@@ -45,11 +45,22 @@ sudo -u postgres createuser Japhilko
 sudo -u postgres createdb -E UTF8 -O Japhilko offlgeoc
 ```
 
-Die postgis Erweiterung muss für die Datenbank installiert werden:
+Die [postgis Erweiterung](http://postgis.net/install/) muss für die Datenbank installiert werden:
 
 ```
 CREATE EXTENSION postgis;
 ```
+
+
+## Programm zum Import der OSM Daten in PostgreSQL- osm2pgsql
+
+- Läuft unter Linux deutlich besser
+- so könnte bspw. ein Import in PostgreSQL aussehen:
+
+```
+osm2pgsql -c -d osmBerlin --slim -C  -k  berlin-latest.osm.pbf
+```
+
 
 ## [Erweiterung hstore](https://www.postgresql.org/docs/9.1/static/sql-createextension.html)
 

@@ -12,11 +12,11 @@ output:
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
-# C++ Integration - Überblick über das Paket rcpp
+## C++ Integration - Überblick über das Paket `rcpp`
 
 ```{r child = 'rcpp.Rmd'}
 ```
 
 
-#	Überblick über Möglichkeiten des Parallel Computings - Paket parallel
+##	Überblick über Möglichkeiten des Parallel Computings - Paket parallel
 

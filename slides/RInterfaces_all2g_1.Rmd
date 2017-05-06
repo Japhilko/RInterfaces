@@ -26,6 +26,10 @@ knitr::opts_chunk$set(echo = TRUE,warning=F,message=F)
 ```{r child = 'Datenimport.Rmd'}
 ```
 
+```{r child = '../tutorial/Aufgabe_Datenimport.Rmd'}
+```
+
+
 # Datenexport
 
 ```{r child = 'Datenexport.Rmd'}
@@ -37,4 +41,6 @@ knitr::opts_chunk$set(echo = TRUE,warning=F,message=F)
 ```{r child = 'Rexcel.Rmd'}
 ```
 
+```{r child = '../tutorial/Aufgabe_Export2Excel.Rmd'}
+```
 

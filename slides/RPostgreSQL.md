@@ -1,6 +1,6 @@
 # RPostgreSQL
 Jan-Philipp Kolb  
-9 Mai 2017  
+`r format(Sys.time(), '%d %B, %Y')`  
 
 
 
@@ -19,6 +19,7 @@ Jan-Philipp Kolb
 ## PG admin installieren
 
 - [PGadmin](https://www.pgadmin.org/)
+- [Tutorial zur Nutzung von PGadmin](https://www.enterprisedb.com/resources/videos/how-create-postgres-database-using-pgadmin)
 
 ## Wie bekomme ich Daten in die Datenbank
 
@@ -150,7 +151,7 @@ colnames(df_)
 table(df_$name)
 ```
 
-## Adress in Sippersfeld
+## Adresse in einem Ort
 
 
 ```r
@@ -163,6 +164,8 @@ head(df_sipp)
 
 ## [OpenStreetMap und Open Government Data in PostGIS](http://tud.at/linuxwochen/2013-osm-postgis/)
 
+- [Der Anfang mit PostGIS](http://www.bostongis.com/?content_name=postgis_tut01)
+- [PostGIS und R](https://gis.stackexchange.com/questions/64950/working-with-postgis-data-in-r)
 
 
 ```r
@@ -208,3 +211,10 @@ library(RPostgreSQL)
 
 - [Wie bekommt man OSM Daten](https://www.azavea.com/blog/2015/12/21/tools-for-getting-data-out-of-openstreetmap-and-into-desktop-gis/)
 
+
+## [`RMySQL`](https://cran.r-project.org/web/packages/RMySQL/index.html)
+
+
+```r
+install.packages("RMySQL")
+```

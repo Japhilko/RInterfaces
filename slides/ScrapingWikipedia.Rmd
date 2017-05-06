@@ -34,7 +34,7 @@ install.packages("FactoMineR")
 
 - Das R-Paket [`stringi`](http://stringi.rexamine.com/) von Marek Gagolewski and Bartek Tartanus bietet Möglichkeiten zur String Verarbeitung.
 
-```{r libraries}
+```{r}
 library("stringi")
 ```
 
@@ -71,7 +71,7 @@ titles <- c("Zika-Virus", "Influenza-A-Virus_H1N1",
 - Zunächst wird ein Container erstellt um die Ergebnisse abzuspeichern
 - Dann wird der Text für jeden Artikel heruntergeladen und in dem Container gespeichert.
 
-```{r}
+```{r,eval=F}
 articles <- character(length(titles))
 
 for (i in 1:length(titles)){
@@ -90,7 +90,7 @@ Das Folgende basiert auf einem Blogpost von Norbert Ryciak über die [automatisc
 - Es war möglich, dieses Problem mit Hinweisen aus einer [Diskussion auf Stackoverflow](http://stackoverflow.com/questions/24191728/documenttermmatrix-error-on-corpus-argument) zu lösen.
 
 
-```{r prepdata}
+```{r prepdata,eval=F}
 docs2 <- tm_map(docs, function(x) stri_replace_all_regex(
   x, "<.+?>", " "))
 docs3 <- tm_map(docs2, function(x) stri_replace_all_fixed(
@@ -99,7 +99,7 @@ docs3 <- tm_map(docs2, function(x) stri_replace_all_fixed(
 
 ## Den Text weiterverarbeiten
 
-```{r}
+```{r,eval=F}
 docs4 <- tm_map(docs3, PlainTextDocument)
 docs5 <- tm_map(docs4, stripWhitespace)
 docs6 <- tm_map(docs5, removeWords, stopwords("german"))
@@ -109,7 +109,7 @@ docs8 <- tm_map(docs7, tolower)
 ```
 
 
-```{r}
+```{r,eval=F}
 dtm <- DocumentTermMatrix(docs8)  
 ```
 
@@ -119,7 +119,7 @@ dtm <- DocumentTermMatrix(docs8)
 
 - Der folgende Code ist auf einem Blog post von  Arthur Charpentier über das Mining von Wikipedia basiert. 
 
-```{r}
+```{r,eval=F}
 dtm2 <- as.matrix(dtm)
 frequency <- colSums(dtm2)
 frequency <- sort(frequency, decreasing=TRUE)
@@ -133,6 +133,15 @@ for(i in 2:nrow(dtm2)){
 
 colnames(s) <- titles
 ```
+
+```{r,eval=F,echo=F}
+save(s,file="../data/KrankheitenWikipedia.Rmd")
+```
+
+```{r,echo=F}
+load("../data/KrankheitenWikipedia.Rmd")
+```
+
 
 ## Ergebnis
 

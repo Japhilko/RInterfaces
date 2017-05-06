@@ -1,0 +1,35 @@
+---
+title: "Rstudio_AddIns"
+author: "Jan-Philipp Kolb"
+date: "6 Mai 2017"
+output: slidy_presentation
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## [Rstudio AddIns](https://rstudio.github.io/rstudioaddins/#overview)
+
+- Man kann kleine Erweiterungen für Rstudio installieren
+- Einige dieser Erweiterungen beruhen auf Javascript
+- Um die AddIns zu nutzen muss die neueste Version von Rstudio installiert sein
+
+![](figure/AddInsEx.PNG)
+
+
+## [Ein AddIn um Farben auszuwählen](https://www.r-bloggers.com/an-awesome-rstudio-addin-for-selecting-colours-and-another-for-adding-marginal-density-plots-to-ggplot2/)
+
+```{r,eval=F}
+install.packages("shinyjs")
+```
+
+![](https://i1.wp.com/deanattali.com/img/blog/colourpicker-ggmarginal-gadgets/colourpickerscrnshot.png?w=456)
+
+
+## Das Paket `shinyjs`
+
+```{r}
+citation("shinyjs")
+```
+

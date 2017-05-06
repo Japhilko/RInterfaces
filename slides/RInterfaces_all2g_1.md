@@ -349,6 +349,17 @@ oecd <- read_dta("https://github.com/Japhilko/IntroR/raw/master/2017/data/oecd.d
 
 - [Das Paket readr](https://www.r-bloggers.com/readrproblems-returns-tidy-data/)
 
+
+
+## Aufgabe - Datenimport
+
+- Gehen Sie auf [meine Github Seite](https://github.com/Japhilko/RInterfaces/blob/master/data/whcSites.csv) und laden Sie den Datensatz zu den Weltkulturerbestätten (whcsites) herunter
+- Laden Sie den Datensatz mit einer geeigneten Funktion in Ihre Console.
+- Finden Sie heraus, wieviele Beobachtungen und Variablen der Datensatz umfasst.
+- Wieviele kulturelle/natürliche Weltkulturerbestätten gibt es im Datensatz?
+
+
+
 # Datenexport
 
 
@@ -563,5 +574,16 @@ library(readxl)
 ```
 
 ![](figure/Rexcel.PNG)
+
+
+
+
+
+## Aufgabe Export nach Excel
+
+- Schränken Sie den Weltkulturerbe Datensatz auf die wichtigsten Spalten ein.
+- Erzeugen Sie einen Subdatensatz in dem nur die kulturellen Stätten enthalten sind. Machen Sie dies analog für die natürlichen Stätten.
+- Nutzen Sie das Paket `XLconnect` um die Datensätze nach Excel zu übertragen. Erstellen Sie ein Blatt für die kulturellen und eins für die natürlichen Stätten.
+
 
 

@@ -14,15 +14,13 @@ Jan-Philipp Kolb
 
 ![](figure/TaskViewReproducibleResearch.PNG)
 
-
-## Resourcen
-
-- [Reproducible Research
+- Ein Online Buch mit vielen nützlichen Tipps
+## [Reproducible Research
 with R and RStudio](https://englianhu.files.wordpress.com/2016/01/reproducible-research-with-r-and-studio-2nd-edition.pdf)
 
 ![](figure/Gandrud.PNG)
 
-- [A crash course in reproducible research in R](http://t-redactyl.io/blog/2016/10/a-crash-course-in-reproducible-research-in-r.html)
+## [A crash course in reproducible research in R](http://t-redactyl.io/blog/2016/10/a-crash-course-in-reproducible-research-in-r.html)
 
 
 ![](figure/CrashcourseReprod.PNG)
@@ -188,16 +186,16 @@ kable(ab)
 
          a            b
 ----------  -----------
- 0.5698950   -1.0027845
- 0.5128758    0.7160237
- 0.9015984    0.3844438
- 0.6933359   -0.7651290
- 0.1793136    0.5983410
- 0.5899971   -0.0817023
- 0.0470482    2.6758295
- 0.4616198    0.5917404
- 0.7061242    1.0987356
- 0.9341547    0.7744080
+ 0.1962884    0.1131156
+ 0.8059007   -0.0229997
+ 0.2766309   -1.1885926
+ 0.2797320   -0.0391348
+ 0.2934003    0.6799188
+ 0.5117670   -0.6064448
+ 0.4788544    1.1067234
+ 0.5341763    0.4185559
+ 0.3249823    0.1729800
+ 0.4148437   -1.5484840
 
 ## [Vorlagen verwenden](http://rmarkdown.rstudio.com/articles_docx.html)
 
@@ -208,6 +206,15 @@ kable(ab)
 3. Vorlage als Referenz angeben
 
 ![](figure/RefDoc.PNG)
+
+## [Immer das aktuelle Datum im Kopf](http://stackoverflow.com/questions/23449319/yaml-current-date-in-rmarkdown)
+
+```
+date: "06 Mai, 2017"
+```
+![](figure/rmdAktuellesDatum.PNG)
+
+![](figure/ErgebenisAktuellesDatum.PNG)
 
 
 ## Resourcen
@@ -437,7 +444,7 @@ date()
 ```
 
 ```
-## [1] "Fri May 05 15:43:02 2017"
+## [1] "Sat May 06 15:08:16 2017"
 ```
 
 ## Eine Folie mit Formel
@@ -744,6 +751,8 @@ install.packages("flexdashboard", type = "source")
 
 - [Verschiedene CSS Fonts](http://www.cssfontstack.com/)
 
+- [Überblick über die verschiedenen Rmarkdown Formate](http://rmarkdown.rstudio.com/formats.html)
+
 # Notebooks zur Integration von anderen Programmiersprachen (Python,LaTeX,Julia)
 
 
@@ -784,7 +793,7 @@ print(sys.version)
 ```
 
 ```
-## 3.5.2 (v3.5.2:4def2a2901a5, Jun 25 2016, 22:01:18) [MSC v.1900 32 bit (Intel)]
+## 2.7.10 (default, May 23 2015, 09:44:00) [MSC v.1500 64 bit (AMD64)]
 ```
 
 ## [LaTeX Code integieren](https://blog.rstudio.org/2016/10/05/r-notebooks/)
@@ -864,6 +873,10 @@ jupyter notebook
 
 - [Podcast](https://talkpython.fm/episodes/show/96/exploring-awesome-python)
 
+
+- [Deploying JupyterHub for Education](https://developer.rackspace.com/blog/deploying-jupyterhub-for-education/)
+- [JupyterHub](https://hub.docker.com/r/jupyterhub/jupyterhub/) - [github](https://github.com/jupyterhub/jupyterhub)
+- [Jupyter autograder](https://github.com/data-8/connector-instructors/issues/3)
 
 
 

@@ -12,13 +12,14 @@ output:
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
+
+## Einführung und Motivation
+
 ```{r,eval=F,echo=F}
 install.packages("threejs")
 install.packages("tidyverse")
 ```
 
-
-# Einführung und Motivation
 
 ```{r child = 'Intro.Rmd'}
 ```
@@ -27,7 +28,7 @@ install.packages("tidyverse")
 ```{r child = '../tutorial/Aufgabe_Zusatzpakete.Rmd'}
 ```
 
-# Datenimport
+## Datenimport
 
 ```{r child = 'Datenimport.Rmd'}
 ```
