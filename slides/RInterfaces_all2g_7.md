@@ -176,26 +176,6 @@ head(flights)
 
 ```r
 library(dplyr)
-```
-
-```
-## 
-## Attaching package: 'dplyr'
-```
-
-```
-## The following objects are masked from 'package:stats':
-## 
-##     filter, lag
-```
-
-```
-## The following objects are masked from 'package:base':
-## 
-##     intersect, setdiff, setequal, union
-```
-
-```r
 head(filter(flights, month == 1,day==1))
 ```
 
@@ -268,78 +248,134 @@ head(sleepData)
 ```
 
 
-## Integration von PostgreSQL mit dem Paket 
-RPostgreSQL
+## Integration von PostgreSQL mit dem Paket RPostgreSQL
 
 
 
 
 
-## PostgreSQL
+## Die Nutzung von [RPostgreSQL](http://wiki.openstreetmap.org/wiki/PostgreSQL)
 
 ![PostgreSQL](https://www.runabove.com/images/new/2015/postgresql_1.png)
 
-- [PostgreSQL](http://wiki.openstreetmap.org/wiki/PostgreSQL)
 
-
-## PostgreSQL installieren
+PostgreSQL installieren
 
 - [Installation Windows](https://www.postgresql.org/download/windows/)
 - [Installation Linux](http://postgres.de/install.html)
 
 ## PG admin installieren
 
+![](figure/pgadmin.PNG)
+
 - [PGadmin](https://www.pgadmin.org/)
 - [Tutorial zur Nutzung von PGadmin](https://www.enterprisedb.com/resources/videos/how-create-postgres-database-using-pgadmin)
+
+![](https://upload.wikimedia.org/wikipedia/commons/5/5f/PgAdminLogo.jpg)
+
+## Neue Datenbank anlegen
+
+![](figure/pgadminDBanlegen.PNG)
+
+## Eine neue Datenbank
+
+![](figure/neueDB.PNG)
+
+- Unter Linux kann man auch in der Kommandozeile einen neuen Nutzer anlegen:
+
+```
+sudo -u postgres createuser Japhilko
+```
+- und auch eine neue Datenbank anlegen:
+
+```
+sudo -u postgres createdb -E UTF8 -O Japhilko offlgeoc
+```
 
 ## Wie bekomme ich Daten in die Datenbank
 
 
 ```r
-# install.packages("RPostgreSQL")
+install.packages("RPostgreSQL")
+```
+
+
+
+```r
 library("RPostgreSQL")
 ```
 
+## [Datenbank mit R verbinden](https://datashenanigan.wordpress.com/2015/05/18/getting-started-with-postgresql-in-r/)
 
-## Geodaten in die Datenbank migrieren
 
-- [Nutzung von osm2pgsql](http://www.volkerschatz.com/net/osm/osm2pgsql-usage.html)
+```r
+pw <- {"1234"}
+drv <- dbDriver("PostgreSQL")
+con <- dbConnect(drv, dbname = "BeispielDB",
+                 host = "localhost", port = 5432,
+                 user = "postgres", password = pw)
+rm(pw) # removes the password
 
+dbExistsTable(con, "BeispielDB")
 ```
-sudo -u postgres createuser Japhilko
-sudo -u postgres createdb -E UTF8 -O Japhilko offlgeoc
+
+## Daten an Datenbank schicken
+
+
+```r
+data(mtcars)
+df <- data.frame(carname = rownames(mtcars), 
+                 mtcars, 
+                 row.names = NULL)
+df$carname <- as.character(df$carname)
+rm(mtcars)
+ 
+dbWriteTable(con, "cartable", 
+             value = df, append = TRUE, row.names = FALSE)
 ```
 
-Die postgis Erweiterung muss für die Datenbank installiert werden:
+- eine Abfrage machen:
+
+
+```r
+df_postgres <- dbGetQuery(con, "SELECT * from cartable")
+```
+
+- die beiden Tabellen müssten gleich sein
+
+
+```r
+identical(df, df_postgres)
+```
+
+
+## Anwendung - Geodaten in die Datenbank migrieren
+
+- Zunächst muss für die Datenbank die [postgis Erweiterung](http://postgis.net/install/) installiert werden:
 
 ```
 CREATE EXTENSION postgis;
 ```
 
-## [Erweiterung hstore](https://www.postgresql.org/docs/9.1/static/sql-createextension.html)
+## Programm zum Import der OSM Daten in PostgreSQL- osm2pgsql
+
+- [Nutzung von osm2pgsql](http://www.volkerschatz.com/net/osm/osm2pgsql-usage.html)
+- Läuft unter Linux deutlich besser
+- so könnte bspw. ein Import in PostgreSQL aussehen:
 
 ```
-CREATE EXTENSION hstore;
+osm2pgsql -c -d osmBerlin --slim -C  -k  berlin-latest.osm.pbf
 ```
-
 
 ```
 osm2pgsql -s -U postgres -d offlgeoc /home/kolb/Forschung/osmData/data/saarland-latest.osm.pbf 
 ```
 
-## Datenbank für Geocoding
-
-```
-sudo -u postgres createdb -E UTF8 -O Japhilko offlgeocRLP
-```
-
-```
-CREATE EXTENSION postgis;
-```
-
 ```
 osm2pgsql -s -U postgres -d offlgeocRLP -o gazetteer /home/kolb/Forschung/osmData/data/rheinland-pfalz-latest.osm.pbf 
 ```
+
+## Mögliche Abfragen
 
 [So bekommt man alle administrativen Grenzen:](https://gist.github.com/jpetazzo/5177554)
 
@@ -347,21 +383,8 @@ osm2pgsql -s -U postgres -d offlgeocRLP -o gazetteer /home/kolb/Forschung/osmDat
 SELECT name FROM planet_osm_polygon WHERE boundary='administrative'
 ```
 
-## [Zurück zu R](https://datashenanigan.wordpress.com/2015/05/18/getting-started-with-postgresql-in-r/)
 
-
-```r
-pw <- {"1234"}
-drv <- dbDriver("PostgreSQL")
-con <- dbConnect(drv, dbname = "offlgeocRLP",
-                 host = "localhost", port = 5432,
-                 user = "postgres", password = pw)
-rm(pw) # removes the password
-
-dbExistsTable(con, "planet_osm_polygon")
-```
-
-- [Select more than one column](http://dba.stackexchange.com/questions/54011/postgres-function-assign-query-results-to-multiple-variables)
+- [mehr als eine Spalte auswählen](http://dba.stackexchange.com/questions/54011/postgres-function-assign-query-results-to-multiple-variables)
 
 
 ```r
@@ -373,7 +396,7 @@ df_postgres <- dbGetQuery(con, "SELECT name, admin_level FROM planet_osm_polygon
 barplot(table(df_postgres[,2]),col="royalblue")
 ```
 
-## 
+## Eine Abfrage zu administrativen Grenzen
 
 
 ```r
@@ -381,12 +404,8 @@ df_adm8 <- dbGetQuery(con, "SELECT name, admin_level FROM planet_osm_polygon WHE
 ```
 
 
-```r
-library(knitr)
-# kable(head(df_adm8))
-```
 
-## 
+## Mögliche Abfragen
 
 
 ```r

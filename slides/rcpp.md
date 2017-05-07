@@ -49,6 +49,52 @@ C++ Code).
 
 - `Rcpp`, und die Nutzung der Funktion `cppFunction` 
 
+## [`Rcpp` ist das am meisten heruntergeladene Paket](http://www.kdnuggets.com/2015/06/top-20-r-packages.html)
+
+![](http://www.kdnuggets.com/wp-content/uploads/top-20-r-packages-downloads.jpg)
+
+
+
+## Das Paket `inline`
+
+
+```r
+install.packages("inline")
+```
+
+
+```r
+library(inline)
+citation("inline")
+```
+
+```
+## 
+## To cite package 'inline' in publications use:
+## 
+##   Oleg Sklyar, Duncan Murdoch, Mike Smith, Dirk Eddelbuettel,
+##   Romain Francois and Karline Soetaert (2015). inline: Functions
+##   to Inline C, C++, Fortran Function Calls from R. R package
+##   version 0.3.14. https://CRAN.R-project.org/package=inline
+## 
+## A BibTeX entry for LaTeX users is
+## 
+##   @Manual{,
+##     title = {inline: Functions to Inline C, C++, Fortran Function Calls from R},
+##     author = {Oleg Sklyar and Duncan Murdoch and Mike Smith and Dirk Eddelbuettel and Romain Francois and Karline Soetaert},
+##     year = {2015},
+##     note = {R package version 0.3.14},
+##     url = {https://CRAN.R-project.org/package=inline},
+##   }
+## 
+## ATTENTION: This citation information has been auto-generated from
+## the package DESCRIPTION file and may need manual editing, see
+## 'help("citation")'.
+```
+
+
+
+
 ## Rcpp
 
 ![](figure/cppimages.jpg)
@@ -57,8 +103,9 @@ C++ Code).
 
 - R ist in C geschrieben
 - Die Nutzung der Schnittstelle zu C liegt nahe
-
-![](https://cdn.worldvectorlogo.com/logos/c.svg)
+<!--
+![](https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcTXmGIhv5uLPOs2czuAQZ5lQaTepoiuROC2SVgMHPw1zv3_6ggqmzwZoEL8rA)
+-->
 ![](http://www.rcpp.org/book/seamless.png)
 
 ## Das R-Paket CPP 
@@ -99,6 +146,19 @@ add(1, 2, 3)
 library(Rcpp)
 ```
 
+```
+## 
+## Attaching package: 'Rcpp'
+```
+
+```
+## The following object is masked from 'package:inline':
+## 
+##     registerPlugin
+```
+
+![](figure/BuildTools.PNG)
+
 
 ```r
 cppFunction('int add(int x, int y, int z) {
@@ -128,9 +188,67 @@ library(microbenchmark)
 
 - [R-bloggers Artikel zu dem Paket `microbenchmark` ](https://www.r-bloggers.com/microbenchmarking-with-r/)
 
+## Das Paket `rbenchmark`
+
+
+```r
+install.packages("rbenchmark")
+```
+
+
+
+```r
+library(rbenchmark)
+```
+
+## Eine cpp Funktion zum aufsummieren 
+
+
+```r
+library(Rcpp)
+cppFunction('
+  double sumC(NumericVector x) {
+    int n = x.size();
+    double total = 0;
+    for(int i = 0; i < n; ++i) {
+      total += x[i];
+    }
+    return total;
+  }
+')
+```
+
+## [Ein erster Vergleich](http://www.quantide.com/ramarro-chapter-10/)
+
+
+```r
+y <- rnorm(1000000)
+microbenchmark(
+  sumC(y),
+  sum(y)
+)
+```
+
+
 ## Resourcen
 
-- [Youtube Video with Dirk Edelbuettel](https://www.youtube.com/watch?v=ZKx5duewv-0)
+Youtube Videos
+
+- [... mit Dirk Edelbuettel](https://www.youtube.com/watch?v=ZKx5duewv-0)
+
+- [... R mit C++: Rcpp, RInside, und RProtobuf](https://www.youtube.com/watch?v=UZkaZhsOfT4#t=232)
 
 - Oliver Heidmann - [Programmieren in R - 
 Rcpp](https://wr.informatik.uni-hamburg.de/_media/teaching/sommersemester_2016/pir-16-oliver_heidmann-report.pdf)
+
+- [Das Paket `cxxfunplus`](https://cran.r-project.org/web/packages/cxxfunplus/cxxfunplus.pdf)
+
+
+```r
+install.packages("cxxfunplus")
+```
+
+- [Rcpp: Seamless R and C++ Integration](www.quantide.com/R/ramarro-chapter-10/)
+
+- [Rcpp Honig](https://www.r-bloggers.com/rcpphoney-introduction/)
+

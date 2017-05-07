@@ -268,3 +268,29 @@ gvisComboChart(CityPopularity, xvar='City',
                        title='City Popularity',
                        series='{0: {type:\"line\"}}'))
 ```
+
+## Ein erstes Beispiel (Fortran) mit `inline`
+
+```{r}
+x <- as.numeric(1:10)
+n <- as.integer(10)
+
+## Not run: 
+## A simple Fortran example - n and x: assumed-size vector
+code <- "
+      integer i
+      do 1 i=1, n(1)
+    1 x(i) = x(i)**3
+"
+cubefn <- cfunction(signature(n="integer", x="numeric"), code, convention=".Fortran")
+print(cubefn)
+
+cubefn(n, x)$x
+```
+
+
+## [Erweiterung hstore](https://www.postgresql.org/docs/9.1/static/sql-createextension.html)
+
+```
+CREATE EXTENSION hstore;
+```

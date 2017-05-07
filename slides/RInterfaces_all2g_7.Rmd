@@ -9,7 +9,7 @@ output:
 ---
 
 ```{r, include=FALSE}
-knitr::opts_chunk$set(echo = TRUE)
+knitr::opts_chunk$set(echo = TRUE,message=F,warning=F)
 ```
 
 ## Datenbanken und R
@@ -22,13 +22,12 @@ knitr::opts_chunk$set(echo = TRUE)
 ```{r child = 'dplyr.Rmd'}
 ```
 
-## Integration von PostgreSQL mit dem Paket 
-RPostgreSQL
+## Integration von PostgreSQL mit dem Paket RPostgreSQL
 
 ```{r child = 'RPostgreSQL.Rmd'}
 ```
 
-## Nutzung von weiteren Datenbanken (MongoDB, MySQL)
+## Nutzung von weiteren Datenbanken (MySQL, MongoDB)
 
 ```{r child = 'Rmongodb.Rmd'}
 ```
