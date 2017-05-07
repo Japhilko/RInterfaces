@@ -1,0 +1,32 @@
+---
+title: "Aufgabe XML einlesen"
+author: "Jan-Philipp Kolb"
+date: "8 Mai 2017"
+output: 
+  slidy_presentation: 
+    keep_md: yes
+---
+
+```{r, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+```
+
+## Aufgabe - XML file einlesen
+
+- Laden Sie [folgende Datei](https://github.com/Japhilko/RInterfaces/blob/master/data/xmlEx.xml) in den R-Workspace  
+
+
+```{r,echo=F,eval=F}
+library(XML)
+url2<-"http://api.openstreetmap.org/api/0.6/node/1836323121"
+obj<-xmlParse(url2)
+saveXML(obj,file="xmlEx.xml")
+```
+
+![](figure/XMLex.PNG)
+
+Nutzen Sie Xpath um die folgenden Fragen zu beantworten:
+
+- Wie ist der Name des Knoten?
+- Bis wieviel Uhr ist geöffnet?
+- Ist die Speisekarte auf der Webseite zu finden?
