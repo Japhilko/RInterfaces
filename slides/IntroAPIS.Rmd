@@ -37,10 +37,27 @@ knitr::opts_chunk$set(echo = TRUE)
 
 -->
 
+## Das GeoJSON Format
+
+- GeoJSON ist ein offenes Format um geografische Daten nach der Simple-Feature-Access-Spezifikation zu repräsentieren. 
+- Dafür wird die JavaScript Object Notation verwendet.
+
+Die Struktur der Daten kann man sich mit einem [JSON Viewer anschauen](http://jsonviewer.stack.hu/)
+
+
 ## [GeoJSON](http://cannoneyed.github.io/geojson/)
 
 ![](figure/GeoJSON.PNG)
 
+- [GeoJSON](https://de.wikipedia.org/wiki/GeoJSON) ist ein offenes Format um geografische Daten nach der Simple-Feature-Access-Spezifikation zu repräsentieren.
+- [Simple Feature Access](https://de.wikipedia.org/wiki/Simple_Feature_Access) ist eine Spezifikation des Open Geospatial Consortium, welche eine allgemein gültige Architektur für geografische Daten und deren Geometrien definiert.
+- Die Spezifikation beschreibt einerseits die Speicherung und den Zugriff auf Geometrien und andererseits verschiedene räumliche Operatoren.
+
 ## [OpenStreetMap Daten](https://rstudio.github.io/leaflet/json.html)
 
 ![](figure/TopoJSON.PNG)
+
+
+## [Beispiele für GeoJSON](https://de.wikipedia.org/wiki/GeoJSON)
+
+![](figure/EinfacheGeometrien.PNG)

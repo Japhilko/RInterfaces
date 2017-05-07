@@ -1,9 +1,9 @@
 ---
-title: "DiagrammeR"
+title: "Das DiagrammeR Paket"
 author: "Jan-Philipp Kolb"
-date: "7 Februar 2017"
+date: "8 Mai 2017"
 output: 
-  html_document: 
+  slidy_presentation: 
     keep_md: yes
 ---
 
@@ -13,7 +13,7 @@ knitr::opts_chunk$set(echo = TRUE)
 
 ## Um was geht es?
 
-- [Getting started](http://rich-iannone.github.io/DiagrammeR/docs.html)
+- [Der Start](http://rich-iannone.github.io/DiagrammeR/docs.html)
 
 - [Das R-Paket DiagrammeR](http://rich-iannone.github.io/DiagrammeR/index.html)
 
@@ -28,7 +28,7 @@ library('DiagrammeR')
 ```
 
 
-## Creating a simple graph
+## Eine einfache Grafik erzeugen
 
 ```{r}
 DiagrammeR("
@@ -43,7 +43,7 @@ DiagrammeR("
 ")
 ```
 
-## [Creating a GANTT diagramm](https://knsv.github.io/mermaid/#mermaid)
+## [Ein GANTT Diagramm erstellen](https://knsv.github.io/mermaid/#mermaid)
 
 ```{r}
 DiagrammeR("

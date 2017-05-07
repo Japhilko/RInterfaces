@@ -14,6 +14,7 @@ knitr::opts_chunk$set(echo = TRUE)
 ## [Einführung in `visNetwork`](https://cran.r-project.org/web/packages/visNetwork/vignettes/Introduction-to-visNetwork.html)
 
 - [Rein kommen](http://datastorm-open.github.io/visNetwork/)
+- [d3-Netzwerkgraphiken mit R](https://www.r-bloggers.com/visualizing-with-d3-javascript-network-graphs-from-r/)
 
 ```{r,eval=F}
 install.packages("visNetwork")
@@ -34,6 +35,7 @@ visNetwork(nodes, edges, width = "100%")
 <!--
 ![](figure/VisNetMinimal.PNG)
 -->
+
 ## Wie es funktioniert
 
 ```{r,eval=F}
@@ -41,11 +43,15 @@ visDocumentation()
 vignette("Introduction-to-visNetwork") # with CRAN version
 ```
 
-## Shiny Beispiel
+![](figure/visjsNetworkvignette.PNG)
+
+## shiny Beispiel
+
+```{r,eval=F}
+install.packages("shiny")
+```
+
 
 ```{r,eval=F}
 shiny::runApp(system.file("shiny", package = "visNetwork"))
 ```
-
-
-## [d3-Netzwerkgraphiken mit R](https://www.r-bloggers.com/visualizing-with-d3-javascript-network-graphs-from-r/)

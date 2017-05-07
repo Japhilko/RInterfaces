@@ -1,0 +1,16 @@
+---
+title: "Aufgabe - Javascript Graphik einbinden"
+author: "Jan-Philipp Kolb"
+date: "7 Mai 2017"
+output: 
+  slidy_presentation: 
+    keep_md: yes
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+```
+
+## Aufgabe - interaktive Javascript Datei in Präsentation einbinden
+
+- Erzeugen Sie eine Präsentation und binden Sie eine beliebige interaktive Javascript Grafik ein
