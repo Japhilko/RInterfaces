@@ -335,6 +335,21 @@ leaflet(data = quakes[1:4,]) %>% addTiles() %>%
   addMarkers(~long, ~lat, icon = greenLeafIcon)
 ```
 
+## Andere Icons einfügen
+
+- es lassen sich alle möglichen Icons einfügen
+
+```{r}
+menIcon <- makeIcon("https://img.clipartfest.com/707b339dc88f57bbd5d88377891131e3_bean-people-clipart-cliparts-beach-screen-with-people-clipart_344-432.jpeg",
+         iconWidth = 38, iconHeight = 95,
+  iconAnchorX = 22, iconAnchorY = 94)
+
+leaflet(data = quakes[1:4,]) %>% addTiles() %>%
+  addMarkers(~long, ~lat, icon = menIcon)
+```
+
+
+
 ## Cluster Optionen für Marker
 
 ```{r}

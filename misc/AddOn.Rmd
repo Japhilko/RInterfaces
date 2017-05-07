@@ -252,3 +252,19 @@ tableplot(diamonds)
 ```
 
 - [Jupyter autograder](https://github.com/data-8/connector-instructors/issues/3)
+
+
+## [Combo Chart](https://rawgit.com/al2na/Rmarkdown_JSviz/master/googleVis.html)
+
+```{r}
+library(googleVis)
+op <- options(gvis.plot.tag = "chart")
+## Add the mean
+CityPopularity$Mean=mean(CityPopularity$Popularity)
+gvisComboChart(CityPopularity, xvar='City',
+          yvar=c('Mean', 'Popularity'),
+          options=list(seriesType='bars',
+                       width=450, height=300,
+                       title='City Popularity',
+                       series='{0: {type:\"line\"}}'))
+```

@@ -81,6 +81,31 @@ install.packages("googleVis")
 library(googleVis)
 ```
 
+- Das Paket `googleVis` bietet eine Schnittstelle zur [Google Charts API](https://developers.google.com/chart/)
+- [Einführung in `googleVis`](https://cran.r-project.org/web/packages/googleVis/vignettes/googleVis.pdf)
+- [Tutorial für `googleVis`](http://decastillo.github.io/googleVis_Tutorial/#1)
+- Inspiration durch Hans Rosling: [No more boring data](https://youtu.be/hVimVzgtD6w)
+
+## Ein Datensatz mit Früchten
+
+```{r}
+library(DT)
+datatable(Fruits)
+```
+
+
+
+## Beispiel mit `googleVis`
+
+```{r,eval=F}
+plot(gvisMotionChart(Fruits, "Fruit", "Year", options = list(width = 600, height = 400)))
+```
+
+![](figure/GoogleVisEx.PNG)
+
+
+## Ein weiterer Beispieldatensatz
+
 ```{r}
 df <- data.frame(year=1:11, x=1:11,
                  x.scope=c(rep(TRUE, 8), rep(FALSE, 3)),
@@ -89,11 +114,13 @@ df <- data.frame(year=1:11, x=1:11,
                  y.emphasis=c(rep(FALSE, 4), rep(TRUE, 7)))
 ```
 
+## Ein weiteres Beispiel für `googleVis`
+
 ```{r,eval=F}
-plot(
-  gvisScatterChart(df,options=list(lineWidth=2))
-)
+plot(gvisScatterChart(df,options=list(lineWidth=2)))
 ```
+
+![](figure/GoogleVisEx2.PNG)
 
 ## [Click me](http://rclickme.com/)
 
@@ -104,13 +131,22 @@ library(devtools)
 install_github("clickme", "nachocab")
 ```
 
+![](figure/clickmelogo.PNG)
+
+
+## Einfaches Beispiel mit `clickme`
+
 ```{r,eval=F}
 library(clickme)
-
-# simple
 clickme("points", 1:10)
+```
 
-# fancy
+
+![](figure/clickmeEx.PNG)
+
+## Ein weiteres `clickme` Beispiel
+
+```{r,eval=F}
 n <- 500
 clickme("points",
     x = rbeta(n, 1, 10), y = rbeta(n, 1, 10),
@@ -119,31 +155,33 @@ clickme("points",
     title = "Zoom Search Hover Click")
 ```
 
-## [d3Network ](http://christophergandrud.github.io/d3Network/)
+![](figure/clickmeex3.PNG)
+
+## [Das Paket `networkD3`](https://christophergandrud.github.io/networkD3/)
 
 ```{r,eval=F}
-install.packages("d3Network")
+install.packages("networkD3")
 ```
+
+![](figure/logoNetwork3d.PNG)
+
+- der Vorgänger [d3Network ](http://christophergandrud.github.io/d3Network/)
+
+## Ein Beispiel mit `networkD3`
+
 
 ```{r}
-library(d3Network)
-Source <- c("A", "A", "A", "A", "B", "B", "C", "C", "D")
-Target <- c("B", "C", "D", "J", "E", "F", "G", "H", "I")
-NetworkData <- data.frame(Source, Target)
-d3SimpleNetwork(NetworkData, width = 400, height = 250)
+library(networkD3)
+src <- c("A", "A", "A", "A","B", "B", "C", "C", "D")
+target <- c("B", "C", "D", "J","E", "F", "G", "H", "I")
+networkData <- data.frame(src, target)
+simpleNetwork(networkData)
 ```
 
 
-```{r,eval=F}
-sink("FirstNetwork.js") 
+## Zeitreihen interaktiv darstellen mit `dygraphs` 
 
-writeLines(d3SimpleNetwork(NetworkData), fileConn)
-unlink("FirstNetwork.js")
-```
-
-
-
-## [HTML widgets in R](http://www.htmlwidgets.org/showcase_leaflet.html)
+- [HTML widgets in R](http://www.htmlwidgets.org/showcase_leaflet.html)
 
 ```{r}
 library(dygraphs)
@@ -151,23 +189,8 @@ dygraph(nhtemp, main = "New Haven Temperatures") %>%
   dyRangeSelector(dateWindow = c("1920-01-01", "1960-01-01"))
 ```
 
-## [Combo Chart](https://rawgit.com/al2na/Rmarkdown_JSviz/master/googleVis.html)
 
-```{r}
-library(googleVis)
-op <- options(gvis.plot.tag = "chart")
-## Add the mean
-CityPopularity$Mean=mean(CityPopularity$Popularity)
-CC <- gvisComboChart(CityPopularity, xvar='City',
-          yvar=c('Mean', 'Popularity'),
-          options=list(seriesType='bars',
-                       width=450, height=300,
-                       title='City Popularity',
-                       series='{0: {type:\"line\"}}'))
-plot(CC)
-```
-
-
+## Das Paket `threejs`
 
 - [Introducing JS](https://www.opencpu.org/posts/js-release-0-1/)
 
@@ -175,10 +198,7 @@ plot(CC)
 install.packages("threejs")
 ```
 
-
-
 ```{r,results='asis'}
-# install.packages("threejs")
 library(threejs)
 z <- seq(-10, 10, 0.01)
 x <- cos(z)
@@ -206,6 +226,7 @@ scatterplot3js(x,y,z, color=rainbow(length(z)))
 
 - [ Interaktive Graphiken mit SVG](http://timelyportfolio.github.io/gridSVG_intro/)
 
+- [HTMLwidgets](http://www.htmlwidgets.org/develop_intro.html)
 
 - [Rook](https://cran.r-project.org/web/packages/Rook/index.html) - Tools um Webapplikationen mit R zu erstellen
 

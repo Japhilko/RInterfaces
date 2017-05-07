@@ -11,6 +11,17 @@ output:
 knitr::opts_chunk$set(echo = TRUE,message=F,warning=F)
 ```
 
+## [plotly ](https://plot.ly/)
+
+![](figure/plotlyLogo.PNG)
+
+- plotly ist ein Online Analyse und Visualisierungstool
+- es gibt Pakete für verschiedene Programmiersprachen
+
+## plotly und R
+
+![](figure/plotlyR.PNG)
+
 ## `plotly` Installieren
 
 ```{r,eval=F}
@@ -25,32 +36,29 @@ library("plotly")
 
 ## [Der Anfang mit `plotly` für R](https://plot.ly/r/getting-started/)
 
-```{r,eval=F}
-p <- plot_ly(midwest, x = ~percollege, color = ~state, type = "box")
-p
+```{r}
+plot_ly(midwest, x = ~percollege, color = ~state, type = "box")
 ```
 
+<!--
 ![](figure/plotlyEx.png)
-
+-->
 
 ## plotly Beispiel mit eigenen Daten
 
-```{r,eval=F}
+```{r}
 url <- "https://raw.githubusercontent.com/Japhilko/GeoData/master/2015/data/whcSites.csv"
-
 whcSites <- read.csv(url) 
 ```
 
-
-
-```{r,eval=F}
-p <- plot_ly(whcSites, x = ~date_inscribed, color = ~category_short, type = "box")
-p
+```{r}
+plot_ly(whcSites, x = ~date_inscribed, color = ~category_short, type = "box")
 ```
 
 
 
 ## Links
 
-- [Getting started with Plotly: basic Plots](https://www.r-bloggers.com/getting-started-with-plotly-basic-plots/)
+- [der Start mit Plotly: einfache Grafiken](https://www.r-bloggers.com/getting-started-with-plotly-basic-plots/)
 
+![](figure/plotlyRbloggers.PNG)
