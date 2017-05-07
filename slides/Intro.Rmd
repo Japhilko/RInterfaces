@@ -100,9 +100,17 @@ knitr::opts_chunk$set(echo = FALSE)
 
 ## Nutzung der Unterlagen auf GitHub
 
+-   Die folgende Seite ist die Startseite für den Kurs:
+
+<https://japhilko.github.io/Interfaces4R/>
+
+![](figure/Interfaces4r.PNG)
+
+## Wo sind die Sourcecodes?
+
 Wie wird das Github Verzeichnis genutzt?
 
--   Die folgende Seite ist die Startseite für den Kurs:
+-   Auf der folgenden Seite sind alle Sourcecodes enthalten:
 
 <https://github.com/Japhilko/RInterfaces>
 
@@ -133,7 +141,6 @@ Wie wird das Github Verzeichnis genutzt?
 - Alle anderen Dateien (bspw. `.RData`) auch mittels Raw Button herunterladen.
 
 ## Organisatorisches
-
 
 - Zusätzlich gibt es für jedes Kapitel eine Aufgabe, da man nur durch eigenes Trainieren auf der Lernkurve vorankommt.
 - Die Quellen sind als Link meist in der Überschrift hinterlegt.
