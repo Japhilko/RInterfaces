@@ -46,3 +46,5 @@ DBI
 RPostgreSQL
 plot3D
 networkD3
+inline
+rbenchmark
