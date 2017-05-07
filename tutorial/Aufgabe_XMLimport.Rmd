@@ -13,7 +13,7 @@ knitr::opts_chunk$set(echo = FALSE)
 
 ## Aufgabe - XML file einlesen
 
-- Laden Sie [folgende Datei](https://github.com/Japhilko/RInterfaces/blob/master/data/xmlEx.xml) in den R-Workspace  
+- Laden Sie [die Datei](https://github.com/Japhilko/RInterfaces/blob/master/data/xmlEx.xml) xmlEx aus dem data Subverzeichnis in den R-Workspace  
 
 
 ```{r,echo=F,eval=F}
@@ -23,7 +23,6 @@ obj<-xmlParse(url2)
 saveXML(obj,file="xmlEx.xml")
 ```
 
-![](figure/XMLex.PNG)
 
 Nutzen Sie Xpath um die folgenden Fragen zu beantworten:
 

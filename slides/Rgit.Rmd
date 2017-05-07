@@ -1,5 +1,5 @@
 ---
-title: "Rgit"
+title: "R und Versionsverwaltung"
 author: "Jan-Philipp Kolb"
 date: "09 Mai 2017"
 output: 
@@ -8,7 +8,7 @@ output:
 ---
 
 ```{r, include=FALSE}
-knitr::opts_chunk$set(echo = TRUE)
+knitr::opts_chunk$set(echo = TRUE,message=F,warning=F)
 ```
 
 
@@ -37,6 +37,12 @@ knitr::opts_chunk$set(echo = TRUE)
 
 ![](figure/CommitMessage.PNG)
 
+## Der übliche Ablauf
+
+- Datei bearbeiten und speichern
+- Änderungen commiten
+- Änderungen von anderen ziehen (pull)
+- Eigene Änderung hochladen (push)
 
 ## Links
 
@@ -83,6 +89,10 @@ install_github("Japhilko/gosmd")
 
 ![](figure/SearchableGithub.PNG)
 
+## [Git und Rstudio](https://www.r-bloggers.com/version-control-file-sharing-and-collaboration-using-github-and-rstudio/)
+
+![](figure/gitRstudio.PNG)
+
 
 ## Links
 
@@ -93,3 +103,5 @@ install_github("Japhilko/gosmd")
 - [Reset local repository branch to be just like remote repository HEAD](http://stackoverflow.com/questions/1628088/reset-local-repository-branch-to-be-just-like-remote-repository-head)
 
 - [How I Manage Data Analysis Projects with RStudio and Git - Part 1](http://christianlemp.com/blog/2014/02/05/How-I-Manage-Data-Projects-with-RStudio-and-Git.html)
+
+- [How do I force “git pull” to overwrite local files?](http://stackoverflow.com/questions/1125968/how-do-i-force-git-pull-to-overwrite-local-files)

@@ -1,6 +1,6 @@
 # Webscraping
 Jan-Philipp Kolb  
-1 Februar 2017  
+9 Mai 2017  
 
 
 
@@ -17,19 +17,40 @@ install.packages("tidyverse")
 
 ```r
 library(tidyverse)
+```
+
+![](figure/tidyverse.PNG)
+
+- [R für DataScience](http://r4ds.had.co.nz/)
+
+
+## Weitere benötigte Pakete
+
+- Das Paket `stringr`
+
+
+```r
 library(stringr)
+```
+
+
+
+```r
 library(forcats)
 library(ggmap)
 library(rvest)
 ```
 
-## SCRAPE DATA FROM WIKIPEDIA
+
+## Daten von Wikipedia einsammeln
 
 
 ```r
 html.world_ports <- read_html("https://en.wikipedia.org/wiki/List_of_busiest_container_ports")
 df.world_ports <- html_table(html_nodes(html.world_ports, "table")[[2]], fill = TRUE)
 ```
+
+
 
 ## Die Daten anschauen
 
@@ -59,7 +80,7 @@ glimpse(df.world_ports)
 ```
 
 
-## 
+## Das Paket `rvest`
 
 
 ```r
@@ -70,14 +91,14 @@ gsub('/url\\?q=','',sapply(strsplit(links[as.vector(grep('url',links))],split='&
 ```
 
 ```
-## [1] "http://theguitarrepairworkshop.com/"                                                                         
-## [2] "http://www.guitarservices.com/"                                                                              
-## [3] "http://www.guitarrepairbench.com/guitar-building-projects/guitar-workshop/guitar-workshop-project.html"      
-## [4] "http://www.guitarrepairbench.com/guitar-building-projects/guitar-workshop/guitar-workshop-layout-design.html"
-## [5] "https://www.facebook.com/The-Guitar-Repair-Workshop-847517635259712/"                                        
-## [6] "https://www.taylorguitars.com/dealer/guitar-repair-workshop-ltd"                                             
-## [7] "http://guitarworkshopglasgow.com/pages/repairs-1"                                                            
-## [8] "http://www.laweekly.com/music/10-best-guitar-repair-shops-in-los-angeles-4647166"                            
+## [1] "http://theguitarrepairworkshop.com/"                                                                   
+## [2] "http://www.guitarservices.com/"                                                                        
+## [3] "http://www.guitarrepairbench.com/guitar-building-projects/guitar-workshop/guitar-workshop-project.html"
+## [4] "https://www.facebook.com/The-Guitar-Repair-Workshop-847517635259712/"                                  
+## [5] "https://www.taylorguitars.com/dealer/guitar-repair-workshop-ltd"                                       
+## [6] "http://www.laweekly.com/music/10-best-guitar-repair-shops-in-los-angeles-4647166"                      
+## [7] "http://guitarworkshopglasgow.com/pages/repairs-1"                                                      
+## [8] "https://www.justdial.com/Mumbai/Guitar-Repair-Services/nct-10988623"                                   
 ## [9] "https://www.justdial.com/Delhi-NCR/Guitar-Repair-Services/nct-10988623"
 ```
 
@@ -87,7 +108,5 @@ gsub('/url\\?q=','',sapply(strsplit(links[as.vector(grep('url',links))],split='&
 - [How to really do an analysis in R (part 1, data manipulation)](https://www.r-bloggers.com/how-to-really-do-an-analysis-in-r-part-1-data-manipulation/)
 
 - [Read CSV From The Web](http://www.programmingr.com/examples/read-csv-web/)
-
-
 
 - [Scraping CRAN with rvest](https://www.r-bloggers.com/scraping-cran-with-rvest/)

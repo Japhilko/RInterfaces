@@ -4,21 +4,73 @@ Jan-Philipp Kolb
 
 
 
-# Shiny Apps 
+# Versionsverwaltung
 
 
 
 
 
-## Der Start
 
-![](figure/ShinyAppEx.PNG)
+## [Wozu überhaupt Versionskontrolle?](http://r-bio.github.io/intro-git-rstudio/)
 
-## Die erste App
+![](http://www.phdcomics.com/comics/archive/phd101212s.gif)
 
-![](figure/RunApp.PNG)
+## [Warum Versionskontrolle?](https://git-scm.com/book/de/v1/Los-geht%E2%80%99s-Wozu-Versionskontrolle%3F)
 
-![](figure/FirstShinyApp.PNG)
+- Versionskontrollsysteme (VCS) protokollieren Änderungen an einer Datei oder einer Anzahl von Dateien über die Zeit hinweg
+
+[Wikipedia Artikel zu Versionsverwaltung](https://de.wikipedia.org/wiki/Versionsverwaltung)
+
+![](figure/Versionsverwaltung.PNG)
+
+## [Gründe für die Nutzung von Versionskontrolle](http://stackoverflow.com/questions/1408450/why-should-i-use-version-control)
+
+![](figure/ReasonsVersionControl.PNG)
+
+
+## [GitHub](https://github.com/)
+
+![](figure/GitBuuild.PNG)
+
+## [GitHub Konferenz](https://githubuniverse.com/satellite/?utm_source=github&utm_medium=banner&utm_campaign=ww-satellite-20170405)
+
+London 22 und 23 Mai 2017
+
+![](figure/githubSattelite.PNG)
+
+## [GitLab](https://about.gitlab.com/)
+
+![](figure/GitlabPicture.PNG)
+
+## [Git installieren](https://support.rstudio.com/hc/en-us/articles/200532077-Version-Control-with-Git-and-SVN)
+
+- Windows und OS X: 
+
+http://git-scm.com/downloads
+
+- Debian/Ubuntu: 
+
+```
+sudo apt-get install git-core
+```
+
+- Fedora/RedHat: 
+
+```
+sudo yum install git-core
+```
+
+
+
+
+
+
+## Links
+
+- [Gründe eines Sozialwissenschaftlers Versionskontrolle zu nutzen](http://stackoverflow.com/questions/2712421/r-and-version-control-for-the-solo-data-analyst)
+
+- [Git Bootcamp](https://help.github.com/articles/set-up-git/)
+
 
 # R und Git
 
@@ -52,6 +104,12 @@ Jan-Philipp Kolb
 
 ![](figure/CommitMessage.PNG)
 
+## Der übliche Ablauf
+
+- Datei bearbeiten und speichern
+- Änderungen commiten
+- Änderungen von anderen ziehen (pull)
+- Eigene Änderung hochladen (push)
 
 ## Links
 
@@ -99,6 +157,10 @@ install_github("Japhilko/gosmd")
 
 ![](figure/SearchableGithub.PNG)
 
+## [Git und Rstudio](https://www.r-bloggers.com/version-control-file-sharing-and-collaboration-using-github-and-rstudio/)
+
+![](figure/gitRstudio.PNG)
+
 
 ## Links
 
@@ -109,3 +171,102 @@ install_github("Japhilko/gosmd")
 - [Reset local repository branch to be just like remote repository HEAD](http://stackoverflow.com/questions/1628088/reset-local-repository-branch-to-be-just-like-remote-repository-head)
 
 - [How I Manage Data Analysis Projects with RStudio and Git - Part 1](http://christianlemp.com/blog/2014/02/05/How-I-Manage-Data-Projects-with-RStudio-and-Git.html)
+
+- [How do I force “git pull” to overwrite local files?](http://stackoverflow.com/questions/1125968/how-do-i-force-git-pull-to-overwrite-local-files)
+
+# Shiny Apps 
+
+
+
+
+
+## Das `shiny` Paket installieren
+
+
+```r
+install.packages("shiny")
+```
+
+![](figure/shinyLogo.PNG)
+
+## Wer hat's erfunden?
+
+
+```r
+citation("shiny")
+```
+
+```
+## 
+## To cite package 'shiny' in publications use:
+## 
+##   Winston Chang, Joe Cheng, JJ Allaire, Yihui Xie and Jonathan
+##   McPherson (2017). shiny: Web Application Framework for R. R
+##   package version 1.0.1. https://CRAN.R-project.org/package=shiny
+## 
+## A BibTeX entry for LaTeX users is
+## 
+##   @Manual{,
+##     title = {shiny: Web Application Framework for R},
+##     author = {Winston Chang and Joe Cheng and JJ Allaire and Yihui Xie and Jonathan McPherson},
+##     year = {2017},
+##     note = {R package version 1.0.1},
+##     url = {https://CRAN.R-project.org/package=shiny},
+##   }
+```
+
+
+
+## Eine erste Beispielapp
+
+
+```r
+library(shiny)
+runExample("01_hello")
+```
+
+![](figure/ErsteShinyApp.PNG)
+
+## Der Start
+
+![](figure/ShinyApp.PNG)
+
+## Dem Kind einen Namen geben
+
+![](figure/ShinyAppEx.PNG)
+
+## Die erste App
+
+- man muss den Run App Button drücken
+
+![](figure/RunApp.PNG)
+
+- Das Ergebnis:
+
+![](figure/FirstShinyApp.PNG)
+
+## Zur Erklärung
+
+- Zumeist arbeitet man mit mindestens zwei Dateien
+- Das user interface wird mit einer Datei erzeugt werden, die `ui.R` genannt werden muss
+- Für die Server Seite brauchen wir auch ein eigenes File, dieses bennenen wir mit `server.R`
+
+## Eine zweite Beispiel App
+
+
+```r
+library(shiny)
+runExample("02_text")
+```
+
+![](http://rstudio.github.io/shiny/tutorial/screenshots/shiny-text.png)
+
+
+## [Einführung in Shiny](https://shiny.rstudio.com/tutorial/)
+
+![](figure/TeachYourselfShiny.PNG)
+
+## Links 
+
+- [Eine Dashboard App erzeugen](https://shiny.rstudio.com/tutorial/js-lesson1/#creating-a-dashboard-app)
+

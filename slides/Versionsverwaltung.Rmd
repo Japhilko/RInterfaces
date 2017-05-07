@@ -1,8 +1,10 @@
 ---
 title: "Versionskontrolle"
 author: "Jan-Philipp Kolb"
-date: "5 Mai 2017"
-output: slidy_presentation
+date: "9 Mai 2017"
+output: 
+  slidy_presentation: 
+    keep_md: yes
 ---
 
 ```{r setup, include=FALSE}
@@ -43,8 +45,7 @@ London 22 und 23 Mai 2017
 
 ## [Git installieren](https://support.rstudio.com/hc/en-us/articles/200532077-Version-Control-with-Git-and-SVN)
 
-
-- Windows & OS X: 
+- Windows und OS X: 
 
 http://git-scm.com/downloads
 

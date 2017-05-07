@@ -12,12 +12,18 @@ output:
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
-# Shiny Apps 
+# Versionsverwaltung
 
-```{r child = 'shiny.Rmd'}
+```{r child = 'Versionsverwaltung.Rmd'}
 ```
+
 
 # R und Git
 
 ```{r child = 'Rgit.Rmd'}
+```
+
+# Shiny Apps 
+
+```{r child = 'shiny.Rmd'}
 ```
