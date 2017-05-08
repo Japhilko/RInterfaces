@@ -18,6 +18,8 @@ Jan-Philipp Kolb
 ## [Wann sollte man R um Datenbanken ergänzen?](https://cran.r-project.org/web/packages/dplyr/vignettes/databases.html)
 
 - Wenn ein Datensatz in den Arbeitsspeicher passt, gibt es keinen Grund eine Datenbank zu nutzen.
+- die Nutzung von Schnittstellen zu Datenbanken macht den Code nur komplizierter und langsamer
+
 
 Man nutzt die Schnittstelle zu Datenbanken,...
 
@@ -27,32 +29,33 @@ Man nutzt die Schnittstelle zu Datenbanken,...
 
 ## Die drei großen Open-Source Datenbanken
 
-- sqlite, mysql and postgresql
+- sqlite, mysql und PostgreSQL
 - für alle drei gibt es Anbindungen in R
-- und auf diese Anbindungen soll in der Folge der Fokus liegen
+- in der Folge liegt der Fokus vor allem auf SQLite und PostgreSQL
 
-## [sqlite](https://www.sqlite.org/)
+## [SQLite](https://www.sqlite.org/)
 
 ![](figure/LogoSQLLite.PNG)
 
 - [SQLite](https://de.wikipedia.org/wiki/SQLite) - Open Source Programmbibliothek mit relationalem Datenbanksystem 
-- [es ist eine schlanke Datenbank](https://chemnitzer.linux-tage.de/2015/media/vortraege/folien/144_sqlite.pdf)
+- [SQLite ist eine schlanke Datenbank](https://chemnitzer.linux-tage.de/2015/media/vortraege/folien/144_sqlite.pdf) und man muss nichts weiter installieren um sie zu nutzen. 
 
-## [mysql Datenbank](https://de.wikipedia.org/wiki/MySQL)
+## [MySQL Datenbank](https://de.wikipedia.org/wiki/MySQL)
 
 ![](https://upload.wikimedia.org/wikipedia/de/thumb/1/1f/Logo_MySQL.svg/375px-Logo_MySQL.svg.png)
 
 ![](figure/wikimysql.PNG)
 
 - Grundlage für dynamische Webauftritte
-- am meisten verbreitete Datenbanksystem
+- am meisten verbreitetes Datenbanksystem
+- allerdings schwieriger zu konfigurieren als die anderen SQL Datenbanken SQLite und PostgreSQL
 
 ## [PostgreSQL](http://www.postgresql.de/)
 
 ![](figure/logoPostgresql.PNG)
 
 - [PostgreSQL](https://de.wikipedia.org/wiki/PostgreSQL) ist in den meisten Linux-Distributionen enthalten.
-- Schnittstellen zu vielen Programmiersprachen
+- Bietet eine Schnittstellen zu vielen Programmiersprachen
 
 ## [Vergleich zwischen MySQL und PostgreSQL](http://www.torsten-horn.de/techdocs/sql.htm)
 
@@ -80,10 +83,9 @@ Man nutzt die Schnittstelle zu Datenbanken,...
 
 ## [MongoDB](https://de.wikipedia.org/wiki/MongoDB)
 
-- MongoDB - sehr schnell und einfach installiert und benutzt.
--  Schema-freie, dokumentenorientierte NoSQL-Datenbank
+- MongoDB - kann sehr schnell und einfach installiert und benutzt werden.
+- Schema-freie, dokumentenorientierte NoSQL-Datenbank
 - kann Sammlungen von JSON-ähnlichen Dokumenten verwalten
-
 
 ## [CouchDB](https://de.wikipedia.org/wiki/CouchDB)
 
@@ -117,6 +119,8 @@ Man nutzt die Schnittstelle zu Datenbanken,...
 
 
 ## Weitere Resourcen
+
+- [10 einfache Schritte um SQL zu verstehen](https://blog.jooq.org/2016/03/17/10-easy-steps-to-a-complete-understanding-of-sql/)
 
 - [Video um NoSQL zu verstehen](https://www.youtube.com/watch?v=TvRDOLiadtg&list=PLxcWHsmHykmWlXorl8rm-2Ux4HP1sFkub)
 
@@ -467,6 +471,7 @@ msleep %>%
 
 
 ```r
+library(dplyr)
 my_db <- src_sqlite("my_db.sqlite3", create = T)
 ```
 
@@ -480,6 +485,14 @@ flights_sqlite <- copy_to(my_db, flights, temporary = FALSE, indexes = list(
 ```
 
 
+```r
+flights_sqlite <- tbl(nycflights13_sqlite(), "flights")
+```
+
+
+```r
+tbl(my_db, sql("SELECT * FROM flights"))
+```
 
 
 ## Integration von PostgreSQL mit dem Paket RPostgreSQL

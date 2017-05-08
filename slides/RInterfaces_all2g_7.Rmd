@@ -17,17 +17,17 @@ knitr::opts_chunk$set(echo = TRUE,message=F,warning=F)
 ```{r child = 'Datenbanken.Rmd'}
 ```
 
-## Das R-Paket `dplyr`
+## Das R-Paket `dplyr` und die Schnittstelle zu SQLite
 
 ```{r child = 'dplyr.Rmd'}
 ```
 
-## Integration von PostgreSQL mit dem Paket RPostgreSQL
+## Integration von PostgreSQL mit dem Paket `RPostgreSQL`
 
 ```{r child = 'RPostgreSQL.Rmd'}
 ```
 
-## Nutzung von weiteren Datenbanken (MySQL, MongoDB)
+## Nutzung von weiteren Datenbanken (MySQL, MongoDB, CouchDB)
 
 ```{r child = 'Rmongodb.Rmd'}
 ```

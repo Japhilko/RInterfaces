@@ -1,5 +1,5 @@
 ---
-title: "dplyr"
+title: "Eine Annährung an Datenbankkonzepte - Das Paket `dplyr`"
 author: "Jan-Philipp Kolb"
 date: "5 Mai 2017"
 output: 
@@ -152,6 +152,7 @@ msleep %>%
 - alles was man braucht wird quasi schon mit R mitgeliefert 
 
 ```{r,eval=F}
+library(dplyr)
 my_db <- src_sqlite("my_db.sqlite3", create = T)
 ```
 
@@ -163,5 +164,11 @@ flights_sqlite <- copy_to(my_db, flights, temporary = FALSE, indexes = list(
   c("year", "month", "day"), "carrier", "tailnum"))
 ```
 
+```{r,eval=F}
+flights_sqlite <- tbl(nycflights13_sqlite(), "flights")
+```
 
+```{r,eval=F}
+tbl(my_db, sql("SELECT * FROM flights"))
+```
 

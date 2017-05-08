@@ -11,6 +11,56 @@ output:
 knitr::opts_chunk$set(echo = FALSE,eval=F)
 ```
 
+
+## [Eine erste Verbindung einrichten](https://dev.mysql.com/doc/workbench/en/wb-getting-started-tutorial-create-connection.html)
+
+![](figure/MySQLErsteVerbindung.PNG)
+
+
+## [RmySQL](https://www.r-bloggers.com/rmysql-version-0-10-2-full-ssl-support/)
+
+
+```{r,eval=F}
+install.packages("RMySQL")
+```
+
+```{r}
+library(RMySQL)
+mydb = dbConnect(MySQL(), user='user', password='password', dbname='database_name', host='host')
+```
+
+
+
+## Links
+
+- [Full SSL Support](https://www.r-bloggers.com/rmysql-version-0-10-2-full-ssl-support/) [2nd link](https://www.opencpu.org/posts/rmysql-release-0-10-2/)
+
+- [Der Start mit MySQL](https://dev.mysql.com/doc/mysql-getting-started/en/)
+
+- [PC Magazin - MySQL Datenbankserver](http://www.pc-magazin.de/ratgeber/grundlagen-zum-datenbankserver-mysql-1039293.html)
+
+- [Accessing MySQL through R](https://www.r-bloggers.com/accessing-mysql-through-r/)
+
+- [Was ist MySQL](https://www.proggen.org/doku.php?id=php:mysql:start)
+
+https://cran.r-project.org/web/packages/RMySQL/index.html
+
+## Schnittstelle zwischen [R und MySQL Datenbank nutzen](http://www.jason-french.com/blog/2014/07/03/using-r-with-mysql-databases/)
+
+- [MySQL installieren](https://dev.mysql.com/doc/refman/5.7/en/windows-installation.html)
+
+![](figure/InstallingMySQL.PNG)
+
+[RmySQL](https://github.com/rstats-db/RMySQL)
+
+
+```{r,eval=F}
+library(DBI)
+con <- dbConnect(RMySQL::MySQL(), group = "my-db")
+```
+
+
+
 ## Mongodb
 
 - [Installation](https://docs.mongodb.com/manual/tutorial/install-mongodb-on-windows/)
@@ -45,11 +95,21 @@ devtools::install_github("ropensci/sofa")
 library("sofa")
 ```
 
-## Spark
 
-- [Warum Spark mit NoSQL kombinieren](https://blog.couchbase.com/why-spark-and-nosql/)
 
-- [Spark in Rstudio](http://spark.rstudio.com/)
+- [R und Mongodb](https://cran.r-project.org/web/packages/rmongodb/vignettes/rmongodb_introduction.html)
+
+
+- [Cheat sheet](https://cran.r-project.org/web/packages/rmongodb/vignettes/rmongodb_cheat_sheet.pdf)
+
+
 ## Links
 
 - [Eine Liste aller NoSQL Datenbanken](http://bigdata-madesimple.com/a-deep-dive-into-nosql-a-complete-list-of-nosql-databases/)
+
+- [Azure in R nutzen](http://www.r-bloggers.com/using-azure-as-an-r-datasource-part-2-pulling-data-from-mysqlmariadb/)
+
+
+- [PHP & MySQL - Einführung und Installation](https://www.youtube.com/watch?v=2AVnuu4Ty_A)
+
+- [Rpubs - mongoDB](https://rpubs.com/davparker/32742)

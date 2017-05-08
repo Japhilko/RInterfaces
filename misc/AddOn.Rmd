@@ -294,3 +294,8 @@ cubefn(n, x)$x
 ```
 CREATE EXTENSION hstore;
 ```
+## Spark
+
+- [Warum Spark mit NoSQL kombinieren](https://blog.couchbase.com/why-spark-and-nosql/)
+
+- [Spark in Rstudio](http://spark.rstudio.com/)

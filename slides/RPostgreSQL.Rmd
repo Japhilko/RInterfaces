@@ -244,21 +244,4 @@ library(RPostgreSQL)
 - [Wie bekommt man OSM Daten](https://www.azavea.com/blog/2015/12/21/tools-for-getting-data-out-of-openstreetmap-and-into-desktop-gis/)
 
 
-## [`RMySQL`](https://cran.r-project.org/web/packages/RMySQL/index.html)
-
-```{r,eval=F}
-install.packages("RMySQL")
-```
-
-[RmySQL](https://github.com/rstats-db/RMySQL)
-
-```{r}
-library(DBI)
-con <- dbConnect(RMySQL::MySQL(), group = "my-db")
-```
-
-- [R zusammen mit einer MySQL Datenbank nutzen](http://www.jason-french.com/blog/2014/07/03/using-r-with-mysql-databases/)
-
-## [MySQL installieren](https://dev.mysql.com/doc/refman/5.7/en/windows-installation.html)
-
-![](figure/InstallingMySQL.PNG)
+- [PostgreSQL](http://wiki.openstreetmap.org/wiki/PostgreSQL)
