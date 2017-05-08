@@ -40,6 +40,8 @@ purl("../slides/Rmongodb.Rmd")
 
 install.packages("dygraphs")
 install.packages("networkD3")
+install.packages("XLConnect")
+install.packages("XLConnectJars")
 
 ## Citations
 
