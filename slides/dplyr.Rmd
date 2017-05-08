@@ -157,7 +157,7 @@ my_db <- src_sqlite("my_db.sqlite3", create = T)
 
 ## Ein Beispieldatensatz
 
-```{r}
+```{r,eval=F}
 library(nycflights13)
 flights_sqlite <- copy_to(my_db, flights, temporary = FALSE, indexes = list(
   c("year", "month", "day"), "carrier", "tailnum"))
