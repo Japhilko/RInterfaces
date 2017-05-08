@@ -1,10 +1,10 @@
-# Schnittstellen für den Austausch von Daten
+# Schnittstellen fÃ¼r den Austausch von Daten
 Jan-Philipp Kolb  
 8 Mai 2017  
 
 
 
-# Einführung und Motivation
+# EinfÃ¼hrung und Motivation
 
 
 
@@ -21,13 +21,13 @@ Jan-Philipp Kolb
 - Um die Intelligenz anderer Leute zu nutzen ;-)
 - ...
 
-## Gründe
+## GrÃ¼nde
 
-- R ist [frei verfügbar](https://www.r-project.org/). Es kann umsonst [runtergeladen](http://www.inside-r.org/why-use-r) werden.
+- R ist [frei verfÃ¼gbar](https://www.r-project.org/). Es kann umsonst [runtergeladen](http://www.inside-r.org/why-use-r) werden.
 - R ist eine Skriptsprache 
-- Gute Möglichkeiten für die [Visualisierung](http://www.sr.bham.ac.uk/~ajrs/R/r-gallery.html) 
-- R wird immer [populärer](https://twitter.com/josiahjdavis/status/559778930476220418)
-- [Popularität von R](http://blog.revolutionanalytics.com/popularity/) ist in vielen Bereichen sehr hoch.
+- Gute MÃ¶glichkeiten fÃ¼r die [Visualisierung](http://www.sr.bham.ac.uk/~ajrs/R/r-gallery.html) 
+- R wird immer [populÃ¤rer](https://twitter.com/josiahjdavis/status/559778930476220418)
+- [PopularitÃ¤t von R](http://blog.revolutionanalytics.com/popularity/) ist in vielen Bereichen sehr hoch.
 
 ![](http://d287f0h5fel5hu.cloudfront.net/blog/wp-content/uploads/2013/06/bar-learn-r-img11.png)
 
@@ -53,13 +53,13 @@ Jan-Philipp Kolb
 2. Nicht jeder ist bereit mit R zu arbeiten 
 3. Nicht auf jedem Rechner ist R installiert
 4. R ist manchmal zu langsam
-5. Schwierigkeiten bei der Arbeit mit großen Datenmengen
+5. Schwierigkeiten bei der Arbeit mit groÃen Datenmengen
 
 ## Was folgt daraus
 
 1. Schnittstelle zu SPSS/Stata/Excel zum Import von Daten
 2. Schnittstelle zu Word/LaTeX
-3. Möglichkeit HTML Präsentationen zu erzeugen
+3. MÃ¶glichkeit HTML PrÃ¤sentationen zu erzeugen
 4. Nutzung von C++
 5. Nutzung von Datenbanken
 
@@ -81,7 +81,7 @@ Jan-Philipp Kolb
 ## Darstellung von Ergebnissen
 
 - Mit der Schnittstelle zu Javascript lassen sich interaktive Graphiken erzeugen
-- Diese kann man auf Websites, in Präsentationen oder in Dashboards verwenden
+- Diese kann man auf Websites, in PrÃ¤sentationen oder in Dashboards verwenden
 
 
 ![](figure/visNetwork.jpg)
@@ -91,19 +91,19 @@ Jan-Philipp Kolb
 
 - [Wenn Schnelligkeit wichtig ist, bietet sich C++ an](http://www.stat.berkeley.edu/scf/paciorek-cppWorkshop.pdf).
 - [Dies kann bspw. der Fall sein, wenn sich Schleifen nicht vermeiden lassen](https://www.r-bloggers.com/calling-c-from-r-using-rcpp/).
-- [Man wird bei der Programmierung durch RStudio unterstützt](https://support.rstudio.com/hc/en-us/articles/200486088-Using-Rcpp-with-RStudio).
+- [Man wird bei der Programmierung durch RStudio unterstÃ¼tzt](https://support.rstudio.com/hc/en-us/articles/200486088-Using-Rcpp-with-RStudio).
 - Es gibt eine [Rcpp Galerie](http://gallery.rcpp.org/), wo man sich Anregungen holen kann.
-- Allerdings sollte man zunächst versuchen den Rcode so schnell wie möglich zu gestalten.
+- Allerdings sollte man zunÃ¤chst versuchen den Rcode so schnell wie mÃ¶glich zu gestalten.
 
 ## Die Nutzung von Datenbanken
 
-- Wenn große Datenmengen anfallen, kann die zusätzliche Nutzung von Datenbanken sinnvoll sein.
+- Wenn groÃe Datenmengen anfallen, kann die zusÃ¤tzliche Nutzung von Datenbanken sinnvoll sein.
 - In R bestehen Schnittstellen sowohl zu relationalen als auch nicht relationalen Datenbanken.
-- Datenbanken sollten allerdings erst genutzt werden, wenn alle Möglichkeiten in R ausgeschöpft sind. 
+- Datenbanken sollten allerdings erst genutzt werden, wenn alle MÃ¶glichkeiten in R ausgeschÃ¶pft sind. 
 
 ## Nutzung der Unterlagen auf GitHub
 
--   Die folgende Seite ist die Startseite für den Kurs:
+-   Die folgende Seite ist die Startseite fÃ¼r den Kurs:
 
 <https://japhilko.github.io/Interfaces4R/>
 
@@ -117,17 +117,17 @@ Wie wird das Github Verzeichnis genutzt?
 
 <https://github.com/Japhilko/RInterfaces>
 
-- Es lohnt sich immer wieder zu dieser Seite zurückzukehren, weil auch hier alle relevanten Dokumente verlinkt sind.
+- Es lohnt sich immer wieder zu dieser Seite zurÃ¼ckzukehren, weil auch hier alle relevanten Dokumente verlinkt sind.
 
-- Grundsätzlich kann man der Veranstalung am Besten mit den [kompletten File](https://github.com/Japhilko/RInterfaces/blob/master/slides/RInterfaces_all2g.md) oder der kompletten Browserversion eines Kapitels (sind unter den Kapitelüberschriften verlinkt) folgen. Wenn Teile heruntergeladen werden sollen, bietet es sich an, das entsprechende pdf herunterzuladen.
+- GrundsÃ¤tzlich kann man der Veranstalung am Besten mit den [kompletten File](https://github.com/Japhilko/RInterfaces/blob/master/slides/RInterfaces_all2g.md) oder der kompletten Browserversion eines Kapitels (sind unter den KapitelÃ¼berschriften verlinkt) folgen. Wenn Teile heruntergeladen werden sollen, bietet es sich an, das entsprechende pdf herunterzuladen.
 
-- Falls Links ins Leere führen - bitte Bescheid sagen.
+- Falls Links ins Leere fÃ¼hren - bitte Bescheid sagen.
 
 ## Informationen ausdrucken
 
 -   Zum Ausdrucken eignen sich die pdf-Dateien besser. 
 
--   Diese können mit dem Raw Button heruntergeladen werden. 
+-   Diese kÃ¶nnen mit dem Raw Button heruntergeladen werden. 
 
 ![Raw Button zum Download](https://raw.githubusercontent.com/Japhilko/GeoData/master/2016/slides/figure/GithubDownload.bmp)
 
@@ -135,11 +135,11 @@ Wie wird das Github Verzeichnis genutzt?
 
 - Begleitend zu den Folien wird meistens auch ein R-File angeboten. 
 
-- Hier können Sie entweder das gesamte R-File herunterladen und in R ausführen oder einzelne Befehle per Copy/Paste übernehmen.
+- Hier kÃ¶nnen Sie entweder das gesamte R-File herunterladen und in R ausfÃ¼hren oder einzelne Befehle per Copy/Paste Ã¼bernehmen.
 
-- Vereinzelt sind auch Datensätze vorhanden. 
+- Vereinzelt sind auch DatensÃ¤tze vorhanden. 
 
-- `.csv` Dateien können direkt von R eingelesen werden (wie das geht werde ich noch zeigen).
+- `.csv` Dateien kÃ¶nnen direkt von R eingelesen werden (wie das geht werde ich noch zeigen).
 
 - Wenn die `.csv` Dateien heruntergeladen werden sollen auch den Raw Button verwenden.
 
@@ -147,14 +147,14 @@ Wie wird das Github Verzeichnis genutzt?
 
 ## Organisatorisches
 
-- Zusätzlich gibt es in jedem Kapitel eine oder mehrere Aufgabe(n), da man nur durch eigenes Trainieren auf der Lernkurve vorankommt.
-- Die Quellen für die Punkte auf den Folien sind als Link meist in der Überschrift hinterlegt.
+- ZusÃ¤tzlich gibt es in jedem Kapitel eine oder mehrere Aufgabe(n), da man nur durch eigenes Trainieren auf der Lernkurve vorankommt.
+- Die Quellen fÃ¼r die Punkte auf den Folien sind als Link meist in der Ãberschrift hinterlegt.
 - Die Links sind nur im HTML Dokument zu sehen aber auch in der pdf vorhanden.
 
 ## Links und Quellen
 
 
-Wen Github näher interessiert:
+Wen Github nÃ¤her interessiert:
 
 - [Hello World](https://guides.github.com/activities/hello-world/)
 
@@ -162,7 +162,7 @@ Wen Github näher interessiert:
 
 ## Basis R ...
 
-- Wenn man nur R herunterlädt und installiert, sieht das so aus:
+- Wenn man nur R herunterlÃ¤dt und installiert, sieht das so aus:
 
 ![](figure/BasisR.PNG)
 
@@ -170,11 +170,11 @@ Wen Github näher interessiert:
 
 ## ... und Rstudio
 
-- Rstudio bietet Heute sehr viel Unterstützung:
+- Rstudio bietet Heute sehr viel UnterstÃ¼tzung:
 
 ![](http://rprogramming.net/wp-content/uploads/2012/10/RStudio-Screenshot.png)
 
-- und macht einige Themen dieses Workshops erst möglich
+- und macht einige Themen dieses Workshops erst mÃ¶glich
 
 
 
@@ -184,10 +184,10 @@ Wen Github näher interessiert:
 
 Gehen Sie auf <https://cran.r-project.org/> und suchen Sie in dem Bereich, wo die Pakete vorgestellt werden, nach Paketen,...
 
--  für Reproducible Research
--  für interaktive Darstellungen
--  für High-Performance Computing
--  um mit großen Datenmengen umzugehen
+-  fÃ¼r Reproducible Research
+-  fÃ¼r interaktive Darstellungen
+-  fÃ¼r High-Performance Computing
+-  um mit groÃen Datenmengen umzugehen
 
 # Datenimport
 
@@ -198,14 +198,14 @@ Gehen Sie auf <https://cran.r-project.org/> und suchen Sie in dem Bereich, wo di
 
 ## Dateiformate in R
 
--  Von R werden quelloffene, nicht-proprietäre Formate bevorzugt
--  Es können aber auch Formate von anderen Statistik Software Paketen eingelesen werden
+-  Von R werden quelloffene, nicht-proprietÃ¤re Formate bevorzugt
+-  Es kÃ¶nnen aber auch Formate von anderen Statistik Software Paketen eingelesen werden
 -  R-user speichern Objekte gerne in sog. Workspaces ab
--  Auch hier jedoch gilt: (fast) alles andere ist möglich
+-  Auch hier jedoch gilt: (fast) alles andere ist mÃ¶glich
 
 ## Formate - base package
 
-R unterstützt von Haus aus schon einige wichtige Formate:
+R unterstÃ¼tzt von Haus aus schon einige wichtige Formate:
 		
 -  CSV (Comma Separated Values): `read.csv()`
 -  FWF (Fixed With Format): `read.fwf()`
@@ -238,18 +238,18 @@ So findet man heraus, in welchem Verzeichnis man sich gerade befindet
 getwd()
 ```
 
-So kann man das Arbeitsverzeichnis ändern:
+So kann man das Arbeitsverzeichnis Ã¤ndern:
 
 Man erzeugt ein Objekt in dem man den Pfad abspeichert:
 
 
 ```r
-main.path <- "C:/" # Beispiel für Windows
-main.path <- "/users/Name/" # Beispiel für Mac
-main.path <- "/home/user/" # Beispiel für Linux
+main.path <- "C:/" # Beispiel fÃ¼r Windows
+main.path <- "/users/Name/" # Beispiel fÃ¼r Mac
+main.path <- "/home/user/" # Beispiel fÃ¼r Linux
 ```
 
-Und ändert dann den Pfad mit setwd()
+Und Ã¤ndert dann den Pfad mit setwd()
 
 
 ```r
@@ -282,7 +282,7 @@ library(readr)
 
 ## Import von Excel-Daten
 
--  `library(readr)` ist für den Import von fremden Datenformaten hilfreich
+-  `library(readr)` ist fÃ¼r den Import von fremden Datenformaten hilfreich
 -  Wenn Excel-Daten vorliegen - als .csv abspeichern
 
 
@@ -344,8 +344,8 @@ library(haven)
 
 ## SPSS Dateien einlesen
 
-- Zunächst muss wieder der Pfad zum Arbeitsverzeichnis angeben werden.
-- SPSS-Dateien können auch direkt aus dem Internet geladen werden:
+- ZunÃ¤chst muss wieder der Pfad zum Arbeitsverzeichnis angeben werden.
+- SPSS-Dateien kÃ¶nnen auch direkt aus dem Internet geladen werden:
 
 
 ```r
@@ -384,10 +384,10 @@ oecd <- read_dta("https://github.com/Japhilko/IntroR/raw/master/2017/data/oecd.d
 
 ## Aufgabe - Datenimport
 
-- Gehen Sie auf [meine Github Seite](https://github.com/Japhilko/RInterfaces/blob/master/data/whcSites.csv) und laden Sie den Datensatz zu den Weltkulturerbestätten (whcsites) herunter
+- Gehen Sie auf [meine Github Seite](https://github.com/Japhilko/RInterfaces/blob/master/data/whcSites.csv) und laden Sie den Datensatz zu den WeltkulturerbestÃ¤tten (whcsites) herunter
 - Laden Sie den Datensatz mit einer geeigneten Funktion in Ihre Console.
 - Finden Sie heraus, wieviele Beobachtungen und Variablen der Datensatz umfasst.
-- Wieviele kulturelle/natürliche Weltkulturerbestätten gibt es im Datensatz?
+- Wieviele kulturelle/natÃ¼rliche WeltkulturerbestÃ¤tten gibt es im Datensatz?
 
 
 
@@ -400,7 +400,7 @@ oecd <- read_dta("https://github.com/Japhilko/IntroR/raw/master/2017/data/oecd.d
 ## Die Exportformate von R
 
 -  In R werden offene Dateiformate bevorzugt
--  Genauso wie `read.X()` Funktionen stehen viele `write.X()` Funktionen zur Verfügung
+-  Genauso wie `read.X()` Funktionen stehen viele `write.X()` Funktionen zur VerfÃ¼gung
 -  Das eigene Format von R sind sog. Workspaces (`.RData`)
 
 ## Beispieldatensatz erzeugen
@@ -418,7 +418,7 @@ mydata <- data.frame(A,B)
 
 
 
-## Überblick Daten Import/Export
+## Ãberblick Daten Import/Export
 
 - wenn mit R weitergearbeitet wird, eignet sich das `.RData` Format am Besten:
 
@@ -506,7 +506,7 @@ convert("data/mtcars.dta", "data/mtcars.sav")
 
 ## Links Export
 
-- [Quick R](http://www.statmethods.net/input/exportingdata.html) für das Exportieren von Daten:
+- [Quick R](http://www.statmethods.net/input/exportingdata.html) fÃ¼r das Exportieren von Daten:
 
 - Hilfe zum Export auf dem [cran Server](http://cran.r-project.org/doc/manuals/r-release/R-data.pdf)
 
@@ -544,7 +544,7 @@ install.packages("XLConnect")
 library("XLConnect")
 ```
 
-![[Vignette für XLconnect](https://cran.r-project.org/web/packages/XLConnect/vignettes/XLConnect.pdf)](figure/XLconnect.PNG)
+![[Vignette fÃ¼r XLconnect](https://cran.r-project.org/web/packages/XLConnect/vignettes/XLConnect.pdf)](figure/XLconnect.PNG)
 
 ## [Eine Excel Datei aus R erzeugen](http://www.milanor.net/blog/steps-connect-r-excel-xlconnect/)
 
@@ -557,7 +557,7 @@ createSheet(exc,'Input')
 saveWorkbook(exc)
 ```
 
-## Das Arbeitsblatt mit Daten befüllen
+## Das Arbeitsblatt mit Daten befÃ¼llen
 
 
 ```r
@@ -612,9 +612,9 @@ library(readxl)
 
 ## Aufgabe Export nach Excel
 
-- Schränken Sie den Weltkulturerbe Datensatz auf die wichtigsten Spalten ein.
-- Erzeugen Sie einen Subdatensatz in dem nur die kulturellen Stätten enthalten sind. Machen Sie dies analog für die natürlichen Stätten.
-- Nutzen Sie das Paket `XLconnect` um die Datensätze nach Excel zu übertragen. Erstellen Sie ein Blatt für die kulturellen und eins für die natürlichen Stätten.
+- SchrÃ¤nken Sie den Weltkulturerbe Datensatz auf die wichtigsten Spalten ein.
+- Erzeugen Sie einen Subdatensatz in dem nur die kulturellen StÃ¤tten enthalten sind. Machen Sie dies analog fÃ¼r die natÃ¼rlichen StÃ¤tten.
+- Nutzen Sie das Paket `XLconnect` um die DatensÃ¤tze nach Excel zu Ã¼bertragen. Erstellen Sie ein Blatt fÃ¼r die kulturellen und eins fÃ¼r die natÃ¼rlichen StÃ¤tten.
 
 
 
