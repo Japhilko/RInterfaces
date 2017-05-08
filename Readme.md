@@ -10,12 +10,14 @@ Aufgabe: [Zusatzpakete](tutorial/Aufgabe_Zusatzpakete.md)
 -   [Datenimport](slides/Datenimport.md) ([pdf](slides/Datenimport.pdf)
     | [rcode](slides/Datenimport.R))
 
-Aufgabe: [Datenimport](tutorial/Datenimport.md)
+Aufgabe: [Datenimport](tutorial/Aufgabe_Datenimport.md)
 
--   [R und Excel](slides/Rexcel.md) ([pdf](Rexcel.pdf) |
-    [rcode](slides/Rexcel.R))
 -   [Datenexport](slides/Datenexport.md) ([pdf](slides/Datenexport.pdf)
     | [rcode](slides/Datenexport.R))
+-   [R und Excel](slides/Rexcel.md) ([pdf](Rexcel.pdf) |
+    [rcode](slides/Rexcel.R))
+
+Aufgabe: [Export nach Excel](tutorial/Aufgabe_Export2Excel.Rmd)
 
 [Präsentation von Daten - Reproducible Research](https://github.com/Japhilko/RInterfaces/blob/master/slides/RInterfaces_all2g_2.md)
 -----------------------------------------------------------------------------------------------------------------------------------
@@ -30,13 +32,17 @@ Aufgabe: [Datenimport](tutorial/Datenimport.md)
     Programmiersprachen (Python,LaTeX,Julia)
     ([pdf](slides/Notebooks.pdf))
 
-Aufgabe: Bearbeiten Sie ein Notebook weiter
+Aufgabe: [Bearbeiten Sie ein Notebook
+weiter](tutorial/Aufgabe_Notebook.md)
 
 [Interaktive Darstellung mit Javascript und R](https://github.com/Japhilko/RInterfaces/blob/master/slides/RInterfaces_all2g_3.md)
 ---------------------------------------------------------------------------------------------------------------------------------
 
 -   [Interaktive Karten mit dem Javascript Paket
     leaflet](https://github.com/Japhilko/RInterfaces/blob/master/slides/leaflet.md)
+
+Aufgabe: [Eine interaktive Karte erzeugen](tutorial/Aufgabe_leaflet.Rmd)
+
 -   [Interaktive Tabellen mit
     DataTables](https://github.com/Japhilko/RInterfaces/blob/master/slides/DataTables.md)
 -   [R und die Javascript Data-Driven
