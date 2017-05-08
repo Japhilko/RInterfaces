@@ -63,6 +63,8 @@ msleep <- read.csv("msleep_ggplot2.csv")
 
 ## Den Datensatz anschauen
 
+- die ersten Zeilen des Datensatzes anschauen
+
 ```{r}
 head(msleep)
 ```
@@ -75,4 +77,37 @@ head(msleep)
 sleepData <- select(msleep, name, sleep_total)
 head(sleepData)
 ```
+
+## [Was bedeuten die Splaten](http://genomicsclass.github.io/book/pages/dplyr_tutorial.html)
+
+![](figure/sleepData.PNG)
+
+## Die verschiedenen `dplyr` Befehle
+
+![](figure/dplyrVerbs.PNG)
+
+## Spalten auswählen
+
+```{r}
+sleepData <- select(msleep, name, sleep_total)
+head(sleepData)
+```
+
+## Das Gegenteil
+
+- mit dem ´-´ Zeichen kann man sich alle Spalten bis auf die entsprechende anzeigen lassen
+
+```{r}
+head(select(msleep, -name))
+```
+
+## Auswahl treffen
+
+- alle Spalten anzeigen lassen, die mit einer Kombination von Buchstaben anfangen
+
+```{r}
+head(select(msleep, starts_with("sl")))
+```
+
+![](figure/endswith.PNG)
 
