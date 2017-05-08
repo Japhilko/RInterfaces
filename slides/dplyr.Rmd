@@ -131,3 +131,20 @@ msleep %>%
     head
 ```
 
+## Die Anweisung `group_by`
+
+```{r}
+msleep %>% 
+    group_by(order) %>%
+    summarise(avg_sleep = mean(sleep_total), 
+              min_sleep = min(sleep_total), 
+              max_sleep = max(sleep_total),
+              total = n())
+```
+
+## [Vignette zur Datenbankintegration mit `dplyr`](https://cran.r-project.org/web/packages/dplyr/vignettes/databases.html)
+
+
+![](figure/DBquery_dplyr.PNG)
+
+
