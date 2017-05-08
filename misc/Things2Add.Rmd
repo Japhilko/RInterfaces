@@ -11,6 +11,19 @@ knitr::opts_chunk$set(echo = TRUE)
 
 ## 
 
+- Basis R hinzufügen
+- auf die Funktionen von Rstudio hinweisen
+- die Funktion purl hinzufügen
+- wie man Folien mit pandoc erzeugt
+
+
+## 
+
 - [Figure Size](https://rstudio.github.io/dygraphs/r-markdown.html)
 
 - [Different ways to set figure size in RMarkdown](https://sebastiansauer.github.io/figure_sizing_knitr/)
+
+- 
+
+- Diese lassen sich auch ohne das Paket `foreign` einlesen.
+

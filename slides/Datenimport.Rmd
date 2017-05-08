@@ -5,11 +5,11 @@ date: "8 Mai 2017"
 output:
   slidy_presentation: 
     keep_md: yes
-  html_document:
-    keep_md: yes
   beamer_presentation:
     colortheme: beaver
     theme: CambridgeUS
+  html_document:
+    keep_md: yes
 ---
 
 ```{r, include=FALSE}
@@ -100,7 +100,6 @@ library(readr)
 
 -  `library(readr)` ist für den Import von fremden Datenformaten hilfreich
 -  Wenn Excel-Daten vorliegen - als .csv abspeichern
-- Diese lassen sich auch ohne das Paket `foreign` einlesen.
 
 ```{r,eval=F}
 library(readr)

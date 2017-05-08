@@ -31,6 +31,16 @@ Jan-Philipp Kolb
 ![Modularer Aufbau](figure/ModularerAufbau.PNG)
 
 
+## [Die am meisten heruntergeladenen Pakete](https://gallery.shinyapps.io/cran-gauge/)
+
+![](figure/CRANdownloads.PNG)
+
+
+## [CRAN Task Views](https://cran.r-project.org/web/views/)
+
+![](figure/CRANTaskviews.PNG)
+
+
 ## Motivation - Nachteile von R
 
 1. Daten werden oft anderswo erfasst/eingegeben (oft Excel, SPSS etc.)
@@ -101,9 +111,11 @@ Wie wird das Github Verzeichnis genutzt?
 
 <https://github.com/Japhilko/RInterfaces>
 
-- Es lohnt sich immer wieder zu dieser Seite zurückzukehren, weil hier alle relevanten Dokumente verlinkt sind.
+- Es lohnt sich immer wieder zu dieser Seite zurückzukehren, weil auch hier alle relevanten Dokumente verlinkt sind.
 
-- Grundsätzlich kann man der Veranstalung am Besten mit dem [kompletten File](https://github.com/Japhilko/RInterfaces/blob/master/slides/RInterfaces_all2g.md) folgen. Wenn Teile heruntergeladen werden sollen, bietet es sich an, das entsprechende pdf herunterzuladen.
+- Grundsätzlich kann man der Veranstalung am Besten mit den [kompletten File](https://github.com/Japhilko/RInterfaces/blob/master/slides/RInterfaces_all2g.md) oder der kompletten Browserversion eines Kapitels (sind unter den Kapitelüberschriften verlinkt) folgen. Wenn Teile heruntergeladen werden sollen, bietet es sich an, das entsprechende pdf herunterzuladen.
+
+- Falls Links ins Leere führen - bitte Bescheid sagen.
 
 ## Informationen ausdrucken
 
@@ -129,8 +141,8 @@ Wie wird das Github Verzeichnis genutzt?
 
 ## Organisatorisches
 
-- Zusätzlich gibt es für jedes Kapitel eine Aufgabe, da man nur durch eigenes Trainieren auf der Lernkurve vorankommt.
-- Die Quellen sind als Link meist in der Überschrift hinterlegt.
+- Zusätzlich gibt es in jedem Kapitel eine oder mehrere Aufgabe(n), da man nur durch eigenes Trainieren auf der Lernkurve vorankommt.
+- Die Quellen für die Punkte auf den Folien sind als Link meist in der Überschrift hinterlegt.
 - Die Links sind nur im HTML Dokument zu sehen aber auch in der pdf vorhanden.
 
 ## Links und Quellen
@@ -142,8 +154,19 @@ Wen Github näher interessiert:
 
 - [Understanding the GitHub flow](https://guides.github.com/introduction/flow/)
 
-## [CRAN Task Views](https://cran.r-project.org/web/views/)
+## Basis R ...
 
-![](figure/CRANTaskviews.PNG)
+- Wenn man nur R herunterlädt und installiert, sieht das so aus:
 
+![](figure/BasisR.PNG)
+
+- So habe ich bis 2012 mit R gearbeitet.
+
+## ... und Rstudio
+
+- Rstudio bietet Heute sehr viel Unterstützung:
+
+![](http://rprogramming.net/wp-content/uploads/2012/10/RStudio-Screenshot.png)
+
+- und macht einige Themen dieses Workshops erst möglich
 

@@ -93,7 +93,6 @@ library(readr)
 
 -  `library(readr)` ist für den Import von fremden Datenformaten hilfreich
 -  Wenn Excel-Daten vorliegen - als .csv abspeichern
-- Diese lassen sich auch ohne das Paket `foreign` einlesen.
 
 
 ```r
@@ -107,69 +106,33 @@ rows <- read_csv("https://data.montgomerycountymd.gov/api/views/6rqk-pdub/rows.c
 
 
 ```r
-url <- "https://raw.githubusercontent.com/Japhilko/GeoData/master/2015/data/whcSites.csv"
+url <- "https://raw.githubusercontent.com/Japhilko/
+GeoData/master/2015/data/whcSites.csv"
 
-whcSites <- read_csv(url) 
-```
-
-```
-## Warning: Missing column names filled in: 'X1' [1]
-```
-
-```
-## Parsed with column specification:
-## cols(
-##   .default = col_character(),
-##   X1 = col_integer(),
-##   unique_number = col_integer(),
-##   id_no = col_integer(),
-##   date_inscribed = col_integer(),
-##   longitude = col_double(),
-##   latitude = col_double(),
-##   area_hectares = col_double(),
-##   C1 = col_integer(),
-##   C2 = col_integer(),
-##   C3 = col_integer(),
-##   C4 = col_integer(),
-##   C5 = col_integer(),
-##   C6 = col_integer(),
-##   N7 = col_integer(),
-##   N8 = col_integer(),
-##   N9 = col_integer(),
-##   N10 = col_integer(),
-##   transboundary = col_integer()
-## )
-```
-
-```
-## See spec(...) for full column specifications.
+whcSites <- read.csv(url) 
 ```
 
 
 
 ```r
-head(whcSites)
+head(data.frame(whcSites$name_en,whcSites$category))
 ```
 
 ```
-## # A tibble: 6 × 36
-##      X1 unique_number id_no rev_bis
-##   <int>         <int> <int>   <chr>
-## 1     1           230   208     Rev
-## 2     2           234   211     Rev
-## 3     3          1590   569     Bis
-## 4     4          1563   570     ter
-## 5     5           111   102    <NA>
-## 6     6           209   188    <NA>
-## # ... with 32 more variables: name_en <chr>, name_fr <chr>,
-## #   short_description_en <chr>, short_description_fr <chr>,
-## #   justification_en <chr>, justification_fr <chr>, date_inscribed <int>,
-## #   secondary_dates <chr>, danger_list <chr>, longitude <dbl>,
-## #   latitude <dbl>, area_hectares <dbl>, C1 <int>, C2 <int>, C3 <int>,
-## #   C4 <int>, C5 <int>, C6 <int>, N7 <int>, N8 <int>, N9 <int>, N10 <int>,
-## #   criteria_txt <chr>, category <chr>, category_short <chr>,
-## #   states_name_en <chr>, states_name_fr <chr>, name_en.1 <chr>,
-## #   name_fr.1 <chr>, iso_code <chr>, udnp_code <chr>, transboundary <int>
+##                                                      whcSites.name_en
+## 1 Cultural Landscape and Archaeological Remains of the Bamiyan Valley
+## 2                           Minaret and Archaeological Remains of Jam
+## 3                          Historic Centres of Berat and Gjirokastra 
+## 4                                                             Butrint
+## 5                                             Al Qal'a of Beni Hammad
+## 6                                                        M'Zab Valley
+##   whcSites.category
+## 1          Cultural
+## 2          Cultural
+## 3          Cultural
+## 4          Cultural
+## 5          Cultural
+## 6          Cultural
 ```
 
 ## Das Paket `haven`
@@ -184,7 +147,7 @@ install.packages("haven")
 library(haven)
 ```
 
-- [`haven`auf dem Rstudio Blogg](https://blog.rstudio.org/2016/10/04/haven-1-0-0/)
+- [Das R-Paket `haven` auf dem Rstudio Blogg](https://blog.rstudio.org/2016/10/04/haven-1-0-0/)
 
 ![](figure/havenRstudioBlogg.PNG)
 

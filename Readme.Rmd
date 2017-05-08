@@ -22,6 +22,10 @@ knitr::opts_chunk$set(echo = TRUE)
 Aufgabe: [Zusatzpakete](tutorial/Aufgabe_Zusatzpakete.md)
 
 - [Datenimport](slides/Datenimport.md) ([pdf](slides/Datenimport.pdf) | [rcode](slides/Datenimport.R))
+
+Aufgabe: [Datenimport](tutorial/Datenimport.md)
+
+
 - [R und Excel](slides/Rexcel.md) ([pdf](Rexcel.pdf) | [rcode](slides/Rexcel.R))
 - [Datenexport](slides/Datenexport.md) ([pdf](slides/Datenexport.pdf) | [rcode](slides/Datenexport.R)) 
 
