@@ -1,4 +1,4 @@
-# Schnittstellen fÃ¼r den Austausch von Daten
+# R Schnittstellen - der Austausch von Daten
 Jan-Philipp Kolb  
 8 Mai 2017  
 

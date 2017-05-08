@@ -1,5 +1,5 @@
 ---
-title: "Schnittstellen für den Austausch von Daten"
+title: "R Schnittstellen - der Austausch von Daten"
 author: "Jan-Philipp Kolb"
 date: "8 Mai 2017"
 output: 
