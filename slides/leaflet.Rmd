@@ -2,13 +2,14 @@
 title: "Interaktive Karten mit leaflet"
 author: "Jan-Philipp Kolb"
 date: "08 Mai 2017"
-output: 
+output:
+  beamer_presentation: default
   slidy_presentation:
     keep_md: yes
 ---
 
 ```{r, include=FALSE}
-knitr::opts_chunk$set(echo = TRUE,warning=F,message=F)
+knitr::opts_chunk$set(echo = TRUE,warning=F,message=F,eval=F)
 ```
 
 ## Die Daten - Weltkulturerbe

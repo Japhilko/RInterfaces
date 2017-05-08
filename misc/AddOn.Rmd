@@ -299,3 +299,20 @@ CREATE EXTENSION hstore;
 - [Warum Spark mit NoSQL kombinieren](https://blog.couchbase.com/why-spark-and-nosql/)
 
 - [Spark in Rstudio](http://spark.rstudio.com/)
+
+
+
+## [OpenStreetMap und Open Government Data in PostGIS](http://tud.at/linuxwochen/2013-osm-postgis/)
+
+
+```{r,eval=F}
+restnam <- dbGetQuery(con, "SELECT name, COUNT(osm_id) AS anzahl
+FROM planet_osm_point
+WHERE amenity = 'restaurant'
+  AND name <> ''
+GROUP BY name
+ORDER BY anzahl DESC
+LIMIT 10")
+head(restnam)
+```
+

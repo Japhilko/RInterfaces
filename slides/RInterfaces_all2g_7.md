@@ -29,8 +29,17 @@ Man nutzt die Schnittstelle zu Datenbanken,...
 
 ## Die drei großen Open-Source Datenbanken
 
-- sqlite, mysql und PostgreSQL
+- [SQLite](https://www.sqlite.org/), [MySQL](https://www.mysql.com/de/) und [PostgreSQL](https://www.postgresql.org/)
 - für alle drei gibt es Anbindungen in R
+
+
+```r
+install.packages("RSQLite")
+install.packages("RMySQL")
+install.packages("RpostgreSQL")
+```
+
+
 - in der Folge liegt der Fokus vor allem auf SQLite und PostgreSQL
 
 ## [SQLite](https://www.sqlite.org/)
@@ -39,6 +48,8 @@ Man nutzt die Schnittstelle zu Datenbanken,...
 
 - [SQLite](https://de.wikipedia.org/wiki/SQLite) - Open Source Programmbibliothek mit relationalem Datenbanksystem 
 - [SQLite ist eine schlanke Datenbank](https://chemnitzer.linux-tage.de/2015/media/vortraege/folien/144_sqlite.pdf) und man muss nichts weiter installieren um sie zu nutzen. 
+- SQLite ist schon in R und Python integriert
+
 
 ## [MySQL Datenbank](https://de.wikipedia.org/wiki/MySQL)
 
@@ -122,15 +133,11 @@ Man nutzt die Schnittstelle zu Datenbanken,...
 
 - [10 einfache Schritte um SQL zu verstehen](https://blog.jooq.org/2016/03/17/10-easy-steps-to-a-complete-understanding-of-sql/)
 
+- [Abfrage planen](http://www.sqlite.org/queryplanner.html)
+
 - [Video um NoSQL zu verstehen](https://www.youtube.com/watch?v=TvRDOLiadtg&list=PLxcWHsmHykmWlXorl8rm-2Ux4HP1sFkub)
 
-- [Datenbanken in R](https://cran.r-project.org/web/packages/dplyr/vignettes/databases.html)
-
-- [Database basics - dplyr and DBI](https://shiny.rstudio.com/articles/overview.html)
-
-- [Frühe Entwicklung zu Integration von Datenbanken](https://cran.r-project.org/web/packages/DBI/vignettes/DBI-proposal.html)
-
-## Das R-Paket `dplyr`
+## Das R-Paket `dplyr` und die Schnittstelle zu SQLite
 
 
 
@@ -468,14 +475,19 @@ msleep %>%
 ## Am Besten funktionierts mit SQLite
 
 - alles was man braucht wird quasi schon mit R mitgeliefert 
+- der Befehl `src_sqlite` kann genutzt werden um sich mit einer Datenbank zu verbinden
+- bei Verwendung von `create=T` wird eine neue Datenbank erzeugt
+- bei `create=F` muss man den Pfad zur Datenbenk angeben
+
 
 
 ```r
 library(dplyr)
+setwd("data")
 my_db <- src_sqlite("my_db.sqlite3", create = T)
 ```
 
-## Ein Beispieldatensatz
+## Erste Datenbank mit Beispieldatensatz befüllen
 
 
 ```r
@@ -485,17 +497,30 @@ flights_sqlite <- copy_to(my_db, flights, temporary = FALSE, indexes = list(
 ```
 
 
+## Den Datensatz wieder heraus bekommen
+
+- mit dem Befehl `tbl` kann man sich mit Tabellen innerhalb einer Datenbank verbinden
+
+
 ```r
 flights_sqlite <- tbl(nycflights13_sqlite(), "flights")
 ```
+
+- das gleiche Ergebnis:
 
 
 ```r
 tbl(my_db, sql("SELECT * FROM flights"))
 ```
 
+## Eine weitere Abfrage
 
-## Integration von PostgreSQL mit dem Paket RPostgreSQL
+
+```r
+tbl(my_db, sql("SELECT * FROM flights WHERE month = 1 AND dep_time = 517"))
+```
+
+## Integration von PostgreSQL mit dem Paket `RPostgreSQL`
 
 
 
@@ -503,10 +528,10 @@ tbl(my_db, sql("SELECT * FROM flights"))
 
 ## Die Nutzung von [RPostgreSQL](http://wiki.openstreetmap.org/wiki/PostgreSQL)
 
-![PostgreSQL](https://www.runabove.com/images/new/2015/postgresql_1.png)
+![](https://www.runabove.com/images/new/2015/postgresql_1.png)
 
 
-PostgreSQL installieren
+### PostgreSQL installieren
 
 - [Installation Windows](https://www.postgresql.org/download/windows/)
 - [Installation Linux](http://postgres.de/install.html)
@@ -551,6 +576,12 @@ install.packages("RPostgreSQL")
 ```r
 library("RPostgreSQL")
 ```
+
+
+```r
+citation("RPostgreSQL")
+```
+
 
 ## [Datenbank mit R verbinden](https://datashenanigan.wordpress.com/2015/05/18/getting-started-with-postgresql-in-r/)
 
@@ -604,7 +635,13 @@ identical(df, df_postgres)
 CREATE EXTENSION postgis;
 ```
 
-## Programm zum Import der OSM Daten in PostgreSQL- osm2pgsql
+- [Der Anfang mit PostGIS](http://www.bostongis.com/?content_name=postgis_tut01)
+- [PostGIS und R](https://gis.stackexchange.com/questions/64950/working-with-postgis-data-in-r)
+
+
+## Programm zum Import der OpenStreetMap Daten in PostgreSQL- [osm2pgsql](http://wiki.openstreetmap.org/wiki/Osm2pgsql)
+
+- Ausschnitte der OpenStreetMap Daten können bei der Geofabrik heruntergeladen werden
 
 - [Nutzung von osm2pgsql](http://www.volkerschatz.com/net/osm/osm2pgsql-usage.html)
 - Läuft unter Linux deutlich besser
@@ -639,18 +676,12 @@ df_postgres <- dbGetQuery(con, "SELECT name, admin_level FROM planet_osm_polygon
 ```
 
 
-```r
-barplot(table(df_postgres[,2]),col="royalblue")
-```
-
-## Eine Abfrage zu administrativen Grenzen
+## Eine Abfrage zu administrativen Grenzen (ein spezielles Level) 
 
 
 ```r
 df_adm8 <- dbGetQuery(con, "SELECT name, admin_level FROM planet_osm_polygon WHERE boundary='administrative' AND admin_level='8'")
 ```
-
-
 
 ## Mögliche Abfragen
 
@@ -699,24 +730,6 @@ head(df_sipp)
 ```
 
 
-## [OpenStreetMap und Open Government Data in PostGIS](http://tud.at/linuxwochen/2013-osm-postgis/)
-
-- [Der Anfang mit PostGIS](http://www.bostongis.com/?content_name=postgis_tut01)
-- [PostGIS und R](https://gis.stackexchange.com/questions/64950/working-with-postgis-data-in-r)
-
-
-```r
-restnam <- dbGetQuery(con, "SELECT name, COUNT(osm_id) AS anzahl
-FROM planet_osm_point
-WHERE amenity = 'restaurant'
-  AND name <> ''
-GROUP BY name
-ORDER BY anzahl DESC
-LIMIT 10")
-head(restnam)
-```
-
-
 ## [PostgreSQL and Leaflet](https://www.r-bloggers.com/using-postgresql-and-shiny-with-a-dynamic-leaflet-map-monitoring-trash-cans/)
 
 
@@ -749,28 +762,9 @@ library(RPostgreSQL)
 - [Wie bekommt man OSM Daten](https://www.azavea.com/blog/2015/12/21/tools-for-getting-data-out-of-openstreetmap-and-into-desktop-gis/)
 
 
-## [`RMySQL`](https://cran.r-project.org/web/packages/RMySQL/index.html)
+- [PostgreSQL](http://wiki.openstreetmap.org/wiki/PostgreSQL)
 
-
-```r
-install.packages("RMySQL")
-```
-
-[RmySQL](https://github.com/rstats-db/RMySQL)
-
-
-```r
-library(DBI)
-con <- dbConnect(RMySQL::MySQL(), group = "my-db")
-```
-
-- [R zusammen mit einer MySQL Datenbank nutzen](http://www.jason-french.com/blog/2014/07/03/using-r-with-mysql-databases/)
-
-## [MySQL installieren](https://dev.mysql.com/doc/refman/5.7/en/windows-installation.html)
-
-![](figure/InstallingMySQL.PNG)
-
-## Nutzung von weiteren Datenbanken (MySQL, MongoDB)
+## Nutzung von weiteren Datenbanken (MySQL, MongoDB, CouchDB)
 
 
 
