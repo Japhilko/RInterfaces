@@ -21,10 +21,8 @@ Aufgabe: [Zusatzpakete](tutorial/Aufgabe_Zusatzpakete.md)
 
 Aufgabe: [Datenimport](tutorial/Datenimport.md)
 
-
-- [R und Excel](slides/Rexcel.md) ([pdf](Rexcel.pdf) | [rcode](slides/Rexcel.R))
 - [Datenexport](slides/Datenexport.md) ([pdf](slides/Datenexport.pdf) | [rcode](slides/Datenexport.R)) 
-
+- [R und Excel](slides/Rexcel.md) ([pdf](Rexcel.pdf) | [rcode](slides/Rexcel.R))
 
 ## [Präsentation von Daten - Reproducible Research](https://github.com/Japhilko/RInterfaces/blob/master/slides/RInterfaces_all2g_2.md)
 
