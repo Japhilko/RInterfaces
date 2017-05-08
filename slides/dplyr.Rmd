@@ -111,3 +111,23 @@ head(select(msleep, starts_with("sl")))
 
 ![](figure/endswith.PNG)
 
+## Zeilen auswählen
+
+```{r}
+filter(msleep, sleep_total >= 16)
+```
+
+## Mehrere logische Abfragen um Zeilen auszuwählen
+
+```{r}
+filter(msleep, sleep_total >= 16, bodywt >= 1)
+```
+
+## Neue Spalten erzeugen mit `mutate`
+
+```{r}
+msleep %>% 
+    mutate(rem_proportion = sleep_rem / sleep_total) %>%
+    head
+```
+
