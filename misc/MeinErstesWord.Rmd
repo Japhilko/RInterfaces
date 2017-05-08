@@ -1,0 +1,17 @@
+---
+title: "Erstes Word"
+author: "Jan-Philipp Kolb"
+date: "8 Mai 2017"
+output: word_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## R Markdown
+
+```{r cars,echo=T,eval=T}
+1:10
+
+```
