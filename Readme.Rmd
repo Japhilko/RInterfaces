@@ -3,11 +3,7 @@ title: "Themenübersicht - R Interfaces"
 author: "Jan-Philipp Kolb"
 date: "08 Mai 2017"
 output: 
-  html_document:
-    keep_md: yes
-  slidy_presentation: 
-    css: slides/readme.css
-    keep_md: yes
+  md_document: default
 ---
 
 ```{r setup, include=FALSE}
