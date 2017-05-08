@@ -116,9 +116,9 @@ Wie wird das Github Verzeichnis genutzt?
 
 <https://github.com/Japhilko/RInterfaces>
 
-- Es lohnt sich immer wieder zu dieser Seite zurückzukehren, weil hier alle relevanten Dokumente verlinkt sind.
+- Es lohnt sich immer wieder zu dieser Seite zurückzukehren, weil auch hier alle relevanten Dokumente verlinkt sind.
 
-- Grundsätzlich kann man der Veranstalung am Besten mit dem [kompletten File](https://github.com/Japhilko/RInterfaces/blob/master/slides/RInterfaces_all2g.md) folgen. Wenn Teile heruntergeladen werden sollen, bietet es sich an, das entsprechende pdf herunterzuladen.
+- Grundsätzlich kann man der Veranstalung am Besten mit den [kompletten Files](https://github.com/Japhilko/RInterfaces/blob/master/slides/RInterfaces_all2g.md) (sind unter den Kapitelüberschriften verlinkt) folgen. Wenn Teile heruntergeladen werden sollen, bietet es sich an, das entsprechende pdf herunterzuladen.
 
 ## Informationen ausdrucken
 
