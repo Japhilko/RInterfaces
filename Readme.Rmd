@@ -15,11 +15,11 @@ knitr::opts_chunk$set(echo = TRUE)
 
 - [Einführung und Motivation](https://github.com/Japhilko/RInterfaces/blob/master/slides/Intro.md) ([pdf](slides/Intro.pdf))
 
-Aufgabe: [Zusatzpakete](tutorial/Aufgabe_Zusatzpakete.md)
+Aufgabe: [Zusatzpakete](tutorial/Aufgabe_Zusatzpakete.Rmd)
 
 - [Datenimport](slides/Datenimport.md) ([pdf](slides/Datenimport.pdf) | [rcode](slides/Datenimport.R))
 
-Aufgabe: [Datenimport](tutorial/Datenimport.md)
+Aufgabe: [Datenimport](tutorial/Datenimport.Rmd)
 
 - [Datenexport](slides/Datenexport.md) ([pdf](slides/Datenexport.pdf) | [rcode](slides/Datenexport.R)) 
 - [R und Excel](slides/Rexcel.md) ([pdf](Rexcel.pdf) | [rcode](slides/Rexcel.R))
