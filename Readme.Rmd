@@ -18,6 +18,9 @@ knitr::opts_chunk$set(echo = TRUE)
 ## [Schnittstellen für den Austausch von Daten](https://github.com/Japhilko/RInterfaces/blob/master/slides/RInterfaces_all2g_1.md)
 
 - [Einführung und Motivation](https://github.com/Japhilko/RInterfaces/blob/master/slides/Intro.md) ([pdf](slides/Intro.pdf))
+
+Aufgabe: [Zusatzpakete](tutorial/Aufgabe_Zusatzpakete.md)
+
 - [Datenimport](slides/Datenimport.md) ([pdf](slides/Datenimport.pdf) | [rcode](slides/Datenimport.R))
 - [R und Excel](slides/Rexcel.md) ([pdf](Rexcel.pdf) | [rcode](slides/Rexcel.R))
 - [Datenexport](slides/Datenexport.md) ([pdf](slides/Datenexport.pdf) | [rcode](slides/Datenexport.R)) 
