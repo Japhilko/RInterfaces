@@ -29,14 +29,14 @@ whcSitesDat <- with(whcSites,data.frame(name_en,
                                         category))
 ```
 
-- Eine Tabelle erzeugen
+## Eine Tabelle erzeugen mit `knitr`
 
 ```{r}
 library(knitr)
 kable(head(whcSitesDat))
 ```
 
-## [Das Paket `DT`](https://rstudio.github.io/DT/)
+## Eine erste interaktive Tabelle - [Das Paket `DT`](https://rstudio.github.io/DT/)
 
 ```{r,eval=F}
 install.packages("DT")
@@ -48,7 +48,8 @@ install.packages("DT")
 ## Weitere Variablen WHC Datensatz
 
 ```{r}
-whcSitesDat2 <- with(whcSites,data.frame(name_en,category,longitude,latitude,date_inscribed,area_hectares,danger_list))
+whcSitesDat2 <- with(whcSites,data.frame(name_en,category,
+                                         longitude,latitude,date_inscribed,area_hectares,danger_list))
 ```
 
 - mit dem Befehl `datatable` kann man eine erste interaktive Tabelle erstellen:
@@ -98,26 +99,26 @@ str1 %>% substr(1,5) %>% toupper()
 
 ## Das Paket `leaflet`
 
-- [leaflet](https://rstudio.github.io/leaflet/) - um  interaktive Karten mit der JavaScript Bibliothek `leaflet` zu erzeugen
+- [`leaflet`](https://rstudio.github.io/leaflet/) - um  interaktive Karten mit der JavaScript Bibliothek `leaflet` zu erzeugen
 
 ```{r,eval=F}
 install.packages("leaflet")
 ```
 
-
-
 ```{r,warning=F}
 library("leaflet")
 ```
 
+- Bei `leaflet` wird mit so genannten Tiles gearbeitet.
+
 - Robin Lovelace - [The leaflet package for online mapping in R](http://robinlovelace.net/r/2015/02/01/leaflet-r-package.html)
 
 
-## Was sind Tiles
+## Was sind Tiles?
 
-- das Bild der Fliese erklärt es eigentlich ganz gut 
-- es geht um eine [Kachelgrafik](https://de.wikipedia.org/wiki/Kachelgrafik)
-- es ist eine Grafik bezeichnet, die mosaikartig zusammengesetzt ein vielfach größeres Gesamtbild ergibt.
+- Die Übersetzung aus dem englischen ist Fliese und dieses Bild erklärt es eigentlich ganz gut.
+- Es geht um [Kachelgrafiken](https://de.wikipedia.org/wiki/Kachelgrafik).
+- Es ist eine Grafik bezeichnet, die mosaikartig zusammengesetzt ein vielfach größeres Gesamtbild ergibt.
 
 ## Eine interaktive Karte erstellen
 

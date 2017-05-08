@@ -39,6 +39,7 @@ purl("../slides/Rmongodb.Rmd")
 ## Install Packages
 
 install.packages("dygraphs")
+install.packages("networkD3")
 
 ## Citations
 
