@@ -23,23 +23,23 @@ Jan-Philipp Kolb
 
 ## Gründe
 
-- R ist [frei verfügbar](http://www.inside-r.org/why-use-r). Es kann umsonst [runtergeladen](http://mirrors.softliste.de/cran/) werden.
+- R ist [frei verfügbar](https://www.r-project.org/). Es kann umsonst [runtergeladen](http://www.inside-r.org/why-use-r) werden.
 - R ist eine Skriptsprache 
-- Gute Möglichkeiten für die [Visualisierung](http://research.stowers-institute.org/efg/R/) ([Link](http://www.sr.bham.ac.uk/~ajrs/R/r-gallery.html) )
+- Gute Möglichkeiten für die [Visualisierung](http://www.sr.bham.ac.uk/~ajrs/R/r-gallery.html) 
 - R wird immer [populärer](https://twitter.com/josiahjdavis/status/559778930476220418)
-- [Popularität von R](http://blog.revolutionanalytics.com/popularity/)
+- [Popularität von R](http://blog.revolutionanalytics.com/popularity/) ist in vielen Bereichen sehr hoch.
 
 ![](http://d287f0h5fel5hu.cloudfront.net/blog/wp-content/uploads/2013/06/bar-learn-r-img11.png)
 
 
-## Warum R?
+## [Warum R?](http://stats.idre.ucla.edu/r/seminars/intro/)
 
 ![Modularer Aufbau](figure/ModularerAufbau.PNG)
 
 
-## Nachteile von R
+## Motivation - Nachteile von R
 
-1. Daten werden oft anderswo erfasst
+1. Daten werden oft anderswo erfasst/eingegeben (oft Excel, SPSS etc.)
 2. Nicht jeder ist bereit mit R zu arbeiten 
 3. Nicht auf jedem Rechner ist R installiert
 4. R ist manchmal zu langsam
@@ -48,7 +48,7 @@ Jan-Philipp Kolb
 ## Was folgt daraus
 
 1. Schnittstelle zu SPSS/Stata/Excel zum Import von Daten
-2. Schnittstelle zu Word
+2. Schnittstelle zu Word/LaTeX
 3. Möglichkeit HTML Präsentationen zu erzeugen
 4. Nutzung von C++
 5. Nutzung von Datenbanken
@@ -63,7 +63,7 @@ Jan-Philipp Kolb
 
 ![](figure/MiracleOccursImage.png)
 
-## [Was wird bei Wikipedia unter Reproducability verstanden?](https://en.wikipedia.org/wiki/Reproducibility)
+## [Was wird bei Wikipedia unter Reproducibility verstanden?](https://en.wikipedia.org/wiki/Reproducibility)
 
 ![](figure/Spectrum_of_reproducible_research.png)
 
@@ -79,21 +79,31 @@ Jan-Philipp Kolb
 
 ## [Warum die Schnittstelle zu C++?](http://dirk.eddelbuettel.com/papers/rcpp_workshop_introduction_user2012.pdf)
 
-- [Wenn Schnelligkeit wichtig ist, bietet sich C++ an](http://www.stat.berkeley.edu/scf/paciorek-cppWorkshop.pdf)
-- [Dies ist kann bspw. der Fall sein, wenn sich Schleifen nicht vermeiden lassen](https://www.r-bloggers.com/calling-c-from-r-using-rcpp/)
-- [Man wird bei der Programmierung durch RStudio unterstützt](https://support.rstudio.com/hc/en-us/articles/200486088-Using-Rcpp-with-RStudio)
-- Es gibt eine [Rcpp Galerie](http://gallery.rcpp.org/), wo man sich Anregungen holen kann
+- [Wenn Schnelligkeit wichtig ist, bietet sich C++ an](http://www.stat.berkeley.edu/scf/paciorek-cppWorkshop.pdf).
+- [Dies kann bspw. der Fall sein, wenn sich Schleifen nicht vermeiden lassen](https://www.r-bloggers.com/calling-c-from-r-using-rcpp/).
+- [Man wird bei der Programmierung durch RStudio unterstützt](https://support.rstudio.com/hc/en-us/articles/200486088-Using-Rcpp-with-RStudio).
+- Es gibt eine [Rcpp Galerie](http://gallery.rcpp.org/), wo man sich Anregungen holen kann.
+- Allerdings sollte man zunächst versuchen den Rcode so schnell wie möglich zu gestalten.
 
 ## Die Nutzung von Datenbanken
 
-- Wenn große Datenmengen anfallen, kann die zusätzliche Nutzung von Datenbanken sinnvoll sein
-- In R bestehen Schnittstellen sowohl zu relationalen als auch nicht relationalen Datenbanken
+- Wenn große Datenmengen anfallen, kann die zusätzliche Nutzung von Datenbanken sinnvoll sein.
+- In R bestehen Schnittstellen sowohl zu relationalen als auch nicht relationalen Datenbanken.
+- Datenbanken sollten allerdings erst genutzt werden, wenn alle Möglichkeiten in R ausgeschöpft sind. 
 
 ## Nutzung der Unterlagen auf GitHub
 
+-   Die folgende Seite ist die Startseite für den Kurs:
+
+<https://japhilko.github.io/Interfaces4R/>
+
+![](figure/Interfaces4r.PNG)
+
+## Wo sind die Sourcecodes?
+
 Wie wird das Github Verzeichnis genutzt?
 
--   Die folgende Seite ist die Startseite für den Kurs:
+-   Auf der folgenden Seite sind alle Sourcecodes enthalten:
 
 <https://github.com/Japhilko/RInterfaces>
 
@@ -124,7 +134,6 @@ Wie wird das Github Verzeichnis genutzt?
 - Alle anderen Dateien (bspw. `.RData`) auch mittels Raw Button herunterladen.
 
 ## Organisatorisches
-
 
 - Zusätzlich gibt es für jedes Kapitel eine Aufgabe, da man nur durch eigenes Trainieren auf der Lernkurve vorankommt.
 - Die Quellen sind als Link meist in der Überschrift hinterlegt.

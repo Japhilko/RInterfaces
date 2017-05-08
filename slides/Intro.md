@@ -15,32 +15,25 @@ Jan-Philipp Kolb
 - Um die Intelligenz anderer Leute zu nutzen ;-)
 - ...
 
+## Gründe
 
-## Warum R?
+- R ist [frei verfügbar](https://www.r-project.org/). Es kann umsonst [runtergeladen](http://www.inside-r.org/why-use-r) werden.
+- R ist eine Skriptsprache 
+- Gute Möglichkeiten für die [Visualisierung](http://www.sr.bham.ac.uk/~ajrs/R/r-gallery.html) 
+- R wird immer [populärer](https://twitter.com/josiahjdavis/status/559778930476220418)
+- [Popularität von R](http://blog.revolutionanalytics.com/popularity/) ist in vielen Bereichen sehr hoch.
+
+![](http://d287f0h5fel5hu.cloudfront.net/blog/wp-content/uploads/2013/06/bar-learn-r-img11.png)
+
+
+## [Warum R?](http://stats.idre.ucla.edu/r/seminars/intro/)
 
 ![Modularer Aufbau](figure/ModularerAufbau.PNG)
 
 
-## Gründe
+## Motivation - Nachteile von R
 
-- R ist [frei verfügbar](http://www.inside-r.org/why-use-r). Es kann umsonst [runtergeladen](http://mirrors.softliste.de/cran/) werden.
-
-- R ist eine Skriptsprache 
-- Gute Möglichkeiten für die [Visualisierung](http://research.stowers-institute.org/efg/R/) ([Link](http://www.sr.bham.ac.uk/~ajrs/R/r-gallery.html) )
-
-- R wird immer [populärer](https://twitter.com/josiahjdavis/status/559778930476220418)
-
-- [Popularität von R](http://blog.revolutionanalytics.com/popularity/)
-
-## Übersicht - warum R
-
-![pic](http://d287f0h5fel5hu.cloudfront.net/blog/wp-content/uploads/2013/06/bar-learn-r-img11.png)
-
-
-
-## Nachteile von R
-
-1. Daten werden oft anderswo erfasst
+1. Daten werden oft anderswo erfasst/eingegeben (oft Excel, SPSS etc.)
 2. Nicht jeder ist bereit mit R zu arbeiten 
 3. Nicht auf jedem Rechner ist R installiert
 4. R ist manchmal zu langsam
@@ -49,16 +42,14 @@ Jan-Philipp Kolb
 ## Was folgt daraus
 
 1. Schnittstelle zu SPSS/Stata/Excel zum Import von Daten
-2. Schnittstelle zu Word
+2. Schnittstelle zu Word/LaTeX
 3. Möglichkeit HTML Präsentationen zu erzeugen
 4. Nutzung von C++
 5. Nutzung von Datenbanken
 
-# Warum die Nutzung von Schnittstellen?
-
 ## Die Nutzung von Schnittstellen beim Import/Export
 
-- Interaktion mit SPSS, Stata
+- Interaktion mit Excel, SPSS, Stata, ...
 
 ![Import](figure/Import.PNG)
 
@@ -66,7 +57,7 @@ Jan-Philipp Kolb
 
 ![](figure/MiracleOccursImage.png)
 
-## [Was wird bei Wikipedia unter Reproduibility verstanden?](https://en.wikipedia.org/wiki/Reproducibility)
+## [Was wird bei Wikipedia unter Reproducibility verstanden?](https://en.wikipedia.org/wiki/Reproducibility)
 
 ![](figure/Spectrum_of_reproducible_research.png)
 
@@ -82,29 +73,39 @@ Jan-Philipp Kolb
 
 ## [Warum die Schnittstelle zu C++?](http://dirk.eddelbuettel.com/papers/rcpp_workshop_introduction_user2012.pdf)
 
-- [Wenn Schnelligkeit wichtig ist, bietet sich C++ an](http://www.stat.berkeley.edu/scf/paciorek-cppWorkshop.pdf)
-- [Dies ist kann bspw. der Fall sein, wenn sich Schleifen nicht vermeiden lassen](https://www.r-bloggers.com/calling-c-from-r-using-rcpp/)
-- [Man wird bei der Programmierung durch RStudio unterstützt](https://support.rstudio.com/hc/en-us/articles/200486088-Using-Rcpp-with-RStudio)
-- Es gibt eine [Rcpp Galerie](http://gallery.rcpp.org/), wo man sich Anregungen holen kann
+- [Wenn Schnelligkeit wichtig ist, bietet sich C++ an](http://www.stat.berkeley.edu/scf/paciorek-cppWorkshop.pdf).
+- [Dies kann bspw. der Fall sein, wenn sich Schleifen nicht vermeiden lassen](https://www.r-bloggers.com/calling-c-from-r-using-rcpp/).
+- [Man wird bei der Programmierung durch RStudio unterstützt](https://support.rstudio.com/hc/en-us/articles/200486088-Using-Rcpp-with-RStudio).
+- Es gibt eine [Rcpp Galerie](http://gallery.rcpp.org/), wo man sich Anregungen holen kann.
+- Allerdings sollte man zunächst versuchen den Rcode so schnell wie möglich zu gestalten.
 
 ## Die Nutzung von Datenbanken
 
-- Wenn große Datenmengen anfallen, kann die zusätzliche Nutzung von Datenbanken sinnvoll sein
-- In R bestehen Schnittstellen sowohl zu relationalen als auch nicht relationalen Datenbanken
+- Wenn große Datenmengen anfallen, kann die zusätzliche Nutzung von Datenbanken sinnvoll sein.
+- In R bestehen Schnittstellen sowohl zu relationalen als auch nicht relationalen Datenbanken.
+- Datenbanken sollten allerdings erst genutzt werden, wenn alle Möglichkeiten in R ausgeschöpft sind. 
 
-# Nutzung der Unterlagen auf GitHub
-
-## Wie wird das Github Verzeichnis genutzt
+## Nutzung der Unterlagen auf GitHub
 
 -   Die folgende Seite ist die Startseite für den Kurs:
+
+<https://japhilko.github.io/Interfaces4R/>
+
+![](figure/Interfaces4r.PNG)
+
+## Wo sind die Sourcecodes?
+
+Wie wird das Github Verzeichnis genutzt?
+
+-   Auf der folgenden Seite sind alle Sourcecodes enthalten:
 
 <https://github.com/Japhilko/RInterfaces>
 
 - Es lohnt sich immer wieder zu dieser Seite zurückzukehren, weil hier alle relevanten Dokumente verlinkt sind.
 
-- Grundsätzlich bietet es sich an, den einzelnen Teilen der Veranstaltung mit dem File zu folgen, dass mit dem Begriff _Browser_ verlinkt ist.
+- Grundsätzlich kann man der Veranstalung am Besten mit dem [kompletten File](https://github.com/Japhilko/RInterfaces/blob/master/slides/RInterfaces_all2g.md) folgen. Wenn Teile heruntergeladen werden sollen, bietet es sich an, das entsprechende pdf herunterzuladen.
 
-## Informationen audrucken
+## Informationen ausdrucken
 
 -   Zum Ausdrucken eignen sich die pdf-Dateien besser. 
 
@@ -128,11 +129,9 @@ Jan-Philipp Kolb
 
 ## Organisatorisches
 
-
 - Zusätzlich gibt es für jedes Kapitel eine Aufgabe, da man nur durch eigenes Trainieren auf der Lernkurve vorankommt.
-
-- Die Quellen sind als Link meist in der Überschrift hinterlegt
-- Die Links sind nur im HTML Dokument zu sehen aber auch in der pdf vorhanden
+- Die Quellen sind als Link meist in der Überschrift hinterlegt.
+- Die Links sind nur im HTML Dokument zu sehen aber auch in der pdf vorhanden.
 
 ## Links und Quellen
 
@@ -141,4 +140,10 @@ Wen Github näher interessiert:
 
 - [Hello World](https://guides.github.com/activities/hello-world/)
 
-- [Understanding the GitHub](https://guides.github.com/introduction/flow/)
+- [Understanding the GitHub flow](https://guides.github.com/introduction/flow/)
+
+## [CRAN Task Views](https://cran.r-project.org/web/views/)
+
+![](figure/CRANTaskviews.PNG)
+
+
