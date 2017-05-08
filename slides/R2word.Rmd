@@ -31,9 +31,8 @@ knitr::opts_chunk$set(echo = TRUE)
 
 ![](figure/ErstesWord.PNG)
 
-# Das Arbeiten mit Markdown
 
-## Rmarkdown - erste Schritte
+## Das Arbeiten mit Rmarkdown - erste Schritte
 
 Markdown ist eine sehr einfache Syntax, die es Benutzern erlaubt, aus einfachen Textdateien gut gelayoutete Dokumente zu erstellen.
 
@@ -186,14 +185,15 @@ date: "`r format(Sys.time(), '%d %B, %Y')`"
 
 ![](figure/ErgebenisAktuellesDatum.PNG)
 
+## [Ein Schummelzettel](https://www.rstudio.com/wp-content/uploads/2015/06/rmarkdown-german.pdf)
+
+![](figure/RmarkdownSchummelzettel.PNG)
 
 ## Resourcen
 
 - Interview - [Ein Word Dokument mit wenig Aufwand schreiben](https://www.r-statistics.com/2013/03/write-ms-word-document-using-r-with-as-little-overhead-as-possible/)
 
 - [pander: Ein R Pandoc Wrapper](http://rapporter.github.io/pander/)
-
-- [Ein Schummelzettel](https://www.rstudio.com/wp-content/uploads/2015/06/rmarkdown-german.pdf)
 
 - [Einführung in Markdown](https://github.com/ctreffe/r-space/wiki/R-Markdown-Intro)
 

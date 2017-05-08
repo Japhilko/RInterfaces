@@ -5,9 +5,6 @@ date: "8 Mai 2017"
 output:
   slidy_presentation:
     keep_md: yes
-  ioslides_presentation:
-    highlight: tango
-    keep_md: yes
   beamer_presentation:
     colortheme: beaver
     fig_caption: no
@@ -15,6 +12,9 @@ output:
     highlight: tango
     theme: CambridgeUS
     toc: yes
+  ioslides_presentation:
+    highlight: tango
+    keep_md: yes
 ---
 
 ```{r, include=FALSE}
@@ -66,8 +66,6 @@ output:
 
 ![](figure/BeamerInhaltsVZ.PNG)
 
-## Inhaltsverzeichnis II
-
 ```
 output: 
   beamer_presentation: 
@@ -118,6 +116,14 @@ output:
 ## Inline Code - das Ergebnis
 
 ![](figure/CRANmirror.PNG)
+
+```{r}
+CRANmirror <- "http://cran.revolutionanalytics.com"
+cran <- contrib.url(repos = CRANmirror,type = "source")
+info <- available.packages(contriburl = cran, type = x)
+nrow(info)
+```
+
 
 
 ## PDF Paper mit R

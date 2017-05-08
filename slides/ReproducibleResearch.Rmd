@@ -15,13 +15,19 @@ knitr::opts_chunk$set(echo = TRUE)
 
 ![](figure/TaskViewReproducibleResearch.PNG)
 
-- Ein Online Buch mit vielen nützlichen Tipps
+
 ## [Reproducible Research
 with R and RStudio](https://englianhu.files.wordpress.com/2016/01/reproducible-research-with-r-and-studio-2nd-edition.pdf)
 
 ![](figure/Gandrud.PNG)
 
-## [A crash course in reproducible research in R](http://t-redactyl.io/blog/2016/10/a-crash-course-in-reproducible-research-in-r.html)
+- Ein Online Buch mit vielen nützlichen Tipps
 
+## [Ein Crash Kurs in Reproducible Research mit R](http://t-redactyl.io/blog/2016/10/a-crash-course-in-reproducible-research-in-r.html)
 
 ![](figure/CrashcourseReprod.PNG)
+
+## [Umsetzung in R](http://chance.amstat.org/2015/11/reproducible-reporting/)
+
+![](http://chance.amstat.org/files/2015/11/bookfig2abig.png)
+

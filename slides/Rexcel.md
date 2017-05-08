@@ -1,6 +1,6 @@
 # R und Excel
 Jan-Philipp Kolb  
-08 Mai 2017  
+8 Mai 2017  
 
 
 

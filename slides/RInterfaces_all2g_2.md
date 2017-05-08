@@ -14,16 +14,22 @@ Jan-Philipp Kolb
 
 ![](figure/TaskViewReproducibleResearch.PNG)
 
-- Ein Online Buch mit vielen nützlichen Tipps
+
 ## [Reproducible Research
 with R and RStudio](https://englianhu.files.wordpress.com/2016/01/reproducible-research-with-r-and-studio-2nd-edition.pdf)
 
 ![](figure/Gandrud.PNG)
 
-## [A crash course in reproducible research in R](http://t-redactyl.io/blog/2016/10/a-crash-course-in-reproducible-research-in-r.html)
+- Ein Online Buch mit vielen nützlichen Tipps
 
+## [Ein Crash Kurs in Reproducible Research mit R](http://t-redactyl.io/blog/2016/10/a-crash-course-in-reproducible-research-in-r.html)
 
 ![](figure/CrashcourseReprod.PNG)
+
+## [Umsetzung in R](http://chance.amstat.org/2015/11/reproducible-reporting/)
+
+![](http://chance.amstat.org/files/2015/11/bookfig2abig.png)
+
 
 
 # Word Dokumente mit R erstellen
@@ -45,9 +51,8 @@ with R and RStudio](https://englianhu.files.wordpress.com/2016/01/reproducible-r
 
 ![](figure/ErstesWord.PNG)
 
-# Das Arbeiten mit Markdown
 
-## Rmarkdown - erste Schritte
+## Das Arbeiten mit Rmarkdown - erste Schritte
 
 Markdown ist eine sehr einfache Syntax, die es Benutzern erlaubt, aus einfachen Textdateien gut gelayoutete Dokumente zu erstellen.
 
@@ -186,16 +191,16 @@ kable(ab)
 
          a            b
 ----------  -----------
- 0.1962884    0.1131156
- 0.8059007   -0.0229997
- 0.2766309   -1.1885926
- 0.2797320   -0.0391348
- 0.2934003    0.6799188
- 0.5117670   -0.6064448
- 0.4788544    1.1067234
- 0.5341763    0.4185559
- 0.3249823    0.1729800
- 0.4148437   -1.5484840
+ 0.6270199    0.6100286
+ 0.8631485    0.3742776
+ 0.5925393    0.5123502
+ 0.1367910    1.5329615
+ 0.7009417    0.0506878
+ 0.5726770   -2.1913698
+ 0.5449974   -0.8546935
+ 0.7179814   -0.2917793
+ 0.1605434    0.3768956
+ 0.0929623   -0.0090389
 
 ## [Vorlagen verwenden](http://rmarkdown.rstudio.com/articles_docx.html)
 
@@ -210,20 +215,21 @@ kable(ab)
 ## [Immer das aktuelle Datum im Kopf](http://stackoverflow.com/questions/23449319/yaml-current-date-in-rmarkdown)
 
 ```
-date: "06 Mai, 2017"
+date: "08 Mai, 2017"
 ```
 ![](figure/rmdAktuellesDatum.PNG)
 
 ![](figure/ErgebenisAktuellesDatum.PNG)
 
+## [Ein Schummelzettel](https://www.rstudio.com/wp-content/uploads/2015/06/rmarkdown-german.pdf)
+
+![](figure/RmarkdownSchummelzettel.PNG)
 
 ## Resourcen
 
 - Interview - [Ein Word Dokument mit wenig Aufwand schreiben](https://www.r-statistics.com/2013/03/write-ms-word-document-using-r-with-as-little-overhead-as-possible/)
 
 - [pander: Ein R Pandoc Wrapper](http://rapporter.github.io/pander/)
-
-- [Ein Schummelzettel](https://www.rstudio.com/wp-content/uploads/2015/06/rmarkdown-german.pdf)
 
 - [Einführung in Markdown](https://github.com/ctreffe/r-space/wiki/R-Markdown-Intro)
 
@@ -281,8 +287,6 @@ output:
 
 ![](figure/BeamerInhaltsVZ.PNG)
 
-## Inhaltsverzeichnis II
-
 ```
 output: 
   beamer_presentation: 
@@ -333,6 +337,19 @@ output:
 ## Inline Code - das Ergebnis
 
 ![](figure/CRANmirror.PNG)
+
+
+```r
+CRANmirror <- "http://cran.revolutionanalytics.com"
+cran <- contrib.url(repos = CRANmirror,type = "source")
+info <- available.packages(contriburl = cran, type = x)
+nrow(info)
+```
+
+```
+## [1] 10489
+```
+
 
 
 ## PDF Paper mit R
@@ -444,7 +461,7 @@ date()
 ```
 
 ```
-## [1] "Sat May 06 15:08:16 2017"
+## [1] "Mon May 08 09:11:53 2017"
 ```
 
 ## Eine Folie mit Formel
@@ -634,7 +651,7 @@ kable(table(a))
 ![](figure/sluidypresentations.PNG)
 
 
-## [Was sind Cascading Style Files ([CSS](https://en.wikipedia.org/wiki/Cascading_Style_Sheets))?](https://de.wikipedia.org/wiki/Cascading_Style_Sheets)
+## [Was sind Cascading Style Files ([CSS](https://de.wikipedia.org/wiki/Cascading_Style_Sheets)) 
 
 ![](https://upload.wikimedia.org/wikipedia/commons/8/83/CSS-Logo.png)
 
@@ -793,7 +810,7 @@ print(sys.version)
 ```
 
 ```
-## 2.7.10 (default, May 23 2015, 09:44:00) [MSC v.1500 64 bit (AMD64)]
+## 3.5.2 (v3.5.2:4def2a2901a5, Jun 25 2016, 22:01:18) [MSC v.1900 32 bit (Intel)]
 ```
 
 ## [LaTeX Code integieren](https://blog.rstudio.org/2016/10/05/r-notebooks/)

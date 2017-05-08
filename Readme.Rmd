@@ -15,14 +15,16 @@ knitr::opts_chunk$set(echo = TRUE)
 
 - [Einführung und Motivation](https://github.com/Japhilko/RInterfaces/blob/master/slides/Intro.md) ([pdf](slides/Intro.pdf))
 
-Aufgabe: [Zusatzpakete](tutorial/Aufgabe_Zusatzpakete.Rmd)
+Aufgabe: [Zusatzpakete](tutorial/Aufgabe_Zusatzpakete.md)
 
 - [Datenimport](slides/Datenimport.md) ([pdf](slides/Datenimport.pdf) | [rcode](slides/Datenimport.R))
 
-Aufgabe: [Datenimport](tutorial/Datenimport.Rmd)
+Aufgabe: [Datenimport](tutorial/Aufgabe_Datenimport.md)
 
 - [Datenexport](slides/Datenexport.md) ([pdf](slides/Datenexport.pdf) | [rcode](slides/Datenexport.R)) 
 - [R und Excel](slides/Rexcel.md) ([pdf](Rexcel.pdf) | [rcode](slides/Rexcel.R))
+
+Aufgabe: [Export nach Excel](tutorial/Aufgabe_Export2Excel.Rmd)
 
 ## [Präsentation von Daten - Reproducible Research](https://github.com/Japhilko/RInterfaces/blob/master/slides/RInterfaces_all2g_2.md)
 
@@ -31,11 +33,14 @@ Aufgabe: [Datenimport](tutorial/Datenimport.Rmd)
 -	[HTML Dokumente, Präsentationen und Dashboards mit Rmarkdown](slides/Rmarkdown.md) ([pdf](slides/Rmarkdown.pdf))
 - [Notebooks](slides/Notebooks.md) zur Integration von anderen Programmiersprachen (Python,LaTeX,Julia) ([pdf](slides/Notebooks.pdf))
 
-Aufgabe: Bearbeiten Sie ein Notebook weiter
+Aufgabe: [Bearbeiten Sie ein Notebook weiter](tutorial/Aufgabe_Notebook.md)
 
 ## [Interaktive Darstellung mit Javascript und R](https://github.com/Japhilko/RInterfaces/blob/master/slides/RInterfaces_all2g_3.md)
 
 -	[Interaktive Karten mit dem Javascript Paket leaflet](https://github.com/Japhilko/RInterfaces/blob/master/slides/leaflet.md)
+
+Aufgabe: [Eine interaktive Karte erzeugen](tutorial/Aufgabe_leaflet.Rmd)
+
 -	[Interaktive Tabellen mit DataTables](https://github.com/Japhilko/RInterfaces/blob/master/slides/DataTables.md)
 -	[R und die Javascript Data-Driven Documents (D3)](https://github.com/Japhilko/RInterfaces/blob/master/slides/D3.md)
 -	[Interaktive Graphiken mit D3 und plotly](https://github.com/Japhilko/RInterfaces/blob/master/slides/plotly.md)

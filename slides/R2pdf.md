@@ -48,8 +48,6 @@ output:
 
 ![](figure/BeamerInhaltsVZ.PNG)
 
-## Inhaltsverzeichnis II
-
 ```
 output: 
   beamer_presentation: 
@@ -100,6 +98,19 @@ output:
 ## Inline Code - das Ergebnis
 
 ![](figure/CRANmirror.PNG)
+
+
+```r
+CRANmirror <- "http://cran.revolutionanalytics.com"
+cran <- contrib.url(repos = CRANmirror,type = "source")
+info <- available.packages(contriburl = cran, type = x)
+nrow(info)
+```
+
+```
+## [1] 10489
+```
+
 
 
 ## PDF Paper mit R
