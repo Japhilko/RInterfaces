@@ -32,22 +32,44 @@ library(dplyr)
 head(filter(flights, month == 1,day==1))
 ```
 
-## [Erste Schritte mit `dplyr`](http://genomicsclass.github.io/book/pages/dplyr_tutorial.html)
+## [Das Paket `downloader`](http://genomicsclass.github.io/book/pages/dplyr_tutorial.html)
 
 ```{r,eval=F}
 install.packages("downloader")
 ```
 
+```{r}
+library(downloader)
+```
+
+![](figure/DownloaderEx.PNG)
+
+## Einen Beispieldatensatz herunterladen und importieren
 
 
 ```{r}
-library(downloader)
 url <- "https://raw.githubusercontent.com/genomicsclass/dagdata/master/inst/extdata/msleep_ggplot2.csv"
 filename <- "msleep_ggplot2.csv"
+```
+
+- folgender Code sagt, dass das File nur heruntergeladen wird, wenn es noch nicht existiert
+
+```{r}
+setwd("data/")
 if (!file.exists(filename)) download(url,filename)
 msleep <- read.csv("msleep_ggplot2.csv")
+```
+
+
+## Den Datensatz anschauen
+
+```{r}
 head(msleep)
 ```
+
+## Eine erste Auswahl treffen
+
+- die Befehle erinnern schon an die SQL Sprache 
 
 ```{r}
 sleepData <- select(msleep, name, sleep_total)
