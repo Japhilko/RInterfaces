@@ -2,13 +2,14 @@
 title: "D3 und plotly"
 author: "Jan-Philipp Kolb"
 date: "8 Mai 2017"
-output: 
-  slidy_presentation: 
+output:
+  beamer_presentation: default
+  slidy_presentation:
     keep_md: yes
 ---
 
 ```{r, include=FALSE}
-knitr::opts_chunk$set(echo = TRUE,message=F,warning=F)
+knitr::opts_chunk$set(echo = TRUE,message=F,warning=F,eval=F)
 ```
 
 ## [plotly ](https://plot.ly/)

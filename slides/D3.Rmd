@@ -3,13 +3,14 @@ title: "R and D3"
 author: "Jan-Philipp Kolb"
 date: "8 Mai 2017"
 output:
-  slidy_presentation: default
+  beamer_presentation: default
   ioslides_presentation:
     keep_md: yes
+  slidy_presentation: default
 ---
 
 ```{r, include=FALSE}
-knitr::opts_chunk$set(echo = TRUE,message=F,warning=F,eval=T)
+knitr::opts_chunk$set(echo = TRUE,message=F,warning=F,eval=F)
 ```
 
 ## JavaScript - Data-Driven Documents 

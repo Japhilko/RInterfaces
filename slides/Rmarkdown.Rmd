@@ -3,6 +3,7 @@ title: "HTML Dokumente Präsentationen und Dashboards"
 author: "Jan-Philipp Kolb"
 date: "8 Mai 2017"
 output:
+  pdf_document: default
   slidy_presentation:
     keep_md: yes
   beamer_presentation:

@@ -1,8 +1,9 @@
 ---
-title: "R Schnittstellen - für den Austausch von Daten"
+title: "R Schnittstellen"
 author: "Jan-Philipp Kolb"
 date: "8 Mai 2017"
 output: 
+  pdf_document: default
   slidy_presentation: 
     css: mycss2.css
     keep_md: yes
@@ -13,7 +14,7 @@ knitr::opts_chunk$set(echo = TRUE)
 ```
 
 
-## Einführung und Motivation
+# Einführung und Motivation
 
 ```{r,eval=F,echo=F}
 install.packages("threejs")
@@ -28,7 +29,7 @@ install.packages("tidyverse")
 ```{r child = '../tutorial/Aufgabe_Zusatzpakete.Rmd'}
 ```
 
-## Datenimport
+# Datenimport
 
 ```{r child = 'Datenimport.Rmd'}
 ```
@@ -165,23 +166,23 @@ install.packages("tidyverse")
 
 
 
-## Datenbanken und R
+# Datenbanken und R
 
 ```{r child = 'Datenbanken.Rmd'}
 ```
 
-## Das R-Paket `dplyr`
+# Das R-Paket `dplyr`
 
 ```{r child = 'dplyr.Rmd'}
 ```
 
-## Integration von PostgreSQL mit dem Paket 
+# Integration von PostgreSQL mit dem Paket 
 RPostgreSQL
 
 ```{r child = 'RPostgreSQL.Rmd'}
 ```
 
-## Nutzung von weiteren Datenbanken (MongoDB, MySQL)
+# Nutzung von weiteren Datenbanken (MongoDB, MySQL)
 
 ```{r child = 'Rmongodb.Rmd'}
 ```

@@ -3,6 +3,7 @@ title: "R Schnittstellen - der Austausch von Daten"
 author: "Jan-Philipp Kolb"
 date: "8 Mai 2017"
 output: 
+  pdf_document: default
   slidy_presentation: 
     css: mycss2.css
     keep_md: yes
