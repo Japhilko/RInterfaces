@@ -104,3 +104,5 @@ Aufgabe: [Eine interaktive Karte erzeugen](tutorial/Aufgabe_leaflet.md)
 -   [Nutzung von weiteren Datenbanken
     (MongoDB, MySQL)](https://github.com/Japhilko/RInterfaces/blob/master/slides/Rmongodb.md)
     ([pdf](slides/Rmongodb.pdf) | [rcode](rcode/Rmongodb.R))
+
+Alle Folien in einem [pdf](slides/RInterfaces_all2g.pdf).
