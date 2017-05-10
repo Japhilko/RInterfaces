@@ -14,7 +14,7 @@ Aufgabe: [Datenimport](tutorial/Aufgabe_Datenimport.md)
 
 -   [Datenexport](slides/Datenexport.md) ([pdf](slides/Datenexport.pdf)
     | [rcode](slides/Datenexport.R))
--   [R und Excel](slides/Rexcel.md) ([pdf](Rexcel.pdf) |
+-   [R und Excel](slides/Rexcel.md) ([pdf](slides/Rexcel.pdf) |
     [rcode](slides/Rexcel.R))
 
 Aufgabe: [Export nach Excel](tutorial/Aufgabe_Export2Excel.Rmd)
