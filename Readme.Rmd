@@ -79,5 +79,3 @@ RPostgreSQL](https://github.com/Japhilko/RInterfaces/blob/master/slides/RPostgre
 
 
 
-
-
