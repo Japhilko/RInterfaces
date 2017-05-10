@@ -3,6 +3,7 @@ title: "Eine Annährung an Datenbankkonzepte - Das Paket `dplyr`"
 author: "Jan-Philipp Kolb"
 date: "5 Mai 2017"
 output: 
+  pdf_document: default
   slidy_presentation: 
     keep_md: yes
 ---

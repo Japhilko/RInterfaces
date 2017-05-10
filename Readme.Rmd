@@ -60,7 +60,7 @@ Aufgabe: [Eine interaktive Karte erzeugen](tutorial/Aufgabe_leaflet.md)
 
 ## [Applikationen und Projektverwaltung mit Rstudio und git](https://github.com/Japhilko/RInterfaces/blob/master/slides/RInterfaces_all2g_5.md) ([pdf](slides/RInterfaces_all2g_5.pdf))
 
-- [Allgemein zur Versionsverwaltung](slides/Versionsverwaltung.md) ([pdf](slides/Versionsverwaltung.pdf) | [rcode](slides/Versionsverwaltung.R))
+- [Allgemein zur Versionsverwaltung](slides/Versionsverwaltung.md) ([pdf](slides/Versionsverwaltung.pdf))
 - [R und Git](slides/Rgit.md) ([pdf](slides/Rgit.pdf) | [rcode](rcode/Rgit.R))
 - [Shiny Apps](slides/shiny.md) ([pdf](slides/shiny.pdf) | [rcode](rcode/shiny.R))
 
