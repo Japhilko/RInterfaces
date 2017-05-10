@@ -3,6 +3,7 @@
 # Jan-Philipp Kolb
 
 setwd("D:/Eigene Dateien/Dokumente/GitHub/RInterfaces/rcode")
+setwd("C:/Users/kolbjp/Documents/GitHub/RInterfaces/slides")
 
 library(knitr)
 
