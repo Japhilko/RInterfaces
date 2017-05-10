@@ -52,7 +52,7 @@ Aufgabe: [Eine interaktive Karte erzeugen](tutorial/Aufgabe_leaflet.md)
 
 ## [Internetresourcen und Schnittstellen nutzen](https://github.com/Japhilko/RInterfaces/blob/master/slides/RInterfaces_all2g_4.md) ([pdf](slides/RInterfaces_all2g_4.pdf))
 
--	[Import von JSON-Objekten und XML Dateien](slides/rapis.md) ([pdf](slides/rapis.pdf) | [rcode](rcode/rapis.pdf))
+-	[Import von JSON-Objekten und XML Dateien](slides/rapis.md) ([pdf](slides/rapis.pdf) | [rcode](rcode/rapis.R))
 - [Die Pakete rvest und RCurl](slides/rvest.md) ([pdf](slides/rvest.pdf) | [rcode](rcode/rvest.R))
 - [Webscraping](https://github.com/Japhilko/RInterfaces/blob/master/slides/Webscraping.md) ([pdf](slides/Webscraping.pdf) | [rcode](rcode/Webscraping.R))
 - [Use Case - Scraping Wikipedia](slides/ScrapingWikipedia.md) ([pdf](slides/ScrapingWikipedia.pdf) | [rcode](rcode/ScrapingWikipedia.R))
