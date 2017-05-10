@@ -1,5 +1,5 @@
-[Schnittstellen für den Austausch von Daten](https://github.com/Japhilko/RInterfaces/blob/master/slides/RInterfaces_all2g_1.md)
--------------------------------------------------------------------------------------------------------------------------------
+[Schnittstellen für den Austausch von Daten](https://github.com/Japhilko/RInterfaces/blob/master/slides/RInterfaces_all2g_1.md) ([pdf](slides/RInterfaces_all2g_1.pdf))
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 -   [Einführung und
     Motivation](https://github.com/Japhilko/RInterfaces/blob/master/slides/Intro.md)
@@ -17,10 +17,10 @@ Aufgabe: [Datenimport](tutorial/Aufgabe_Datenimport.md)
 -   [R und Excel](slides/Rexcel.md) ([pdf](slides/Rexcel.pdf) |
     [rcode](slides/Rexcel.R))
 
-Aufgabe: [Export nach Excel](tutorial/Aufgabe_Export2Excel.Rmd)
+Aufgabe: [Export nach Excel](tutorial/Aufgabe_Export2Excel.md)
 
-[Präsentation von Daten - Reproducible Research](https://github.com/Japhilko/RInterfaces/blob/master/slides/RInterfaces_all2g_2.md)
------------------------------------------------------------------------------------------------------------------------------------
+[Präsentation von Daten - Reproducible Research](https://github.com/Japhilko/RInterfaces/blob/master/slides/RInterfaces_all2g_2.md) ([pdf](slides/RInterfaces_all2g_2.pdf))
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 -   [Word Dokumente mit R erstellen](slides/R2word.md)
     ([pdf](slides/R2word.pdf))
@@ -35,8 +35,8 @@ Aufgabe: [Export nach Excel](tutorial/Aufgabe_Export2Excel.Rmd)
 Aufgabe: [Bearbeiten Sie ein Notebook
 weiter](tutorial/Aufgabe_Notebook.md)
 
-[Interaktive Darstellung mit Javascript und R](https://github.com/Japhilko/RInterfaces/blob/master/slides/RInterfaces_all2g_3.md)
----------------------------------------------------------------------------------------------------------------------------------
+[Interaktive Darstellung mit Javascript und R](https://github.com/Japhilko/RInterfaces/blob/master/slides/RInterfaces_all2g_3.md) ([pdf](slides/RInterfaces_all2g_3.pdf))
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 -   [Interaktive Karten mit dem Javascript Paket
     leaflet](https://github.com/Japhilko/RInterfaces/blob/master/slides/leaflet.md)
@@ -55,8 +55,8 @@ Aufgabe: [Eine interaktive Karte erzeugen](tutorial/Aufgabe_leaflet.Rmd)
 -   [Das Erstellen von Ablaufdiagrammen mit
     mermaid](https://github.com/Japhilko/RInterfaces/blob/master/slides/mermaid.md)
 
-[Internetresourcen und Schnittstellen nutzen](https://github.com/Japhilko/RInterfaces/blob/master/slides/RInterfaces_all2g_4.md)
---------------------------------------------------------------------------------------------------------------------------------
+[Internetresourcen und Schnittstellen nutzen](https://github.com/Japhilko/RInterfaces/blob/master/slides/RInterfaces_all2g_4.md) ([pdf](slides/RInterfaces_all2g_4.pdf))
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 -   [Import von JSON-Objekten und XML Dateien](slides/rapis.Rmd)
     ([pdf](slides/rapis.pdf) | [rcode](slides/rapis.pdf))
@@ -64,23 +64,23 @@ Aufgabe: [Eine interaktive Karte erzeugen](tutorial/Aufgabe_leaflet.Rmd)
 -   [Webscraping](https://github.com/Japhilko/RInterfaces/blob/master/slides/Webscraping.md)
 -   [Use Case - Scraping Wikipedia](slides/ScrapingWikipedia.Rmd)
 
-[Applikationen und Projektverwaltung mit Rstudio und git](https://github.com/Japhilko/RInterfaces/blob/master/slides/RInterfaces_all2g_5.md)
---------------------------------------------------------------------------------------------------------------------------------------------
+[Applikationen und Projektverwaltung mit Rstudio und git](https://github.com/Japhilko/RInterfaces/blob/master/slides/RInterfaces_all2g_5.md) ([pdf](slides/RInterfaces_all2g_5.pdf))
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 -   [Allgemein zur Versionsverwaltung](slides/Versionsverwaltung.Rmd)
 -   [R und Git](slides/Rgit.Rmd)
 -   [Shiny Apps](slides/shiny.Rmd)
 
-[Hochperfomanter Code](https://github.com/Japhilko/RInterfaces/blob/master/slides/RInterfaces_all2g_6.md)
----------------------------------------------------------------------------------------------------------
+[Hochperfomanter Code](https://github.com/Japhilko/RInterfaces/blob/master/slides/RInterfaces_all2g_6.md) ([pdf](slides/RInterfaces_all2g_6.pdf))
+-------------------------------------------------------------------------------------------------------------------------------------------------
 
 -   [C++ Integration - Überblick über das Paket
     rcpp](https://github.com/Japhilko/RInterfaces/blob/master/slides/rcpp.md)
 -   Überblick über Möglichkeiten des Parallel Computings - Paket
     parallel
 
-[Integration von Datenbanken](https://github.com/Japhilko/RInterfaces/blob/master/slides/RInterfaces_all2g_7.md)
-----------------------------------------------------------------------------------------------------------------
+[Integration von Datenbanken](https://github.com/Japhilko/RInterfaces/blob/master/slides/RInterfaces_all2g_7.md) ([pdf](slides/RInterfaces_all2g_7.pdf))
+--------------------------------------------------------------------------------------------------------------------------------------------------------
 
 -   [Datenbanken und R](slides/Datenbanken.Rmd)
 -   [Das R-Paket `dplyr`](slides/dplyr.Rmd)
