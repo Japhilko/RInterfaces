@@ -65,7 +65,7 @@ Aufgabe: [Eine interaktive Karte erzeugen](tutorial/Aufgabe_leaflet.md)
 ------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 -   [Import von JSON-Objekten und XML Dateien](slides/rapis.md)
-    ([pdf](slides/rapis.pdf) | [rcode](rcode/rapis.pdf))
+    ([pdf](slides/rapis.pdf) | [rcode](rcode/rapis.R))
 -   [Die Pakete rvest und RCurl](slides/rvest.md)
     ([pdf](slides/rvest.pdf) | [rcode](rcode/rvest.R))
 -   [Webscraping](https://github.com/Japhilko/RInterfaces/blob/master/slides/Webscraping.md)
@@ -78,8 +78,7 @@ Aufgabe: [Eine interaktive Karte erzeugen](tutorial/Aufgabe_leaflet.md)
 ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 -   [Allgemein zur Versionsverwaltung](slides/Versionsverwaltung.md)
-    ([pdf](slides/Versionsverwaltung.pdf) |
-    [rcode](slides/Versionsverwaltung.R))
+    ([pdf](slides/Versionsverwaltung.pdf))
 -   [R und Git](slides/Rgit.md) ([pdf](slides/Rgit.pdf) |
     [rcode](rcode/Rgit.R))
 -   [Shiny Apps](slides/shiny.md) ([pdf](slides/shiny.pdf) |
@@ -103,5 +102,5 @@ Aufgabe: [Eine interaktive Karte erzeugen](tutorial/Aufgabe_leaflet.md)
     RPostgreSQL](https://github.com/Japhilko/RInterfaces/blob/master/slides/RPostgreSQL.md)
     ([pdf](slides/RPostgreSQL.pdf) | [rcode](rcode/RPostgreSQL.R))
 -   [Nutzung von weiteren Datenbanken
-    (MongoDB, MySQL)]((https://github.com/Japhilko/RInterfaces/blob/master/slides/Rmongodb.md))
+    (MongoDB, MySQL)](https://github.com/Japhilko/RInterfaces/blob/master/slides/Rmongodb.md)
     ([pdf](slides/Rmongodb.pdf) | [rcode](rcode/Rmongodb.R))

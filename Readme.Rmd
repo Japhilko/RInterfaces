@@ -75,5 +75,5 @@ Aufgabe: [Eine interaktive Karte erzeugen](tutorial/Aufgabe_leaflet.md)
 - [Das R-Paket `dplyr`](slides/dplyr.md) ([pdf](slides/dplyr.pdf) | [rcode](rcode/dplyr.R))
 -	[Integration von PostgreSQL mit dem Paket 
 RPostgreSQL](https://github.com/Japhilko/RInterfaces/blob/master/slides/RPostgreSQL.md) ([pdf](slides/RPostgreSQL.pdf) | [rcode](rcode/RPostgreSQL.R))
--	[Nutzung von weiteren Datenbanken (MongoDB, MySQL)]((https://github.com/Japhilko/RInterfaces/blob/master/slides/Rmongodb.md)) ([pdf](slides/Rmongodb.pdf) | [rcode](rcode/Rmongodb.R))
+-	[Nutzung von weiteren Datenbanken (MongoDB, MySQL)](https://github.com/Japhilko/RInterfaces/blob/master/slides/Rmongodb.md) ([pdf](slides/Rmongodb.pdf) | [rcode](rcode/Rmongodb.R))
 
