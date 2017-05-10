@@ -1,5 +1,5 @@
-## ----setup, include=FALSE------------------------------------------------
-knitr::opts_chunk$set(echo = TRUE)
+## ---- include=FALSE------------------------------------------------------
+knitr::opts_chunk$set(echo = TRUE,warning=F,message=F)
 
 ## ----eval=F--------------------------------------------------------------
 ## getwd()
@@ -13,15 +13,14 @@ knitr::opts_chunk$set(echo = TRUE)
 ## setwd(main.path)
 
 ## ----eval=F--------------------------------------------------------------
-## library(foreign)
-## ?read.csv
-## ?read.csv2
+## install.packages("readr")
+
+## ------------------------------------------------------------------------
+library(readr)
 
 ## ----eval=F--------------------------------------------------------------
-## Dat <- read.csv("schuldaten_export.csv")
-
-## ----eval=F--------------------------------------------------------------
-## Dat <- read.csv2("schuldaten_export.csv")
+## library(readr)
+## rows <- read_csv("https://data.montgomerycountymd.gov/api/views/6rqk-pdub/rows.csv?accessType=DOWNLOAD")
 
 ## ------------------------------------------------------------------------
 url <- "https://raw.githubusercontent.com/Japhilko/
@@ -29,13 +28,23 @@ GeoData/master/2015/data/whcSites.csv"
 
 whcSites <- read.csv(url) 
 
-## ----eval=F--------------------------------------------------------------
-## link<- "http://www.statistik.at/web_de/static/
-## mz_2013_sds_-_datensatz_080469.sav"
-## 
-## ?read.spss
-## Dat <- read.spss(link,to.data.frame=T)
+## ------------------------------------------------------------------------
+head(data.frame(whcSites$name_en,whcSites$category))
 
 ## ----eval=F--------------------------------------------------------------
-## MZ02 <- read.dta("MZ02.dta")
+## install.packages("haven")
+
+## ------------------------------------------------------------------------
+library(haven)
+
+## ----eval=F--------------------------------------------------------------
+## install.packages("haven")
+
+## ----eval=F--------------------------------------------------------------
+## library(haven)
+## mtcars <- read_sav("https://github.com/Japhilko/RInterfaces/raw/master/data/mtcars.sav")
+
+## ----eval=F--------------------------------------------------------------
+## library(haven)
+## oecd <- read_dta("https://github.com/Japhilko/IntroR/raw/master/2017/data/oecd.dta")
 

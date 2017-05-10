@@ -1,11 +1,15 @@
-## ----setup, include=FALSE------------------------------------------------
-knitr::opts_chunk$set(echo = TRUE)
+## ---- include=FALSE------------------------------------------------------
+knitr::opts_chunk$set(echo = TRUE,eval=T)
 
 ## ------------------------------------------------------------------------
 A <- c(1,2,3,4)
 B <- c("A","B","C","D")
 
 mydata <- data.frame(A,B)
+
+## ----eval=F,echo=F-------------------------------------------------------
+## library(knitr)
+## kable(mydata)
 
 ## ----eval=F--------------------------------------------------------------
 ## save(mydata, file="mydata.RData")
@@ -14,26 +18,28 @@ mydata <- data.frame(A,B)
 ## write.csv(mydata,file="mydata.csv")
 
 ## ----eval=F--------------------------------------------------------------
+## write.csv2(mydata,file="mydata.csv")
+
+## ----eval=F--------------------------------------------------------------
 ## library(xlsx)
 ## write.xlsx(mydata,file="mydata.xlsx")
 
-## ------------------------------------------------------------------------
-library(foreign)
-write.dta(mydata,file="mydata.dta") 
+## ----eval=F--------------------------------------------------------------
+## library(foreign)
+## write.dta(mydata,file="data/mydata.dta")
 
 ## ----eval=F--------------------------------------------------------------
 ## install.packages("rio")
 
-## ------------------------------------------------------------------------
-library("rio")
-# create file to convert
-setwd("data/")
+## ----eval=F--------------------------------------------------------------
+## library("rio")
+## # create file to convert
+## 
+## export(mtcars, "data/mtcars.sav")
 
-export(mtcars, "mtcars.sav")
-
-## ------------------------------------------------------------------------
-export(mtcars, "mtcars.dta")
-
-# convert Stata to SPSS
-convert("mtcars.dta", "mtcars.sav")
+## ----eval=F--------------------------------------------------------------
+## export(mtcars, "data/mtcars.dta")
+## 
+## # convert Stata to SPSS
+## convert("data/mtcars.dta", "data/mtcars.sav")
 
