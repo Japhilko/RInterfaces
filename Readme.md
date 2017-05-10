@@ -42,7 +42,7 @@ weiter](tutorial/Aufgabe_Notebook.md)
     leaflet](https://github.com/Japhilko/RInterfaces/blob/master/slides/leaflet.md)
     ([pdf](slides/leaflet.pdf) | [rcode](rcode/leaflet.R))
 
-Aufgabe: [Eine interaktive Karte erzeugen](tutorial/Aufgabe_leaflet.Rmd)
+Aufgabe: [Eine interaktive Karte erzeugen](tutorial/Aufgabe_leaflet.md)
 
 -   [Interaktive Tabellen mit
     DataTables](https://github.com/Japhilko/RInterfaces/blob/master/slides/DataTables.md)
@@ -64,25 +64,25 @@ Aufgabe: [Eine interaktive Karte erzeugen](tutorial/Aufgabe_leaflet.Rmd)
 [Internetresourcen und Schnittstellen nutzen](https://github.com/Japhilko/RInterfaces/blob/master/slides/RInterfaces_all2g_4.md) ([pdf](slides/RInterfaces_all2g_4.pdf))
 ------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
--   [Import von JSON-Objekten und XML Dateien](slides/rapis.Rmd)
+-   [Import von JSON-Objekten und XML Dateien](slides/rapis.md)
     ([pdf](slides/rapis.pdf) | [rcode](rcode/rapis.pdf))
 -   [Die Pakete rvest und RCurl](slides/rvest.md)
     ([pdf](slides/rvest.pdf) | [rcode](rcode/rvest.R))
 -   [Webscraping](https://github.com/Japhilko/RInterfaces/blob/master/slides/Webscraping.md)
     ([pdf](slides/Webscraping.pdf) | [rcode](rcode/Webscraping.R))
--   [Use Case - Scraping Wikipedia](slides/ScrapingWikipedia.Rmd)
+-   [Use Case - Scraping Wikipedia](slides/ScrapingWikipedia.md)
     ([pdf](slides/ScrapingWikipedia.pdf) |
     [rcode](rcode/ScrapingWikipedia.R))
 
 [Applikationen und Projektverwaltung mit Rstudio und git](https://github.com/Japhilko/RInterfaces/blob/master/slides/RInterfaces_all2g_5.md) ([pdf](slides/RInterfaces_all2g_5.pdf))
 ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
--   [Allgemein zur Versionsverwaltung](slides/Versionsverwaltung.Rmd)
+-   [Allgemein zur Versionsverwaltung](slides/Versionsverwaltung.md)
     ([pdf](slides/Versionsverwaltung.pdf) |
     [rcode](slides/Versionsverwaltung.R))
--   [R und Git](slides/Rgit.Rmd) ([pdf](slides/Rgit.pdf) |
+-   [R und Git](slides/Rgit.md) ([pdf](slides/Rgit.pdf) |
     [rcode](rcode/Rgit.R))
--   [Shiny Apps](slides/shiny.Rmd) ([pdf](slides/shiny.pdf) |
+-   [Shiny Apps](slides/shiny.md) ([pdf](slides/shiny.pdf) |
     [rcode](rcode/shiny.R))
 
 [Hochperfomanter Code](https://github.com/Japhilko/RInterfaces/blob/master/slides/RInterfaces_all2g_6.md) ([pdf](slides/RInterfaces_all2g_6.pdf))
@@ -95,12 +95,12 @@ Aufgabe: [Eine interaktive Karte erzeugen](tutorial/Aufgabe_leaflet.Rmd)
 [Integration von Datenbanken](https://github.com/Japhilko/RInterfaces/blob/master/slides/RInterfaces_all2g_7.md) ([pdf](slides/RInterfaces_all2g_7.pdf))
 --------------------------------------------------------------------------------------------------------------------------------------------------------
 
--   [Datenbanken und R](slides/Datenbanken.Rmd)
+-   [Datenbanken und R](slides/Datenbanken.md)
     ([pdf](slides/Datenbanken.pdf) | [rcode](rcode/Datenbanken.R))
--   [Das R-Paket `dplyr`](slides/dplyr.Rmd) ([pdf](slides/dplyr.pdf) |
+-   [Das R-Paket `dplyr`](slides/dplyr.md) ([pdf](slides/dplyr.pdf) |
     [rcode](rcode/dplyr.R))
 -   [Integration von PostgreSQL mit dem Paket
-    RPostgreSQL](https://github.com/Japhilko/RInterfaces/blob/master/slides/RPostgreSQL.Rmd)
+    RPostgreSQL](https://github.com/Japhilko/RInterfaces/blob/master/slides/RPostgreSQL.md)
     ([pdf](slides/RPostgreSQL.pdf) | [rcode](rcode/RPostgreSQL.R))
 -   [Nutzung von weiteren Datenbanken
     (MongoDB, MySQL)]((https://github.com/Japhilko/RInterfaces/blob/master/slides/Rmongodb.md))
