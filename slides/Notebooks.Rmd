@@ -3,6 +3,7 @@ title: "Notebooks"
 author: "Jan-Philipp Kolb"
 date: "8 Mai 2017"
 output:
+  pdf_document: default
   slidy_presentation:
     keep_md: yes
   beamer_presentation:
@@ -64,11 +65,10 @@ print(sys.version)
 
 ![](figure/PublishNotebook2.PNG)
 
+
 # Andere Notebooks
 
 ## [Jupyter Notebook](http://jupyter.readthedocs.io/en/latest/install.html)
-
-![](http://jupyter.readthedocs.io/en/latest/_static/_images/jupyter.svg)
 
 - [Anaconda installieren](https://docs.continuum.io/anaconda/install)
 - folgenden Befehl in die Eingabeaufforderung eingeben
@@ -123,10 +123,7 @@ jupyter notebook
 - [Knit directly to jupyter notebooks from RStudio](https://www.r-bloggers.com/knit-directly-to-jupyter-notebooks-from-rstudio/)
 
 - [Python-Markdown](https://pythonhosted.org/Markdown/)
-
-- [Podcast](https://talkpython.fm/episodes/show/96/exploring-awesome-python)
-
-
+- [Podcast - die Welt von Python kennenlernen](https://talkpython.fm/episodes/show/96/exploring-awesome-python)
 - [Deploying JupyterHub for Education](https://developer.rackspace.com/blog/deploying-jupyterhub-for-education/)
 - [JupyterHub](https://hub.docker.com/r/jupyterhub/jupyterhub/) - [github](https://github.com/jupyterhub/jupyterhub)
 - [Jupyter autograder](https://github.com/data-8/connector-instructors/issues/3)

@@ -62,9 +62,9 @@ print(sys.version)
 
 ![](http://jupyter.readthedocs.io/en/latest/_static/_images/jupyter.svg)
 
-- Anaconda installieren
+- [Anaconda installieren](https://docs.continuum.io/anaconda/install)
 - folgenden Befehl in die Eingabeaufforderung eingeben
-- Diese findet man bei windows wenn man cmd in Suche eingibt.
+- Bei Windows findet man diese, wenn man `cmd` in Suche eingibt.
 
 ```
 jupyter notebook
@@ -118,3 +118,7 @@ jupyter notebook
 
 - [Podcast](https://talkpython.fm/episodes/show/96/exploring-awesome-python)
 
+
+- [Deploying JupyterHub for Education](https://developer.rackspace.com/blog/deploying-jupyterhub-for-education/)
+- [JupyterHub](https://hub.docker.com/r/jupyterhub/jupyterhub/) - [github](https://github.com/jupyterhub/jupyterhub)
+- [Jupyter autograder](https://github.com/data-8/connector-instructors/issues/3)

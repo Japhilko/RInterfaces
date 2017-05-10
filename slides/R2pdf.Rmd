@@ -79,6 +79,8 @@ output:
 
 ![](figure/figOpts.PNG)
 
+- Man sollte keine Bilder im Format `.svg` einbinden
+
 ## Präsentationen mit Sweave
 
 - Das Dokument erstellen

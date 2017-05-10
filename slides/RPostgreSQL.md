@@ -6,10 +6,10 @@ Jan-Philipp Kolb
 
 ## Die Nutzung von [RPostgreSQL](http://wiki.openstreetmap.org/wiki/PostgreSQL)
 
-![PostgreSQL](https://www.runabove.com/images/new/2015/postgresql_1.png)
+![](https://www.runabove.com/images/new/2015/postgresql_1.png)
 
 
-PostgreSQL installieren
+### PostgreSQL installieren
 
 - [Installation Windows](https://www.postgresql.org/download/windows/)
 - [Installation Linux](http://postgres.de/install.html)
@@ -54,6 +54,12 @@ install.packages("RPostgreSQL")
 ```r
 library("RPostgreSQL")
 ```
+
+
+```r
+citation("RPostgreSQL")
+```
+
 
 ## [Datenbank mit R verbinden](https://datashenanigan.wordpress.com/2015/05/18/getting-started-with-postgresql-in-r/)
 
@@ -107,7 +113,13 @@ identical(df, df_postgres)
 CREATE EXTENSION postgis;
 ```
 
-## Programm zum Import der OSM Daten in PostgreSQL- osm2pgsql
+- [Der Anfang mit PostGIS](http://www.bostongis.com/?content_name=postgis_tut01)
+- [PostGIS und R](https://gis.stackexchange.com/questions/64950/working-with-postgis-data-in-r)
+
+
+## Programm zum Import der OpenStreetMap Daten in PostgreSQL- [osm2pgsql](http://wiki.openstreetmap.org/wiki/Osm2pgsql)
+
+- Ausschnitte der OpenStreetMap Daten können bei der Geofabrik heruntergeladen werden
 
 - [Nutzung von osm2pgsql](http://www.volkerschatz.com/net/osm/osm2pgsql-usage.html)
 - Läuft unter Linux deutlich besser
@@ -142,18 +154,12 @@ df_postgres <- dbGetQuery(con, "SELECT name, admin_level FROM planet_osm_polygon
 ```
 
 
-```r
-barplot(table(df_postgres[,2]),col="royalblue")
-```
-
-## Eine Abfrage zu administrativen Grenzen
+## Eine Abfrage zu administrativen Grenzen (ein spezielles Level) 
 
 
 ```r
 df_adm8 <- dbGetQuery(con, "SELECT name, admin_level FROM planet_osm_polygon WHERE boundary='administrative' AND admin_level='8'")
 ```
-
-
 
 ## Mögliche Abfragen
 
@@ -199,24 +205,6 @@ df_sipp <- dbGetQuery(con, "SELECT * FROM planet_osm_line, planet_osm_point
 WHERE planet_osm_line.name='Rechweg' AND planet_osm_point.name='Sippersfeld' 
 ORDER BY ST_Distance(planet_osm_line.way, planet_osm_point.way)")
 head(df_sipp)
-```
-
-
-## [OpenStreetMap und Open Government Data in PostGIS](http://tud.at/linuxwochen/2013-osm-postgis/)
-
-- [Der Anfang mit PostGIS](http://www.bostongis.com/?content_name=postgis_tut01)
-- [PostGIS und R](https://gis.stackexchange.com/questions/64950/working-with-postgis-data-in-r)
-
-
-```r
-restnam <- dbGetQuery(con, "SELECT name, COUNT(osm_id) AS anzahl
-FROM planet_osm_point
-WHERE amenity = 'restaurant'
-  AND name <> ''
-GROUP BY name
-ORDER BY anzahl DESC
-LIMIT 10")
-head(restnam)
 ```
 
 

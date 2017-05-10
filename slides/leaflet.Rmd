@@ -3,13 +3,15 @@ title: "Interaktive Karten mit leaflet"
 author: "Jan-Philipp Kolb"
 date: "08 Mai 2017"
 output:
+  pdf_document: default
   beamer_presentation: default
   slidy_presentation:
     keep_md: yes
 ---
 
 ```{r, include=FALSE}
-knitr::opts_chunk$set(echo = TRUE,warning=F,message=F,eval=F)
+pdfP <- F
+knitr::opts_chunk$set(echo = TRUE,warning=F,message=F)
 ```
 
 ## Die Daten - Weltkulturerbe
@@ -55,7 +57,7 @@ whcSitesDat2 <- with(whcSites,data.frame(name_en,category,
 
 - mit dem Befehl `datatable` kann man eine erste interaktive Tabelle erstellen:
 
-```{r,eval=F}
+```{r,eval=pdfP}
 library('DT')
 datatable(whcSitesDat2)
 ```
@@ -123,7 +125,7 @@ library("leaflet")
 
 ## Eine interaktive Karte erstellen
 
-```{r,eval=F}
+```{r,eval=pdfP}
 m <- leaflet() %>%
   addTiles() %>%  # Add default OpenStreetMap map tiles
   addMarkers(lng=whcSites$lon, 
@@ -148,7 +150,7 @@ whcSites$color[whcSites$category=="Mixed"] <- "orange"
 
 ### Eine Karte mit Farbe erzeugen
 
-```{r,eval=F}
+```{r,eval=pdfP}
 m1 <- leaflet() %>%
   addTiles() %>%  
   addCircles(lng=whcSites$lon, 
@@ -172,7 +174,7 @@ m1 <- leaflet() %>%
 ## [Layers ein- und ausblenden](https://rstudio.github.io/leaflet/showhide.html)
 
 
-```{r,eval=F}
+```{r,eval=pdfP}
 m2 <- leaflet() %>%
   addTiles(group = "OSM (default)") %>%  
   addProviderTiles("Stamen.Toner", group = "Toner") %>%
@@ -200,7 +202,7 @@ m2
 outline <- quakes[chull(quakes$long, quakes$lat),]
 ```
 
-```{r}
+```{r,eval=pdfP}
 map <- leaflet(quakes) %>%
   # Base groups
   addTiles(group = "OSM (default)") %>%
@@ -237,14 +239,14 @@ SpP = SpatialPolygons(list(Srs1, Srs2, Srs3), 1:3)
 
 - so wird die Karte erzeugt:
 
-```{r}
+```{r,eval=pdfP}
 leaflet(height = "300px") %>% addPolygons(data = SpP)
 ```
 
 
 ## Beispiel US Staaten
 
-```{r}
+```{r,eval=pdfP}
 library(maps)
 mapStates = map("state", fill = TRUE, plot = FALSE)
 leaflet(data = mapStates) %>% addTiles() %>%
@@ -268,7 +270,7 @@ leaflet(data = mapStates) %>% addTiles() %>%
 
 - Neben der Default Basiskarte kann man auch [andere Hintergründe aktivieren](http://leaflet-extras.github.io/leaflet-providers/preview/index.html)
 
-```{r}
+```{r,eval=pdfP}
 m <- leaflet() %>% setView(lng = -71.0589, lat = 42.3601, zoom = 12)
 m %>% addTiles()
 m %>% addProviderTiles("Stamen.Toner")
@@ -276,33 +278,33 @@ m %>% addProviderTiles("Stamen.Toner")
 
 ## Basiskarte - CartoDB
 
-```{r}
+```{r,eval=pdfP}
 m %>% addProviderTiles("CartoDB.Positron")
 ```
 
 ## Esri.NatGeoWorldMap
 
-```{r}
+```{r,eval=pdfP}
 m %>% addProviderTiles("Esri.NatGeoWorldMap")
 ```
 
 ## OpenTopoMap
 
-```{r}
+```{r,eval=pdfP}
 m %>% addProviderTiles("OpenTopoMap")
 ```
 
 
 ## Thunderforest.OpenCycleMap
 
-```{r}
+```{r,eval=pdfP}
 m %>% addProviderTiles("Thunderforest.OpenCycleMap")
 ```
 
 
 ## WMS Tiles hinzufügen
 
-```{r}
+```{r,eval=pdfP}
 leaflet() %>% addTiles() %>% setView(-93.65, 42.0285, zoom = 4) %>%
   addWMSTiles(
     "http://mesonet.agron.iastate.edu/cgi-bin/wms/nexrad/n0r.cgi",
@@ -314,7 +316,7 @@ leaflet() %>% addTiles() %>% setView(-93.65, 42.0285, zoom = 4) %>%
 
 ## Mehrere Layer miteinander kombinieren
 
-```{r}
+```{r,eval=pdfP}
 m %>% addProviderTiles("MtbMap") %>%
   addProviderTiles("Stamen.TonerLines",
     options = providerTileOptions(opacity = 0.35)) %>%
@@ -323,7 +325,7 @@ m %>% addProviderTiles("MtbMap") %>%
 
 ## Andere Marker benutzen
 
-```{r}
+```{r,eval=pdfP}
 greenLeafIcon <- makeIcon(
   iconUrl = "http://leafletjs.com/examples/custom-icons/leaf-green.png",
   iconWidth = 38, iconHeight = 95,
@@ -341,7 +343,7 @@ leaflet(data = quakes[1:4,]) %>% addTiles() %>%
 
 - es lassen sich alle möglichen Icons einfügen
 
-```{r}
+```{r,eval=pdfP}
 menIcon <- makeIcon("https://img.clipartfest.com/707b339dc88f57bbd5d88377891131e3_bean-people-clipart-cliparts-beach-screen-with-people-clipart_344-432.jpeg",
          iconWidth = 38, iconHeight = 95,
   iconAnchorX = 22, iconAnchorY = 94)
@@ -354,7 +356,7 @@ leaflet(data = quakes[1:4,]) %>% addTiles() %>%
 
 ## Cluster Optionen für Marker
 
-```{r}
+```{r,eval=pdfP}
 leaflet(quakes) %>% addTiles() %>% addMarkers(
   clusterOptions = markerClusterOptions()
 )
@@ -363,7 +365,7 @@ leaflet(quakes) %>% addTiles() %>% addMarkers(
 ## [Ein Rechteck hinzufügen](https://rstudio.github.io/leaflet/shapes.html)
 
 
-```{r}
+```{r,eval=pdfP}
 leaflet() %>% addTiles() %>%
   addRectangles(
     lng1=-118.456554, lat1=34.078039,

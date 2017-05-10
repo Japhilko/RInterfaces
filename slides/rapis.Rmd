@@ -3,6 +3,7 @@ title: "Import von Webdaten"
 author: "Jan-Philipp Kolb"
 date: "8 Mai 2017"
 output:
+  pdf_document: default
   slidy_presentation: 
     keep_md: yes
   html_document:
@@ -15,6 +16,7 @@ output:
 ---
 
 ```{r, include=FALSE}
+pdfP <- F
 knitr::opts_chunk$set(echo = TRUE,eval=T,message=F,warning = F)
 ```
 
@@ -109,13 +111,23 @@ head(my_repos)
 
 ## Ergast Daten lesen
 
-```{r}
+```{r,eval=pdfP,echo=F}
 library(jsonlite)
 res <- fromJSON('http://ergast.com/api/f1/2004/1/results.json')
 drivers <- res$MRData$RaceTable$Races$Results[[1]]$Driver
 library(DT)
 datatable(drivers)
 ```
+
+
+```{r}
+library(knitr)
+library(jsonlite)
+res <- fromJSON('http://ergast.com/api/f1/2004/1/results.json')
+drivers <- res$MRData$RaceTable$Races$Results[[1]]$Driver
+kable(head(drivers))
+```
+
 
 ## Daten der New York Times
 
@@ -130,7 +142,7 @@ article_key <- "&api-key=c2fede7bd9aea57c898f538e5ec0a1ee:6:68700045"
 url <- "http://api.nytimes.com/svc/search/v2/articlesearch.json?q=obamacare+socialism"
 req <- fromJSON(paste0(url, article_key))
 articles <- req$response$docs
-datatable(articles)
+# kable(head(articles))
 ```
 
 
