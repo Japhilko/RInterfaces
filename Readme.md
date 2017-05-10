@@ -40,39 +40,39 @@ weiter](tutorial/Aufgabe_Notebook.md)
 
 -   [Interaktive Karten mit dem Javascript Paket
     leaflet](https://github.com/Japhilko/RInterfaces/blob/master/slides/leaflet.md)
-    ([pdf](slides/leaflet.pdf) | [rcode](slides/leaflet.R))
+    ([pdf](slides/leaflet.pdf) | [rcode](rcode/leaflet.R))
 
 Aufgabe: [Eine interaktive Karte erzeugen](tutorial/Aufgabe_leaflet.Rmd)
 
 -   [Interaktive Tabellen mit
     DataTables](https://github.com/Japhilko/RInterfaces/blob/master/slides/DataTables.md)
-    ([pdf](slides/DataTables.pdf) | [rcode](slides/DataTables.R))
+    ([pdf](slides/DataTables.pdf) | [rcode](rcode/DataTables.R))
 -   [R und die Javascript Data-Driven
     Documents (D3)](https://github.com/Japhilko/RInterfaces/blob/master/slides/D3.md)
-    ([pdf](slides/D3.pdf) | [rcode](slides/D3.R))
+    ([pdf](slides/D3.pdf) | [rcode](rcode/D3.R))
 -   [Interaktive Graphiken mit D3 und
     plotly](https://github.com/Japhilko/RInterfaces/blob/master/slides/plotly.md)
-    ([pdf](slides/plotly.pdf) | [rcode](slides/plotly.R))
+    ([pdf](slides/plotly.pdf) | [rcode](rcode/plotly.R))
 
 -   [Netzwerkgraphiken mit
     vis.js](https://github.com/Japhilko/RInterfaces/blob/master/slides/visNetwork.md)
-    ([pdf](slides/visNetwork.pdf) | [rcode](slides/visNetwork.R))
+    ([pdf](slides/visNetwork.pdf) | [rcode](rcode/visNetwork.R))
 -   [Das Erstellen von Ablaufdiagrammen mit
     mermaid](https://github.com/Japhilko/RInterfaces/blob/master/slides/mermaid.md)
-    ([pdf](slides/mermaid.pdf) | [rcode](slides/mermaid.R))
+    ([pdf](slides/mermaid.pdf) | [rcode](rcode/mermaid.R))
 
 [Internetresourcen und Schnittstellen nutzen](https://github.com/Japhilko/RInterfaces/blob/master/slides/RInterfaces_all2g_4.md) ([pdf](slides/RInterfaces_all2g_4.pdf))
 ------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 -   [Import von JSON-Objekten und XML Dateien](slides/rapis.Rmd)
-    ([pdf](slides/rapis.pdf) | [rcode](slides/rapis.pdf))
+    ([pdf](slides/rapis.pdf) | [rcode](rcode/rapis.pdf))
 -   [Die Pakete rvest und RCurl](slides/rvest.md)
-    ([pdf](slides/rvest.pdf) | [rcode](slides/rvest.R))
+    ([pdf](slides/rvest.pdf) | [rcode](rcode/rvest.R))
 -   [Webscraping](https://github.com/Japhilko/RInterfaces/blob/master/slides/Webscraping.md)
-    ([pdf](slides/Webscraping.pdf) | [rcode](slides/Webscraping.R))
+    ([pdf](slides/Webscraping.pdf) | [rcode](rcode/Webscraping.R))
 -   [Use Case - Scraping Wikipedia](slides/ScrapingWikipedia.Rmd)
     ([pdf](slides/ScrapingWikipedia.pdf) |
-    [rcode](slides/ScrapingWikipedia.R))
+    [rcode](rcode/ScrapingWikipedia.R))
 
 [Applikationen und Projektverwaltung mit Rstudio und git](https://github.com/Japhilko/RInterfaces/blob/master/slides/RInterfaces_all2g_5.md) ([pdf](slides/RInterfaces_all2g_5.pdf))
 ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
@@ -81,27 +81,27 @@ Aufgabe: [Eine interaktive Karte erzeugen](tutorial/Aufgabe_leaflet.Rmd)
     ([pdf](slides/Versionsverwaltung.pdf) |
     [rcode](slides/Versionsverwaltung.R))
 -   [R und Git](slides/Rgit.Rmd) ([pdf](slides/Rgit.pdf) |
-    [rcode](slides/Rgit.R))
+    [rcode](rcode/Rgit.R))
 -   [Shiny Apps](slides/shiny.Rmd) ([pdf](slides/shiny.pdf) |
-    [rcode](slides/shiny.R))
+    [rcode](rcode/shiny.R))
 
 [Hochperfomanter Code](https://github.com/Japhilko/RInterfaces/blob/master/slides/RInterfaces_all2g_6.md) ([pdf](slides/RInterfaces_all2g_6.pdf))
 -------------------------------------------------------------------------------------------------------------------------------------------------
 
 -   [C++ Integration - Überblick über das Paket
     rcpp](https://github.com/Japhilko/RInterfaces/blob/master/slides/rcpp.md)
-    ([pdf](slides/rcpp.pdf) | [rcode](slides/rcpp.R))
+    ([pdf](slides/rcpp.pdf) | [rcode](rcode/rcpp.R))
 
 [Integration von Datenbanken](https://github.com/Japhilko/RInterfaces/blob/master/slides/RInterfaces_all2g_7.md) ([pdf](slides/RInterfaces_all2g_7.pdf))
 --------------------------------------------------------------------------------------------------------------------------------------------------------
 
 -   [Datenbanken und R](slides/Datenbanken.Rmd)
-    ([pdf](slides/Datenbanken.pdf) | [rcode](slides/Datenbanken.R))
+    ([pdf](slides/Datenbanken.pdf) | [rcode](rcode/Datenbanken.R))
 -   [Das R-Paket `dplyr`](slides/dplyr.Rmd) ([pdf](slides/dplyr.pdf) |
-    [rcode](slides/dplyr.R))
+    [rcode](rcode/dplyr.R))
 -   [Integration von PostgreSQL mit dem Paket
     RPostgreSQL](https://github.com/Japhilko/RInterfaces/blob/master/slides/RPostgreSQL.Rmd)
-    ([pdf](slides/RPostgreSQL.pdf) | [rcode](slides/RPostgreSQL.R))
+    ([pdf](slides/RPostgreSQL.pdf) | [rcode](rcode/RPostgreSQL.R))
 -   [Nutzung von weiteren Datenbanken
     (MongoDB, MySQL)]((https://github.com/Japhilko/RInterfaces/blob/master/slides/Rmongodb.md))
-    ([pdf](slides/Rmongodb.pdf) | [rcode](slides/Rmongodb.R))
+    ([pdf](slides/Rmongodb.pdf) | [rcode](rcode/Rmongodb.R))
