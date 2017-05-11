@@ -3,6 +3,7 @@ title: "RPostgreSQL"
 author: "Jan-Philipp Kolb"
 date: "`r format(Sys.time(), '%d %B, %Y')`"
 output: 
+  pdf_document: default
   slidy_presentation: 
     keep_md: yes
 ---
@@ -80,7 +81,7 @@ dbExistsTable(con, "BeispielDB")
 
 ## Daten an Datenbank schicken
 
-```{r}
+```{r,eval=F}
 data(mtcars)
 df <- data.frame(carname = rownames(mtcars), 
                  mtcars, 
@@ -94,13 +95,13 @@ dbWriteTable(con, "cartable",
 
 - eine Abfrage machen:
 
-```{r}
+```{r,eval=F}
 df_postgres <- dbGetQuery(con, "SELECT * from cartable")
 ```
 
 - die beiden Tabellen müssten gleich sein
 
-```{r}
+```{r,eval=F}
 identical(df, df_postgres)
 ```
 

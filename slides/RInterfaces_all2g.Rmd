@@ -39,18 +39,17 @@ install.packages("tidyverse")
 ```{r child = 'Datenexport.Rmd'}
 ```
 
+
 # R und Excel
 
 ```{r child = 'Rexcel.Rmd'}
 ```
 
 
-
 # Präsentation von Daten - Reproducible Research
 
 ```{r child = 'ReproducibleResearch.Rmd'}
 ```
-
 
 
 # Word Dokumente mit R erstellen
@@ -66,16 +65,21 @@ install.packages("tidyverse")
 ```
 
 
+
 # HTML Dokumente, Präsentationen und Dashboards mit Rmarkdown
 
 
 ```{r child = 'Rmarkdown.Rmd'}
 ```
 
+
 # Notebooks zur Integration von anderen Programmiersprachen (Python,LaTeX,Julia)
 
 ```{r child = 'Notebooks.Rmd'}
 ```
+
+
+
 
 ```{r child = '../tutorial/Aufgabe_Notebook.Rmd'}
 ```
@@ -128,20 +132,25 @@ install.packages("tidyverse")
 ```{r child = 'rapis.Rmd'}
 ```
 
+
+
 # Die Pakete rvest und RCurl
 
 ```{r child = 'rvest.Rmd'}
 ```
+
 
 # Webscraping
 
 ```{r child = 'Webscraping.Rmd'}
 ```
 
+
 # Use Case - Scraping Wikipedia
 
 ```{r child = 'ScrapingWikipedia.Rmd'}
 ```
+
 
 
 # Shiny Apps 
@@ -154,22 +163,17 @@ install.packages("tidyverse")
 ```{r child = 'Rgit.Rmd'}
 ```
 
-
 # C++ Integration - Überblick über das Paket rcpp
 
 ```{r child = 'rcpp.Rmd'}
 ```
 
 
-#	Überblick über Möglichkeiten des Parallel Computings - Paket parallel
-
-
-
-
 # Datenbanken und R
 
 ```{r child = 'Datenbanken.Rmd'}
 ```
+
 
 # Das R-Paket `dplyr`
 
@@ -186,4 +190,7 @@ RPostgreSQL
 
 ```{r child = 'Rmongodb.Rmd'}
 ```
+
+
+
 

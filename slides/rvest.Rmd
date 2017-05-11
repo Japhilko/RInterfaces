@@ -5,6 +5,7 @@ date: "09 Mai 2017"
 output: 
   slidy_presentation: 
     keep_md: yes
+    pdf_document: default
 ---
 
 ```{r, include=FALSE}
@@ -35,7 +36,8 @@ gsub('/url\\?q=','',sapply(strsplit(links[as.vector(grep('url',links))],split='&
 
 ## Hin und weg
 
-```{r }
+```{r}
+library(XML)
 url4<-"http://api.openstreetmap.org/api/0.6/node/25439439"
 obj4 <- xmlParse(url4)
 xpathApply(obj4,"//tag[@k = 'railway:station_category']")[[1]]

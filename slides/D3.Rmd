@@ -10,7 +10,8 @@ output:
 ---
 
 ```{r, include=FALSE}
-knitr::opts_chunk$set(echo = TRUE,message=F,warning=F,eval=F)
+pdfP <- F
+knitr::opts_chunk$set(echo = TRUE,message=F,warning=F)
 ```
 
 ## JavaScript - Data-Driven Documents 
@@ -44,13 +45,13 @@ library(dplyr)
 
 ## [Kochbuch für ggvis](http://ggvis.rstudio.com/cookbook.html)
 
-```{r}
+```{r,eval=pdfP}
 mtcars %>% ggvis(~wt, ~mpg) %>% layer_points()
 ```
 
 ## Plots mit Gruppierung
 
-```{r}
+```{r,eval=pdfP}
 mtcars %>% 
   ggvis(~wt, ~mpg, fill = ~factor(cyl)) %>% 
   layer_points() %>% 
@@ -89,7 +90,7 @@ library(googleVis)
 
 ## Ein Datensatz mit Früchten
 
-```{r}
+```{r,eval=pdfP}
 library(DT)
 datatable(Fruits)
 ```
@@ -171,7 +172,7 @@ install.packages("networkD3")
 ## Ein Beispiel mit `networkD3`
 
 
-```{r}
+```{r,eval=pdfP}
 library(networkD3)
 src <- c("A", "A", "A", "A","B", "B", "C", "C", "D")
 target <- c("B", "C", "D", "J","E", "F", "G", "H", "I")
@@ -184,7 +185,7 @@ simpleNetwork(networkData)
 
 - [HTML widgets in R](http://www.htmlwidgets.org/showcase_leaflet.html)
 
-```{r}
+```{r,eval=pdfP}
 library(dygraphs)
 dygraph(nhtemp, main = "New Haven Temperatures") %>% 
   dyRangeSelector(dateWindow = c("1920-01-01", "1960-01-01"))
@@ -199,7 +200,7 @@ dygraph(nhtemp, main = "New Haven Temperatures") %>%
 install.packages("threejs")
 ```
 
-```{r,results='asis'}
+```{r,results='asis',eval=pdfP}
 library(threejs)
 z <- seq(-10, 10, 0.01)
 x <- cos(z)

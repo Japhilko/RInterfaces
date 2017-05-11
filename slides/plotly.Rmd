@@ -9,7 +9,8 @@ output:
 ---
 
 ```{r, include=FALSE}
-knitr::opts_chunk$set(echo = TRUE,message=F,warning=F,eval=F)
+pdfP <- F
+knitr::opts_chunk$set(echo = TRUE,message=F,warning=F)
 ```
 
 ## [plotly ](https://plot.ly/)
@@ -37,7 +38,7 @@ library("plotly")
 
 ## [Der Anfang mit `plotly` für R](https://plot.ly/r/getting-started/)
 
-```{r}
+```{r,eval=pdfP}
 plot_ly(midwest, x = ~percollege, color = ~state, type = "box")
 ```
 
@@ -52,7 +53,7 @@ url <- "https://raw.githubusercontent.com/Japhilko/GeoData/master/2015/data/whcS
 whcSites <- read.csv(url) 
 ```
 
-```{r}
+```{r,eval=pdfP}
 plot_ly(whcSites, x = ~date_inscribed, color = ~category_short, type = "box")
 ```
 

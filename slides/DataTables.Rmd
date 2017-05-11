@@ -9,7 +9,8 @@ output:
 ---
 
 ```{r, include=FALSE}
-knitr::opts_chunk$set(echo = TRUE,eval=F,warning=F,message = F)
+pdfP <- F
+knitr::opts_chunk$set(echo = TRUE,warning=F,message = F)
 ```
 
 ## The R-package DT
@@ -29,7 +30,7 @@ library('DT')
 exdat <- read.csv("data/exdat.csv")
 ```
 
-```{r}
+```{r,eval=pdfP}
 datatable(exdat)
 ```
 
@@ -42,7 +43,7 @@ Hier ist das Ergebnis - [Beispiel für eine interaktive Tabelle](http://rpubs.co
 
 ## [Default Optionen verändern](http://rstudio.github.io/DT/options.html)
 
-```{r}
+```{r,eval=pdfP}
 datatable(head(exdat, 20), options = list(
   columnDefs = list(list(className = 'dt-center', targets = 5)),
   pageLength = 5,
@@ -53,7 +54,7 @@ datatable(head(exdat, 20), options = list(
 
 ## [Suchoptionen kennzeichnen](http://rstudio.github.io/DT/006-highlight.html)
 
-```{r}
+```{r,eval=pdfP}
 datatable(exdat, options = list(searchHighlight = TRUE), filter = 'top')
 ```
 

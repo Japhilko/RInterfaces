@@ -1,4 +1,4 @@
-# dplyr
+# Eine Annährung an Datenbankkonzepte - Das Paket `dplyr`
 Jan-Philipp Kolb  
 5 Mai 2017  
 
@@ -16,6 +16,13 @@ install.packages("nycflights13")
 
 ```r
 library(nycflights13)
+```
+
+```
+## Warning: package 'nycflights13' was built under R version 3.3.3
+```
+
+```r
 dim(flights)
 ```
 
@@ -97,6 +104,10 @@ install.packages("downloader")
 
 ```r
 library(downloader)
+```
+
+```
+## Warning: package 'downloader' was built under R version 3.3.3
 ```
 
 ![](figure/DownloaderEx.PNG)
@@ -356,13 +367,19 @@ msleep %>%
 ## Am Besten funktionierts mit SQLite
 
 - alles was man braucht wird quasi schon mit R mitgeliefert 
+- der Befehl `src_sqlite` kann genutzt werden um sich mit einer Datenbank zu verbinden
+- bei Verwendung von `create=T` wird eine neue Datenbank erzeugt
+- bei `create=F` muss man den Pfad zur Datenbenk angeben
+
 
 
 ```r
+library(dplyr)
+setwd("data")
 my_db <- src_sqlite("my_db.sqlite3", create = T)
 ```
 
-## Ein Beispieldatensatz
+## Erste Datenbank mit Beispieldatensatz befüllen
 
 
 ```r
@@ -372,4 +389,25 @@ flights_sqlite <- copy_to(my_db, flights, temporary = FALSE, indexes = list(
 ```
 
 
+## Den Datensatz wieder heraus bekommen
 
+- mit dem Befehl `tbl` kann man sich mit Tabellen innerhalb einer Datenbank verbinden
+
+
+```r
+flights_sqlite <- tbl(nycflights13_sqlite(), "flights")
+```
+
+- das gleiche Ergebnis:
+
+
+```r
+tbl(my_db, sql("SELECT * FROM flights"))
+```
+
+## Eine weitere Abfrage
+
+
+```r
+tbl(my_db, sql("SELECT * FROM flights WHERE month = 1 AND dep_time = 517"))
+```

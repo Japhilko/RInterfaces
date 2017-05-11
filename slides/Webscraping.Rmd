@@ -3,11 +3,13 @@ title: "Webscraping"
 author: "Jan-Philipp Kolb"
 date: "9 Mai 2017"
 output: 
+  pdf_document: default
   slidy_presentation: 
     keep_md: yes
 ---
 
 ```{r, include=FALSE}
+pdfP <- F
 knitr::opts_chunk$set(echo = TRUE,message = F,warning=F)
 ```
 
@@ -52,7 +54,7 @@ html.world_ports <- read_html("https://en.wikipedia.org/wiki/List_of_busiest_con
 df.world_ports <- html_table(html_nodes(html.world_ports, "table")[[2]], fill = TRUE)
 ```
 
-```{r}
+```{r,eval=pdfP}
 library(DT)
 datatable(df.world_ports)
 ```

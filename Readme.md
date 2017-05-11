@@ -1,5 +1,5 @@
-[Schnittstellen für den Austausch von Daten](https://github.com/Japhilko/RInterfaces/blob/master/slides/RInterfaces_all2g_1.md)
--------------------------------------------------------------------------------------------------------------------------------
+[Schnittstellen für den Austausch von Daten](https://github.com/Japhilko/RInterfaces/blob/master/slides/RInterfaces_all2g_1.md) ([pdf](slides/RInterfaces_all2g_1.pdf))
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 -   [Einführung und
     Motivation](https://github.com/Japhilko/RInterfaces/blob/master/slides/Intro.md)
@@ -14,13 +14,13 @@ Aufgabe: [Datenimport](tutorial/Aufgabe_Datenimport.md)
 
 -   [Datenexport](slides/Datenexport.md) ([pdf](slides/Datenexport.pdf)
     | [rcode](slides/Datenexport.R))
--   [R und Excel](slides/Rexcel.md) ([pdf](Rexcel.pdf) |
+-   [R und Excel](slides/Rexcel.md) ([pdf](slides/Rexcel.pdf) |
     [rcode](slides/Rexcel.R))
 
-Aufgabe: [Export nach Excel](tutorial/Aufgabe_Export2Excel.Rmd)
+Aufgabe: [Export nach Excel](tutorial/Aufgabe_Export2Excel.md)
 
-[Präsentation von Daten - Reproducible Research](https://github.com/Japhilko/RInterfaces/blob/master/slides/RInterfaces_all2g_2.md)
------------------------------------------------------------------------------------------------------------------------------------
+[Präsentation von Daten - Reproducible Research](https://github.com/Japhilko/RInterfaces/blob/master/slides/RInterfaces_all2g_2.md) ([pdf](slides/RInterfaces_all2g_2.pdf))
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 -   [Word Dokumente mit R erstellen](slides/R2word.md)
     ([pdf](slides/R2word.pdf))
@@ -35,56 +35,74 @@ Aufgabe: [Export nach Excel](tutorial/Aufgabe_Export2Excel.Rmd)
 Aufgabe: [Bearbeiten Sie ein Notebook
 weiter](tutorial/Aufgabe_Notebook.md)
 
-[Interaktive Darstellung mit Javascript und R](https://github.com/Japhilko/RInterfaces/blob/master/slides/RInterfaces_all2g_3.md)
----------------------------------------------------------------------------------------------------------------------------------
+[Interaktive Darstellung mit Javascript und R](https://github.com/Japhilko/RInterfaces/blob/master/slides/RInterfaces_all2g_3.md) ([pdf](slides/RInterfaces_all2g_3.pdf))
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 -   [Interaktive Karten mit dem Javascript Paket
     leaflet](https://github.com/Japhilko/RInterfaces/blob/master/slides/leaflet.md)
+    ([pdf](slides/leaflet.pdf) | [rcode](rcode/leaflet.R))
 
-Aufgabe: [Eine interaktive Karte erzeugen](tutorial/Aufgabe_leaflet.Rmd)
+Aufgabe: [Eine interaktive Karte erzeugen](tutorial/Aufgabe_leaflet.md)
 
 -   [Interaktive Tabellen mit
     DataTables](https://github.com/Japhilko/RInterfaces/blob/master/slides/DataTables.md)
+    ([pdf](slides/DataTables.pdf) | [rcode](rcode/DataTables.R))
 -   [R und die Javascript Data-Driven
     Documents (D3)](https://github.com/Japhilko/RInterfaces/blob/master/slides/D3.md)
+    ([pdf](slides/D3.pdf) | [rcode](rcode/D3.R))
 -   [Interaktive Graphiken mit D3 und
     plotly](https://github.com/Japhilko/RInterfaces/blob/master/slides/plotly.md)
+    ([pdf](slides/plotly.pdf) | [rcode](rcode/plotly.R))
 
 -   [Netzwerkgraphiken mit
     vis.js](https://github.com/Japhilko/RInterfaces/blob/master/slides/visNetwork.md)
+    ([pdf](slides/visNetwork.pdf) | [rcode](rcode/visNetwork.R))
 -   [Das Erstellen von Ablaufdiagrammen mit
     mermaid](https://github.com/Japhilko/RInterfaces/blob/master/slides/mermaid.md)
+    ([pdf](slides/mermaid.pdf) | [rcode](rcode/mermaid.R))
 
-[Internetresourcen und Schnittstellen nutzen](https://github.com/Japhilko/RInterfaces/blob/master/slides/RInterfaces_all2g_4.md)
---------------------------------------------------------------------------------------------------------------------------------
+[Internetresourcen und Schnittstellen nutzen](https://github.com/Japhilko/RInterfaces/blob/master/slides/RInterfaces_all2g_4.md) ([pdf](slides/RInterfaces_all2g_4.pdf))
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
--   [Import von JSON-Objekten und XML Dateien](slides/rapis.Rmd)
-    ([pdf](slides/rapis.pdf) | [rcode](slides/rapis.pdf))
+-   [Import von JSON-Objekten und XML Dateien](slides/rapis.md)
+    ([pdf](slides/rapis.pdf) | [rcode](rcode/rapis.R))
 -   [Die Pakete rvest und RCurl](slides/rvest.md)
+    ([pdf](slides/rvest.pdf) | [rcode](rcode/rvest.R))
 -   [Webscraping](https://github.com/Japhilko/RInterfaces/blob/master/slides/Webscraping.md)
--   [Use Case - Scraping Wikipedia](slides/ScrapingWikipedia.Rmd)
+    ([pdf](slides/Webscraping.pdf) | [rcode](rcode/Webscraping.R))
+-   [Use Case - Scraping Wikipedia](slides/ScrapingWikipedia.md)
+    ([pdf](slides/ScrapingWikipedia.pdf) |
+    [rcode](rcode/ScrapingWikipedia.R))
 
-[Applikationen und Projektverwaltung mit Rstudio und git](https://github.com/Japhilko/RInterfaces/blob/master/slides/RInterfaces_all2g_5.md)
---------------------------------------------------------------------------------------------------------------------------------------------
+[Applikationen und Projektverwaltung mit Rstudio und git](https://github.com/Japhilko/RInterfaces/blob/master/slides/RInterfaces_all2g_5.md) ([pdf](slides/RInterfaces_all2g_5.pdf))
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
--   [Allgemein zur Versionsverwaltung](slides/Versionsverwaltung.Rmd)
--   [R und Git](slides/Rgit.Rmd)
--   [Shiny Apps](slides/shiny.Rmd)
+-   [Allgemein zur Versionsverwaltung](slides/Versionsverwaltung.md)
+    ([pdf](slides/Versionsverwaltung.pdf))
+-   [R und Git](slides/Rgit.md) ([pdf](slides/Rgit.pdf) |
+    [rcode](rcode/Rgit.R))
+-   [Shiny Apps](slides/shiny.md) ([pdf](slides/shiny.pdf) |
+    [rcode](rcode/shiny.R))
 
-[Hochperfomanter Code](https://github.com/Japhilko/RInterfaces/blob/master/slides/RInterfaces_all2g_6.md)
----------------------------------------------------------------------------------------------------------
+[Hochperfomanter Code](https://github.com/Japhilko/RInterfaces/blob/master/slides/RInterfaces_all2g_6.md) ([pdf](slides/RInterfaces_all2g_6.pdf))
+-------------------------------------------------------------------------------------------------------------------------------------------------
 
 -   [C++ Integration - Überblick über das Paket
     rcpp](https://github.com/Japhilko/RInterfaces/blob/master/slides/rcpp.md)
--   Überblick über Möglichkeiten des Parallel Computings - Paket
-    parallel
+    ([pdf](slides/rcpp.pdf) | [rcode](rcode/rcpp.R))
 
-[Integration von Datenbanken](https://github.com/Japhilko/RInterfaces/blob/master/slides/RInterfaces_all2g_7.md)
-----------------------------------------------------------------------------------------------------------------
+[Integration von Datenbanken](https://github.com/Japhilko/RInterfaces/blob/master/slides/RInterfaces_all2g_7.md) ([pdf](slides/RInterfaces_all2g_7.pdf))
+--------------------------------------------------------------------------------------------------------------------------------------------------------
 
--   [Datenbanken und R](slides/Datenbanken.Rmd)
--   [Das R-Paket `dplyr`](slides/dplyr.Rmd)
+-   [Datenbanken und R](slides/Datenbanken.md)
+    ([pdf](slides/Datenbanken.pdf) | [rcode](rcode/Datenbanken.R))
+-   [Das R-Paket `dplyr`](slides/dplyr.md) ([pdf](slides/dplyr.pdf) |
+    [rcode](rcode/dplyr.R))
 -   [Integration von PostgreSQL mit dem Paket
-    RPostgreSQL](https://github.com/Japhilko/RInterfaces/blob/master/slides/RPostgreSQL.Rmd)
+    RPostgreSQL](https://github.com/Japhilko/RInterfaces/blob/master/slides/RPostgreSQL.md)
+    ([pdf](slides/RPostgreSQL.pdf) | [rcode](rcode/RPostgreSQL.R))
 -   [Nutzung von weiteren Datenbanken
-    (MongoDB, MySQL)]((https://github.com/Japhilko/RInterfaces/blob/master/slides/Rmongodb.md))
+    (MongoDB, MySQL)](https://github.com/Japhilko/RInterfaces/blob/master/slides/Rmongodb.md)
+    ([pdf](slides/Rmongodb.pdf) | [rcode](rcode/Rmongodb.R))
+
+Alle Folien in einem [pdf](slides/RInterfaces_all2g.pdf).
