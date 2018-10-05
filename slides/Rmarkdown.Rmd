@@ -21,7 +21,7 @@ knitr::opts_chunk$set(echo = T)
 
 
 
-## [Präsentationen - Rpres der einfachste Weg](https://rstudio-pubs-static.s3.amazonaws.com/27777_55697c3a476640caa0ad2099fe914ae5.html#/)
+## [**Präsentationen - Rpres der einfachste Weg**](https://rstudio-pubs-static.s3.amazonaws.com/27777_55697c3a476640caa0ad2099fe914ae5.html#/)
 
 ![](figure/Rpresentations.PNG)
 
@@ -69,7 +69,7 @@ transition: rotate
 
 ![](figure/RpresRotate.PNG)
 
-## [Weitere mögliche Folienübergänge](https://support.rstudio.com/hc/en-us/articles/200714013-Slide-Transitions-and-Navigation)
+## [**Weitere mögliche Folienübergänge**](https://support.rstudio.com/hc/en-us/articles/200714013-Slide-Transitions-and-Navigation)
 
 
 -    none
@@ -101,9 +101,9 @@ Noch ein anderer Folientyp
 type: alert
 ```
 
-## [Die Schriftart wechseln](https://support.rstudio.com/hc/en-us/articles/200532307)
+## [Die Schriftart wechseln**](https://support.rstudio.com/hc/en-us/articles/200532307)
 
-- Die [CSS Schrifttypen](https://www.w3schools.com/cssref/css_websafe_fonts.asp) können verwendet werden
+- Die [**CSS Schrifttypen**](https://www.w3schools.com/cssref/css_websafe_fonts.asp) können verwendet werden
 
 ```
 Meine Präsentation
@@ -148,7 +148,7 @@ Normale Schriftgröße
 
 ![](figure/ioslidespres.PNG)
 
-## [ioslides - Der Start](http://rmarkdown.rstudio.com/ioslides_presentation_format.html) 
+## [**ioslides - Der Start**](http://rmarkdown.rstudio.com/ioslides_presentation_format.html) 
 
 
 ![](figure/ioslidesBSP.PNG)
@@ -182,7 +182,7 @@ output:
 
 ## Tabellen
 
-- Quelle: [R Studio, and Presentations, and Git! Oh my!](https://www.r-bloggers.com/r-studio-and-presentations-and-git-oh-my/)
+- Quelle: [**R Studio, and Presentations, and Git! Oh my!**](https://www.r-bloggers.com/r-studio-and-presentations-and-git-oh-my/)
 
 
 ```{r}
@@ -194,9 +194,9 @@ kable(table(a))
 
 ## `knitr` Engines
 
-- [knitr Language Engines](http://rmarkdown.rstudio.com/authoring_knitr_engines.html)
+- [**knitr Language Engines**](http://rmarkdown.rstudio.com/authoring_knitr_engines.html)
 
-- [slidify](http://slidify.org/)
+- [**slidify**](http://slidify.org/)
 
 
 # Eine slidy Präsentation
@@ -208,7 +208,7 @@ kable(table(a))
 ![](figure/sluidypresentations.PNG)
 
 
-## [Was sind Cascading Style Files ([CSS](https://de.wikipedia.org/wiki/Cascading_Style_Sheets)) 
+## [**Was sind Cascading Style Files ([CSS**](https://de.wikipedia.org/wiki/Cascading_Style_Sheets)) 
 
 ![](https://upload.wikimedia.org/wikipedia/commons/8/83/CSS-Logo.png)
 
@@ -218,8 +218,8 @@ kable(table(a))
 
 ### CSS und R
 
-- [Custom CSS](http://rmarkdown.rstudio.com/html_document_format.html#custom_css)
-- [CSS pro tipps](https://github.com/AllThingsSmitty/css-protips#use-a-css-reset)
+- [**Custom CSS**](http://rmarkdown.rstudio.com/html_document_format.html#custom_css)
+- [**CSS pro tipps**](https://github.com/AllThingsSmitty/css-protips#use-a-css-reset)
 
 ## Beispiel CSS
 
@@ -229,12 +229,12 @@ kable(table(a))
 
 Um den Präsentationstyp zu ändern kann man das CSS verändern
 
-- [Cascading Style Sheets](https://de.wikipedia.org/wiki/Cascading_Style_Sheets) (CSS)
+- [**Cascading Style Sheets**](https://de.wikipedia.org/wiki/Cascading_Style_Sheets) (CSS)
 
-- Bspw. lässt sich die [Farbe (HTML)](http://tomheller.de/html-farben.html) ändern.
-- [Man kann eine andere Schriftart wählen](https://www.mediaevent.de/css/font-family.html)
-- [Es gibt zahlreiche Möglichkeiten der Schriftformatierung](https://wiki.selfhtml.org/wiki/CSS/Eigenschaften/Schriftformatierung)
-- [Daneben gibt es viele weitere Dinge, die sich mit dem CSS steuern lassen](https://www.w3.org/TR/WCAG20-TECHS/C22.html)
+- Bspw. lässt sich die [**Farbe (HTML)**](http://tomheller.de/html-farben.html) ändern.
+- [**Man kann eine andere Schriftart wählen**](https://www.mediaevent.de/css/font-family.html)
+- [**Es gibt zahlreiche Möglichkeiten der Schriftformatierung**](https://wiki.selfhtml.org/wiki/CSS/Eigenschaften/Schriftformatierung)
+- Daneben gibt es viele weitere Dinge, [**die sich mit dem CSS steuern lassen**](https://www.w3.org/TR/WCAG20-TECHS/C22.html)
 
 # HTML Dokumente
 
@@ -246,9 +246,9 @@ Um den Präsentationstyp zu ändern kann man das CSS verändern
 
 ![](figure/UsingTemplate.PNG)
 
-## [Weitere Vorlagen nutzen](http://rmarkdown.rstudio.com/developer_document_templates.html)
+## [**Weitere Vorlagen nutzen**](http://rmarkdown.rstudio.com/developer_document_templates.html)
 
-- Es gibt viele Formate - [manche müssen erst aktiviert werden](https://blog.rstudio.org/2016/03/21/r-markdown-custom-formats/):
+- Es gibt viele Formate - [**manche müssen erst aktiviert werden**](https://blog.rstudio.org/2016/03/21/r-markdown-custom-formats/):
 
 ```{r,eval=F}
 install.packages("rticles")
@@ -279,18 +279,18 @@ install.packages("tufte")
 
 
 
-## [Beispiele für Templates](https://github.com/juba/rmdformats)
+## [**Beispiele für Templates**](https://github.com/juba/rmdformats)
 
 ![](https://rstudioblog.files.wordpress.com/2016/03/readthedown.png)
 
 # Dashboards
 
-## [Beispiel R-Pakete](https://gallery.shinyapps.io/cran-gauge/)
+## [**Beispiel R-Pakete**](https://gallery.shinyapps.io/cran-gauge/)
 
 ![](figure/CRANdownloads.PNG)
 
 
-## [Paket installieren](https://blog.rstudio.org/2016/05/17/flexdashboard-easy-interactive-dashboards-for-r/)
+## [**Paket installieren**](https://blog.rstudio.org/2016/05/17/flexdashboard-easy-interactive-dashboards-for-r/)
 
 ```{r, eval=F,echo=T}
 install.packages("flexdashboard", type = "source")
@@ -302,22 +302,22 @@ install.packages("flexdashboard", type = "source")
 
 ![](https://i2.wp.com/rmarkdown.rstudio.com/flexdashboard/images/NewRMarkdown.png?zoom=2)
 
-## [Mein erstes Dashboard](http://rpubs.com/Japhilko82/whcsites)
+## [**Mein erstes Dashboard**](http://rpubs.com/Japhilko82/whcsites)
 
 ![](figure/MeinErstesDashboard.PNG)
 
-## [Gallerie](http://rmarkdown.rstudio.com/gallery.html)
+## [**Gallerie**](http://rmarkdown.rstudio.com/gallery.html)
 
 ![](figure/RmarkdownGallery.PNG)
 
 
 ## Links 
-
-- [Verschiedene Markdown Dokumente zusammen fügen](http://stackoverflow.com/questions/25824795/how-to-combine-two-rmarkdown-rmd-files-into-a-single-output)
+- [**Formate**](http://rmarkdown.rstudio.com/formats.html)
+- [**Verschiedene Markdown Dokumente zusammen fügen**](http://stackoverflow.com/questions/25824795/how-to-combine-two-rmarkdown-rmd-files-into-a-single-output)
 
 ![](figure/stackoverflowCombine.PNG)
 
 
-- [Verschiedene CSS Fonts](http://www.cssfontstack.com/)
+- [**Verschiedene CSS Fonts**](http://www.cssfontstack.com/)
 
-- [Überblick über die verschiedenen Rmarkdown Formate](http://rmarkdown.rstudio.com/formats.html)
+- [Überblick über die verschiedenen Rmarkdown
